@@ -1,0 +1,48 @@
+:root{
+    --main-black: #333;
+    --main-red: #7f0000;
+    --secondary-red:#bd0003;
+    --ternary-red: #ff0000;
+    --main-orange: #ff6c3e;
+    --secondary-orange: #ffa372;
+}
+
+@font-face {
+    font-family: Valera;
+    src: url(../Fonts/VarelaRound-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../Fonts/Poppins-Regular.ttf);
+}
+
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-family: Serif, sans-serif !important;
+    font-size: 3.6rem !important;
+}
+
+h2, h3{
+    font-family: Poppins  !important;
+    font-size: 3rem;
+}
+
+h4, h5, h6{
+    font-family: Poppins  !important;
+    font-size: 2.4rem;
+}
+
+p{
+    font-family: Valera  !important;
+    font-size: 1.8rem;
+}
