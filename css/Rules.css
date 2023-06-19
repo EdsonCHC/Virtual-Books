@@ -1,48 +1,102 @@
-:root{
-    --main-black: #333;
-    --main-red: #7f0000;
-    --secondary-red:#bd0003;
-    --ternary-red: #ff0000;
-    --main-orange: #ff6c3e;
-    --secondary-orange: #ffa372;
+:root {
+  --main-black: #010101;
+  --main-red: #7f0000;
+  --secondary-red: #bd0003;
+  --ternary-red: #ff0000;
+  --main-orange: #ff6c3e;
+  --secondary-orange: #ffa372;
 }
 
 @font-face {
-    font-family: Valera;
-    src: url(../Fonts/VarelaRound-Regular.ttf);
+  font-family: Valera;
+  src: url(../Fonts/VarelaRound-Regular.ttf);
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url(../Fonts/Poppins-Regular.ttf);
+  font-family: Poppins;
+  src: url(../Fonts/Poppins-Regular.ttf);
 }
 
-*, ::after, ::before{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-h1{
-    font-family: Serif, sans-serif !important;
-    font-size: 3.6rem !important;
+body {
+  background-color: #ddd;
 }
 
-h2, h3{
-    font-family: Poppins  !important;
-    font-size: 3rem;
+h1 {
+  font-family: Serif, sans-serif !important;
+  font-size: 3.6rem !important;
+  color: var(--main-black);
 }
 
-h4, h5, h6{
-    font-family: Poppins  !important;
-    font-size: 2.4rem;
+h2 {
+  font-family: Poppins !important;
+  font-size: 3.4rem;
+  color: var(--main-black);
 }
 
-p{
-    font-family: Valera  !important;
-    font-size: 1.8rem;
+h3 {
+  font-family: Poppins !important;
+  font-size: 3rem;
+  color: var(--main-black);
 }
+
+h4{
+  font-family: Poppins !important;
+  font-size: 2.4rem;
+  color: var(--main-black);
+}
+
+h5,
+h6{
+  font-family: Poppins !important;
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+p {
+  font-family: Valera !important;
+  font-size: 1.8rem;
+  color: var(--main-black);
+}
+
+i{
+  font-size: 2rem;
+  margin-right: 5px;
+  color: var(--main-black);
+}
+
+
+.link{ /*  ESTILOS DE ETIQUETA LINK*/
+  color: var(--main-black);
+  text-decoration: none;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+
+
+/*scrollbar*/
+::-webkit-scrollbar{
+  width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track{
+  border: 5px solid #fff;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+  background: var(--secondary-red);
+}
+

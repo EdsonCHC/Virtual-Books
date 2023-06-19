@@ -1,0 +1,228 @@
+@import url(../css/Rules.css);
+
+/* ESTILOS HEADER*/
+header {
+  background-color: var(--secondary-orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 8rem;
+}
+
+#logo {
+  width: 25rem;
+  height: auto;
+}
+
+#labelInput {
+  display: block;
+  background-color: #fff;
+  width: 25rem;
+  height: 3.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  padding: 2px;
+}
+
+#labelInput button {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 0 5px;
+}
+
+#searchInput {
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#user {
+  margin: 0 2rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user img {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+#log-links{
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#close{ /*STILO PARA ICONO NOTIS*/
+  cursor:pointer;
+}
+
+.notis{
+  position: absolute;
+  width: 30rem;
+  height: 0px;
+  right: 6%;
+  top: 50%;
+  overflow: hidden;
+  border-radius: 8px 10px;
+  background-color: aliceblue;
+  transition: height .5s ease;
+}
+
+.notis.open{ 
+  height: 40rem;
+}
+
+#notis-info{
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#notis-info h4{
+  width: 100%;
+  border-bottom: 2px solid var(--main-black);
+  margin-bottom: 2rem;
+}
+
+#notis-nav{
+  list-style: none;
+}
+
+#notis-nav li{
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+/* ESTILOS ASIDE */
+aside {
+  position: sticky;
+  top: 8rem;
+  left: 0;
+  background-color: #fff;
+  height: 91vh;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+#home{
+  margin: 2rem 0 0 0;
+  width: 100%;
+  height: auto;
+}
+
+#books-nav {
+  list-style: none;
+  width: 100%;
+  height: auto;
+}
+
+#books-nav li {
+  font-size: 1.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 0 1.3rem 0;
+  cursor: pointer;
+}
+
+#books-nav li > span{
+  position: absolute;
+  left: 90%;
+  font-style: bold;
+  font-weight: 600;
+  transition: transform .3s ease-in-out;
+}
+
+#books-nav li:hover > span{
+  transform: rotate(90deg);
+}
+
+#settings{
+  border-top: 2px solid #ddd;
+  padding: 0.5rem 0 0 0;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+
+/*ESTILOS CONTENIDO*/
+main {
+  display: flex;
+  gap: 2rem;
+}
+
+#content {
+  padding: 2rem 0 0 0;
+}
+
+#content h2 {
+  margin: 0 0 2rem 0;
+}
+
+#content h3 {
+  margin: 0 0 1.5rem 0;
+}
+
+.grid-books{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  width: auto;
+  height: 32rem;
+  margin-bottom: 3.5rem;
+}
+
+.grid-books img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#more{
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+/*ESTILOS FOOTER */
+
+footer{
+  width: 100%;
+  height: auto;
+  background-color: var(--secondary-orange);
+  text-align: center;
+  padding: 0.5rem;
+}
