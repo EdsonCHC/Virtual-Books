@@ -1,0 +1,245 @@
+@import url(../css/Rules.css);
+
+/* ESTILOS HEADER*/
+header {
+  background-color: var(--secondary-orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 8rem;
+}
+
+#logo {
+  width: 25rem;
+  height: auto;
+}
+
+#labelInput {
+  display: block;
+  background-color: #fff;
+  width: 25rem;
+  height: 3.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  padding: 2px;
+}
+
+#labelInput button {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 0 5px;
+}
+
+#searchInput {
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#user {
+  margin: 0 2rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user img {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+#log-links{
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#close{ /*STILO PARA ICONO NOTIS*/
+    cursor:pointer;
+  }
+  
+  .notis{
+    position: absolute;
+    width: 30rem;
+    height: 0px;
+    right: 6%;
+    top: 50%;
+    overflow: hidden;
+    border-radius: 8px 10px;
+    background-color: aliceblue;
+    transition: height .5s ease;
+  }
+  
+  .notis.open{ 
+    height: 40rem;
+  }
+  
+  #notis-info{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  #notis-info h4{
+    width: 100%;
+    border-bottom: 2px solid var(--main-black);
+    margin-bottom: 2rem;
+  }
+  
+  #notis-nav{
+    list-style: none;
+  }
+  
+  #notis-nav li{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  
+  
+  
+  /* ESTILOS ASIDE */
+  aside {
+    position: sticky;
+    top: 8rem;
+    left: 0;
+    background-color: #fff;
+    height: 91vh;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  #home{
+    margin: 2rem 0 0 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  #books-nav {
+    list-style: none;
+    width: 100%;
+    height: auto;
+  }
+  
+  #books-nav li {
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 0 1.3rem 0;
+    cursor: pointer;
+  }
+  
+  #books-nav li > span{
+    position: absolute;
+    left: 90%;
+    font-style: bold;
+    font-weight: 600;
+    transition: transform .3s ease-in-out;
+  }
+  
+  #books-nav li:hover > span{
+    transform: rotate(90deg);
+  }
+  
+  #settings{
+    border-top: 2px solid #ddd;
+    padding: 0.5rem 0 0 0;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  main {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  #content {
+    padding: 2rem 0 0 0;
+  }  
+  #general_conteiner{
+  display: flex;
+}
+#post_desc textarea{
+  padding: 2.5rem;
+  outline: none;
+  border-radius: 1.5rem;
+  border: 1px  solid #ccc;
+  font-size: 20px;
+  resize: none;
+ 
+}
+#post_enter input{
+  margin-top: 1rem;
+    color:rgb(255, 255, 255);
+    border:none;
+    background: rgba(127, 0, 0, 0.9);
+    height: 45px;
+    width: 20%;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 15px;
+}
+#second_conteiner{
+  border: 1px  solid #ccc;
+  background-color:rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0 3.5rem 0 3.5rem;
+  width: 35%;
+  align-items: center;
+  
+}
+#tittle_second_conteiner{
+  padding-left: 1rem;
+}
+
+#coments p{
+  background-color:#D9D9D9;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin:  2rem 1rem 2rem 1rem;
+  width: 90%;
+  font-size: 15px;
+}
+
+
+#coments button{
+  background: rgba(255, 255, 255, 0.9);
+  width: 13%;
+  padding-top: 0.4rem;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #BCBEC0;
+  margin-left: 90%;
+
+  
+}
+
