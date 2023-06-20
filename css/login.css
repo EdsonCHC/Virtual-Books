@@ -28,21 +28,19 @@ body{
 
 form{
     background-color: rgb(255, 255, 255);
-  
-
 }
 .space_primary_part{
     padding-left: 30%;
 }
 
 .tittle_primary_part{
-    color: rgb(0, 0, 0);
+    color: #010101;
     padding-top: 3rem;
 }
 h1{
     font-family: 'Spectral';
     font-style: normal;
-    font-size: 55px;
+    font-size: 5.5rem;
 }
 .subtittle_primary_part{
     padding-top: 3rem;
@@ -87,9 +85,9 @@ h1{
 }
 .submit_primary_part input{
     margin-top: 2rem;
-    color:rgb(255, 255, 255);
+    color:#fff;
     border:none;
-    background: rgba(127, 0, 0, 0.9);
+    background: #7f0000;
     height: 45px;
     width: 60%;
     cursor: pointer;
@@ -110,9 +108,9 @@ h1{
 
 }
 .google_primary_part button{
-    background: rgba(255, 255, 255, 0.9);
+    background: #ddd;
     height: 45px;
-    width: 25%;
+    width: 7rem;
     cursor: pointer;
     border-radius: 20px;
     border: 1px solid #BCBEC0;

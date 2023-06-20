@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Books</title>
+    <link rel="stylesheet" href="../css/Rules.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/myBooks.css" />
+</head>
+
+<body>
+    <?php
+    require_once("../html/header.php");
+    ?>
+    <main>
+    <?php
+      require_once("../html/aside.php");
+    ?>
+        <div id="content">
+            <h2>Mis Libros</h2>
+            <div class="categoria">
+                <div class="flex-books">
+                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php
+      require_once("../html/footer.php");
+    ?>
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <script>
+        let year = document.getElementById('year');
+        let y = new Date().getFullYear();
+        year.innerHTML = y;
+    </script>
+    <script src="../js/toggle.js"></script>
+</body>
+
+</html>

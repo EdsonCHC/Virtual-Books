@@ -13,7 +13,7 @@
 <body>
     <main>
         <h1 id="title">Virtual Books</h1>
-        <img id="img-ground" src="../img/Captura_de_pantalla_2023-05-22_132249-removebg-preview 4.png">
+        <img id="img-ground" src="../src/login.png">
         <div>
             <form>
                 <h2 id="title-form">Please confirm your account to continue</h2>
@@ -24,12 +24,12 @@
                 </div>
                 <div id="form-group-code">
                     <label id="confirm-code">Confirm Code</label>
-                    <input id="number-code" type="number" min="8" max="9" placeholder="9414578/7" required>
+                    <input id="number-code" type="text" placeholder="******" required>
                     <button id="register-buttom" type="submit">Register</button>
                 </div>
             </form>
         </div>
-        <img id="img-ground2" src="../img/Captura_de_pantalla_2023-05-22_132249-removebg-preview 4.png">
+        <img id="img-ground2" src="../src/login.png">
     </main>
 </body>
 
