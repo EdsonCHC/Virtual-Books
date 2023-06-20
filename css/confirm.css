@@ -1,0 +1,118 @@
+@import url(../css/Rules.css);
+
+html {
+    background-color: var(--secondary-orange);
+    /*background-image: url(../img/Captura_de_pantalla_2023-05-22_132249-removebg-preview\ 4.png);*/
+}
+
+/*Estilo de titulo*/
+
+h1[id="title"] {
+    margin: 7rem 23% 2rem 15%;
+    font-weight: 400;
+    font-size: 0;/*No pude cambiarlo porque se sobreescribe son Rules.css*/
+}
+
+
+img[id="img-ground"] {
+    position: absolute;
+    width: 700px;
+    top: 40px;
+    z-index: -1;
+}
+
+/*Estilo formulario*/
+
+
+form {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    margin: 4% 15%;
+    padding: 4rem 5rem;
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    top: 100px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+#title-form {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 68px;
+}
+
+form>p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+div[id="lines"] {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div[id="line"] {
+    width: 220px;
+    border: 1px solid #F25019;
+}
+
+div[id="form-group-code"] {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 70px;
+    padding: 0 30% 0 30%;
+}
+
+label[id="confirm-code"] {
+    width: 193px;
+    height: 14px;
+    font-family: valera;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+input[id="number-code"] {
+    position: relative;
+    width: 403.99px;
+    height: 44.89px;
+    top: 20px;
+    padding: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+button[id="register-buttom"] {
+    position: relative;
+    width: 292px;
+    height: 45px;
+    left: 50px;
+    top: 50px;
+
+
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: none;
+
+    background: var(--main-red);
+    border-radius: 20px;
+}
+
+img[id="img-ground2"] {
+    position: absolute;
+    width: 400px;
+    left: 70%;
+    top: 450px;
+    z-index: -1;
+}
