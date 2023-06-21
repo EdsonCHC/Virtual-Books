@@ -22,3 +22,8 @@
         <a href="" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
     </div>
 </aside>
+
+<script
+      src="https://kit.fontawesome.com/7bcd40cb83.js"
+      crossorigin="anonymous"
+></script>

@@ -118,6 +118,7 @@ header {
 #logo {
   width: 25rem;
   height: auto;
+  margin-left: 2rem;
 }
 
 #labelInput {
@@ -217,18 +218,14 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
-
-
-
-
 /* ESTILOS ASIDE */
 aside {
   position: sticky;
   top: 8rem;
   left: 0;
   background-color: #fff;
-  height: 91vh;
-  width: 20rem;
+  height: 91.3vh;
+  width: 10.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,5 +275,11 @@ aside {
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
+}
+
+/*ESTILOS FOOTER*/ 
+footer{
+  background-color: var(--secondary-orange);
+  text-align: center;
 }
 

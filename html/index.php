@@ -73,10 +73,5 @@
     <?php
       require_once("../html/footer.php");
     ?>
-    <script
-      src="https://kit.fontawesome.com/7bcd40cb83.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/toggle.js"></script>
   </body>
 </html>
