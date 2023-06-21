@@ -1,5 +1,7 @@
 :root {
   --main-black: #010101;
+  --main-white: #ffffff;
+  --main-grey: rgba(255, 255, 255, 0.3);
   --main-red: #7f0000;
   --secondary-red: #bd0003;
   --ternary-red: #ff0000;
@@ -29,6 +31,7 @@ html {
   font-size: 62.5%;
 }
 
+/*Esto sobre escribe el body de los demas*/
 body {
   background-color: #ddd;
 }
