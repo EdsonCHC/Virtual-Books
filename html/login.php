@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-   
+    <title>login</title>
+    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/login.css" />
-  </head>
+</head>
+
+
 
 
 <body>
     <div class="img_part">
         <img src="../src/login.png" class="img1_part">
 
+
         <img src="../src/login.png" class="img2_part">
+
+
 
 
         <img src="../src/login.png" class="img3_part">
     </div>
 
+
     </div>
     <div class="general_part">
+
 
         <div class="primary_part">
             <form>
@@ -30,18 +38,18 @@
                         <h1>Virtual Books</h1>
                     </div>
                     <div class="subtittle_primary_part">
-                        <p>Login</p>
+                        <h3>Login</h3>
                     </div>
                     <div class="form_primary_part">
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <label for="email">Email</label>
+                                <h4><label for="email">Email</label></h4>
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com">
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <label for="email">Password</label>
+                                <h4> <label for="email">Password</label></h4>
                             </div>
                             <input type="text" name="password" id="password" placeholder="password">
                         </div>
@@ -52,6 +60,8 @@
                     <div class="submit_primary_part">
                         <input type="submit" value="Sign in">
                     </div>
+
+
 
 
                 </div>
@@ -68,9 +78,25 @@
         </div>
         <div class="secundary_part">
 
+
         </div>
 
+
     </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+
+
 
 
 
