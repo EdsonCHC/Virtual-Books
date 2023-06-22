@@ -18,27 +18,36 @@
         <div id="mother-ctn">
             <div id="title-ctn">
                 <h1>Virtual Books</h1>
-                <h7>Register</h7>
+                <H6>Register</H6>
             </div>
 
             <img id="Ovalo_1" src="../src/login.png">
 
+            <div id="flex-lines">            
+                <div id="line"></div>
+            </div>
+
+
+
+
             <div id="form-ctn">
                     <form action=""> 
                         <div id="text-ctn">
-                            <label for="">First Name</label>
+                            <label for=""><h6>First Name</h6></label>
                             <input type="text" placeholder="Narendra Singh">
-                            <label for="">Last Name</label>
+                            <label for=""><h6>Last Name</h6></label>
                             <input type="text" placeholder="Narendra Singh" >
-                            <label for="">E-mail</label>
+                            <label for=""><h6>E-mail</h6></label>
                             <input type="email" placeholder="Username@gmail.com">
-                            <label for="">Password</label>
+                            <label for=""><h6>Password</h6></label>
                             <input type="password" placeholder="Username@gmail.com">
-                            <label for="">Confirm Password</label>
-                            <input type="password" placeholder="Password">
-
+                            <label for=""><h6>Confirm Password </h6></label>
+                            <input type="password" placeholder="Password" >
+                            <div id="eye"> <!-- boton-->
+                            <img src="../src/img/icons8-eye-96.png" width="21px">
+                            </div>
                             <div id="aparte">
-                                <p>Or continue with</p>
+                                <h6>Or continue with</h6>
                                 <button><img src="../src/google.png" alt=""></button>
                             </div>
 
@@ -47,7 +56,7 @@
                             <h5>Profile Picture</h5>
                             <div><img grande src="../src/user.png" alt=""><br>
                             </div>
-                            <button Upload>Upload image <img src="../src/img/icons8-upload-25.png" alt=""></button>
+                            <button Upload>Upload image <img src="../src/img/icons8-upload-to-cloud-96.png" alt=""></button>
                             <h5 primo>Select Avatar</h5>
                             <img class="img_chiqitas" src="../src/user.png" alt="">
                             <img class="img_chiqitas" src="../src/user.png" alt="">

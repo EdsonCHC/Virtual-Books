@@ -1,24 +1,43 @@
 @import url(../css/Rules.css);
 
+body{
+    background-color: #ffa372;
+}
+
 #title-ctn{
     display: inline-block;
     position: relative;
     letter-spacing: 1.5px;
     padding-bottom: 50px;
     cursor: default;
-    left: 250px;
+    left: 275px;
     top: 40px;
+    
+}
+
+#title-ctn h1{
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1.5px;
+    cursor: default;
+    font-size: 50px;
+
+    
 }
 
 
 
 #Ovalo_1{
     position: absolute;
-    left: -50px;
-    top: -70px;
-    width: 650px;
+    transform: translate(-35%, -10%);
     opacity: 0.5;
     z-index: -10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 35%;
+  height: 70vh; 
 
 }
 
@@ -28,8 +47,8 @@
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     border-radius: 30px;
-    width: 900px;
-    height: 480px;
+    width: 1500px;
+    height: 700px;
     margin: auto;
     margin-top: 10px;
     padding-bottom: 20px;
@@ -38,30 +57,41 @@
 }
 
 #text-ctn{
+    /* border: 1px solid black; */
     position: relative;
     display: inline-block;
-    /* border:  1px solid black; */
-    font-weight: bold;
+    left: 40px;
     padding: 50px;
-    width: 300px;
+    width: 650px;
     opacity: 1;
     font-size: 15px;
 }
 
-#text-ctn label{
+#text-ctn label h6{
     display: inline-block;
     position: relative;
+    font-size: 25px;
     padding-top: 10px;
 }
 
 
 
 #text-ctn input{
-    width: 300px;
+    width: 500px;
     border-radius: 13px;
-    border: 1px;
-    height: 27px;
-    padding-left: 7px;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    padding: 20px;
+    margin-top: 5px;
+    font-size: 25px;
+    color: gray;
+}
+
+#eye{
+    position: absolute;
+    left: 315px;
+    top: 327px;
 }
 
 
@@ -79,32 +109,34 @@
 
 #img-ctn img[grande]{
   padding: 10px;
-width: 100px;
-height: 100px;
+width: 200px;
+height: 200px;
 
 }
 
 div img[grande]{
   margin: 10px;
-  width: 100px;
-  height: 50px;
   border-radius: 100px;
   background-color: white;
+}
+
+#img-ctn h5{
+ font-size: 30px;
 }
 
 #img-ctn h5[primo]{
     color: #F25019;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: justify;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .img_chiqitas{
   padding: 10px;
-    width: 50px;
-    height: 50px;
-    padding-left: 10px;
+    width: 100px;
+    height: 100px;
+    padding-left: 10;
     margin: 10px;
     border-radius: 100px;
     background-color: white;
@@ -115,6 +147,7 @@ div img[grande]{
 #img-ctn button[Upload]{
     position: relative;
     width: 160px;
+    height: 35px;
     margin-bottom: 10px;
 }
 
@@ -129,28 +162,29 @@ div form button img{
     width: 20px;
 }
 
-#aparte{
+#aparte h6{
     width: 200px;
     position: relative;
     top: 25px;
     display: inline-block;
     color: gray;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 15px;
 
 }
 
 #aparte button{
     margin-left: 15px;
+    margin-top: 25px;
     background-color: #ffff;
-    width: 100px;
+    width: 75px;
     
 }
 
 #aparte button img{
     position: relative;
     left: -1px;
-    top: 4px;
+    top: 2px;
     width: 25px;
     
 }
@@ -173,9 +207,8 @@ div form button{
     font-weight: bold;
     border: none;
     border-radius: 15px;
-    width: 300px;
-    top: 25px;
-    height: 30px;
+    width: 400px;
+    height: 50px;
     left: 0px;
 }
 
@@ -198,3 +231,19 @@ div form button{
     opacity: 0.5;
     z-index: -20;
 }
+
+div[id="flex-lines"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 34.5rem;
+    left: 65rem;
+    z-index: 10000;
+}
+
+div[id="line"] {
+    width: 20rem;
+    border: 1px solid var(--main-orange);
+}
+
