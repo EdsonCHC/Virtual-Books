@@ -35,7 +35,7 @@ form{
 .tittle_primary_part{
 
 
-    padding-top: 8em;
+    padding-top: 10em;
 
 
 }
@@ -45,7 +45,7 @@ form{
 
 
 .tittle_details_primary_part{
-    margin-top: 1rem;
+    margin-top: 3rem;
 
 
 }
@@ -63,16 +63,17 @@ form{
 .recuperate_primary_part{
     margin-top: 1rem;
 }
-.recuperate_primary_part a{
+.recuperate_primary_part p{
     color: #465685;
+    
+}
+.recuperate_primary_part a{
     text-decoration: none;
-
-
 }
 .submit_primary_part input{
 
 
-    margin-top: 3.5rem;
+    margin-top: 5rem;
     color:rgb(255, 255, 255);
     border:none;
     background: #7f0000;
@@ -90,7 +91,7 @@ form{
 }
 .google_primary_part p{
     color: #798995;
-   margin-top: 1.5rem;
+   margin-top: 3rem;
 
 
 }
@@ -106,7 +107,7 @@ form{
    
 }
 .register_primary_part p{
-    margin:  2.5rem 0 4rem 0 ;
+    margin:  5rem 0 9.8rem 0 ;
     color: #333333;
 }
 .register_primary_part a{

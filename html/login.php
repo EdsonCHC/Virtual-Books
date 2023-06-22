@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="recuperate_primary_part">
-                        <a href="#">Register for Free</a>
+                        <a href="#"><p>Register for Free</p></a>
                     </div>
                     <div class="submit_primary_part">
                         <input type="submit" value="Sign in">
