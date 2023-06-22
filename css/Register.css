@@ -1,385 +1,372 @@
-*{
-    margin: 0;
-    padding: 0;
-
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 :root {
-    --main-black: #010101;
-    --main-red: #7f0000;
-    --secondary-red: #bd0003;
-    --ternary-red: #ff0000;
-    --main-orange: #ff6c3e;
-    --secondary-orange: #ffa372;
-  }
-  
-  @font-face {
-    font-family: Valera;
-    src: url(../Fonts/VarelaRound-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: Poppins;
-    src: url(../Fonts/Poppins-Regular.ttf);
-  }
-  
-  *,
-  ::after,
-  ::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    background-color: #ddd;
-  }
-  
-  h1 {
-    font-family: Serif, sans-serif !important;
-    font-size: 3.6rem !important;
-    color: var(--main-black);
-  }
-  
-  h2 {
-    font-family: Poppins !important;
-    font-size: 3.4rem;
-    color: var(--main-black);
-  }
-  
-  h3 {
-    font-family: Poppins !important;
-    font-size: 3rem;
-    color: var(--main-black);
-  }
-  
-  h4{
-    font-family: Poppins !important;
-    font-size: 2.4rem;
-    color: var(--main-black);
-  }
-  
-  h5,
-  h6{
-    font-family: Poppins !important;
-    font-size: 2rem;
-    color: var(--main-black);
-  }
-  
-  p {
-    font-family: Valera !important;
-    font-size: 1.8rem;
-    color: var(--main-black);
-  }
-  
-  i{
-    font-size: 2rem;
-    margin-right: 5px;
-    color: var(--main-black);
-  }
-  
-  
-  .link{ /*  ESTILOS DE ETIQUETA LINK*/
-    color: var(--main-black);
-    text-decoration: none;
-  }
-  
-  .link:hover{
-    text-decoration: underline;
-  }
-  
-  
-  /*scrollbar*/
-  ::-webkit-scrollbar{
-    width: 5px;
-    }
-    
-    ::-webkit-scrollbar-track{
-    border: 5px solid #fff;
-    }
-    
-    ::-webkit-scrollbar-thumb{
-    background: var(--secondary-red);
-  }
-  
-  
-  /* ESTILOS HEADER*/
-  header {
-    background-color: var(--secondary-orange);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 8rem;
-  }
-  
-  #logo {
-    width: 25rem;
-    height: auto;
-    margin-left: 2rem;
-  }
-  
-  #labelInput {
-    display: block;
-    background-color: #fff;
-    width: 25rem;
-    height: 3.5rem;
-    border-radius: 8px;
-    display: flex;
-    gap: 1rem;
-    padding: 2px;
-  }
-  
-  #labelInput button {
-    border: none;
-    background-color: transparent;
-    margin: 0 0 0 5px;
-    cursor: pointer;
-  }
-  
-  #searchInput {
-    border: none;
-    width: 100%;
-    height: 100%;
-    outline: none;
-  }
-  
-  #user {
-    margin: 0 2rem 0 0;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #user img {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    padding: 0.3rem;
-    border-radius: 50%;
-  }
-  
-  #log-links{
-    font-size: 1.8rem;
-    font-weight: 600;
-    width: 25rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  #close{ /*ESTILO PARA ICONO NOTIS*/
-    cursor:pointer;
-  }
-  
-  .notis{
-    position: absolute;
-    width: 30rem;
-    height: 0px;
-    right: 6%;
-    top: 50%;
-    overflow: hidden;
-    border-radius: 8px 10px;
-    background-color: aliceblue;
-    transition: height .5s ease;
-  }
-  
-  .notis.open{ 
-    height: 40rem;
-  }
-  
-  #notis-info{
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  
-  #notis-info h4{
-    width: 100%;
-    border-bottom: 2px solid var(--main-black);
-    margin-bottom: 2rem;
-  }
-  
-  #notis-nav{
-    list-style: none;
-  }
-  
-  #notis-nav li{
-    width: 100%;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* ESTILOS ASIDE */
-  aside {
-    position: sticky;
-    top: 8rem;
-    left: 0;
-    background-color: #fff;
-    height: 91.3vh;
-    width: 10.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  #home{
-    margin: 2rem 0 0 0;
-    width: 100%;
-    height: auto;
-  }
-  
-  #books-nav {
-    list-style: none;
-    width: 100%;
-    height: auto;
-  }
-  
-  #books-nav li {
-    font-size: 1.8rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 0 0 1.3rem 0;
-    cursor: pointer;
-  }
-  
-  #books-nav li > span{
-    position: absolute;
-    left: 90%;
-    font-style: bold;
-    font-weight: 600;
-    transition: transform .3s ease-in-out;
-  }
-  
-  #books-nav li:hover > span{
-    transform: rotate(90deg);
-  }
-  
-  #settings{
-    border-top: 2px solid #ddd;
-    padding: 0.5rem 0 0 0;
-    font-size: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-  }
-  
-  /*ESTILOS FOOTER*/ 
-  footer{
-    background-color: var(--secondary-orange);
-    text-align: center;
-  }
-  
-
-body{
-    background-color: #ffa474;
+  --main-black: #010101;
+  --main-red: #7f0000;
+  --secondary-red: #bd0003;
+  --ternary-red: #ff0000;
+  --main-orange: #ff6c3e;
+  --secondary-orange: #ffa372;
 }
 
-#title-ctn{
-    display: inline-block;
-    position: relative;
-    letter-spacing: 1.5px;
-    font-size: 30px;
-    padding-bottom: 50px;
-    cursor: default;
-    left: 250px;
-    top: 40px;
+@font-face {
+  font-family: Valera;
+  src: url(../Fonts/VarelaRound-Regular.ttf);
 }
 
-
-
-#Ovalo_1{
-    position: absolute;
-    left: -50px;
-    top: -70px;
-    width: 650px;
-    opacity: 0.5;
-    z-index: -10;
-
+@font-face {
+  font-family: Poppins;
+  src: url(../Fonts/Poppins-Regular.ttf);
 }
 
-#form-ctn{
-
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 30px;
-    width: 900px;
-    height: 480px;
-    margin: auto;
-    margin-top: 10px;
-    padding-bottom: 20px;
-    z-index: -1;
-
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#text-ctn{
-    position: relative;
-    display: inline-block;
-    /* border:  1px solid black; */
-    font-weight: bold;
-    padding: 50px;
-    width: 300px;
-    opacity: 1;
-    font-size: 18px;
+html {
+  font-size: 62.5%;
 }
 
-#text-ctn label{
-    display: inline-block;
-    position: relative;
-    padding-top: 10px;
+body {
+  background-color: #ddd;
 }
 
-
-
-#text-ctn input{
-    width: 300px;
-    border-radius: 13px;
-    border: 1px;
-    height: 27px;
-    padding-left: 7px;
+h1 {
+  font-family: Serif, sans-serif !important;
+  font-size: 3.6rem !important;
+  color: var(--main-black);
 }
 
-
-
-#img-ctn{
-    position: absolute;
-    display: inline-block;
-    padding: 40px;
-    margin-top: 40px;
-    margin-left: 190px;
-    padding-bottom: 100px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+h2 {
+  font-family: Poppins !important;
+  font-size: 3.4rem;
+  color: var(--main-black);
 }
 
-#img-ctn img[grande]{
+h3 {
+  font-family: Poppins !important;
+  font-size: 3rem;
+  color: var(--main-black);
+}
+
+h4 {
+  font-family: Poppins !important;
+  font-size: 2.4rem;
+  color: var(--main-black);
+}
+
+h5,
+h6 {
+  font-family: Poppins !important;
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+p {
+  font-family: Valera !important;
+  font-size: 1.8rem;
+  color: var(--main-black);
+}
+
+i {
+  font-size: 2rem;
+  margin-right: 5px;
+  color: var(--main-black);
+}
+
+.link {
+  /*  ESTILOS DE ETIQUETA LINK*/
+  color: var(--main-black);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border: 5px solid #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-red);
+}
+
+/* ESTILOS HEADER*/
+header {
+  background-color: var(--secondary-orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 8rem;
+}
+
+#logo {
+  width: 25rem;
+  height: auto;
+  margin-left: 2rem;
+}
+
+#labelInput {
+  display: block;
+  background-color: #fff;
+  width: 25rem;
+  height: 3.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  padding: 2px;
+}
+
+#labelInput button {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
+
+#searchInput {
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+#user {
+  margin: 0 2rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user img {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+#log-links {
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#close {
+  /*ESTILO PARA ICONO NOTIS*/
+  cursor: pointer;
+}
+
+.notis {
+  position: absolute;
+  width: 30rem;
+  height: 0px;
+  right: 6%;
+  top: 50%;
+  overflow: hidden;
+  border-radius: 8px 10px;
+  background-color: aliceblue;
+  transition: height 0.5s ease;
+}
+
+.notis.open {
+  height: 40rem;
+}
+
+#notis-info {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#notis-info h4 {
+  width: 100%;
+  border-bottom: 2px solid var(--main-black);
+  margin-bottom: 2rem;
+}
+
+#notis-nav {
+  list-style: none;
+}
+
+#notis-nav li {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ESTILOS ASIDE */
+aside {
+  position: sticky;
+  top: 8rem;
+  left: 0;
+  background-color: #fff;
+  height: 91.3vh;
+  width: 10.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+#home {
+  margin: 2rem 0 0 0;
+  width: 100%;
+  height: auto;
+}
+
+#books-nav {
+  list-style: none;
+  width: 100%;
+  height: auto;
+}
+
+#books-nav li {
+  font-size: 1.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 0 1.3rem 0;
+  cursor: pointer;
+}
+
+#books-nav li > span {
+  position: absolute;
+  left: 90%;
+  font-style: bold;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+#books-nav li:hover > span {
+  transform: rotate(90deg);
+}
+
+#settings {
+  border-top: 2px solid #ddd;
+  padding: 0.5rem 0 0 0;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/*ESTILOS FOOTER*/
+footer {
+  background-color: var(--secondary-orange);
+  text-align: center;
+}
+
+body {
+  background-color: #ffa474;
+}
+
+#title-ctn {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1.5px;
+  font-size: 30px;
+  padding-bottom: 50px;
+  cursor: default;
+  left: 250px;
+  top: 40px;
+}
+
+#Ovalo_1 {
+  position: absolute;
+  left: -50px;
+  top: -70px;
+  width: 650px;
+  opacity: 0.5;
+  z-index: -10;
+}
+
+#form-ctn {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  width: 900px;
+  height: 480px;
+  margin: auto;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  z-index: -1;
+}
+
+#text-ctn {
+  position: relative;
+  display: inline-block;
+  /* border:  1px solid black; */
+  font-weight: bold;
+  padding: 50px;
+  width: 300px;
+  opacity: 1;
+  font-size: 18px;
+}
+
+#text-ctn label {
+  display: inline-block;
+  position: relative;
+  padding-top: 10px;
+}
+
+#text-ctn input {
+  width: 300px;
+  border-radius: 13px;
+  border: 1px;
+  height: 27px;
+  padding-left: 7px;
+}
+
+#img-ctn {
+  position: absolute;
+  display: inline-block;
+  padding: 40px;
+  margin-top: 40px;
+  margin-left: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#img-ctn img[grande] {
   padding: 10px;
-width: 100px;
-height: 100px;
-
+  width: 100px;
+  height: 100px;
 }
 
-div img[grande]{
+div img[grande] {
   margin: 10px;
   width: 100px;
   height: 50px;
@@ -387,109 +374,100 @@ div img[grande]{
   background-color: white;
 }
 
-#img-ctn h5[primo]{
-    color: #F25019;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: justify;
-    font-size: 20px;
+#img-ctn h5[primo] {
+  color: #f25019;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 20px;
 }
 
-.img_chiqitas{
+.img_chiqitas {
   padding: 10px;
-    width: 50px;
-    height: 50px;
-    padding-left: 10px;
-    margin: 10px;
-    border-radius: 100px;
-    background-color: white;
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+  margin: 10px;
+  border-radius: 100px;
+  background-color: white;
 }
 
-
-
-#img-ctn button[Upload]{
-    position: relative;
-    width: 160px;
-    margin-bottom: 10px;
+#img-ctn button[Upload] {
+  position: relative;
+  width: 160px;
+  margin-bottom: 10px;
 }
 
-#img-ctn button[Upload] img{
-    position: relative;
-    top: 3px;
+#img-ctn button[Upload] img {
+  position: relative;
+  top: 3px;
 }
 
-div form button img{
-    padding-top: 2px;
-    padding-left: 3px;
-    width: 20px;
+div form button img {
+  padding-top: 2px;
+  padding-left: 3px;
+  width: 20px;
 }
 
-#aparte{
-    width: 200px;
-    position: relative;
-    top: 25px;
-    display: inline-block;
-    color: gray;
-    font-weight: normal;
-    font-size: 12px;
-
+#aparte {
+  width: 200px;
+  position: relative;
+  top: 25px;
+  display: inline-block;
+  color: gray;
+  font-weight: normal;
+  font-size: 12px;
 }
 
-#aparte button{
-    margin-left: 15px;
-    background-color: #ffff;
-    width: 100px;
-    
+#aparte button {
+  margin-left: 15px;
+  background-color: #ffff;
+  width: 100px;
 }
 
-#aparte button img{
-    position: relative;
-    left: -1px;
-    top: 4px;
-    width: 25px;
-    
+#aparte button img {
+  position: relative;
+  left: -1px;
+  top: 4px;
+  width: 25px;
 }
 
-
-div form button{
-    
-    background-color: #800404;
-    color: #ffff;
-    border: none;
-    border-radius: 15px;
-    width: 300px;
+div form button {
+  background-color: #800404;
+  color: #ffff;
+  border: none;
+  border-radius: 15px;
+  width: 300px;
 }
 
-#boton{
-    position: relative;
-    margin: auto;
-    background-color: #800404;
-    color: #ffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
-    width: 300px;
-    top: 25px;
-    height: 30px;
-    left: 0px;
+#boton {
+  position: relative;
+  margin: auto;
+  background-color: #800404;
+  color: #ffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  width: 300px;
+  top: 25px;
+  height: 30px;
+  left: 0px;
 }
 
-#boton:hover{
-        transform: scale(1.05);
-        transition: transform 0.5s;
+#boton:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s;
 }
 
-#boton{
-    transition: transform 0.5s;
-
+#boton {
+  transition: transform 0.5s;
 }
 
-
-#Ovalo_2{
-    position: absolute;
-    left: 900px;
-    top: 320px;
-    width: 400px;
-    opacity: 0.5;
-    z-index: -20;
+#Ovalo_2 {
+  position: absolute;
+  left: 900px;
+  top: 320px;
+  width: 400px;
+  opacity: 0.5;
+  z-index: -20;
 }
