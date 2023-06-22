@@ -155,7 +155,7 @@ header {
     cursor: pointer;
   }
   
-  #books-nav li > span{
+#books-nav li > span{
     position: absolute;
     left: 90%;
     font-style: bold;
@@ -163,11 +163,11 @@ header {
     transition: transform .3s ease-in-out;
   }
   
-  #books-nav li:hover > span{
+#books-nav li:hover > span{
     transform: rotate(90deg);
   }
   
-  #settings{
+#settings{
     border-top: 2px solid #ddd;
     padding: 0.5rem 0 0 0;
     font-size: 1.8rem;
@@ -176,16 +176,16 @@ header {
     width: 100%;
     gap: 0.5rem;
   }
-  main {
+main {
     display: flex;
     gap: 2rem;
   }
   
-  #content {
-    padding: 2rem 0 0 0;
+#content {
+    padding: 2rem 0 0 2.5rem;
   }  
-  #general_conteiner{
-  display: flex;
+#general_conteiner{
+    display: flex;
 }
 #post_desc textarea{
   padding: 2.5rem;
@@ -212,7 +212,7 @@ header {
   background-color:rgb(255, 255, 255);
   border-radius: 20px;
   padding: 1rem;
-  margin: 0 3.5rem 0 3.5rem;
+  margin: 0 5rem 0 5rem;
   width: 35%;
   align-items: center;
   
