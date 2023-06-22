@@ -17,8 +17,8 @@
 
         <div id="mother-ctn">
             <div id="title-ctn">
-                <h2>Virtual Books</h2>
-                <p>Register</p>
+                <h1>Virtual Books</h1>
+                <h7>Register</h7>
             </div>
 
             <img id="Ovalo_1" src="../src/login.png">

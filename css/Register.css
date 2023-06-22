@@ -1,21 +1,9 @@
 @import url(../css/Rules.css);
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-
-body{
-    background-color: #ffa474;
-}
-
 #title-ctn{
     display: inline-block;
     position: relative;
     letter-spacing: 1.5px;
-    font-size: 30px;
     padding-bottom: 50px;
     cursor: default;
     left: 250px;
@@ -57,7 +45,7 @@ body{
     padding: 50px;
     width: 300px;
     opacity: 1;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #text-ctn label{
