@@ -14,6 +14,7 @@
     <title>Document</title>
 </head>
     <body>
+
         <div id="mother-ctn">
             <div id="title-ctn">
                 <h2>Virtual Books</h2>
@@ -26,15 +27,15 @@
                     <form action=""> 
                         <div id="text-ctn">
                             <label for="">First Name</label>
-                            <input type="text">
+                            <input type="text" placeholder="Narendra Singh">
                             <label for="">Last Name</label>
-                            <input type="text">
+                            <input type="text" placeholder="Narendra Singh" >
                             <label for="">E-mail</label>
-                            <input type="email">
+                            <input type="email" placeholder="Username@gmail.com">
                             <label for="">Password</label>
-                            <input type="password">
+                            <input type="password" placeholder="Username@gmail.com">
                             <label for="">Confirm Password</label>
-                            <input type="password">
+                            <input type="password" placeholder="Password">
 
                             <div id="aparte">
                                 <p>Or continue with</p>
@@ -91,5 +92,6 @@
 
 
         </div>
+
     </body>
 </html>
