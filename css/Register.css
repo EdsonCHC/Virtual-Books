@@ -128,7 +128,7 @@ div img[grande]{
     font-weight: bold;
     margin-top: 20px;
     text-align: justify;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .img_chiqitas{
@@ -146,7 +146,7 @@ div img[grande]{
 #img-ctn button[Upload]{
     position: relative;
     width: 160px;
-    height: 50px;
+    height: 37px;
     margin-bottom: 10px;
 }
 
@@ -208,7 +208,8 @@ div form button{
     border-radius: 30px;
     width: 400px;
     height: 50px;
-    left: 0px;
+    left: -100px;
+    top: 30px;
 }
 
 #boton:hover{
@@ -236,13 +237,13 @@ div[id="flex-lines"] {
     flex-direction: row;
     justify-content: space-evenly;
     position: absolute;
-    top: 34.5rem;
-    left: 65rem;
+    top: 42rem;
+    left: 98rem;
     z-index: 10000;
 }
 
 div[id="line"] {
-    width: 20rem;
+    width: 35rem;
     border: 1px solid var(--main-orange);
 }
 
