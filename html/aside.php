@@ -23,7 +23,4 @@
     </div>
 </aside>
 
-<script
-      src="https://kit.fontawesome.com/7bcd40cb83.js"
-      crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Books</title>
     <link rel="stylesheet" href="../css/Rules.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/myBooks.css" />
 </head>
 
@@ -15,9 +15,9 @@
     require_once("../html/header.php");
     ?>
     <main>
-    <?php
-      require_once("../html/aside.php");
-    ?>
+        <?php
+        require_once("../html/aside.php");
+        ?>
         <div id="content">
             <h2>Mis Libros</h2>
             <div class="categoria">
@@ -31,7 +31,7 @@
         </div>
     </main>
     <?php
-      require_once("../html/footer.php");
+    require_once("../html/footer.php");
     ?>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <script>

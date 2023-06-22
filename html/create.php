@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="../css/Rules.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/create.css" />
 </head>
 
@@ -23,7 +23,7 @@
             <div id="general_conteiner">
                 <div id="first_conteiner">
                     <div id="post_desc">
-                        <textarea name="texto" rows="19" cols="65" placeholder="¿De qué quieres hablar?"></textarea>
+                        <textarea name="texto" rows="26" cols="100" placeholder="¿De qué quieres hablar?"></textarea>
                     </div>
                     <div id="post_enter">
                         <input type="reset" value="Postear">

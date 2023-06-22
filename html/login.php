@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <link rel="stylesheet" href="../css/Rules.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/login.css" />
 </head>
 
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="recuperate_primary_part">
-                        <a href="#">Register for Free</a>
+                        <a href="#"><p>Register for Free</p></a>
                     </div>
                     <div class="submit_primary_part">
                         <input type="submit" value="Sign in">

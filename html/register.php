@@ -74,23 +74,6 @@
             <img id="Ovalo_2" src="../src/login.png">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
     </body>

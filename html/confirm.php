@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmar</title>
     <link rel="stylesheet" href="../css/Rules.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/confirm.css" />
 </head>
 
@@ -25,7 +25,7 @@
                         <label id="confirm-code">Confirmar Codigo</label>
                         <input id="number-code" type="text" placeholder="******" required>
                         <div id="flex-buttoms">
-                            <button id="buttom" type="button">Regresar</button>
+                            <a href="*"><button id="buttom" type="button">Regresar</button></a>
                             <button id="buttom" type="submit">Registrar</button>
                         </div>
                     </div>
