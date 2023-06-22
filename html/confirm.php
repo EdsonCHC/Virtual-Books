@@ -25,7 +25,7 @@
                         <label id="confirm-code">Confirmar Codigo</label>
                         <input id="number-code" type="text" placeholder="******" required>
                         <div id="flex-buttoms">
-                            <button id="buttom" type="button">Regresar</button>
+                            <a href="*"><button id="buttom" type="button">Regresar</button></a>
                             <button id="buttom" type="submit">Registrar</button>
                         </div>
                     </div>

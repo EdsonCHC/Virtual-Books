@@ -126,4 +126,5 @@ button[id="buttom"] {
     background: var(--main-red);
     border-radius: 2rem;
     border: none;
+    cursor: pointer;
 }
