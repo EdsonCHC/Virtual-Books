@@ -1,0 +1,15 @@
+@import url(../css/Rules.css);
+
+div[id="content"]{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    top: 50rem;
+    margin: 3rem 0;
+}
+
+embed[id="book"]{
+    width: 150rem;
+    height: 80rem;
+}
