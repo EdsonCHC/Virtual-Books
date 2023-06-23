@@ -10,8 +10,9 @@ body{
     letter-spacing: 1.5px;
     padding-bottom: 50px;
     cursor: default;
-    left: 275px;
+    left: 325px;
     top: 40px;
+
     
 }
 
@@ -20,7 +21,6 @@ body{
     position: relative;
     letter-spacing: 1.5px;
     cursor: default;
-    font-size: 50px;
 
     
 }
@@ -56,7 +56,6 @@ body{
 }
 
 #text-ctn{
-    border: 1px solid black;
     position: relative;
     display: inline-block;
     left: 40px;
@@ -89,8 +88,8 @@ body{
 
 #eye{
     position: absolute;
-    left: 315px;
-    top: 1007px;
+    left: 490px;
+    top: 520px;
 }
 
 
@@ -150,6 +149,8 @@ div img[grande]{
     margin-bottom: 10px;
 }
 
+
+
 #img-ctn button[Upload] img{
     position: relative;
     top: 3px;
@@ -162,21 +163,25 @@ div form button img{
 }
 
 #aparte h6{
-    width: 200px;
+    width: 400px;
     position: relative;
-    top: 25px;
+    top: 10px;
     display: inline-block;
     color: gray;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 20px;
 
 }
 
 #aparte button{
+    position: relative;
+
     margin-left: 12px;
     margin-top: 25px;
     background-color: #ffff;
-    width: 75px;
+    width: 150px;
+    height: 50px;
+    border-radius: 45px;
     
 }
 
@@ -184,7 +189,7 @@ div form button img{
     position: relative;
     left: -1px;
     top: 2px;
-    width: 25px;
+    width: 30px;
     
 }
 
@@ -203,13 +208,15 @@ div form button{
     margin: auto;
     background-color: #800404;
     color: #ffff;
-    font-weight: bold;
     border: none;
     border-radius: 30px;
     width: 400px;
     height: 50px;
     left: -100px;
-    top: 30px;
+}
+
+#boton h6{
+    color: #ffff;
 }
 
 #boton:hover{
@@ -225,9 +232,9 @@ div form button{
 
 #Ovalo_2{
     position: absolute;
-    left: 900px;
-    top: 320px;
-    width: 400px;
+    left: 1400px;
+    top: 450px;
+    width: 550px;
     opacity: 0.5;
     z-index: -20;
 }

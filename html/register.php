@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/Register.css">
-    <title>Document</title>
+    <title>Register</title>
 </head>
     <body>
 
@@ -44,7 +44,7 @@
                             <label for=""><h6>Confirm Password </h6></label>
                             <input type="password" placeholder="Password" >
                             <div id="eye"> <!-- boton-->
-                            <img src="../src/img/icons8-eye-96.png" width="21px">
+                            <img src="../src/img/icons8-eye-96.png" width="32px">
                             </div>
                             <div id="aparte">
                                 <h6>Or continue with</h6>
@@ -65,7 +65,7 @@
                         </div>
 
                     
-                        <button id="boton" type="">Register</button>
+                        <button id="boton" type=""><h6>Register</h6></button>
 
 
                        
