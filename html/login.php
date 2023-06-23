@@ -16,21 +16,10 @@
 <body>
     <div class="img_part">
         <img src="../src/login.png" class="img1_part">
-
-
         <img src="../src/login.png" class="img2_part">
-
-
-
-
         <img src="../src/login.png" class="img3_part">
     </div>
-
-
-    </div>
     <div class="general_part">
-
-
         <div class="primary_part">
             <form>
                 <div class="space_primary_part">
@@ -60,10 +49,6 @@
                     <div class="submit_primary_part">
                         <input type="submit" value="Sign in">
                     </div>
-
-
-
-
                 </div>
                 <div class="google_space_primary_part">
                     <div class="google_primary_part">
@@ -77,30 +62,7 @@
             </form>
         </div>
         <div class="secundary_part">
-
-
         </div>
-
-
     </div>
-
-
-
-
-
-
-
-
 </body>
-
-
-</html>
-
-
-
-
-
-
-</body>
-
 </html>
