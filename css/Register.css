@@ -90,7 +90,7 @@ body{
 #eye{
     position: absolute;
     left: 315px;
-    top: 327px;
+    top: 1007px;
 }
 
 
@@ -173,8 +173,8 @@ div form button img{
 }
 
 #aparte button{
-    margin-left: 122px;
-    margin-top: 205px;
+    margin-left: 12px;
+    margin-top: 25px;
     background-color: #ffff;
     width: 75px;
     
