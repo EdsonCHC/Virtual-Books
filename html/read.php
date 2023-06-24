@@ -15,12 +15,15 @@
     require_once("../html/header.php");
     ?>
     <main>
+        <?php
+        require_once("../html/aside.php");
+        ?>
         <!-- Aqui van los libros -->
-        <!-- 
         <div id="content">
-            <embed id="book" src="../src/Metafisica_Aristoteles.pdf" type="application/pdf" />
+            <object id="book" data="../src/Metafisica_Aristoteles.pdf#toolbar=0&view=fitB" type="application/pdf">
+                
+            </object>
         </div>
-        -->
     </main>
     <?php
     require_once("../html/footer.php");

@@ -11,13 +11,13 @@
     </label>
   </form>
   <div id="log-links">
-    <a href="" class="link">Registrase</a>
-    <a href="" class="link">Iniciar Sesión</a>
+    <a href="../html/register.php" class="link">Registrase</a>
+    <a href="../html/login.php" class="link">Iniciar Sesión</a>
   </div>
   <div id="user">
-    <i class="fa-regular fa-message" onclick="toggleMenu()"
-      id="close"><!--<i class="fa-regular fa-message-exclamation"></i>  --></i>
-    <a href=""><img src="../src/user.png" alt="user-icon" /></a>
+    <i class="fa-regular fa-bell" onclick="toggleMenu()"
+      id="close"></i>
+    <a href="../html/account.php"><img src="../src/user.png" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>
@@ -25,7 +25,7 @@
         </h4>
         <nav id="notis-nav">
           <li><a href="" class="link">
-              <h5>Se ha publicado un nuevo libro en la seccion deportes</h5>
+              <h5>Se ha publicado un nuevo libro en la sección deportes</h5>
             </a></li>
           <li><a href="" class="link">
               <h5>Lorem.</h5>

@@ -2,17 +2,17 @@
     <div id="home">
         <nav id="books-nav">
             <li><i class="fa-solid fa-house"></i>
-                <a href="" class="link">Inicio</a>
+                <a href="../html/index.php" class="link">Inicio</a>
                 <span> ></span>
             </li>
-            <li>
+            <!-- <li>
                 <i class="fa-solid fa-book-bookmark"></i>
-                <a href="" class="link">Libros</a>
-                <span> > </span>
-            </li>
+                <a href="../html/" class="link">Libros</a>
+                <span> > </span> FALTAAAAAAAAA XD
+            </li> -->
             <li>
                 <i class="fa-solid fa-book-open-reader"></i>
-                <a href="" class="link">Area de lectura</a>
+                <a href="../html/myBooks.php" class="link">Area de lectura</a>
                 <span> ></span>
             </li>
         </nav>
