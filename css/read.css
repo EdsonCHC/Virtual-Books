@@ -1,15 +1,18 @@
 @import url(../css/Rules.css);
 
-div[id="content"]{
+main{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    top: 50rem;
-    margin: 3rem 0;
+    gap: 1rem;
 }
 
-embed[id="book"]{
+div[id="content"]{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+object[id="book"]{
     width: 150rem;
     height: 80rem;
 }
