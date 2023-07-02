@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/login.css" />
@@ -64,5 +64,6 @@
         <div class="secundary_part">
         </div>
     </div>
+    <script src="https://accounts.google.com/gsi/client" async></script>
 </body>
 </html>

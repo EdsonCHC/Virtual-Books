@@ -4,7 +4,9 @@
 
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
 }
 
 
@@ -25,7 +27,7 @@ body{
 
 
 form{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
 .space_primary_part{
     padding-left: 30%;
@@ -96,7 +98,7 @@ form{
 
 }
 .google_primary_part button{
-    background: #ddd;
+    background: #fff;
     height: 45px;
     width: 7rem;
     cursor: pointer;
