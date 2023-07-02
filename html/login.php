@@ -21,7 +21,7 @@
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form>
+            <form ,method="POST">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
                         <h1>Virtual Books</h1>

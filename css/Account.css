@@ -1,111 +1,93 @@
 @import url(../css/Rules.css);
 
-
-
-
-
-
-
-#paleta-der{
-      position: absolute;
-    width: 1925px;
-    left: 225px;
-    height: 950px;
-    top: 100px;
+main {
+  display: flex;
+  gap: 3rem;
 }
 
-
-
-#part1{
-    margin: auto;
-    height: 100px;
-    width: 1800px;
-    border-bottom: 1px solid gray;
+#paleta-der {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-#part1 p{
-    padding-top: 70px;
+#part1 {
+  height: 100px;
+  width: 95%;
+  border-bottom: 1px solid gray;
 }
 
-#part2{
-    position: relative;
-    margin: auto;
-    height: 250px;
-    width: 1800px;
-    border-bottom: 1px solid gray;
+#part1 p {
+  padding-top: 70px;
 }
 
-#part2 p{
+#part2 {
+  position: relative;
+  height: 250px;
+  width: 95%;
+  border-bottom: 1px solid gray;
+}
+
+#part2 p {
   position: absolute;
   display: inline-block;
   left: 2px;
   top: 223px;
 }
 
-
-#form-ctn{
-    width: 590px;
-    height: 200px;
-    margin-top: 50px;
-
+#form-ctn {
+  width: 590px;
+  height: 200px;
+  margin-top: 50px;
 }
 
-#text-ctn{
-    position: absolute;
-    display: inline-block;
-    top: 0px;
-    margin-left: 350px;
-    padding: 10px 50px 50px 50px;
-    width: 330px;
- 
-
+#text-ctn {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  margin-left: 350px;
+  padding: 10px 50px 50px 50px;
+  width: 330px;
 }
 
-#text-ctn h6{
+#text-ctn h6 {
   position: relative;
   display: inline-block;
   font-size: 25px;
 }
 
-
-
-#text-ctn input{
-    width: 210px;
-    height: 35px;
-    border-radius: 13px;
-    border: 1px;
-    padding-left: 7px;
-    margin-bottom: 20px;
-    font-size: 20px;
-
+#text-ctn input {
+  width: 210px;
+  height: 35px;
+  border-radius: 13px;
+  border: 1px;
+  padding-left: 7px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-
-
-#img-ctn{
-    position: absolute;
-    display: inline-block;
-    padding: 10px 50px 50px 50px;
-    left: 800px;
-    top: 0px;
-    padding-bottom: 100px;
-    text-align: center;
+#img-ctn {
+  position: absolute;
+  display: inline-block;
+  padding: 10px 50px 50px 50px;
+  left: 800px;
+  top: 0px;
+  padding-bottom: 100px;
+  text-align: center;
 }
 
-#img-ctn h6{
-
+#img-ctn h6 {
   font-size: 25px;
   padding-bottom: 10px;
 }
 
-#img-ctn img[grande]{
+#img-ctn img[grande] {
   padding: 10px;
-width: 110px;
-height: 110px;
-
+  width: 110px;
+  height: 110px;
 }
 
-div img[grande]{
+div img[grande] {
   margin: 7px;
   width: 150px;
   height: 100px;
@@ -113,124 +95,107 @@ div img[grande]{
   background-color: white;
 }
 
-
-
-#img-ctn button[Upload]{
-    position: relative;
-    width: 180px;
-    height: 35px;
-    margin-top: 10px;
-    margin-left: 40px;
-    font-weight: bold;
-    font-size: 20px;
+#img-ctn button[Upload] {
+  position: relative;
+  width: 180px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-#img-ctn button[Upload] img{
-    position: relative;
-    top: 3px;
+#img-ctn button[Upload] img {
+  position: relative;
+  top: 3px;
 }
 
-div form button img{
-    padding-top: 2px;
-    padding-left: 3px;
-    width: 20px;
+div form button img {
+  padding-top: 2px;
+  padding-left: 3px;
+  width: 20px;
 }
 
-div form button{
-    
-    background-color: #800404;
-    color: #ffff;
-    border: none;
-    border-radius: 15px;
-    width: 300px;
+div form button {
+  background-color: #800404;
+  color: #ffff;
+  border: none;
+  border-radius: 15px;
+  width: 300px;
 }
 
-#boton{
-    position: relative;
-    margin: auto;
-    background-color: #800404;
-    color: #ffff;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    border-radius: 15px;
-    width: 170px;
-    height: 35px;
+#boton {
+  position: relative;
+  margin: auto;
+  background-color: #800404;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  width: 170px;
+  height: 35px;
 }
 
-
-
-
-#boton1{
-    position: relative;
-    background-color: #FF6C3E;
-    border-radius: 100px;
-    width: 35px;
-    height: 37px;
-
-
+#boton1 {
+  position: relative;
+  background-color: #ff6c3e;
+  border-radius: 100px;
+  width: 35px;
+  height: 37px;
 }
 
-
-
-#part3{
-    position: absolute;
-    display: inline-block;
-    top: 230px;
-    left: 200px;
-    height: 227px;
-    width: 350px;
-    z-index: 1000;
+#part3 {
+  position: absolute;
+  display: inline-block;
+  top: 230px;
+  left: 200px;
+  height: 227px;
+  width: 350px;
+  z-index: 1000;
 }
 
-#text-ctn1{
-    position: absolute;
-    display: inline-block;
-    top: 200px;
-    margin-left: 140px;
-    padding: 10px 50px 50px 50px;
-    width: 330px;
- 
-
+#text-ctn1 {
+  position: absolute;
+  display: inline-block;
+  top: 200px;
+  margin-left: 140px;
+  padding: 10px 50px 50px 50px;
+  width: 330px;
 }
 
-#text-ctn1 h6{
+#text-ctn1 h6 {
   position: relative;
   display: inline-block;
   font-size: 25px;
 }
 
-
-
-#text-ctn1 input{
-    width: 210px;
-    height: 35px;
-    border-radius: 13px;
-    border: 1px;
-    padding-left: 7px;
-    margin-bottom: 20px;
-    font-size: 20px;
+#text-ctn1 input {
+  width: 210px;
+  height: 35px;
+  border-radius: 13px;
+  border: 1px;
+  padding-left: 7px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-
-
-#contenido3{
-    position: absolute;
-    left: 70px;
-    width: 250px;
-    height: 250px;
+#contenido3 {
+  position: absolute;
+  left: 70px;
+  width: 250px;
+  height: 250px;
 }
 
-#boton2{
-    position: relative;
-    margin: auto;
-    background-color: #800404;
-    color: #ffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
-    width: 180px;
-    height: 36px;
-    font-size: 18px;
-
-} 
+#boton2 {
+  position: relative;
+  margin: auto;
+  background-color: #800404;
+  color: #ffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  width: 180px;
+  height: 36px;
+  font-size: 18px;
+}
