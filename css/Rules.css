@@ -7,6 +7,7 @@
   --ternary-red: #ff0000;
   --main-orange: #ff6c3e;
   --secondary-orange: #ffa372;
+  --main-blue: #00A0FB;
 }
 
 @font-face {
@@ -54,14 +55,14 @@ h3 {
   color: var(--main-black);
 }
 
-h4{
+h4 {
   font-family: Poppins !important;
   font-size: 2.4rem;
   color: var(--main-black);
 }
 
 h5,
-h6{
+h6 {
   font-family: Poppins !important;
   font-size: 2rem;
   color: var(--main-black);
@@ -73,33 +74,34 @@ p {
   color: var(--main-black);
 }
 
-i{
+i {
   font-size: 2rem;
   margin-right: 5px;
   color: var(--main-black);
 }
 
 
-.link{ /*  ESTILOS DE ETIQUETA LINK*/
+.link {
+  /*  ESTILOS DE ETIQUETA LINK*/
   color: var(--main-black);
   text-decoration: none;
 }
 
-.link:hover{
+.link:hover {
   text-decoration: underline;
 }
 
 
 /*scrollbar*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
-  }
-  
-  ::-webkit-scrollbar-track{
+}
+
+::-webkit-scrollbar-track {
   border: 5px solid #fff;
-  }
-  
-  ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
   background: var(--secondary-red);
 }
 
@@ -159,12 +161,12 @@ header {
 #user img {
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background: var(--main-white);
   padding: 0.3rem;
   border-radius: 50%;
 }
 
-#log-links{
+#log-links {
   font-size: 1.8rem;
   font-weight: 600;
   width: 25rem;
@@ -174,11 +176,12 @@ header {
   justify-content: space-between;
 }
 
-#close{ /*ESTILO PARA ICONO NOTIS*/
-  cursor:pointer;
+#close {
+  /*ESTILO PARA ICONO NOTIS*/
+  cursor: pointer;
 }
 
-.notis{
+.notis {
   position: absolute;
   width: 30rem;
   height: 0px;
@@ -190,11 +193,11 @@ header {
   transition: height .5s ease;
 }
 
-.notis.open{ 
+.notis.open {
   height: 40rem;
 }
 
-#notis-info{
+#notis-info {
   padding: 1rem;
   width: 100%;
   height: 100%;
@@ -205,17 +208,17 @@ header {
   overflow-y: scroll;
 }
 
-#notis-info h4{
+#notis-info h4 {
   width: 100%;
   border-bottom: 2px solid var(--main-black);
   margin-bottom: 2rem;
 }
 
-#notis-nav{
+#notis-nav {
   list-style: none;
 }
 
-#notis-nav li{
+#notis-nav li {
   width: 100%;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ddd;
@@ -234,9 +237,12 @@ aside {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  font-family: Valera !important;
+  font-size: 1.8rem;
+  color: var(--main-black);
 }
 
-#home{
+#home {
   margin: 2rem 0 0 0;
   width: 100%;
   height: auto;
@@ -256,9 +262,10 @@ aside {
   position: relative;
   margin: 0 0 1.3rem 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
-#books-nav li > span{
+#books-nav li>span {
   position: absolute;
   left: 90%;
   font-style: bold;
@@ -266,11 +273,11 @@ aside {
   transition: transform .3s ease-in-out;
 }
 
-#books-nav li:hover > span{
+#books-nav li:hover>span {
   transform: rotate(90deg);
 }
 
-#settings{
+#settings {
   border-top: 2px solid #ddd;
   padding: 0.5rem 0 0 0;
   font-size: 1.8rem;
@@ -280,9 +287,49 @@ aside {
   gap: 0.5rem;
 }
 
-/*ESTILOS FOOTER*/ 
-footer{
+/*ESTILOS ASIDE ADMIN*/
+
+.admin {
+  position: sticky;
+  top: 8rem;
+  left: 0;
+  background: var(--main-blue);
+  height: 96.9vh;
+  width: 10.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: Valera !important;
+  font-size: 1.8rem;
+  color: var(--main-black);
+}
+
+.title_aside {
+  border-bottom: 2px solid var(--main-black);
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin-bottom: 3rem;
+  font-size: 2.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+#settings_admin {
+  border-top: 2px solid var(--main-black);
+  padding: 0.5rem 0 0 0;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/*ESTILOS FOOTER*/
+footer {
   background-color: var(--secondary-orange);
   text-align: center;
 }
-

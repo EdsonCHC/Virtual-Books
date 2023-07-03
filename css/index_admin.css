@@ -1,0 +1,57 @@
+@import url(../css/Rules.css);
+
+main {
+    display: flex;
+    gap: 3rem;
+}
+
+#content {
+    padding: 2rem 0 0 0;
+}
+
+#content h2 {
+    margin: 0 0 2rem 0;
+}
+
+#content h3 {
+    margin: 0 0 1.5rem 0;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(2, 400px);
+    gap: 2rem;
+    align-items: stretch;
+    margin-left: 20%;
+}
+
+.grid-content div{
+    padding: 1rem;
+    
+    background: var(--main-white);
+}
+
+.element_1{
+    grid-row: 1/3;
+}
+
+.element_2 h4{
+    padding: 1rem;
+}
+
+.flex-element{
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-evenly;
+}
+
+.btn{
+    margin-left: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+    background: var(--main-white);
+    color: var(--main-blue);
+}
