@@ -291,10 +291,10 @@ aside {
 
 .admin {
   position: sticky;
-  top: 8rem;
+  top: 0;
   left: 0;
   background: var(--main-blue);
-  height: 96.9vh;
+  height: 100vh;
   width: 10.5%;
   display: flex;
   flex-direction: column;

@@ -15,37 +15,35 @@
         <?php
         require_once("../html/aside_admin.php");
         ?>
-        <div class="content">
-            <h2>Welcome</h2>
+        <div id="content">
+            <h4>Welcome</h4>
             <div class="grid-content">
-                <div class="element_1">
+                <div class="element e1">
                     <div class="flex-element">
-                        <h4>Recien agregados</h4>
-                        <input class="btn" type="button" value="Agregar">
-                        <input class="btn" type="button" value="Catalogo">
+                        <h5>Recien agregados</h5>
+                        <div class="btn-div">
+                            <input class="btn" type="button" value="Agregar">
+                            <input class="btn" type="button" value="Catalogo">
+                        </div>
                     </div>
                     <hr>
                 </div>
-                <div class="element_2">
-                    <h4>Estadistica de Usuarios</h4>
-                    <hr>
+                <div class="e2">
+                    <h5>Estadistica de Usuarios</h5>
                 </div>
-                <div class="element_3">
+                <div class="element e3">
                     <div class="flex-element">
-                        <h4>Comentarios</h4>
-                        <input class="btn" type="button" value="Agregar">
-                        <input class="btn" type="button" value="Ver todos">
+                        <h5>Comentarios</h5>
+                        <div class="btn-div">
+                            <input class="btn" type="button" value="Agregar">
+                            <input class="btn" type="button" value="Ver todos">
+                        </div>
                     </div>
                     <hr>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <?php
-        require_once("../html/footer.php");
-        ?>
-    </footer>
 </body>
 
 </html>
