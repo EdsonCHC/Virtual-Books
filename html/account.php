@@ -34,28 +34,28 @@
                                 <h6>Last name</h6>
                             </label>
                             <input type="text" placeholder="Lorem">
-                            <button id="boton" type=""> Edit <img src="../src/img/icons8-pencil-drawing-100.png" alt="">
+                            <button id="boton" type=""> Editar
+                                <i class="fa-regular fa-pen-to-square"></i>
                             </button>
-                            <button id="boton1" type=""><img src="../src/img/icons8-save-all-100.png" height="20px"
-                                    width="50px"> </button>
+                            <button id="boton1" type="">
+                                <i class="fa-regular fa-floppy-disk"></i>
+                            </button>
                         </div>
-
                         <div id="img-ctn">
                             <h6>Profile Picture</h6>
-                            <img grande src="../src/user.png" alt=""><br>
-                            <button Upload>Upload image <img src="../src/img/icons8-upload-to-cloud-96.png"
-                                    height="22px" width="50px"></button>
-                            <button id="boton1" type=""><img src="../src/img/icons8-save-all-100.png" height="20px"
-                                    width="50px"> </button>
+                            <img class="grande" src="../src/user.png" alt=""><br>
+                            <button class="upload">Upload image
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </button>
+                            <button id="boton1" type="">
+                                <i class="fa-regular fa-floppy-disk"></i>
+                            </button>
                         </div>
                     </form>
 
                     <p>Email addres</p>
                 </div>
             </div>
-
-
-
             <div id="part3">
                 <div id="contenido3">
                     <form action="">
@@ -64,21 +64,16 @@
                                 <h6>Email</h6>
                             </label>
                             <input type="email" placeholder="Lorem">
-                            <label for="">
-                                <h6>Password</h6>
-                            </label>
-                            <input type="password" placeholder="Lorem">
-                            <button id="boton2" type=""> Edit Password <img
-                                    src="../src/img/icons8-pencil-drawing-100.png" alt=""> </button>
+                            <button id="boton2" type=""> Edit Password
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
-
-
-
+    </main>
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

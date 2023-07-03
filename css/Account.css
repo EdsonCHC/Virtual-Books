@@ -81,13 +81,13 @@ main {
   padding-bottom: 10px;
 }
 
-#img-ctn img[grande] {
+#img-ctn img[class="grande"] {
   padding: 10px;
   width: 110px;
   height: 110px;
 }
 
-div img[grande] {
+.grande{
   margin: 7px;
   width: 150px;
   height: 100px;
@@ -95,25 +95,17 @@ div img[grande] {
   background-color: white;
 }
 
-#img-ctn button[Upload] {
-  position: relative;
+.upload{
   width: 180px;
   height: 35px;
-  margin-top: 10px;
-  margin-left: 40px;
+  margin: 1rem 0 0 4rem;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.8rem;
 }
 
-#img-ctn button[Upload] img {
-  position: relative;
-  top: 3px;
-}
-
-div form button img {
-  padding-top: 2px;
-  padding-left: 3px;
-  width: 20px;
+button > i{
+  color: #fff;
+  margin-left: 0.5rem;
 }
 
 div form button {
@@ -122,6 +114,7 @@ div form button {
   border: none;
   border-radius: 15px;
   width: 300px;
+  cursor: pointer;
 }
 
 #boton {
@@ -130,11 +123,11 @@ div form button {
   background-color: #800404;
   color: #ffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.8rem;
   border: none;
   border-radius: 15px;
-  width: 170px;
-  height: 35px;
+  width: 18rem;
+  height: 3.5rem;
 }
 
 #boton1 {
