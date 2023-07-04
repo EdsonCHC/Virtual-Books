@@ -21,7 +21,7 @@
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form ,method="POST">
+            <form method="POST">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
                         <h1>Virtual Books</h1>
@@ -47,7 +47,7 @@
                         <a href="#"><p>Register for Free</p></a>
                     </div>
                     <div class="submit_primary_part">
-                        <input type="submit" value="Sign in">
+                        <input type="submit" name="Send" value="Sign in">
                     </div>
                 </div>
                 <div class="google_space_primary_part">

@@ -31,18 +31,18 @@
 
 
             <div id="form-ctn">
-                    <form action=""> 
+                    <form action="../php/register_db.php" method="post" enctype="multipart/form-data"> 
                         <div id="text-ctn">
                             <label for=""><h6>First Name</h6></label>
-                            <input type="text" placeholder="Narendra Singh">
+                            <input type="text" name="nombres" placeholder="Narendra Singh">
                             <label for=""><h6>Last Name</h6></label>
-                            <input type="text" placeholder="Narendra Singh" >
+                            <input type="text" name="apellidos" placeholder="Narendra Singh" >
                             <label for=""><h6>E-mail</h6></label>
-                            <input type="email" placeholder="Username@gmail.com">
+                            <input type="email" name="email" placeholder="Username@gmail.com">
                             <label for=""><h6>Password</h6></label>
-                            <input type="password" placeholder="Username@gmail.com">
+                            <input type="password" name="contraseña" placeholder="Password">
                             <label for=""><h6>Confirm Password </h6></label>
-                            <input type="password" placeholder="Password" >
+                            <input type="password" name="contraseña_C" placeholder="Password Confirm" >
                             <div id="eye"> <!-- boton-->
                             <img src="../src/img/icons8-eye-96.png" width="32px">
                             </div>
@@ -50,13 +50,16 @@
                                 <h6>Or continue with</h6>
                                 <button><img src="../src/google.png" alt=""></button>
                             </div>
-
+                        
                         </div>
                         <div id="img-ctn">
                             <h5>Profile Picture</h5>
                             <div><img grande src="../src/user.png" alt=""><br>
                             </div>
-                            <button Upload>Upload image <img src="../src/img/icons8-upload-to-cloud-96.png" alt=""></button>
+                            <div>
+                                <span>Upload image <img src="../src/img/icons8-upload-to-cloud-96.png"></span>
+                            <input Upload></input>
+                            </div>
                             <h5 primo>Select Avatar</h5>
                             <img class="img_chiqitas" src="../src/user.png" alt="">
                             <img class="img_chiqitas" src="../src/user.png" alt="">
@@ -65,24 +68,17 @@
                         </div>
 
                     
-                        <button id="boton" type=""><h6>Register</h6></button>
+                        <button id="boton" name="register" type="submit"><h6>Register</h6></button>
 
 
                        
 
-
                     </form>
-
-                  
             </div>
-
-
-
-
             <img id="Ovalo_2" src="../src/login.png">
-
-
         </div>
 
     </body>
+    
 </html>
+
