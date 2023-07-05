@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `resource`(
     category varchar(50) not null,
     description varchar(300) not null,
     id_com int(11) not null,
+    src BLOB not null,
     constraint foreign key (id_com) references `comment`(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
