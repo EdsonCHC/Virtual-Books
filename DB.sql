@@ -5,7 +5,8 @@ USE vb;
 Create table IF NOT EXISTS `user`(
 	id int(11) auto_increment primary key,
     name varchar(50) not null,
-    email varchar(100) not null
+    email varchar(100) not null,
+    password varchar(50) not null
 );
 
 CREATE TABLE IF NOT EXISTS `comment`(
@@ -31,5 +32,11 @@ CREATE TABLE IF NOT EXISTS `shelf`(
 	id int(11) auto_increment primary key,
     id_r int(11) not null,
     constraint foreign key (id_r) references `resource`(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS `admin`(
+    id int(11) auto_increment primary key,
+    email varchar(100) not null,
+    password varchar(10) not null
 );
 
