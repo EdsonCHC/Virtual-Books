@@ -37,17 +37,17 @@ form{
 .tittle_primary_part{
 
 
-    padding-top: 10em;
+    padding-top: 15%;
 
 
 }
 .subtittle_primary_part{
-    padding-top: 6rem;
+    padding-top: 5%;
 }
 
 
 .tittle_details_primary_part{
-    margin-top: 3rem;
+    margin-top: 5%;
 
 
 }
@@ -109,7 +109,7 @@ form{
    
 }
 .register_primary_part p{
-    margin:  5rem 0 9.8rem 0 ;
+    margin:  5% 0 9.8%  0 ;
     color: #333333;
 }
 .register_primary_part a{
