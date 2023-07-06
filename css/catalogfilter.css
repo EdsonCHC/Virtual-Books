@@ -1,0 +1,131 @@
+@import url(../css/Rules.css);
+
+main {
+    display: flex;
+    gap: 3rem;
+}
+#content {
+    padding: 2rem 0 0 0;
+    width: 100%;
+    height: 100vh;
+}
+#content h4 {
+    margin: 0 0 4rem 0;
+}
+.content_table {
+    padding: 1rem;
+    background: var(--main-white);
+    width: 99%;
+    padding-bottom: 20%;
+    margin-top: 3%;
+}
+.content_tittle{
+    display: flex;
+}
+.content_tittle img{
+    width: 1.5%;
+}
+.content_description{
+    margin-top: 3%;
+    display: flex;
+} 
+.content_description_search{
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    background: rgba(196, 196, 196, 0.10);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 30%;
+    margin-left: 56%;
+}
+.content_items{
+    display: flex;
+    padding: 1%;
+}
+.content_items_menu{
+    margin: 0.5%;
+    padding: 0.3%;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+background: rgba(196, 196, 196, 0.00);
+}
+.content_items_search{
+    margin: 0.5%;
+    padding: 0.3%;
+    width: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+background: #FFF; 
+}
+.content_items_button_search {
+    color:rgb(255, 255, 255);
+    border:none;
+    background: #00A0FB;
+    height: 18%;
+    width: 20%;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 1%;
+    margin: 0.5%;
+    
+}
+.content_items_button_add{
+    color:rgb(255, 255, 255);
+    border:none;
+    background: #00A0FB;
+    height: 4%;
+    width: 5%;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.5%;
+    margin: 0.2%;
+}
+.flex-element{
+    display: flex;
+}
+.btn{
+    margin-top: 1.5%;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+    background: transparent;
+    color: var(--main-blue);
+    align-self: flex-end;
+}
+table {
+    border-collapse: collapse;
+    border-color: none;
+    margin-top:2%;
+}
+th{
+    background: #00A0FB;
+    color:rgb(255, 255, 255); 
+    padding: 2rem 10rem 2rem 0.5rem;
+}
+td{
+    padding:2rem 10rem 2rem 0.5rem;
+}
+
+.copies{
+    background-color: rgb(66, 235, 181);
+    border-radius: 10px;
+    padding:1rem 2rem 1rem 2rem;
+    color:rgb(255, 255, 255);
+    font-size: 13px;
+
+}
+.actions button{
+    background-color: #00A0FB;
+    border-radius: 5px;
+    padding:0.1rem 0.5rem 0.1rem 0.5rem;
+    color:rgb(255, 255, 255);
+    font-size: 13px;
+    cursor: pointer;
+    border-color: #00A0FB;
+    margin: 0.2rem;
+}
+
+.actions img{
+    width: 30px;
+}
