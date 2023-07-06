@@ -83,26 +83,25 @@ body {
   margin-left: 190px;
   padding-bottom: 100px;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins;
 }
 
-#img-ctn img[grande] {
-  padding: 10px;
+#img-container {
   width: 150px;
   height: 150px;
+  margin: 0 auto;
 }
 
-div img[grande] {
-  margin: 10px;
-  border-radius: 100px;
+.grande{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 50%;
   background-color: white;
+  object-fit: contain;
 }
 
-#img-ctn h5 {
-  font-size: 30px;
-}
-
-#img-ctn h5[primo] {
+h5.primo{
   color: #f25019;
   font-weight: bold;
   margin-top: 20px;
@@ -120,26 +119,19 @@ div img[grande] {
   background-color: white;
 }
 
-input[Upload] {
-  position: absolute;
-  left: 600px;
-}
 
-#img-ctn input[Upload] {
-  position: relative;
-  margin: auto;
-  background-color: #800404;
+.Upload {
+  display: block;
+  margin: 2rem auto;
+  background-color: var(--main-red);
   color: #ffff;
   border: none;
   border-radius: 30px;
-  width: 400px;
-  height: 50px;
-  left: -100px;
-}
-
-#img-ctn input[Upload] img {
-  position: relative;
-  top: 3px;
+  width: 20rem;
+  height: 3.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 5px;
 }
 
 div form button img {
@@ -217,14 +209,13 @@ div form button {
   z-index: -20;
 }
 
-div[id="flex-lines"] {
+#flex-lines{
   display: flex;
-  position: absolute;
   justify-content: space-between;
-  top: 50rem;
-  left: 115rem;
-  z-index: 10;
-}
+  align-items: center;
+  width: 35rem;
+  margin: 0 auto;
+} 
 
 .line {
   width: 15rem;
@@ -237,4 +228,13 @@ div[id="flex-lines"] {
   width: 160px;
   height: 37px;
   margin-bottom: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#ojo{
+  width: 3.5rem;
+  cursor: pointer;
 }

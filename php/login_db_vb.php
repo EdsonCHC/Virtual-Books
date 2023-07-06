@@ -20,8 +20,7 @@ if (isset($_POST['Send'])) {
             echo "<script>
             alert('A iniciado sesión correctamente');
             window.location = '../html/index.php';
-          </script>";
-
+             </script>";
           exit;
         }
         else{

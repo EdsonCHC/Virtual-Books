@@ -74,10 +74,16 @@ p {
   color: var(--main-black);
 }
 
-i {
+i:not(.white_i) {
   font-size: 2rem;
   margin-right: 5px;
   color: var(--main-black);
+}
+
+.white_i{
+  font-size: 2rem;
+  margin-right: 5px;
+  color: var(--main-white);
 }
 
 

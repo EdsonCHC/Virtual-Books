@@ -5,8 +5,10 @@ USE vb;
 Create table IF NOT EXISTS `user`(
 	id int(11) auto_increment primary key,
     name varchar(50) not null,
+    lastName varchar(50) not null,
     email varchar(100) not null,
-    password varchar(50) not null
+    password varchar(50) not null,
+    img BLOB not null
 );
 
 CREATE TABLE IF NOT EXISTS `comment`(
