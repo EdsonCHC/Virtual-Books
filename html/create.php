@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/create.css" />
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <title>Home</title>
 </head>
 
 <body>
@@ -55,8 +56,6 @@
 
 
         </div>
-        
-        <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
         <script>
             let year = document.getElementById('year');
             let y = new Date().getFullYear();

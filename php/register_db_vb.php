@@ -1,5 +1,5 @@
 <?php
-$conex_VB = new mysqli('localhost', 'root', '', 'virtual-books');
+$conex_VB = new mysqli('localhost', 'root', '', 'vb');
 //  $email = trim($_POST['email']);
 
 //     if (buscarRepetido($email) == 1) {

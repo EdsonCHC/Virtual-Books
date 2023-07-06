@@ -1,280 +1,240 @@
 @import url(../css/Rules.css);
 
 body {
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  }
-
-body{
-    background-color: #ffa372;
+  background-color: #ffa372;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-#title-ctn{
-    display: inline-block;
-    position: relative;
-    letter-spacing: 1.5px;
-    padding-bottom: 50px;
-    cursor: default;
-    left: 325px;
-    top: 40px;
-
-    
+#title-ctn {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1.5px;
+  padding-bottom: 50px;
+  cursor: default;
+  left: 325px;
+  top: 40px;
 }
 
-#title-ctn h1{
-    display: inline-block;
-    position: relative;
-    letter-spacing: 1.5px;
-    cursor: default;
-
-    
+#title-ctn h1 {
+  position: relative;
 }
 
-
-
-#Ovalo_1{
-    position: absolute;
-    transform: translate(-35%, -10%);
-    opacity: 0.5;
-    z-index: -10;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 35%;
-  height: 70vh; 
-
+#Ovalo_1 {
+  position: absolute;
+  inset: -10% 0 -35% 0;
+  opacity: 0.5;
+  z-index: -10;
+  width: 35%;
+  height: 70vh;
 }
 
-#form-ctn{
-
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 30px;
-    width: 1500px;
-    height: 700px;
-    margin: auto;
-    margin-top: 10px;
-    padding-bottom: 20px;
-    z-index: -1;
-
+#form-ctn {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  width: 1500px;
+  height: 700px;
+  margin: 10px auto 0;
+  padding-bottom: 20px;
 }
 
-#text-ctn{
-    position: relative;
-    display: inline-block;
-    left: 40px;
-    padding: 50px;
-    width: 650px;
-    opacity: 1;
-    font-size: 15px;
+#text-ctn {
+  position: relative;
+  display: inline-block;
+  left: 40px;
+  padding: 50px;
+  width: 650px;
+  opacity: 1;
+  font-size: 15px;
 }
 
-#text-ctn label h6{
-    display: inline-block;
-    position: relative;
-    font-size: 25px;
-    padding-top: 10px;
+#text-ctn label h6 {
+  display: inline-block;
+  position: relative;
+  font-size: 25px;
+  padding-top: 10px;
 }
 
-
-
-#text-ctn input{
-    width: 500px;
-    border-radius: 13px;
-    border: none;
-    border-radius: 30px;
-    height: 50px;
-    padding: 20px;
-    margin-top: 5px;
-    font-size: 25px;
-    color: gray;
+#text-ctn input {
+  width: 500px;
+  border-radius: 13px;
+  border: none;
+  border-radius: 30px;
+  height: 50px;
+  padding: 20px;
+  margin-top: 5px;
+  font-size: 25px;
+  color: gray;
 }
 
-#eye{
-    position: absolute;
-    left: 490px;
-    top: 520px;
+#eye {
+  position: absolute;
+  left: 490px;
+  top: 520px;
 }
 
-
-
-
-
-#img-ctn{
-    position: absolute;
-    display: inline-block;
-    padding: 40px;
-    margin-top: 60px;
-    margin-left: 190px;
-    padding-bottom: 100px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+#img-ctn {
+  position: absolute;
+  display: inline-block;
+  padding: 40px;
+  margin-top: 60px;
+  margin-left: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-#img-ctn img[grande]{
+#img-ctn img[grande] {
   padding: 10px;
-width: 150px;
-height: 150px;
-
+  width: 150px;
+  height: 150px;
 }
 
-div img[grande]{
+div img[grande] {
   margin: 10px;
   border-radius: 100px;
   background-color: white;
 }
 
-#img-ctn h5{
- font-size: 30px;
+#img-ctn h5 {
+  font-size: 30px;
 }
 
-#img-ctn h5[primo]{
-    color: #F25019;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: justify;
-    font-size: 20px;
+#img-ctn h5[primo] {
+  color: #f25019;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: justify;
+  font-size: 20px;
 }
 
-.img_chiqitas{
+.img_chiqitas {
   padding: 10px;
-    width: 100px;
-    height: 100px;
-    padding-left: 10;
-    margin: 10px;
-    border-radius: 100px;
-    background-color: white;
+  width: 100px;
+  height: 100px;
+  padding-left: 10;
+  margin: 10px;
+  border-radius: 100px;
+  background-color: white;
 }
 
-
-input[Upload]{
-    position: absolute;
-    left: 600px;
+input[Upload] {
+  position: absolute;
+  left: 600px;
 }
 
-
-#img-ctn input[Upload]{
-    position: relative;
-    margin: auto;
-    background-color: #800404;
-    color: #ffff;
-    border: none;
-    border-radius: 30px;
-    width: 400px;
-    height: 50px;
-    left: -100px;
+#img-ctn input[Upload] {
+  position: relative;
+  margin: auto;
+  background-color: #800404;
+  color: #ffff;
+  border: none;
+  border-radius: 30px;
+  width: 400px;
+  height: 50px;
+  left: -100px;
 }
 
-
-
-#img-ctn input[Upload] img{
-    position: relative;
-    top: 3px;
+#img-ctn input[Upload] img {
+  position: relative;
+  top: 3px;
 }
 
-div form button img{
-    padding-top: 2px;
-    padding-left: 3px;
-    width: 20px;
+div form button img {
+  padding-top: 2px;
+  padding-left: 3px;
+  width: 20px;
 }
 
-#aparte h6{
-    width: 400px;
-    position: relative;
-    top: 10px;
-    display: inline-block;
-    color: gray;
-    font-weight: normal;
-    font-size: 20px;
-
+#aparte h6 {
+  width: 400px;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  color: gray;
+  font-weight: normal;
+  font-size: 20px;
 }
 
-#aparte button{
-    position: relative;
+#aparte button {
+  position: relative;
 
-    margin-left: 12px;
-    margin-top: 25px;
-    background-color: #ffff;
-    width: 150px;
-    height: 50px;
-    border-radius: 45px;
-    
+  margin-left: 12px;
+  margin-top: 25px;
+  background-color: #ffff;
+  width: 150px;
+  height: 50px;
+  border-radius: 45px;
 }
 
-#aparte button img{
-    position: relative;
-    left: -1px;
-    top: 2px;
-    width: 30px;
-    
+#aparte button img {
+  position: relative;
+  left: -1px;
+  top: 2px;
+  width: 30px;
 }
 
-
-
-
-div form button{
-    
-    background-color: #800404;
-    color: #ffff;
-    border: none;
-    border-radius: 15px;
-    width: 300px;
+div form button {
+  background-color: #800404;
+  color: #ffff;
+  border: none;
+  border-radius: 15px;
+  width: 300px;
 }
 
-#boton{
-    position: relative;
-    margin: auto;
-    background-color: #800404;
-    color: #ffff;
-    border: none;
-    border-radius: 30px;
-    width: 400px;
-    height: 50px;
-    left: -100px;
+#boton {
+  position: relative;
+  margin: auto;
+  background-color: #800404;
+  color: #ffff;
+  border: none;
+  border-radius: 30px;
+  width: 400px;
+  height: 50px;
+  left: -100px;
 }
 
-#boton h6{
-    color: #ffff;
+#boton h6 {
+  color: var(--main-white);
 }
 
-#boton:hover{
-        transform: scale(1.05);
-        transition: transform 0.5s;
+#boton {
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
-#boton{
-    transition: transform 0.5s;
-
+#boton:hover {
+  transform: scale(1.05);
 }
 
-
-#Ovalo_2{
-    position: absolute;
-    left: 1400px;
-    top: 450px;
-    width: 550px;
-    opacity: 0.5;
-    z-index: -20;
+#Ovalo_2 {
+  position: absolute;
+  inset: 45rem 0 0 140rem;
+  width: 550px;
+  opacity: 0.5;
+  z-index: -20;
 }
 
 div[id="flex-lines"] {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 42rem;
-    left: 98rem;
-    z-index: 10000;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: 50rem;
+  left: 115rem;
+  z-index: 10;
 }
 
-div[id="line"] {
-    width: 35rem;
-    border: 1px solid var(--main-orange);
+.line {
+  width: 15rem;
+  height: 2px;
+  border: 1px solid var(--main-orange);
 }
 
-#img-ctn button[Upload]{
-    position: relative;
-    width: 160px;
-    height: 37px;
-    margin-bottom: 10px;
+#img-ctn button[Upload] {
+  position: relative;
+  width: 160px;
+  height: 37px;
+  margin-bottom: 10px;
 }

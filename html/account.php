@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Account.css">
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <title>Cuenta</title>
 </head>
 
@@ -73,7 +74,6 @@
             </div>
         </div>
     </main>
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
