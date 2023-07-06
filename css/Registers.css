@@ -1,5 +1,9 @@
 @import url(../css/Rules.css);
 
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+
 body{
     background-color: #ffa372;
 }
@@ -94,6 +98,8 @@ body{
 
 
 
+
+
 #img-ctn{
     position: absolute;
     display: inline-block;
@@ -141,17 +147,27 @@ div img[grande]{
 }
 
 
+input[Upload]{
+    position: absolute;
+    left: 600px;
+}
 
-#img-ctn button[Upload]{
+
+#img-ctn input[Upload]{
     position: relative;
-    width: 160px;
-    height: 37px;
-    margin-bottom: 10px;
+    margin: auto;
+    background-color: #800404;
+    color: #ffff;
+    border: none;
+    border-radius: 30px;
+    width: 400px;
+    height: 50px;
+    left: -100px;
 }
 
 
 
-#img-ctn button[Upload] img{
+#img-ctn input[Upload] img{
     position: relative;
     top: 3px;
 }
@@ -192,6 +208,8 @@ div form button img{
     width: 30px;
     
 }
+
+
 
 
 div form button{
@@ -254,3 +272,9 @@ div[id="line"] {
     border: 1px solid var(--main-orange);
 }
 
+#img-ctn button[Upload]{
+    position: relative;
+    width: 160px;
+    height: 37px;
+    margin-bottom: 10px;
+}

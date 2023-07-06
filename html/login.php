@@ -21,7 +21,7 @@
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form ,method="POST">
+            <form method="POST">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
                         <h1>Virtual Books</h1>
@@ -40,14 +40,14 @@
                             <div class="tittle_details_primary_part">
                                 <h4> <label for="email">Password</label></h4>
                             </div>
-                            <input type="text" name="password" id="password" placeholder="password">
+                            <input type="text" name="contraseña" id="password" placeholder="password">
                         </div>
                     </div>
                     <div class="recuperate_primary_part">
                         <a href="#"><p>Register for Free</p></a>
                     </div>
                     <div class="submit_primary_part">
-                        <input type="submit" value="Sign in">
+                        <input type="submit"  value="Sign in" name="Send">
                     </div>
                 </div>
                 <div class="google_space_primary_part">
@@ -60,6 +60,13 @@
                     </div>
                 </div>
             </form>
+
+        <?php
+        
+        include ("../php/login_db_vb.php");
+        
+        ?>
+
         </div>
         <div class="secundary_part">
         </div>
