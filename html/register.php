@@ -1,11 +1,29 @@
+<?php
+    /* *
+    if (isset($_SESSION['user'])){
+        header("Location: ../html/index.php");
+    }
+    */
+    require_once('../php/conex.php');
+    require_once('../php/methods.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos-->
     <link rel="stylesheet" href="../css/Registers.css">
+
+    <!-- Boostrap-->
+    <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
+
+    <!-- Fonts-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    
+    <!-- Boostrap-->
     <link rel="stylesheet" href="../css/alertify.css">
     <link rel="stylesheet" href="../css/alert/themes/bootstrap.css">
     <title>Registrarse</title>
@@ -14,49 +32,51 @@
 <body>
     <div id="mother-ctn">
         <div id="title-ctn">
-            <h1>Virtual Books</h1>
-            <H6>Register</H6>
+            <a href="../html/index.php"><h1>Virtual Books</h1></a>
+            <H4>Registro</H4>
         </div>
         <img id="Ovalo_1" src="../src/login.png">
         <div id="form-ctn">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="../php/register_db_vb.php" method="post" enctype="multipart/form-data">
                 <div id="text-ctn">
                     <label for="">
-                        <h6>First Name</h6>
+                        <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="nombres" placeholder="Narendra Singh">
+                    <input type="text" name="name" placeholder="Martin Alejandro"  pattern="[a-zA-Z]+" required>
                     <label for="">
-                        <h6>Last Name</h6>
+                        <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="apellidos" placeholder="Narendra Singh">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required>
                     <label for="">
-                        <h6>E-mail</h6>
+                        <h6>Correo Electronico</h6>
                     </label>
-                    <input type="email" name="email" placeholder="Username@gmail.com">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require>
                     <label for="">
-                        <h6>Password</h6>
+                        <h6>Contraseña</h6>
                     </label>
-                    <input type="password" name="contraseña" placeholder="Password">
+                    <input type="password" name="password" placeholder="Contraseña" require>
+                    <div id="eye">
+                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
+                    </div>
                     <label for="">
-                        <h6>Confirm Password </h6>
+                        <h6>Confirmar Contraseña</h6>
                     </label>
-                    <input type="password" name="contraseña_C" placeholder="Password Confirm" id="input2">
+                    <input type="password" name="password_c" placeholder="Confirmar Contraseña" id="input2" require>
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <div id="aparte">
-                        <h6>Or continue with</h6>
+                        <h6>O Registrate con...</h6>
                         <button><img src="../src/google.png" alt=""></button>
                     </div>
-
                 </div>
                 <div id="img-ctn">
-                    <h5>Profile Picture</h5>
+                    <h5>Foto de Perfil</h5>
                     <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image" id="img-preview">
                     </div>
-                    <label for="img_i" class="Upload">Upload image
+                    <label for="img_i" class="Upload">Subir IMG
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="image"  onchange="vista_preliminar(event), validar()">
+                        <input type="file" id="img_i" accept=".jpg,.png" name="img" onchange="vista_preliminar(event), validar()" >
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -64,22 +84,16 @@
                         <p>O</p>
                         <div class="line"></div>
                     </div>
-                    <h5 class="primo">Select Avatar</h5>
+                    <h5 class="primo">Selecciona un avatar</h5>
                     <img class="img_chiqitas" src="../src/user.png" alt="">
                     <img class="img_chiqitas" src="../src/user.png" alt="">
                     <img class="img_chiqitas" src="../src/user.png" alt="">
                     <img class="img_chiqitas" src="../src/user.png" alt="">
                 </div>
-
-
                 <button onclick="register()" id="boton" name="register" type="submit">
-                    <h6>Register</h6>
+                    <h6>Registrar</h6>
                 </button>
             </form>
-
-            <?php
-            include("../php/register_db_vb.php");
-            ?>
         </div>
         <img id="Ovalo_2" src="../src/login.png">
     </div>

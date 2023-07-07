@@ -17,8 +17,10 @@ body {
   top: 40px;
 }
 
-#title-ctn h1 {
+#title-ctn a h1 {
   position: relative;
+  text-decoration: none;
+
 }
 
 #Ovalo_1 {
