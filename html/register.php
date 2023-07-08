@@ -28,26 +28,26 @@
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro"  required id="input1">
+                    <input type="text" name="name" placeholder="Martin Alejandro"  required id="input1" autocomplete="no">
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required id="input2">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required id="input2" autocomplete="no">
                     <label for="">
                         <h6>Correo Electrónico</h6>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3" autocomplete="no">
                     <label for="">
                         <h6>Contraseña</h6>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" require id="input4">
-                    <div id="eye">
+                    <input type="password" name="password" placeholder="Contraseña" require id="input4" autocomplete="no">
+                    <div id="eye1">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();"> 
                     </div>
                     <label for="">
                         <h6>Confirmar Contraseña</h6>
                     </label>
-                    <input type="password"  placeholder="Confirmar Contraseña" id="inputP" require>
+                    <input type="password"  placeholder="Confirmar Contraseña" id="inputP" require autocomplete="no">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
