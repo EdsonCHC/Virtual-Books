@@ -1,8 +1,8 @@
 const text = document.getElementById("warning");
 let ojo = document.getElementById("ojo");
-let input = document.getElementById("input2");
+let input = document.getElementById("inputP");
 
-//Funcion imagen
+//Función imagen
 let vista_preliminar = (event) => {
   let vista = new FileReader();
   let id_img = document.querySelector("#img-preview");

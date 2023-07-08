@@ -23,7 +23,7 @@ if (isset($_GET[''])) {
     $gauth = new Google_Service_Oauth2($client);
     $google_info = $gauth->userInfo->get();
     $email = $google_info->email;
-    $name = $google_info->name
+    $name = $google_info->name;
     echo "Welcome user". $name. "listo para esto";
 } else {
     echo "<a href='".$client->createAutUri()."'>Login with google</a>";

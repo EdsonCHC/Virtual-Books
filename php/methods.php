@@ -1,25 +1,17 @@
 <?php
 
-
-/**
-    * Clase contenedora para métodos CRUD */
-
 class métodosCrud
 {
-    /**
-     * Recibe una sentencia sql y la ejecuta segun corresponda*/
     public function insertData($arr)
     {
-        $obj = new conexión();
-        $conex = $obj->conectar();
+        $obj = new DataBase();
+        $DBH = $obj->connect();
 
-        /** Registro datos user */
-        $sql = "INSERT INTO `user` 
-        (`name`,`lastName`,`email`,`password`, `img`) 
-        values('$arr[0]','$arr[1]','$arr[2]','$arr[3]','$arr[4]')";
-
-        return $result = mysqli_query($conex, $sql);  
+        $STH = $DBH->prepare("INSERT INTO user (`name`,`lastName`,`email`,`password`,`img`) 
+        values(?,?,?,?,?)");
+        $STH->execute($arr);
     }
 }
-
+    // No tocar
 ?>
+
