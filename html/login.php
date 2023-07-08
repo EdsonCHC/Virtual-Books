@@ -1,3 +1,17 @@
+<?php
+require_once "../js/vendor/autoload.php";
+
+$client = new \Google\Client();
+$client->setAuthConfig('../js/credentials.json');
+$client->setRedirectUri('http://localhost/Virtual-Books/html/account.php');
+// $client->addScope('name');
+// $client->addScope('lastName');
+$client->addScope('email');
+// $client->addScope('profile');
+
+$authUrl = $client->createAuthUrl();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +24,6 @@
     <link rel="stylesheet" href="../css/login.css" />
 </head>
 
-
-
-
 <body>
     <div class="img_part">
         <img src="../src/login.png" class="img1_part">
@@ -21,56 +32,54 @@
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form method="POST">
+            <form action="../php/login_db_vb.php" method="POST">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
-                        <h1>Virtual Books</h1>
+                        <a href="../html/index.php">
+                            <h1>Virtual Books</h1>
+                        </a>
                     </div>
                     <div class="subtittle_primary_part">
-                        <h3>Login</h3>
+                        <h3>Inicia Sesión</h3>
                     </div>
                     <div class="form_primary_part">
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4><label for="email">Email</label></h4>
+                                <h4><label for="email">Correo Electronico</label></h4>
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com">
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4> <label for="email">Password</label></h4>
+                                <h4> <label for="email">Contraseña</label></h4>
                             </div>
-                            <input type="text" name="contraseña" id="password" placeholder="password">
+                            <input type="password" name="password" id="password" placeholder="Contraseña">
                         </div>
                     </div>
-                    <div class="recuperate_primary_part">
-                        <a href="#"><p>Register for Free</p></a>
-                    </div>
                     <div class="submit_primary_part">
-                        <input type="submit"  value="Sign in" name="Send">
+                        <input type="submit" value="Iniciar Sesión" name="Send">
                     </div>
                 </div>
                 <div class="google_space_primary_part">
                     <div class="google_primary_part">
-                        <p>or continue with</p>
-                        <button><img src="../src/google.png"></button>
+                        <!-- Login con google-->
+                        <a href="<?php echo $authUrl; ?>">
+                            <p>O Inicia Sesión con...</p>
+                        </a>
+                        <a href="<?php echo $authUrl; ?>">
+                            <button><img src="../src/google.png" alt=""></button>
+                        </a>
                     </div>
                     <div class="register_primary_part">
-                        <p>Don't have an account yet?<a href="#">Register for Free</a></p>
+                        <p>¿No tienes cuenta?<a href="../html/register.php">!Registrate¡</a></p>
                     </div>
                 </div>
             </form>
-
-        <?php
-        
-        include ("../php/login_db_vb.php");
-        
-        ?>
-
         </div>
         <div class="secundary_part">
         </div>
     </div>
     <script src="https://accounts.google.com/gsi/client" async></script>
 </body>
+
 </html>

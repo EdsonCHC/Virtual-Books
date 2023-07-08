@@ -1,71 +1,61 @@
 <?php
-//Poner la conexion real
-include_once("../php/conex.php");
 
-// 
-$clienteID = '876116753741-dqgfl8304shbnihnp4o6udsqpb2armg3.apps.googleusercontent.com';
-$clientSecret = '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';
-$redirecUrl = 'http://localhost/Virtual-Books/html/login.php';
+//Conección
+include_once('../php/conex.php');
+include_once('../php/methods.php');
 
-// Se solicita la cuenta del cliente de google
-$client = new Google_Client();
-$client->setClientId($clienteID);
-$client->setClientSecret($clientSecret);
-$client->setRedirectUri($redirectUrl);
-$client->addScope('profile');
-$client->addScope('email');
-
-if (isset($_GET[''])) {
-    $token = $client->FetchAccesTokenWithAuthCode($_GET['code']);
-    $client->setAccesToken($token);
-
-    // Obteniendo el perfil del usuario
-    $gauth = new Google_Service_Oauth2($client);
-    $google_info = $gauth->userInfo->get();
-    $email = $google_info->email;
-    $name = $google_info->name
-    echo "Welcome user". $name. "listo para esto";
-} else {
-    echo "<a href='".$client->createAutUri()."'>Login with google</a>";
-}
-
-if(isset($_POST['Send'])){
-
-$conex = $conex_VB;
-$email = $_POST['email'];
-$contraseña = $_POST['contraseña'];     
-
+$obj = new conexión();
+$conex = $obj->conectar();
 
 if (isset($_POST['Send'])) {
-    if (strlen($_POST['email']) >= 1 && strlen($_POST['contraseña']) >= 1) {
+    if (strlen($_POST['email']) >= 1 && strlen($_POST['password']) >= 1) {
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
-        $validar_login = mysqli_query($conex, "SELECT * FROM usuario WHERE Email='$email' and Contraseña='$contraseña'");
+        // Login User
+        $validar_login = mysqli_query($conex, "SELECT * FROM `user` WHERE `email`='$email' and `password`='$password'");
         if (mysqli_num_rows($validar_login) > 0) {
-            // $data = $validar_login->fetch_assoc();
-            session_start();
+
+            // $_SESSION['user'] = array();
+            // $_SESSION['user'][0] = $data['id'];
+            // $_SESSION['user'][1] = $data['name'];
             echo "<script>
-            alert('A iniciado sesión correctamente');
-            window.location = '../html/index.php';
-             </script>";
-          exit;
-        }
-        else{
-            echo '
-            <script>
-                alert("Datos incorrectos");
-                window.location = "../html/login.php";
-
-            </script>
-            ';
-            exit;
+                    alert('A iniciado sesión correctamente');
+                        window.location = 'http://localhost/Virtual-Books/html/index.php';
+                    </script>";
+            session_start();
+        } else {
+            echo '<script>
+                        alert("Datos incorrectos");
+                    window.location = "http://localhost/Virtual-Books/html/login.php";
+                </script>';
         }
 
+        //Login Admin
+        // $validar_admin = mysqli_query($conex, "SELECT * FROM `user` WHERE `email`='$email' and `password`='$password'");
+        // if (mysqli_num_rows($validar_admin) > 0) {
+        //     $data = $validar_admin->fetch_assoc();
+        //     session_start();
+        //     $_SESSION['admin'] = array();
+        //     $_SESSION['admin'][0] = $data['id'];
+        //     $_SESSION['admin'][1] = $data['nombre'];
+        //     echo "<script>
+        //             alert('A iniciado sesión correctamente');
+        //                 window.location = '../html/index_admin.php';
+        //             </script>";
+
+        // } else {
+        //     echo '<script>
+        //             alert("Datos incorrectos");
+        //             window.location = "http://localhost/Virtual-Books/html/login.php";
+        //         </script>';
+        // }
     } else {
-        echo '
-        <script>
-            alert("Aun hay campos sin llenar")
-        </script>
-        ';
+        echo '<script>
+                alert("Favor de rellenar todos los campos")
+                window.location = "http://localhost/Virtual-Books/html/login.php";
+            </script>';
+
     }
 }
-}
+;

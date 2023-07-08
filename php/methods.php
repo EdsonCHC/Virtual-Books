@@ -1,6 +1,5 @@
 <?php
 
-
 /**
     * Clase contenedora para métodos CRUD */
 
@@ -8,6 +7,9 @@ class métodosCrud
 {
     /**
      * Recibe una sentencia sql y la ejecuta segun corresponda*/
+    // Inicio Sesión
+
+    // Registro
     public function insertData($arr)
     {
         $obj = new conexión();

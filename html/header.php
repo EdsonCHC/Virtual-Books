@@ -1,6 +1,10 @@
+<?php
+include_once("../php/functions.php");
+?>
 <header>
   <div>
-    <img src="../src/logo creaj 2023.png" alt="logo" id="logo" />
+    <a href="http://localhost/Virtual-Books/html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
+        id="logo" /></a>
   </div>
   <form action="">
     <label for="searchInput" id="labelInput">
@@ -11,12 +15,12 @@
     </label>
   </form>
   <div id="log-links">
-    <a href="../html/register.php" class="link">Registrase</a>
-    <a href="../html/login.php" class="link">Iniciar Sesión</a>
+    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link">Registrarse</a></li>
+    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">Iniciar Sesión</a></li>
+    <li class="<?php esconder(); ?>"><a href="../php/logOut.php" class="link">Cerrar Sesión</a></li>
   </div>
   <div id="user">
-    <i class="fa-regular fa-bell" onclick="toggleMenu()"
-      id="close"></i>
+    <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php"><img src="../src/user.png" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
