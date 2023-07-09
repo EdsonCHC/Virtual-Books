@@ -1,24 +1,23 @@
 <?php
 
-    class conexión{
-        private $server = "localhost";
-        private $user = "root";
-        private $password = "";
-        private $db = "vb";
-
-        public function conectar()
-        {
-        $connection = mysqli_connect(
-            $this->server,
-            $this->user,
-            $this->password,
-            $this->db);
-
-            return $connection;
+class DataBase
+{
+    //no tocar
+    public function connect()
+    {
+        $host = "localhost";
+        $dbname = "vb";
+        $user = "root";
+        $pass = "";
+        try {
+            $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+            $DBH->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
         }
 
+        return $DBH;
     }
-
-
+}
 
 ?>

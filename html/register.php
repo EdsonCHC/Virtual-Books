@@ -19,10 +19,7 @@ $authUrl = $client->createAuthUrl();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Estilos-->
     <link rel="stylesheet" href="../css/Registers.css">
-
-    <!-- Boostrap-->
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
 
     <!-- Fonts-->
@@ -30,7 +27,7 @@ $authUrl = $client->createAuthUrl();
 
     <!-- Boostrap-->
     <link rel="stylesheet" href="../css/alertify.css">
-    <link rel="stylesheet" href="../css/alert/themes/bootstrap.css">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <title>Registrarse</title>
 </head>
 
@@ -49,29 +46,27 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" >
+                    <input type="text" name="name" placeholder="Martin Alejandro"  required id="input1" autocomplete="no">
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required id="input2" autocomplete="no">
                     <label for="">
-                        <h6>Correo Electronico</h6>
+                        <h6>Correo Electrónico</h6>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3" autocomplete="no">
                     <label for="">
                         <h6>Contraseña</h6>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña" require id="input4" autocomplete="no">
                     <div id="eye">
-                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
+                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();"> 
                     </div>
                     <label for="">
                         <h6>Confirmar Contraseña</h6>
                     </label>
-                    <input type="password" name="password_c" placeholder="Confirmar Contraseña" id="input2">
-                    <div id="eye">
-                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
-                    </div>
+                    <input type="password"  placeholder="Confirmar Contraseña" id="inputP" require autocomplete="no">
+                    
                     <div id="aparte">
                         <!-- Registro con google-->
                         <a href="<?php echo $client->createAuthUrl(); ?>>">
@@ -86,10 +81,9 @@ $authUrl = $client->createAuthUrl();
                     <h5>Foto de Perfil</h5>
                     <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image" id="img-preview">
                     </div>
-                    <label for="img_i" class="Upload">Subir IMG
+                    <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="img"
-                            onchange="vista_preliminar(event), validar()">
+                        <input type="file" id="img_i" accept=".jpg,.png" name="img" onchange="vista_preliminar(event), validar()">
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -110,7 +104,23 @@ $authUrl = $client->createAuthUrl();
         </div>
         <img id="Ovalo_2" src="../src/login.png">
     </div>
+
+    <!-- No tocar -->
+    <?php 
+        $obj = new métodosCrud();
+        if(isset($_POST['register'])){
+            $arr = array(
+                $user = $_POST['name'],
+                $lastName = $_POST['lastName'],
+                $email = $_POST['email'],
+                $pass = $_POST['password'],
+                $img = $_POST['img']
+            );
+
+            $obj->insertData($arr);
+        }
+    ?>
 </body>
 <script src="../js/preview.js"></script>
-
+<script src="../js/valPattern.js"></script>
 </html>

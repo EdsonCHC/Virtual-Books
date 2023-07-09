@@ -4,8 +4,8 @@
 include_once('../php/conex.php');
 include_once('../php/methods.php');
 
-$obj = new conexión();
-$conex = $obj->conectar();
+$obj = new DataBase();
+$DBH = $obj->connect();
 
 if (isset($_POST['Send'])) {
     if (strlen($_POST['email']) >= 1 && strlen($_POST['password']) >= 1) {
@@ -13,6 +13,7 @@ if (isset($_POST['Send'])) {
         $password = trim($_POST['password']);
 
         // Login User
+        // $STH = $DBH->prepare("INSERT INTO user (`name`,`lastName`,`email`,`password`,`img`) 
         $validar_login = mysqli_query($conex, "SELECT * FROM `user` WHERE `email`='$email' and `password`='$password'");
         if (mysqli_num_rows($validar_login) > 0) {
 

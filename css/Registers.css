@@ -71,6 +71,12 @@ body {
   color: gray;
 }
 
+#eye1{
+  position: absolute;
+  left: 490px;
+  top: 410px;
+}
+
 #eye {
   position: absolute;
   left: 490px;
@@ -236,7 +242,8 @@ input[type="file"] {
   display: none;
 }
 
-#ojo{
+
+#ojo, #ojo1{
   width: 3.5rem;
   cursor: pointer;
 }
