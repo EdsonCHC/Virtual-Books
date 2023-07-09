@@ -20,7 +20,7 @@
         ?>
         <div id="paleta-der">
             <div id="part1">
-                <p>Personal Information</p>
+                <p>Información Personal</p>
             </div>
 
             <div id="part2">
@@ -36,33 +36,33 @@
                     $client->addScope('lastName');
                     $client->addScope('email');
                     // $client->addScope('profile');
-
+                    
                     $authUrl = $client->createAuthUrl();
 
                     if (isset($_GET['code'])) {
                         $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
                         $client->setAccessToken($token);
-                    
+
                         $refreshToken = null;
                         if (array_key_exists('refresh_token', $token)) {
                             $refreshToken = $token['refresh_token'];
                         }
-                    
+
                         if ($refreshToken) {
                             // Obtener un nuevo token de acceso utilizando el refresh token
                             $client->fetchAccessTokenWithRefreshToken($refreshToken);
                             $newToken = $client->getAccessToken();
                             $client->setAccessToken($newToken);
-                    
+
                             // Realiza acciones adicionales utilizando el nuevo token de acceso
                             // ...
                         } else {
                             echo 'No se encontró el refresh token.';
                         }
-                    
+
                         $service = new \Google\Service\Oauth2($client);
                         $userInfo = $service->userinfo->get();
-                    
+
                         // Aquí puedes acceder a los datos del usuario, como su ID, nombre y correo electrónico
                         $userId = $userInfo->id;
                         $name = $userInfo->name;
@@ -71,7 +71,7 @@
                         echo $name;
                         //echo $lastName;
                         echo $email;
-                    
+
                     } else {
                         echo 'Error al obtener el código de autorización.';
                     }
@@ -79,11 +79,11 @@
                     <form action="">
                         <div id="text-ctn">
                             <label for="">
-                                <h6>First name</h6>
+                                <h6>Nombre</h6>
                             </label>
                             <input type="text" placeholder="Lorem">
                             <label for="">
-                                <h6>Last name</h6>
+                                <h6>Apellidos</h6>
                             </label>
                             <input type="text" placeholder="Lorem">
                             <button id="boton" type=""> Editar
@@ -94,9 +94,9 @@
                             </button>
                         </div>
                         <div id="img-ctn">
-                            <h6>Profile Picture</h6>
+                            <h6>Foto de Perfil</h6>
                             <img class="grande" src="../src/user.png" alt=""><br>
-                            <button class="upload">Upload image
+                            <button class="upload">Subir Imagen
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
                             </button>
                             <button id="boton1" type="">
@@ -105,7 +105,8 @@
                         </div>
                     </form>
 
-                    <p>Email addres</p>
+                    <p>Dirección de correo electrónico
+                    </p>
                 </div>
             </div>
             <div id="part3">
@@ -116,7 +117,7 @@
                                 <h6>Email</h6>
                             </label>
                             <input type="email" placeholder="Lorem">
-                            <button id="boton2" type=""> Edit Password
+                            <button id="boton2" type=""> Editar 
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                         </div>

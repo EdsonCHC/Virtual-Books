@@ -18,67 +18,66 @@
         ?>
         <div id="content">
 
-            <h4>Welcome</h4>
+            <h4>Bienvenido</h4>
             <div class="content_table">
                 <div class="content_tittle">
                     <img src="../src/img/data.png" alt="" />
-                    <h6>Catalogs/ Catelog Items</h6>
+                    <h6>Catálogos/Artículos de catálogo</h6>
                 </div>
                 <div class="content_description">
                     <div class="content_description_text">
                         <p>
-                            Catalog Items
+                            Artículos
                         </p>
                         <a>
-                            Manage your library Catalogs here.
-                        </a>
+                            Administre los catálogos de su biblioteca aquí. </a>
                     </div>
                     <div class="content_description_search">
                         <div class="content_items">
                             <select name="menu" class="content_items_menu">
                                 <option>Default</option>
                                 <option>id</option>
-                                <option>Title</option>
-                                <option>Accession No</option>
-                                <option>Call no</option>
+                                <option>titulo</option>
+                                <option>Número de acceso</option>
+                                <option>Teléfono</option>
                                 <option>ISBN</option>
                                 <option>ISSN</option>
-                                <option>Author</option>
-                                <option>Publisher</option>
-                                <option>Category</option>
+                                <option>Autor</option>
+                                <option>Editor</option>
+                                <option>Categoria</option>
                                 <option>Tags</option>
-                                <option>Subject</option>
-                                <option>Abstract</option>
-                                <option>description</option>
+                                <option>Etiquetas</option>
+                                <option>Abstracto</option>
+                                <option>descripción</option>
 
                             </select>
                             <input type="text" name="buscar" class="content_items_search">
-                            <input type="submit" value="Search" class="content_items_button_search">
+                            <input type="submit" value="Buscar" class="content_items_button_search">
                         </div>
 
                     </div>
-                    <input type="submit" value="ADD" class="content_items_button_add">
+                    <input type="submit" value="Agregar" class="content_items_button_add">
                 </div>
                 <div class="flex-element">
                     <input class="btn" type="button" value="Smart add">
-                    <input class="btn" type="button" value="Manual add">
-                    <input class="btn" type="button" value="Import items">
-                    <input class="btn" type="button" value="Authors">
-                    <input class="btn" type="button" value="Publisher">
-                    <input class="btn" type="button" value="Refresh">
+                    <input class="btn" type="button" value="Añadir manualmente">
+                    <input class="btn" type="button" value="Importar elementos">
+                    <input class="btn" type="button" value="Autor">
+                    <input class="btn" type="button" value="Editor">
+                    <input class="btn" type="button" value="Actualizar">
 
                 </div>
                 <div class="table">
                     <table>
                         <tr>
                             <th> ID</th>
-                            <th>Title </th>
-                            <th>Type </th>
-                            <th>Authors </th>
-                            <th>Publisher </th>
-                            <th>Calls No </th>
-                            <th>Copies </th>
-                            <th>Actions </th>
+                            <th>titulo </th>
+                            <th>Tipo </th>
+                            <th>Autor </th>
+                            <th>Editor </th>
+                            <th>Teléfono </th>
+                            <th>Copias </th>
+                            <th>Acciones </th>
 
                         </tr>
                         <tr>
