@@ -46,35 +46,40 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro"  required id="input1" autocomplete="no">
+                    <input type="text" name="name" placeholder="Martin Alejandro" required id="input1"
+                        autocomplete="off">
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required id="input2" autocomplete="no">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
+                        id="input2" autocomplete="no">
                     <label for="">
                         <h6>Correo Electrónico</h6>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3" autocomplete="no">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3"
+                        autocomplete="off">
                     <label for="">
                         <h6>Contraseña</h6>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" require id="input4" autocomplete="no">
+                    <input type="password" name="password" placeholder="Contraseña" require id="input4"
+                        autocomplete="off">
                     <div id="eye">
-                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();"> 
+                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <label for="">
                         <h6>Confirmar Contraseña</h6>
                     </label>
-                    <input type="password"  placeholder="Confirmar Contraseña" id="inputP" require autocomplete="no">
-                    
+                    <input type="password" placeholder="Confirmar Contraseña" id="inputP" require autocomplete="off">
                     <div id="aparte">
                         <!-- Registro con google-->
                         <a href="<?php echo $client->createAuthUrl(); ?>>">
-                            <h6>O Registrate con...</h6>
+                            <h6>O Regístrate con...</h6>
                         </a>
-                        <button>
-                            <a href="<?php echo $client->createAuthUrl(); ?>"><img src="../src/google.png" alt=""></a>
-                        </button>
+                        <a href="<?php echo $client->createAuthUrl(); ?>">
+                            <div>
+                                <img src="../src/google.png" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div id="img-ctn">
@@ -83,7 +88,8 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="img" onchange="vista_preliminar(event), validar()">
+                        <input type="file" id="img_i" accept=".jpg,.png" name="img"
+                            onchange="vista_preliminar(event), validar()">
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -92,10 +98,10 @@ $authUrl = $client->createAuthUrl();
                         <div class="line"></div>
                     </div>
                     <h5 class="primo">Selecciona un avatar</h5>
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
                 </div>
                 <button onclick="register()" id="boton" name="register" type="submit">
                     <h6>Registrar</h6>
@@ -106,21 +112,22 @@ $authUrl = $client->createAuthUrl();
     </div>
 
     <!-- No tocar -->
-    <?php 
-        $obj = new métodosCrud();
-        if(isset($_POST['register'])){
-            $arr = array(
-                $user = $_POST['name'],
-                $lastName = $_POST['lastName'],
-                $email = $_POST['email'],
-                $pass = $_POST['password'],
-                $img = $_POST['img']
-            );
+    <?php
+    $obj = new métodosCrud();
+    if (isset($_POST['register'])) {
+        $arr = array(
+            $user = $_POST['name'],
+            $lastName = $_POST['lastName'],
+            $email = $_POST['email'],
+            $pass = $_POST['password'],
+            $img = $_POST['img']
+        );
 
-            $obj->insertData($arr);
-        }
+        $obj->insertData($arr);
+    }
     ?>
 </body>
 <script src="../js/preview.js"></script>
 <script src="../js/valPattern.js"></script>
+
 </html>
