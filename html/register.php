@@ -18,16 +18,15 @@ $authUrl = $client->createAuthUrl();
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
 
-    <!-- Fonts-->
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-
-    <!-- Boostrap-->
     <link rel="stylesheet" href="../css/alertify.css">
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    
     <title>Registrarse</title>
 </head>
 

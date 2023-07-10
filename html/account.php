@@ -3,10 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Account.css">
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Account.css">
+    <link rel="stylesheet" href="../css/Rules.css">
+
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/alertify.css">
+
     <title>Cuenta</title>
 </head>
 
@@ -79,11 +85,13 @@
                     <form action="">
                         <div id="text-ctn">
                             <label for="">
-                                <h6>Nombres</h6><p class="warnings" id="warnings"></p>
+                                <h6>Nombres</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
                             <input type="text" id="input1" placeholder="Martin Alejandro">
                             <label for="">
-                                <h6>Apellidos</h6><p class="warnings" id="warnings"></p>
+                                <h6>Apellidos</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
                             <input type="text" id="input2" placeholder="Castro Lopez">
                             <button id="boton" type=""> Actualizar
@@ -113,7 +121,8 @@
                     <form action="">
                         <div id="text-ctn1">
                             <label for="">
-                                <h6>Correo Electronico</h6><p class="warnings" id="warnings"></p>
+                                <h6>Correo Electronico</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
                             <input type="email" id="input3" placeholder="Lorem">
                             <button id="boton2" type=""> Actualizar

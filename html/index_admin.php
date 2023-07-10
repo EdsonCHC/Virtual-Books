@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Admin</title>
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/index_admin.css" />
+
+    <!-- Fonts and Boostrap-->
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/alertify.css">
+
+    <title>Inicio Admin</title>
 </head>
 
 <body>
@@ -16,7 +22,7 @@
         require_once("../html/aside_admin.php");
         ?>
         <div id="content">
-            <h4>Welcome</h4>
+            <h4>Bienvenido</h4>
             <div class="grid-content">
                 <div class="element e1">
                     <div class="flex-element">

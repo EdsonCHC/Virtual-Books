@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/catalogfilter.css" />
+
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-    <title>Catalog Admin</title>
+    <link rel="stylesheet" href="../css/alertify.css">
+
+    <title>Admin Catálogo</title>
 </head>
 
 <body>
@@ -102,20 +107,11 @@
                                         <button><img src="../src/img/documents-svgrepo-com.png"></button>
                                     </div>
                                 </div>
-
-
                             </td>
-
                         </tr>
                     </table>
-
                 </div>
-
-
-
             </div>
-
-
         </div>
     </main>
 </body>

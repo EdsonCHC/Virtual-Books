@@ -15,9 +15,9 @@ include_once("../php/functions.php");
     </label>
   </form>
   <div id="log-links">
-    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link">Registrarse</a></li>
-    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">Iniciar Sesión</a></li>
-    <li class="<?php esconder(); ?>"><a href="../php/logOut.php" class="link">Cerrar Sesión</a></li>
+    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link"><p>Registrarse</p></a></li>
+    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link"><p>Iniciar Sesión</p></a></li>
+    <li class="<?php esconder(); ?>"><a href="../php/logOut.php" class="link"><p>Cerrar Sesión</p></a></li>
   </div>
   <div id="user">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
