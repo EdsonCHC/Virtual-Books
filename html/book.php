@@ -25,8 +25,8 @@
         </div>
         <div id="book-info">
           <div id="author-info">
-            <h3>Name Book</h3>
-            <h5>Author Name</h5>
+            <h3>Nombre del Libro</h3>
+            <h5>Nombre del Autor </h5>
             <h5>Fecha</h5>
             <h5>Lorem</h5>
           </div>

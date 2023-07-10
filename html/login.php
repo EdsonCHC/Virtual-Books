@@ -35,9 +35,7 @@ $authUrl = $client->createAuthUrl();
             <form action="../php/login_db_vb.php" method="POST" id="form">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
-                        <a href="../html/index.php">
-                            <h1>Virtual Books</h1>
-                        </a>
+                        <h1>Virtual Books</h1>
                     </div>
                     <div class="subtittle_primary_part">
                         <h3>Inicia Sesión</h3>
@@ -47,13 +45,13 @@ $authUrl = $client->createAuthUrl();
                             <div class="tittle_details_primary_part">
                                 <h4><label for="email">Correo Electronico</label></h4><p class="warnings" id="warnings"></p>
                             </div>
-                            <input type="text" name="email" id="email" placeholder="username@gmail.com">
+                            <input type="text" name="email" id="email" placeholder="username@gmail.com" autocomplete="off">
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
                                 <h4> <label for="email">Contraseña</label></h4><p class="warnings" id="warnings"></p>
                             </div>
-                            <input type="password" name="password" id="password" placeholder="Contraseña">
+                            <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
                         </div>
                     </div>
                     <div class="submit_primary_part">
@@ -63,15 +61,13 @@ $authUrl = $client->createAuthUrl();
                 <div class="google_space_primary_part">
                     <div class="google_primary_part">
                         <!-- Login con google-->
+                        <p>O Inicia Sesión con...</p>
                         <a href="<?php echo $authUrl; ?>">
-                            <p>O Inicia Sesión con...</p>
-                        </a>
-                        <a href="<?php echo $authUrl; ?>">
-                            <button><img src="../src/google.png" alt=""></button>
+                            <img src="../src/google.png" alt="google_logo" id="">
                         </a>
                     </div>
                     <div class="register_primary_part">
-                        <p>¿No tienes cuenta?<a href="../html/register.php">!Registrate¡</a></p>
+                        <p>¿No tienes cuenta?<a href="../html/register.php">!Regístrate¡</a></p>
                     </div>
                 </div>
             </form>

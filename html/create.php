@@ -35,18 +35,17 @@
                         <h3>Otros comentarios</h3>
                     </div>
                     <div id="coments">
-                        <p>Why having a blog on your website is more important than ever<button><img
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img
                                     src="../src/Arrow.png" /></button></p>
 
                     </div>
                     <div id="coments">
-                        <p>Why having a blog on your website is more important than ever<button><img
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img
                                     src="../src/Arrow.png" /></button></p>
 
                     </div>
                     <div id="coments">
-                        <p>Why having a blog on your website is
-                            more important than ever<button><img src="../src/Arrow.png" /></button></p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img src="../src/Arrow.png" /></button></p>
 
                     </div>
 

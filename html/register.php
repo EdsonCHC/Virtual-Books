@@ -60,7 +60,7 @@ $authUrl = $client->createAuthUrl();
                     </label>
                     <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="no">
                     <div id="eye">
-                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();"> 
+                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <label for="">
                         <h6>Confirmar Contraseña</h6><p class="warnings" id="warnings"></p>
@@ -70,11 +70,13 @@ $authUrl = $client->createAuthUrl();
                     <div id="aparte">
                         <!-- Registro con google-->
                         <a href="<?php echo $client->createAuthUrl(); ?>>">
-                            <h6>O Registrate con...</h6>
+                            <h6>O Regístrate con...</h6>
                         </a>
-                        <button>
-                            <a href="<?php echo $client->createAuthUrl(); ?>"><img src="../src/google.png" alt=""></a>
-                        </button>
+                        <a href="<?php echo $client->createAuthUrl(); ?>">
+                            <div>
+                                <img src="../src/google.png" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div id="img-ctn">
@@ -92,10 +94,10 @@ $authUrl = $client->createAuthUrl();
                         <div class="line"></div>
                     </div>
                     <h5 class="primo">Selecciona un avatar</h5>
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
-                    <img class="img_chiqitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <img class="img_chiquitas" src="../src/user.png" alt="">
                 </div>
                 <button onclick="register()" id="boton" name="register" type="submit">
                     <h6>Registrar</h6>
@@ -106,22 +108,23 @@ $authUrl = $client->createAuthUrl();
     </div>
 
     <!-- No tocar -->
-    <?php 
-        $obj = new métodosCrud();
-        if(isset($_POST['register'])){
-            $arr = array(
-                $user = $_POST['name'],
-                $lastName = $_POST['lastName'],
-                $email = $_POST['email'],
-                $pass = $_POST['password'],
-                $img = $_POST['img']
-            );
+    <?php
+    $obj = new métodosCrud();
+    if (isset($_POST['register'])) {
+        $arr = array(
+            $user = $_POST['name'],
+            $lastName = $_POST['lastName'],
+            $email = $_POST['email'],
+            $pass = $_POST['password'],
+            $img = $_POST['img']
+        );
 
-            $obj->insertData($arr);
-        }
+        $obj->insertData($arr);
+    }
     ?>
 </body>
 <script src="../js/preview.js"></script>
 <script src="../js/valid/valRegister.js"></script>
 <script src="../js/valPattern.js"></script>
+
 </html>

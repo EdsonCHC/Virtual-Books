@@ -95,14 +95,14 @@ form{
 
 
 }
-.google_primary_part button{
+.google_primary_part img{
     background: #fff;
-    height: 45px;
-    width: 7rem;
+    height: 4.5rem;
+    width: 4.5rem;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 80px;
     border: 1px solid #ddd;
-    padding-top: 5px;
+    padding: 5px;
     margin-top: 2rem;
    
 }

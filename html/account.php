@@ -36,33 +36,33 @@
                     $client->addScope('lastName');
                     $client->addScope('email');
                     // $client->addScope('profile');
-
+                    
                     $authUrl = $client->createAuthUrl();
 
                     if (isset($_GET['code'])) {
                         $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
                         $client->setAccessToken($token);
-                    
+
                         $refreshToken = null;
                         if (array_key_exists('refresh_token', $token)) {
                             $refreshToken = $token['refresh_token'];
                         }
-                    
+
                         if ($refreshToken) {
                             // Obtener un nuevo token de acceso utilizando el refresh token
                             $client->fetchAccessTokenWithRefreshToken($refreshToken);
                             $newToken = $client->getAccessToken();
                             $client->setAccessToken($newToken);
-                    
+
                             // Realiza acciones adicionales utilizando el nuevo token de acceso
                             // ...
                         } else {
                             echo 'No se encontró el refresh token.';
                         }
-                    
+
                         $service = new \Google\Service\Oauth2($client);
                         $userInfo = $service->userinfo->get();
-                    
+
                         // Aquí puedes acceder a los datos del usuario, como su ID, nombre y correo electrónico
                         $userId = $userInfo->id;
                         $name = $userInfo->name;
@@ -71,7 +71,7 @@
                         echo $name;
                         //echo $lastName;
                         echo $email;
-                    
+
                     } else {
                         echo 'Error al obtener el código de autorización.';
                     }
