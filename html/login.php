@@ -32,7 +32,7 @@ $authUrl = $client->createAuthUrl();
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form action="../php/login_db_vb.php" method="POST">
+            <form action="../php/login_db_vb.php" method="POST" id="form">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
                         <a href="../html/index.php">
@@ -45,13 +45,13 @@ $authUrl = $client->createAuthUrl();
                     <div class="form_primary_part">
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4><label for="email">Correo Electronico</label></h4>
+                                <h4><label for="email">Correo Electronico</label></h4><p class="warnings" id="warnings"></p>
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com">
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4> <label for="email">Contraseña</label></h4>
+                                <h4> <label for="email">Contraseña</label></h4><p class="warnings" id="warnings"></p>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Contraseña">
                         </div>
@@ -81,5 +81,5 @@ $authUrl = $client->createAuthUrl();
     </div>
     <script src="https://accounts.google.com/gsi/client" async></script>
 </body>
-
+<script src="../js/valid/valLogin.js"></script>
 </html>

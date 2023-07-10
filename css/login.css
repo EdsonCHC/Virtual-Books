@@ -150,3 +150,11 @@ form{
     left: 90%;
     transform: translate(-40%, 250%);
 }
+
+
+/* Validación*/
+.warnings{
+    color: var(--main-red);
+    font-weight: 600;
+    position:relative; 
+}

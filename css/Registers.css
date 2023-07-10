@@ -247,3 +247,11 @@ input[type="file"] {
   width: 3.5rem;
   cursor: pointer;
 }
+
+
+/* Validación*/
+.warnings{
+  color: var(--main-red);
+  font-weight: 600;
+  position:relative; 
+}
