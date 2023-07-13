@@ -239,7 +239,7 @@ aside {
   left: 0;
   background-color: #fff;
   height: 91.3vh;
-  width: 10.5%;
+  width: 11.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,7 +303,7 @@ aside {
   left: 0;
   background: var(--main-blue);
   height: 100vh;
-  width: 10.5%;
+  width: 11%;
   display: flex;
   flex-direction: column;
   align-items: center;

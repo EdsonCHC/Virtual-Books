@@ -1,11 +1,11 @@
 <?php
-    function esconder(){//No se muestra si no hay sesión
+    function esconder(){
         if(!isset($_SESSION['user']) ){
             echo "esconder";
         }
     }
 
-    function esconderV2(){//No se muestra si hay sesión
+    function esconderV2(){
         if(isset($_SESSION['user'])){
             echo "esconder";
         }

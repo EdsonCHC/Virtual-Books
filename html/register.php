@@ -51,7 +51,7 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="" required
                         id="input2" autocomplete="no">
                     <label for="">
                         <h6>Correo Electrónico</h6>
@@ -113,18 +113,7 @@ $authUrl = $client->createAuthUrl();
 
     <!-- No tocar -->
     <?php
-    $obj = new métodosCrud();
-    if (isset($_POST['register'])) {
-        $arr = array(
-            $user = $_POST['name'],
-            $lastName = $_POST['lastName'],
-            $email = $_POST['email'],
-            $pass = $_POST['password'],
-            $img = $_POST['img']
-        );
-
-        $obj->insertData($arr);
-    }
+        require_once("../php/register_db_vb.php");
     ?>
 </body>
 <script src="../js/preview.js"></script>

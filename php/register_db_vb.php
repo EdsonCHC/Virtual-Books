@@ -3,7 +3,7 @@
 include_once('../php/conex.php');
 include_once('../php/methods.php');
 
-$obj = new métodosCrud();
+$obj = new métodosUser();
 
 
 if (isset($_POST['register'])) {
@@ -13,7 +13,6 @@ if (isset($_POST['register'])) {
     $password = trim($_POST['password']);
     $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));;
     
-    // Se enlanzan los arrays
     $arr = array($name,$lastName,$email,$password,$img);
 
     $obj->insertData($arr);

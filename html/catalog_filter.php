@@ -29,43 +29,28 @@
                         <p>
                             Artículos
                         </p>
-                        <a>
-                            Administre los catálogos de su biblioteca aquí. </a>
+                        <p>
+                            Administre los catálogos de su biblioteca aquí. 
+                        </p>
                     </div>
                     <div class="content_description_search">
                         <div class="content_items">
                             <select name="menu" class="content_items_menu">
-                                <option>Default</option>
-                                <option>id</option>
-                                <option>titulo</option>
-                                <option>Número de acceso</option>
-                                <option>Teléfono</option>
-                                <option>ISBN</option>
-                                <option>ISSN</option>
+                                <option selected disabled>Default</option>
+                                <option>Id</option>
+                                <option>Titulo</option>
+                                <option>Tipo</option>
                                 <option>Autor</option>
                                 <option>Editor</option>
-                                <option>Categoria</option>
-                                <option>Tags</option>
-                                <option>Etiquetas</option>
-                                <option>Abstracto</option>
-                                <option>descripción</option>
-
                             </select>
                             <input type="text" name="buscar" class="content_items_search">
                             <input type="submit" value="Buscar" class="content_items_button_search">
                         </div>
-
                     </div>
-                    <input type="submit" value="Agregar" class="content_items_button_add">
                 </div>
                 <div class="flex-element">
-                    <input class="btn" type="button" value="Smart add">
-                    <input class="btn" type="button" value="Añadir manualmente">
-                    <input class="btn" type="button" value="Importar elementos">
-                    <input class="btn" type="button" value="Autor">
-                    <input class="btn" type="button" value="Editor">
-                    <input class="btn" type="button" value="Actualizar">
-
+                    <button class="btn" id="oP">Añadir</button>
+                    <button class="btn" >Refrescar</button>
                 </div>
                 <div class="table">
                     <table>
@@ -74,27 +59,19 @@
                             <th>titulo </th>
                             <th>Tipo </th>
                             <th>Autor </th>
-                            <th>Editor </th>
-                            <th>Teléfono </th>
-                            <th>Copias </th>
+                            <th>Editor</th>
+                            <th>Categoría</th>
                             <th>Acciones </th>
-
                         </tr>
                         <tr>
                             <td>12345678</td>
                             <td>Ema (Collins Classics)</td>
                             <td>Books </td>
                             <td>Austen,Jane</td>
+                            <td>Si</td>
                             <td>HarperCollins Publisher</td>
-                            <td>5325242424249242424243236</td>
-                            <td>
-                                <div class="copies">
-                                    <a>7/8</a>
-                                </div>
-                            </td>
                             <td>
                                 <div class="flex-element">
-
                                     <div class="actions">
                                         <button><img src="../src/img/eye-svgrepo-com.png"></button>
                                     </div>
@@ -102,22 +79,36 @@
                                         <button><img src="../src/img/documents-svgrepo-com.png"></button>
                                     </div>
                                 </div>
-
-
                             </td>
-
                         </tr>
                     </table>
-
                 </div>
-
-
-
             </div>
-
-
         </div>
+        <dialog>
+        <form  method="POST">
+        <input type="text" name="Nombre" placeholder="Titulo">
+        <input type="text" name="Autor" placeholder="Autor">
+        <select name="Tipo">
+            <option value="" selected disabled>Tipo</option>
+            <option value="Revista">Revista Académica</option>
+            <option value="Libro">Libro</option>
+            <option value="Tesis">Tesis</option>
+        </select>
+        <select name="cate">
+            <option value="" selected disabled>Categoría</option>
+            <option value="Revista">Revista Académica</option>
+            <option value="Libro">Libro</option>
+            <option value="Tesis">Tesis</option>
+        </select>
+        <button type="submit">OK</button>
+        </form>
+        </dialog>
     </main>
+    <script>
+        document.querySelector("#oP").addEventListener("click", ()=>{
+            document.querySelector("dialog").showModal();
+        })
+    </script>
 </body>
-
 </html>

@@ -2,7 +2,6 @@
 
 class DataBase
 {
-    //no tocar
     public function connect()
     {
         $host = "localhost";
