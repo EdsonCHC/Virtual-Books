@@ -3,11 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libro</title>
   <link rel="stylesheet" href="../css/Rules.css">
   <link rel="stylesheet" href="../css/libro.css">
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+
+  <!-- Fonts and Boostrap-->
+  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/alertify.css">
+
+  <title>Libro</title>
 </head>
 
 <body>
@@ -26,7 +32,7 @@
         <div id="book-info">
           <div id="author-info">
             <h3>Nombre del Libro</h3>
-            <h5>Nombre del Autor </h5>
+            <h5>Nombre del Autor</h5>
             <h5>Fecha</h5>
             <h5>Lorem</h5>
           </div>
@@ -47,18 +53,18 @@
         </div>
       </div>
       <div id="more-books">
-      <h2>Libros Similares</h2>
-      <div id="similar-books">
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
-        <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+        <h2>Libros Similares</h2>
+        <div id="similar-books">
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+          <a href=""><img src="../src/alicia.jpg" alt="libro-img"></a>
+        </div>
       </div>
-    </div>
     </div>
   </main>
   <?php

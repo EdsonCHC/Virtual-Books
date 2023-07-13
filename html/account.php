@@ -3,10 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Account.css">
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Account.css">
+    <link rel="stylesheet" href="../css/Rules.css">
+
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/alertify.css">
+
     <title>Cuenta</title>
 </head>
 
@@ -79,14 +85,16 @@
                     <form action="">
                         <div id="text-ctn">
                             <label for="">
-                                <h6>Nombre</h6>
+                                <h6>Nombres</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
-                            <input type="text" placeholder="Lorem">
+                            <input type="text" id="input1" placeholder="Martin Alejandro">
                             <label for="">
                                 <h6>Apellidos</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
-                            <input type="text" placeholder="Lorem">
-                            <button id="boton" type=""> Editar
+                            <input type="text" id="input2" placeholder="Castro Lopez">
+                            <button id="boton" type=""> Actualizar
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                             <button id="boton1" type="">
@@ -94,9 +102,9 @@
                             </button>
                         </div>
                         <div id="img-ctn">
-                            <h6>Foto de Perfil</h6>
+                            <h6>Imagen de perfil</h6>
                             <img class="grande" src="../src/user.png" alt=""><br>
-                            <button class="upload">Subir Imagen
+                            <button class="upload">Actualizar
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
                             </button>
                             <button id="boton1" type="">
@@ -105,8 +113,7 @@
                         </div>
                     </form>
 
-                    <p>Dirección de correo electrónico
-                    </p>
+                    <p>Correo Electrónico</p>
                 </div>
             </div>
             <div id="part3">
@@ -114,10 +121,11 @@
                     <form action="">
                         <div id="text-ctn1">
                             <label for="">
-                                <h6>Email</h6>
+                                <h6>Correo Electronico</h6>
+                                <p class="warnings" id="warnings"></p>
                             </label>
-                            <input type="email" placeholder="Lorem">
-                            <button id="boton2" type=""> Editar 
+                            <input type="email" id="input3" placeholder="Lorem">
+                            <button id="boton2" type=""> Actualizar
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                         </div>

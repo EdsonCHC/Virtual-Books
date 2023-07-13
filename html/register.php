@@ -18,16 +18,15 @@ $authUrl = $client->createAuthUrl();
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
 
-    <!-- Fonts-->
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-
-    <!-- Boostrap-->
     <link rel="stylesheet" href="../css/alertify.css">
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    
     <title>Registrarse</title>
 </head>
 
@@ -41,35 +40,33 @@ $authUrl = $client->createAuthUrl();
         </div>
         <img id="Ovalo_1" src="../src/login.png">
         <div id="form-ctn">
-            <form action="../php/register_db_vb.php" method="post" enctype="multipart/form-data">
+            <form action="../php/register_db_vb.php" method="post" id="form" enctype="multipart/form-data">
                 <div id="text-ctn">
                     <label for="">
-                        <h6>Nombres</h6>
+                        <h6>Nombres</h6><p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" required id="input1"
-                        autocomplete="off">
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="no">
                     <label for="">
-                        <h6>Apellidos</h6>
+                        <h6>Apellidos</h6><p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="" required
+                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
                         id="input2" autocomplete="no">
                     <label for="">
-                        <h6>Correo Electrónico</h6>
+                        <h6>Correo Electrónico</h6><p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com" require id="input3"
-                        autocomplete="off">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" id="input3" autocomplete="no">
                     <label for="">
-                        <h6>Contraseña</h6>
+                        <h6>Contraseña</h6><p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" require id="input4"
-                        autocomplete="off">
+                    <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="no">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <label for="">
-                        <h6>Confirmar Contraseña</h6>
+                        <h6>Confirmar Contraseña</h6><p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" placeholder="Confirmar Contraseña" id="inputP" require autocomplete="off">
+                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" id="inputP" autocomplete="no">
+                    
                     <div id="aparte">
                         <!-- Registro con google-->
                         <a href="<?php echo $client->createAuthUrl(); ?>>">
@@ -88,8 +85,7 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="img"
-                            onchange="vista_preliminar(event), validar()">
+                        <input type="file" id="img_i" accept=".jpg,.png" name="img" onchange="vista_preliminar(event), validar()" required>
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -117,6 +113,7 @@ $authUrl = $client->createAuthUrl();
     ?>
 </body>
 <script src="../js/preview.js"></script>
+<script src="../js/valid/valRegister.js"></script>
 <script src="../js/valPattern.js"></script>
 
 </html>
