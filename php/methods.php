@@ -10,6 +10,7 @@ class métodosUser implements plantilla
         $STH = $DBH->prepare("INSERT INTO user (`name`,`lastName`,`email`,`password`,`img`) 
         values(?,?,?,?,?)");
         $STH->execute($arr);
+        $DBH->close();
     }
 
     public function showData(){}

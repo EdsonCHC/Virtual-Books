@@ -4,7 +4,6 @@ const name = document.getElementById("input1");
 const lastName = document.getElementById("input2");
 const email = document.getElementById("input3");
 const text = document.getElementById("warnings");
-// const boton = document.getElementById("boton");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

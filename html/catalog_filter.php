@@ -1,3 +1,8 @@
+<?php
+    require_once("../php/interface.php");
+    require_once("../php/cone.php");
+    require_once("../php/methodsAdmin.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +60,7 @@
                 </div>
                 <div class="flex-element">
                     <button class="btn" id="oP">Añadir</button>
-                    <button class="btn" >Refrescar</button>
+                    <button class="btn" onclick="location.reload()">Refrescar</button>
                 </div>
                 <div class="table">
                     <table>
@@ -64,37 +69,48 @@
                             <th>titulo </th>
                             <th>Tipo </th>
                             <th>Autor </th>
-                            <th>Editor</th>
                             <th>Categoría</th>
                             <th>Acciones </th>
                         </tr>
                         <tr>
-                            <td>12345678</td>
-                            <td>Ema (Collins Classics)</td>
-                            <td>Books </td>
-                            <td>Austen,Jane</td>
-                            <td>Si</td>
-                            <td>HarperCollins Publisher</td>
-                            <td>
-                                <div class="flex-element">
-                                    <div class="actions">
-                                        <button><img src="../src/img/eye-svgrepo-com.png"></button>
-                                    </div>
-                                    <div class="actions">
-                                        <button><img src="../src/img/documents-svgrepo-com.png"></button>
-                                    </div>
-                                </div>
-                            </td>
+                            <?php
+                                $obj = new métodosAdmin();
+                                $row = $obj->showData();
+                                if($row->rowCount() > 0){
+                                    $row->setFetchMode(PDO::FETCH_ASSOC);
+                                    while($info = $row->fetch()) {
+                                        ?>
+                                        <td><?php echo $info['id'] ?></td>
+                                        <td><?php echo $info['name'] ?></td>
+                                        <td><?php echo $info['type'] ?></td>
+                                        <td><?php echo $info['author'] ?></td>
+                                        <td><?php echo $info['category'] ?></td>
+                                        <td>
+                                            <div class="flex-element">
+                                                <div class="actions">
+                                                    <button><img src="../src/img/eye-svgrepo-com.png"></button>
+                                                </div>
+                                                <div class="actions">
+                                                    <button><img src="../src/img/documents-svgrepo-com.png"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                            <?php
+                                } 
+                            }else{
+                                echo "<h4>No hay datos</h4>";
+                            }
+                            ?>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
         <dialog>
-        <form  method="POST">
-        <input type="text" name="Nombre" placeholder="Titulo">
-        <input type="text" name="Autor" placeholder="Autor">
-        <select name="Tipo">
+        <form  method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Titulo">
+        <input type="text" name="autor" placeholder="Autor">
+        <select name="tipo">
             <option value="" selected disabled>Tipo</option>
             <option value="Revista">Revista Académica</option>
             <option value="Libro">Libro</option>
@@ -106,14 +122,42 @@
             <option value="Libro">Libro</option>
             <option value="Tesis">Tesis</option>
         </select>
-        <button type="submit">OK</button>
+        <textarea placeholder="Descripción" name="desc"></textarea>
+        <input type="file" accept=".pdf" name="src">
+        <input type="file" accept=".jpg,.png" name="img">
+        <button type="submit" name="enviar">OK</button>
         </form>
+        <?php
+            $obj = new métodosAdmin();
+            if(isset($_POST['enviar'])){
+                $name = trim($_POST['name']);
+                $autor = trim($_POST['autor']);
+                $type = trim($_POST['tipo']);
+                $cat = trim($_POST['cate']);
+                $desc = trim($_POST['desc']);
+                $src =  addslashes(file_get_contents($_FILES['src']['tmp_name']));
+                $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));;
+                $arr = array(
+                    $name,
+                    $autor,
+                    $type,
+                    $cat,
+                    $desc,
+                    $src,
+                    $img
+                );
+                $obj -> insertData($arr);
+            }
+        ?>
         </dialog>
     </main>
     <script>
         document.querySelector("#oP").addEventListener("click", ()=>{
             document.querySelector("dialog").showModal();
         })
+    </script>
+    <script>
+
     </script>
 </body>
 </html>
