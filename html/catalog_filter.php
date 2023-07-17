@@ -115,6 +115,29 @@ require_once("../php/methodsAdmin.php");
             </div>
         </div>
         <dialog>
+        <form  method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Titulo" autocomplete="off">
+        <input type="text" name="autor" placeholder="Autor" autocomplete="off">
+        <select name="tipo">
+            <option value="" selected disabled>Tipo</option>
+            <option value="Revista">Revista Académica</option>
+            <option value="Libro">Libro</option>
+            <option value="Tesis">Tesis</option>
+        </select>
+        <select name="cate">
+            <option value="" selected disabled>Categoría</option>
+            <option value="Ciencia">Ciencia</option>
+            <option value="Literatura">Literatura</option>
+            <option value="Física">Física</option>
+            <option value="Economía">Economía</option>
+            <option value="Historia">Historia</option>
+        </select>
+        <textarea placeholder="Descripción" name="desc"></textarea>
+        <input type="file" accept=".pdf" name="src">
+        <input type="file" accept="Image/*" name="img">
+        <button type="submit" name="enviar">OK</button>
+        </form>
+            <!-- Form estilizado
             <form method="POST" enctype="multipart/form-data">
                 <h4>Agregar Recursos</h4>
                 <hr>
@@ -160,7 +183,7 @@ require_once("../php/methodsAdmin.php");
                     <input type="file" id="imagen" accept="Image/*" name="img">
                 </div>
                 <button type="submit" name="enviar">OK</button>
-            </form>
+            </form>-->
             <?php
             $obj = new métodosAdmin();
             if (isset($_POST['enviar'])) {
