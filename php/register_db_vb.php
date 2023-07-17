@@ -1,7 +1,7 @@
 <?php
 
-include_once('../php/conex.php');
-include_once('../php/methods.php');
+require_once('../php/cone.php');
+require_once('../php/methods.php');
 
 $obj = new métodosUser();
 

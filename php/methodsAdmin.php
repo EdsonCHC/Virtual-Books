@@ -20,7 +20,7 @@ class métodosAdmin implements plantilla
         return $STH;
     }
     public function updateData($sql){}
-    public function deleteData($id){}
+    public function deleteData($sql){}
 }
 
 ?>

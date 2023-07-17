@@ -1,3 +1,6 @@
+<?php
+include_once("../php/functions.php");
+?>
 <aside>
     <div id="home">
         <nav id="books-nav">
@@ -19,7 +22,7 @@
     </div>
     <div id="settings">
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i> Ayuda</a>
-        <a href="" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+        <li class="<?php esconder(); ?>"><a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
     </div>
 </aside>
 

@@ -1,73 +1,82 @@
-// Obtencion de datos
-const form = document.getElementById("form");
-const name = document.getElementById("input1");
-const lastName = document.getElementById("input2");
-const email = document.getElementById("input3");
-const pass = document.getElementById("input4");
-const passConfirm = document.getElementById("inputP");
-const text = document.getElementById("warnings");
-// const boton = document.getElementById("boton");
+// Datos de Nombre
+let inputName = document.getElementById("input1");
+let warningName = document.getElementById("warnings");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let warnings = "";
-  let regexName = /^[a-zA-ZÁ-ÿ\s]{1,40}$/;
-  let regexLastName = /^[a-zA-ZÁ-ÿ\s]{1,40}$/;
-  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-  let regexPass = /^[A-Za-z\d]{8,}$/;
-  let regexPassConfirm = /^[A-Za-z\d]{8,}$/;
-  text.innerHTML = "";
-  let entrar = false;
+var elementName = document.createElement("div");
+elementName.id = "notify";
+elementName.style.display = "none";
+warningName.appendChild(elementName);
 
-  // Validadión nombre
-  if (name.value.length < 4) {
-    warnings += `El nombre no es valido`;
-    entrar = true;
+inputName.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elementName.textContent =
+      "El nombre no puede contener números";
+    elementName.className = "error";
+    elementName.style.display = "block";
+    inputName.className = "invalid";
   }
-  if (!regexName.test(name.value)) {
-    warnings += `El nombre no es valido`;
-    entrar = true;
-  }
+});
 
-  // Validadión apellido
-  if (lastName.value.length < 4) {
-    warnings += `El apellido no es valido`;
-    entrar = true;
+inputName.addEventListener("input", function (event) {
+  if ("block" === elementName.style.display) {
+    inputName.className = "";
+    elementName.style.display = "none";
   }
-  if (!regexLastName.test(lastName.value)) {
-    warnings += `El apellido no es valido`;
-    entrar = true;
-  }
+});
 
-  // Validación email
-  if (!regexEmail.test(email.value)) {
-    warnings += `El correo contiene caracteres inválidos`;
-    entrar = true;
-  }
 
-  // Validación contraseña
-  if (pass.value.length < 4) {
-    warnings += `El nombre no es valido`;
-    entrar = true;
-  }
-  if (!regexPass.test(pass.value)) {
-    warnings += `La contraseña no es valida, solo puede contener letras y números`;
-    entrar = true;
-  }
+// Datos de Apellidos
+let inputLastName = document.getElementById("input2");
+let warningLastName = document.getElementById("warnings");
 
-  if (passConfirm.value.length < 4) {
-    warnings += `El nombre no es valido`;
-    entrar = true;
-  }
-  if (!regexPassConfirm.test(passConfirm.value)) {
-    warnings += `La contraseña no es valida, solo puede contener letras y números`;
-    entrar = true;
-  }
+var elementLastName = document.createElement("div");
+elementLastName.id = "notify";
+elementLastName.style.display = "none";
+warningLastName.appendChild(elementLastName);
 
-  // Mensajes de alerta
-  if (entrar) {
-    text.innerHTML = warnings;
-  } else {
-    text.innerHTML = "nice";
+inputLastName.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elementLastName.textContent =
+      "Los apellidos no pueden contener números";
+    elementLastName.className = "error";
+    elementLastName.style.display = "block";
+    inputLastName.className = "invalid";
+  }
+});
+
+inputLastName.addEventListener("input", function (event) {
+  if ("block" === elementLastName.style.display) {
+    inputLastName.className = "";
+    elementLastName.style.display = "none";
+  }
+});
+
+
+// Datos de Contraseña
+let inputPass = document.getElementById("input4");
+let warningPass = document.getElementById("warnings");
+
+var elementLastName = document.createElement("div");
+elementLastName.id = "notify";
+elementLastName.style.display = "none";
+warningLastName.appendChild(elementLastName);
+
+inputLastName.addEventListener("invalid", function (event) {
+  event.preventDefault();
+  if (!event.target.validity.valid) {
+    elementLastName.textContent =
+      "Los apellidos no pueden contener números";
+    elementLastName.className = "error";
+    elementLastName.style.display = "block";
+    inputLastName.className = "invalid";
+  }
+});
+
+inputLastName.addEventListener("input", function (event) {
+  if ("block" === elementLastName.style.display) {
+    inputLastName.className = "";
+    elementLastName.style.display = "none";
   }
 });

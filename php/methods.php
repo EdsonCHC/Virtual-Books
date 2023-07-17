@@ -1,14 +1,15 @@
 <?php
+include_once '../php/cone.php';
+include_once '../php/interface.php';
 
-
-class métodosUser implements plantilla
+class MétodosUser implements plantilla
 {
     public function insertData($arr)
     {
         $obj = new DataBase();
         $DBH = $obj->connect();
-        $STH = $DBH->prepare("INSERT INTO user (`name`,`lastName`,`email`,`password`,`img`) 
-        values(?,?,?,?,?)");
+        $STH = $DBH->prepare("INSERT INTO `user` (`name`, `lastName`, `email`, `password`, `img`) 
+            VALUES (?, ?, ?, ?, ?)");
         $STH->execute($arr);
         $DBH = null;
     }
@@ -19,7 +20,7 @@ class métodosUser implements plantilla
         return $STH;
     }
     public function updateData($sql){}
-    public function deleteData($dd){}
+    public function deleteData($sql){}
     
 }
 

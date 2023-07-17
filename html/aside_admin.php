@@ -3,7 +3,7 @@
         <h2 class="title_aside">Virtual Books Admin</h2>
         <nav id="books-nav">
             <li><i class="fa-solid fa-house"></i>
-                <a href="#" class="link">Dashboard</a>
+                <a href="#" class="link">Contenido</a>
                 <span> ></span>
             </li>
             <!-- <li>
@@ -13,7 +13,7 @@
             </li> -->
             <li>
                 <i class="fa-solid fa-database"></i>
-                <a href="../html/myBooks.php" class="link">Catalogos</a>
+                <a href="../html/catalog_filter.php" class="link">Catalogos</a>
                 <span> ></span>
             </li>
             <li>
@@ -26,7 +26,7 @@
     <div id="settings_admin">
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i>Documentación</a>
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i>Ayuda</a>
-        <a href="" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+        <a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
     </div>
 </aside>
 
