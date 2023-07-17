@@ -71,8 +71,8 @@ $authUrl = $client->createAuthUrl();
                         <h6>Confirmar Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" id="inputP"
-                        autocomplete="no">
+                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" 
+                        autocomplete="off">
 
                     <div id="aparte">
                         <!-- Registro con google-->
@@ -107,7 +107,7 @@ $authUrl = $client->createAuthUrl();
                     <img class="img_chiquitas" src="../src/user.png" alt="">
                     <img class="img_chiquitas" src="../src/user.png" alt="">
                 </div>
-                <button onclick="register()" id="boton" name="register" type="submit">
+                <button onclick="" id="boton" name="register" type="submit">
                     <h6>Registrar</h6>
                 </button>
             </form>
@@ -120,9 +120,9 @@ $authUrl = $client->createAuthUrl();
     require_once("../php/register_db_vb.php");
     ?>
 </body>
-<script src="../js/preview.js"></script>
+<script src="../js/preview.js"></script>    
 <!--Problemas con preventDeault()-->
-<!--<script src="../js/valid/valLogin.js"></script>-->
+<!-- <script src="../js/valid/valLogin.js"></script> -->
 <script src="../js/valPattern.js"></script>
 
 </html>

@@ -1,6 +1,6 @@
 const text = document.getElementById("warning");
 let ojo = document.getElementById("ojo");
-let input = document.getElementById("inputP");
+let input = document.getElementById("passConfirm");
 
 //Función imagen
 let vista_preliminar = (event) => {

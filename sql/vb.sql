@@ -70,7 +70,7 @@ CREATE TABLE `resource` (
 -- Volcado de datos para la tabla `resource`
 --
 
-INSERT DELAYED INTO `resource` VALUES
+INSERT INTO `resource` VALUES
 (5, 'El Gato negro', 'Edgar Allan Poe', 'Libro', 'Literatura', 'Un gato negro la vd ni isea sjjhsjsjjssa', '../src/files/Edgar Allan Poe - El Gato Negro.pdf', '../src/img/Captura de pantalla 2023-07-17 004749.jpg.png');
 
 -- --------------------------------------------------------

@@ -53,18 +53,19 @@ $authUrl = $client->createAuthUrl();
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
                                 <h4><label for="email">Correo Electronico</label></h4>
-                                <p class="warnings" id="warnings"></p>
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com"
                                 autocomplete="off">
+                            <p class="warnings" id="warnings"></p>
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
                                 <h4> <label for="email">Contraseña</label></h4>
-                                <p class="warnings" id="warnings_2"></p>
+
                             </div>
                             <input type="password" name="password" id="password" placeholder="Contraseña"
                                 autocomplete="off">
+                            <p class="warnings" id="warnings_2"></p>
                         </div>
                     </div>
                     <div class="submit_primary_part">
@@ -89,11 +90,11 @@ $authUrl = $client->createAuthUrl();
         </div>
     </div>
     <?php
-        require_once("../php/login_db_vb.php");
+    require_once("../php/login_db_vb.php");
     ?>
     <script src="https://accounts.google.com/gsi/client" async></script>
     <!--Problemas con preventDeault()-->
-    <!--<script src="../js/valid/valLogin.js"></script>-->
+    <script src="../js/valid/valLogin.js"></script>
 </body>
 
 </html>
