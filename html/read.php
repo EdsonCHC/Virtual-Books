@@ -1,3 +1,19 @@
+<?php
+require_once("../php/interface.php");
+require_once("../php/cone.php");
+require_once("../php/methods.php");
+
+$id = $_GET['id'];
+$obj = new métodosUser();
+$sql = "SELECT src FROM resource WHERE id = $id";
+$row = $obj->showData($sql);
+if ($row->rowCount() > 0) {
+  $row->setFetchMode(PDO::FETCH_ASSOC);
+  $info = $row->fetch();
+} else {
+  echo "404 not found";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +42,7 @@
         ?>
         <!-- Aqui van los libros -->
         <div id="content">
-            <object id="book" data="../src/Metafisica_Aristoteles.pdf#toolbar=0&view=fitB" type="application/pdf">
+            <object id="book" data="<?php echo $info['src'] ?>#toolbar=0&view=fitB" type="application/pdf">
 
             </object>
         </div>

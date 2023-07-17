@@ -32,8 +32,6 @@ CREATE TABLE IF NOT EXISTS `comment`(
     constraint foreign key (id_rec) references  `resource`(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-
-
 CREATE TABLE IF NOT EXISTS `shelf`(
 	id int(11) auto_increment primary key,
     id_r int(11) not null,

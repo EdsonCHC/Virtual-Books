@@ -170,6 +170,11 @@ header {
   align-items: center;
 }
 
+#log-links ul{
+  display: flex;
+  gap: 2rem;
+}
+
 /*  ESTILOS DE ETIQUETA LINK*/
 li {
   list-style: none;
@@ -346,3 +351,8 @@ footer {
   background-color: var(--secondary-orange);
   text-align: center;
 }
+
+.esconder, .esconderV2{
+  display: none;
+}
+
