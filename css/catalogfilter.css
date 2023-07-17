@@ -19,6 +19,9 @@ main {
     padding-bottom: 20%;
     margin-top: 3%;
     border-radius: 0.8rem;
+    height: 70rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .content_tittle{
     display: flex;
