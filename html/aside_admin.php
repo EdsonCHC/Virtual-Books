@@ -3,7 +3,7 @@
         <h2 class="title_aside">Virtual Books Admin</h2>
         <nav id="books-nav">
             <li><i class="fa-solid fa-house"></i>
-                <a href="#" class="link">Contenido</a>
+                <a href="../html/index_admin.php" class="link">Contenido</a>
                 <span> ></span>
             </li>
             <!-- <li>
