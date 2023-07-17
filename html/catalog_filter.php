@@ -13,8 +13,6 @@ require_once("../php/methodsAdmin.php");
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/catalogfilter.css" />
-
-    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
@@ -60,7 +58,6 @@ require_once("../php/methodsAdmin.php");
                 </div>
                 <div class="flex-element">
                     <button class="btn" id="oP">Añadir</button>
-                    <button class="btn" onclick="location.reload()">Refrescar</button>
                 </div>
                 <div class="table">
                     <table>
@@ -72,14 +69,15 @@ require_once("../php/methodsAdmin.php");
                             <th>Categoría</th>
                             <th>Acciones </th>
                         </tr>
-                        <tr>
-                            <?php
-                            $obj = new métodosAdmin();
-                            $row = $obj->showData();
-                            if ($row->rowCount() > 0) {
-                                $row->setFetchMode(PDO::FETCH_ASSOC);
-                                while ($info = $row->fetch()) {
-                                    ?>
+                        <?php
+                        $obj = new métodosAdmin();
+                        $sql = "SELECT id, name, author, type, category FROM resource";
+                        $row = $obj->showData($sql);
+                        if ($row->rowCount() > 0) {
+                            $row->setFetchMode(PDO::FETCH_ASSOC);
+                            while ($info = $row->fetch()) {
+                                ?>
+                                <tr>
                                     <td>
                                         <?php echo $info['id'] ?>
                                     </td>
@@ -105,13 +103,13 @@ require_once("../php/methodsAdmin.php");
                                             </div>
                                         </div>
                                     </td>
-                                    <?php
-                                }
-                            } else {
-                                echo "<h4>No hay datos</h4>";
+                                </tr>
+                                <?php
                             }
-                            ?>
-                        </tr>
+                        } else {
+                            echo "<td><h4>No hay datos</h4></td>";
+                        }
+                        ?>
                     </table>
                 </div>
             </div>
@@ -137,18 +135,21 @@ require_once("../php/methodsAdmin.php");
                         <option value="Tesis">Tesis</option>
                     </select>
                 </div>
-                <div class="content_form">
-                    <label for="descripcion" class="form_text">Descripción</label>
-                    <textarea id="descripcion" class="descripcion" name="desc"></textarea>
-                </div>
+
                 <div class="content_form">
                     <label for="tipo" class="form_text">Categoria</label>
                     <select name="cate" id="categoria" class="categoria">
                         <option value="" selected disabled>Categoría</option>
-                        <option value="Revista">Revista Académica</option>
-                        <option value="Libro">Libro</option>
-                        <option value="Tesis">Tesis</option>
+                        <option value="Ciencia">Ciencia</option>
+                        <option value="Literatura">Literatura</option>
+                        <option value="Física">Física</option>
+                        <option value="Economía">Economía</option>
+                        <option value="Historia">Historia</option>
                     </select>
+                </div>
+                <div class="content_form">
+                    <label for="descripcion" class="form_text">Descripción</label>
+                    <textarea id="descripcion" class="descripcion" name="desc"></textarea>
                 </div>
                 <div class="content_form">
                     <label for="articulo" class="src">Articulo</label>
@@ -156,7 +157,7 @@ require_once("../php/methodsAdmin.php");
                 </div>
                 <div class="content_form">
                     <label for="imagen" class="src">Imagen</label>
-                    <input type="file" id="imagen" accept=".pdf,.png,.jpg" name="src" >
+                    <input type="file" id="imagen" accept="Image/*" name="img">
                 </div>
                 <button type="submit" name="enviar">OK</button>
             </form>
@@ -168,9 +169,12 @@ require_once("../php/methodsAdmin.php");
                 $type = trim($_POST['tipo']);
                 $cat = trim($_POST['cate']);
                 $desc = trim($_POST['desc']);
-                $src = addslashes(file_get_contents($_FILES['src']['tmp_name']));
-                $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-                ;
+                $nombreSrc = $_FILES['src']['name'];
+                $rutaSrc = $_FILES['src']['tmp_name'];
+                $src = "../src/files/" . $nombreSrc;
+                $nombreImg = $_FILES['img']['name'];
+                $rutaImg = $_FILES['img']['tmp_name'];
+                $img = "../src/img/" . $nombreImg;
                 $arr = array(
                     $name,
                     $autor,
@@ -180,7 +184,10 @@ require_once("../php/methodsAdmin.php");
                     $src,
                     $img
                 );
-                $obj->insertData($arr);
+                if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
+                    $obj->insertData($arr);
+                    header('Location: ../html/catalog_filter.php');
+                }
             }
             ?>
         </dialog>

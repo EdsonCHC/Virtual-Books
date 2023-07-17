@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS `resource`(
     author varchar(50) not null,
     type varchar(50) not null,
     category varchar(50) not null,
-    description varchar(300) not null,
-    src BLOB not null,
-    img BLOB not null
+    description varchar(1000) not null,
+    src varchar(300) not null,
+    img varchar(300) not null
 );
 
 CREATE TABLE IF NOT EXISTS `comment`(

@@ -1,9 +1,9 @@
 <?php
 interface plantilla{
     public function insertData($arr);
-    public function showData();
-    public function updateData();
-    public function deleteData();
+    public function showData($sql);
+    public function updateData($sql);
+    public function deleteData($sql);
 }
 
 ?>
