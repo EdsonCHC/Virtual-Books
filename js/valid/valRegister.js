@@ -55,8 +55,8 @@ inputLastName.addEventListener("input", function (event) {
 
 
 // Datos de Contraseña
-let inputPass = document.getElementById("input4");
-let warningPass = document.getElementById("warnings");
+let inputPass = document.getElementById("input3");
+let warningPass = document.getElementById("warnings3");
 
 var elementLastName = document.createElement("div");
 elementLastName.id = "notify";

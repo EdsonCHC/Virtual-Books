@@ -46,19 +46,19 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off">
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off" required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
+                    <input type="text" name="lastName" placeholder="Castro Lopez" required
                         id="input2" autocomplete="no">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
                         <h6>Correo Electrónico</h6>
-                        <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com" id="input3" autocomplete="off">
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com" id="input3" autocomplete="off">
+                    <p class="warnings" id="warnings3"></p>
                     <label for="">
                         <h6>Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
@@ -92,7 +92,7 @@ $authUrl = $client->createAuthUrl();
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
                         <input type="file" id="img_i" accept=".jpg,.png" name="img"
-                            onchange="vista_preliminar(event), validar()" required>
+                            onchange="vista_preliminar(event), validar()" >
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">

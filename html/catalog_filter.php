@@ -209,7 +209,7 @@ require_once("../php/methodsAdmin.php");
                 );
                 if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
                     $obj->insertData($arr);
-                    header('Location: ../html/catalog_filter.php');
+                    header("Location: ../html/catalog_filter.php");
                 }
             }
             ?>
