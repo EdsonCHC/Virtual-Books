@@ -1,5 +1,6 @@
 <?php
-require_once('../php/conex.php');
+require_once('../php/cone.php');
+require_once('../php/interface.php');
 require_once('../php/methods.php');
 require_once "../js/vendor/autoload.php";
 
@@ -26,7 +27,7 @@ $authUrl = $client->createAuthUrl();
     <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
-    
+
     <title>Registrarse</title>
 </head>
 
@@ -43,40 +44,46 @@ $authUrl = $client->createAuthUrl();
             <form action="../php/register_db_vb.php" method="post" id="form" enctype="multipart/form-data">
                 <div id="text-ctn">
                     <label for="">
-                        <h6>Nombres</h6><p class="warnings" id="warnings"></p>
+                        <h6>Nombres</h6>
+                        <p class="warnings" id="warnings"></p>
                     </label>
                     <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="no">
                     <label for="">
-                        <h6>Apellidos</h6><p class="warnings" id="warnings"></p>
+                        <h6>Apellidos</h6>
+                        <p class="warnings" id="warnings"></p>
                     </label>
                     <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
                         id="input2" autocomplete="no">
                     <label for="">
-                        <h6>Correo Electrónico</h6><p class="warnings" id="warnings"></p>
+                        <h6>Correo Electrónico</h6>
+                        <p class="warnings" id="warnings"></p>
                     </label>
                     <input type="email" name="email" placeholder="marin_castro@gmail.com" id="input3" autocomplete="no">
                     <label for="">
-                        <h6>Contraseña</h6><p class="warnings" id="warnings"></p>
+                        <h6>Contraseña</h6>
+                        <p class="warnings" id="warnings"></p>
                     </label>
                     <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="no">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <label for="">
-                        <h6>Confirmar Contraseña</h6><p class="warnings" id="warnings"></p>
+                        <h6>Confirmar Contraseña</h6>
+                        <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" id="inputP" autocomplete="no">
-                    
+                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" id="inputP"
+                        autocomplete="no">
+
                     <div id="aparte">
                         <!-- Registro con google-->
-                        <a href="<?php echo $client->createAuthUrl(); ?>>">
+                        <!--<a href="<?php echo $client->createAuthUrl(); ?>>">
                             <h6>O Regístrate con...</h6>
                         </a>
                         <a href="<?php echo $client->createAuthUrl(); ?>">
                             <div>
                                 <img src="../src/google.png" alt="">
                             </div>
-                        </a>
+                        </a>-->
                     </div>
                 </div>
                 <div id="img-ctn">
@@ -85,7 +92,8 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="img" onchange="vista_preliminar(event), validar()" required>
+                        <input type="file" id="img_i" accept=".jpg,.png" name="img"
+                            onchange="vista_preliminar(event), validar()" required>
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -109,11 +117,12 @@ $authUrl = $client->createAuthUrl();
 
     <!-- No tocar -->
     <?php
-        require_once("../php/register_db_vb.php");
+    require_once("../php/register_db_vb.php");
     ?>
 </body>
 <script src="../js/preview.js"></script>
-<script src="../js/valid/valRegister.js"></script>
+<!--Problemas con preventDeault()-->
+<!--<script src="../js/valid/valLogin.js"></script>-->
 <script src="../js/valPattern.js"></script>
 
 </html>

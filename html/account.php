@@ -79,7 +79,7 @@
                         echo $email;
 
                     } else {
-                        echo 'Error al obtener el código de autorización.';
+                        //echo 'Error al obtener el código de autorización.';
                     }
                     ?>
                     <form action="">

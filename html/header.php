@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../php/functions.php");
 ?>
 <header>
@@ -14,11 +15,23 @@ include_once("../php/functions.php");
       <input type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off" />
     </label>
   </form>
+
   <div id="log-links">
-    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link"><p>Registrarse</p></a></li>
-    <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link"><p>Iniciar Sesión</p></a></li>
-    <li class="<?php esconder(); ?>"><a href="../php/logOut.php" class="link"><p>Cerrar Sesión</p></a></li>
+    <ul>
+      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link">
+          <p>Registrarse</p>
+        </a></li>
+      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">
+          <p>Iniciar Sesión</p>
+        </a></li>
+      <li class="<?php esconder(); ?>">
+        <h3>Bienvenido 
+          <?php echo $_SESSION['user'][1]; ?>
+        </h3>
+      </li>
+    </ul>
   </div>
+
   <div id="user">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php"><img src="../src/user.png" alt="user-icon" /></a>
@@ -30,39 +43,6 @@ include_once("../php/functions.php");
         <nav id="notis-nav">
           <li><a href="" class="link">
               <h5>Se ha publicado un nuevo libro en la sección deportes</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
             </a></li>
           <li><a href="" class="link">
               <h5>Lorem.</h5>

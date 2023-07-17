@@ -1,6 +1,6 @@
 <?php
 
-include_once('../php/conex.php');
+include_once('../php/cone.php');
 include_once('../php/methods.php');
 
 $obj = new métodosUser();

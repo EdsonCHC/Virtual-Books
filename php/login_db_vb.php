@@ -1,5 +1,6 @@
 <?php
 include_once('../php/cone.php');
+require_once('../php/interface.php');
 include_once('../php/methods.php');
 
 $obj = new DataBase();
@@ -19,7 +20,7 @@ if (isset($_POST['Send'])) {
             $_SESSION['user'][0] = $session['id'];
             $_SESSION['user'][1] = $session['name'];
             echo "<script>
-                    alert('A iniciado sesión correctamente');
+                    alert('Ha iniciado sesión correctamente');
                         window.location = '../html/index.php';
                     </script>";
         } else {
@@ -35,4 +36,3 @@ if (isset($_POST['Send'])) {
             </script>';
     }
 }
-;

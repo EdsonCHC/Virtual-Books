@@ -1,4 +1,7 @@
 <?php
+require_once('../php/cone.php');
+require_once('../php/interface.php');
+require_once('../php/methods.php');
 require_once "../js/vendor/autoload.php";
 
 $client = new \Google\Client();
@@ -58,7 +61,7 @@ $authUrl = $client->createAuthUrl();
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
                                 <h4> <label for="email">Contraseña</label></h4>
-                                <p class="warnings" id="warnings"></p>
+                                <p class="warnings" id="warnings_2"></p>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Contraseña"
                                 autocomplete="off">
@@ -71,10 +74,10 @@ $authUrl = $client->createAuthUrl();
                 <div class="google_space_primary_part">
                     <div class="google_primary_part">
                         <!-- Login con google-->
-                        <p>O Inicia Sesión con...</p>
+                        <!--<p>O Inicia Sesión con...</p>
                         <a href="<?php echo $authUrl; ?>">
                             <img src="../src/google.png" alt="google_logo" id="">
-                        </a>
+                        </a>-->
                     </div>
                     <div class="register_primary_part">
                         <p>¿No tienes cuenta?<a href="../html/register.php">!Regístrate¡</a></p>
@@ -85,8 +88,12 @@ $authUrl = $client->createAuthUrl();
         <div class="secundary_part">
         </div>
     </div>
+    <?php
+        require_once("../php/login_db_vb.php");
+    ?>
     <script src="https://accounts.google.com/gsi/client" async></script>
+    <!--Problemas con preventDeault()-->
+    <!--<script src="../js/valid/valLogin.js"></script>-->
 </body>
-<script src="../js/valid/valLogin.js"></script>
 
 </html>
