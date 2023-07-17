@@ -26,7 +26,7 @@
     <div id="settings_admin">
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i>Documentación</a>
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i>Ayuda</a>
-        <a href="" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+        <a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
     </div>
 </aside>
 

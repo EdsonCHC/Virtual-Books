@@ -11,6 +11,7 @@ if (isset($_POST['Send'])) {
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
 
+        //Usuario
         $STH = $DBH->query("SELECT * FROM `user` WHERE `email`='$email' and `password`='$password'");
         if ($STH->rowCount() > 0) {
             $STH->setFetchMode(PDO::FETCH_ASSOC);
@@ -22,6 +23,20 @@ if (isset($_POST['Send'])) {
             echo "<script>
                     alert('Ha iniciado sesión correctamente');
                         window.location = '../html/index.php';
+                    </script>";
+        }
+
+        //Administrador
+        $STH = $DBH->query("SELECT * FROM `admin` WHERE `email`='$email' and `password`='$password'");
+        if ($STH->rowCount() > 0) {
+            $STH->setFetchMode(PDO::FETCH_ASSOC);
+            $session = $STH->FETCH();
+            session_start();
+            $_SESSION['admin'] = array();
+            $_SESSION['admin'][0] = $session['id'];
+            echo "<script>
+                    alert('Ha iniciado sesión correctamente');
+                        window.location = '../html/index_admin.php';
                     </script>";
         } else {
             echo '<script>
