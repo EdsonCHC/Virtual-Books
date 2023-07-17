@@ -69,7 +69,7 @@ if ($row->rowCount() > 0) {
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
             <a href="" class="book-link "><i class="fa-solid fa-plus"></i> Añadir al area de lectura</a>
-            <a href="" class="book-link down"><i class="fa-solid fa-download"></i> Descargar</a>
+            <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i> Descargar</a>
           </div>
         </div>
       </div>

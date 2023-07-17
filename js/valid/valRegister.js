@@ -28,7 +28,7 @@ inputName.addEventListener("input", function (event) {
 
 // Datos de Apellidos
 let inputLastName = document.getElementById("input2");
-let warningLastName = document.getElementById("warnings");
+let warningLastName = document.getElementById("warnings2");
 
 var elementLastName = document.createElement("div");
 elementLastName.id = "notify";

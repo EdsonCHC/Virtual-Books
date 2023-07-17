@@ -45,25 +45,25 @@ $authUrl = $client->createAuthUrl();
                 <div id="text-ctn">
                     <label for="">
                         <h6>Nombres</h6>
-                        <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="no">
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off">
+                    <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
-                        <p class="warnings" id="warnings"></p>
                     </label>
                     <input type="text" name="lastName" placeholder="Castro Lopez" pattern="[a-zA-Z]+" required
                         id="input2" autocomplete="no">
+                    <p class="warnings" id="warnings2"></p>
                     <label for="">
                         <h6>Correo Electrónico</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="email" name="email" placeholder="marin_castro@gmail.com" id="input3" autocomplete="no">
+                    <input type="email" name="email" placeholder="marin_castro@gmail.com" id="input3" autocomplete="off">
                     <label for="">
                         <h6>Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="no">
+                    <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="off">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
@@ -71,8 +71,7 @@ $authUrl = $client->createAuthUrl();
                         <h6>Confirmar Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" 
-                        autocomplete="off">
+                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" autocomplete="off">
 
                     <div id="aparte">
                         <!-- Registro con google-->
@@ -120,9 +119,9 @@ $authUrl = $client->createAuthUrl();
     require_once("../php/register_db_vb.php");
     ?>
 </body>
-<script src="../js/preview.js"></script>    
+<script src="../js/preview.js"></script>
 <!--Problemas con preventDeault()-->
-<!-- <script src="../js/valid/valLogin.js"></script> -->
+<script src="../js/valid/valRegister.js"></script>
 <script src="../js/valPattern.js"></script>
 
 </html>

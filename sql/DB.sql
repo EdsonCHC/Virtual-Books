@@ -8,7 +8,7 @@ Create table IF NOT EXISTS `user`(
     lastName varchar(50) not null,
     email varchar(100) not null,
     password varchar(50) not null,
-    img BLOB not null
+    img LONGBLOB not null
 );
 
 CREATE TABLE IF NOT EXISTS `resource`(
