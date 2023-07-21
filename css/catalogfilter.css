@@ -4,6 +4,10 @@ main {
   display: flex;
   gap: 3rem;
 }
+
+a {
+  text-decoration: none;
+}
 #content {
   padding: 2rem 0 0 0;
   width: 100%;
@@ -147,46 +151,17 @@ td {
   width: 30px;
 }
 
-dialog {
-  background-color: #00a0fb;
-  width: 50rem;
-  height: 50rem;
-  padding: 1rem;
-  position: absolute;
-  inset: 50% 0 0 50%;
-  transform: translate(-50%, -50%);
-}
-
-dialog form {
-  width: 100%;
-  height: 100%;
-}
-
-dialog form input,
-select {
-  width: 100%;
-  padding: 0.5px;
-  height: 2rem;
-  border: none;
-  outline: none;
-  margin-top: 1rem;
-}
-
-dialog form button {
-  width: 20rem;
-  margin: 1rem 0 0 30%;
-}
 /*Form add data*/
-
 dialog {
   background: var(--main-white);
   width: 60rem;
-  height: 100rem;
+  height: 86rem;
   padding: 1.5rem;
   position: absolute;
   inset: 50% 0 0 50%;
   transform: translate(-50%, -50%);
   border: none;
+  border-radius: 5px;
 }
 
 dialog form {
@@ -197,6 +172,28 @@ dialog form {
 .content_form {
   margin: 1rem;
   padding: 1rem;
+}
+
+.btnPart {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnPart button {
+  margin: 3rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  background: var(--main-blue);
+  height: 45px;
+  width: 60%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.btnPart button a {
+  color: rgb(255, 255, 255);
+  padding: 1.8rem 7rem;
 }
 
 .form_text {
@@ -220,6 +217,7 @@ input,
   color: var(--main-black);
 }
 
+/*No se como hace para que aparescan los select*/
 .recurso {
   display: flex;
   flex-direction: column;
@@ -231,6 +229,20 @@ input,
   font-size: 15px;
   background-color: #ddd;
   color: var(--main-black);
+}
+
+#categoria {
+  display: flex;
+  flex-direction: column;
+  width: 535px;
+  height: 40px;
+  border: none;
+  padding: 20px;
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: #ddd;
+  color: var(--main-black);
+  z-index: 10000;
 }
 
 .descripcion {
@@ -246,20 +258,7 @@ input,
   color: var(--main-black);
 }
 
-.categoria {
-  display: flex;
-  flex-direction: column;
-  width: 535px;
-  height: 40px;
-  border: none;
-  padding: 20px;
-  margin-top: 5px;
-  font-size: 15px;
-  background-color: #ddd;
-  color: var(--main-black);
-}
-
-.src{
+.src {
   display: block;
   background-color: #ddd;
   border: none;
@@ -268,14 +267,33 @@ input,
   font-family: Valera !important;
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--main-black);  cursor: pointer;
+  color: var(--main-black);
+  cursor: pointer;
   padding: 10px;
   text-align: center;
 }
 
+#articulo,
+#imagen {
+  display: none;
+}
+
+#img-container {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.grande {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 30%;
+  background-color: white;
+  object-fit: contain;
+}
 
 dialog form button {
   width: 20rem;
   margin: 1rem 0 0 30%;
 }
-

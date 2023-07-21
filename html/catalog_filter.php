@@ -138,7 +138,7 @@ require_once("../php/methodsAdmin.php");
                 <input type="file" accept="Image/*" name="img">
                 <button type="submit" name="enviar">OK</button>
             </form>-->
-            
+
             <form method="POST" enctype="multipart/form-data">
                 <h4>Agregar Recursos</h4>
                 <hr>
@@ -152,7 +152,7 @@ require_once("../php/methodsAdmin.php");
                 </div>
                 <div class="content_form">
                     <label for="tipo" class="form_text">Tipo de recurso</label>
-                    <select name="tipo" id="tipo" class="recurso">
+                    <select id="tipo" class="recurso" name="tipo">
                         <option value="" selected disabled>Tipo</option>
                         <option value="Revista">Revista Académica</option>
                         <option value="Libro">Libro</option>
@@ -162,7 +162,7 @@ require_once("../php/methodsAdmin.php");
 
                 <div class="content_form">
                     <label for="tipo" class="form_text">Categoria</label>
-                    <select name="cate" id="categoria" class="categoria">
+                    <select id="categoria" name="cate">
                         <option value="" selected disabled>Categoría</option>
                         <option value="Ciencia">Ciencia</option>
                         <option value="Literatura">Literatura</option>
@@ -181,9 +181,16 @@ require_once("../php/methodsAdmin.php");
                 </div>
                 <div class="content_form">
                     <label for="imagen" class="src">Imagen</label>
-                    <input type="file" id="imagen" accept="Image/*" name="img">
+                    <input type="file" id="imagen" accept="Image/*" name="img"
+                        onchange="vista_preliminar(event), validar()">
+                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
+                    </div>
                 </div>
-                <button type="submit" name="enviar">OK</button>
+                <div class="btnPart">
+                    <button type="submit" name="enviar">Agregar</button>
+                    <button type="button"><a href="../html/catalog_filter.php">Cancelar</a></button>
+                </div>
+
             </form>
             <?php
             $obj = new métodosAdmin();
@@ -221,8 +228,7 @@ require_once("../php/methodsAdmin.php");
             document.querySelector("dialog").showModal();
         })
     </script>
-    <script>
-
+    <script src="../js/preview.js">
     </script>
 </body>
 
