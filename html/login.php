@@ -44,7 +44,9 @@ $authUrl = $client->createAuthUrl();
             <form action="../php/login_db_vb.php" method="POST" id="form">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
-                        <h1>Virtual Books</h1>
+                        <a href="../html/index.php">
+                            <h1>Virtual Books</h1>
+                        </a>
                     </div>
                     <div class="subtittle_primary_part">
                         <h3>Inicia Sesión</h3>
@@ -81,7 +83,7 @@ $authUrl = $client->createAuthUrl();
                         </a>-->
                     </div>
                     <div class="register_primary_part">
-                        <p>¿No tienes cuenta?<a href="../html/register.php">!Regístrate¡</a></p>
+                        <p>¿No tienes cuenta? <a href="../html/register.php"> !Regístrate¡</a></p>
                     </div>
                 </div>
             </form>

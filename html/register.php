@@ -46,13 +46,14 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off" required>
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off"
+                        required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" required
-                        id="input2" autocomplete="no">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="input2"
+                        autocomplete="no">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
                         <h6>Correo Electrónico</h6>
@@ -84,6 +85,9 @@ $authUrl = $client->createAuthUrl();
                             </div>
                         </a>-->
                     </div>
+                    <div class="login_part">
+                        <p>¿Ya tienes cuenta? <a href="../html/login.php"> !Inicia Sesión¡</a></p>
+                    </div>
                 </div>
                 <div id="img-ctn">
                     <h5>Foto de Perfil</h5>
@@ -92,7 +96,7 @@ $authUrl = $client->createAuthUrl();
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
                         <input type="file" id="img_i" accept=".jpg,.png" name="img"
-                            onchange="vista_preliminar(event), validar()" >
+                            onchange="vista_preliminar(event), validar()">
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -100,14 +104,16 @@ $authUrl = $client->createAuthUrl();
                         <p>O</p>
                         <div class="line"></div>
                     </div>
-                    <h5 class="primo">Selecciona un avatar</h5>
+                    <!--
+                    <h5 class="primo">Selecciona un avatar predeterminado</h5>
                     <img class="img_chiquitas" src="../src/user.png" alt="">
                     <img class="img_chiquitas" src="../src/user.png" alt="">
                     <img class="img_chiquitas" src="../src/user.png" alt="">
                     <img class="img_chiquitas" src="../src/user.png" alt="">
+                    -->
                 </div>
                 <button onclick="" id="boton" name="register" type="submit">
-                    <h6>Registrar</h6>
+                    <h6>Registrarse</h6>
                 </button>
             </form>
         </div>
