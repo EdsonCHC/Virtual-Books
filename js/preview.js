@@ -2,6 +2,19 @@ const text = document.getElementById("warning");
 let ojo = document.getElementById("ojo");
 let input = document.getElementById("passConfirm");
 
+//Funcion documento
+let vista_preliminar_doc = (event) => {
+  let vista = new FileReader();
+  let id_doc = document.querySelector("#doc-preview");
+
+  vista.onload = () => {
+    if (vista.readyState == 2) {
+      id_doc.src = vista.result;
+    }
+  };
+  vista.readAsDataURL(event.target.files[0]);
+};
+
 //Función imagen
 let vista_preliminar = (event) => {
   let vista = new FileReader();
@@ -45,4 +58,3 @@ const eye = () => {
     ojo.style.opacity = 1;
   }
 };
-

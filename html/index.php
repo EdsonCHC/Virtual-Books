@@ -59,7 +59,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Literatura'";
+          $sql = "SELECT id, img from resource where category = 'Ciencia'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -80,7 +80,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Literatura'";
+          $sql = "SELECT id, img from resource where category = 'Economía'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -101,7 +101,27 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
         <?php
-          $sql = "SELECT id, img from resource where category = 'Literatura'";
+          $sql = "SELECT id, img from resource where category = 'Física'";
+          $row = $obj->showData($sql);
+          if ($row->rowCount() > 0) {
+            $row->setFetchMode(PDO::FETCH_ASSOC);
+            while ($info = $row->fetch()) {
+              ?>
+              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
+              </a>
+            <?php
+            }
+          }
+          ?>
+        </div>
+        <div class="categoria">
+        <a href="" class="tag-link">
+          <h3><a href="" class="link">Historia</a></h3>
+        </a>
+        <div class="grid-books">
+        <?php
+          $sql = "SELECT id, img from resource where category = 'Historia'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
