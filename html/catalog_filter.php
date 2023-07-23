@@ -34,111 +34,117 @@ require_once("../php/methodsAdmin.php");
                 </div>
                 <div class="content_description">
                     <div class="content_description_text">
-                        <p>
+                        <h6>
                             Artículos
-                        </p>
+                        </h6>
                         <p>
                             Administre los catálogos de su biblioteca aquí.
                         </p>
                     </div>
                     <div class="content_description_search">
-                        <div class="content_items">
-                            <select name="menu" class="content_items_menu">
-                                <option selected disabled>Default</option>
-                                <option>Id</option>
-                                <option>Titulo</option>
-                                <option>Tipo</option>
-                                <option>Autor</option>
-                                <option>Editor</option>
-                            </select>
-                            <input type="text" name="buscar" class="content_items_search">
-                            <input type="submit" value="Buscar" class="content_items_button_search">
-                        </div>
+                        <form action="catalog_filter.php" method="post">
+                            <div class="content_items">
+                                <div>
+                                    <label class="searchTitle">Titulo a buscar
+                                        <input type="text" name="searchTitle" class="content_items_search">
+                                    </label>
+                                    <label class="searchTitle">Autor a buscar
+                                        <input type="text" name="searchAutor" class="content_items_search">
+                                    </label>
+                                </div>
+                                <div class="content_items_slt">
+                                    <div>
+                                        <label class="searchTitleSlt">Tipo
+                                            <select name="menu" class="content_items_menu">
+                                                <option value="" selected disabled>Tipo</option>
+                                                <option value="Revista">Revista Académica</option>
+                                                <option value="Libro">Libro</option>
+                                                <option value="Tesis">Tesis</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="searchTitleSlt">Categoria
+                                            <select name="menu" class="content_items_menu">
+                                                <option selected disabled>Categoria</option>
+                                                <option>Id</option>
+                                                <option>Titulo</option>
+                                                <option>Tipo</option>
+                                                <option>Autor</option>
+                                                <option>Editor</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="btnSearch">
+                                    <button type="submit" class="content_items_button_search"
+                                        name="buscar">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="flex-element">
-                    <button class="btn" id="oP">Añadir</button>
-                </div>
-                <div class="table">
-                    <table>
-                        <tr>
-                            <th> ID</th>
-                            <th>titulo </th>
-                            <th>Tipo </th>
-                            <th>Autor </th>
-                            <th>Categoría</th>
-                            <th>Acciones </th>
-                        </tr>
-                        <?php
-                        $obj = new métodosAdmin();
-                        $sql = "SELECT id, name, author, type, category FROM resource";
-                        $row = $obj->showData($sql);
-                        if ($row->rowCount() > 0) {
-                            $row->setFetchMode(PDO::FETCH_ASSOC);
-                            while ($info = $row->fetch()) {
-                                ?>
-                                <tr>
-                                    <td>
-                                        <?php echo $info['id'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $info['name'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $info['type'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $info['author'] ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $info['category'] ?>
-                                    </td>
-                                    <td>
-                                        <div class="flex-element">
-                                            <div class="actions">
-                                                <button><img src="../src/img/eye-svgrepo-com.png"></button>
+                <div class="contentArticle">
+                    <div class="flex-element">
+                        <button class="btn" id="oP">Añadir</button>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Titulo </th>
+                                <th>Tipo </th>
+                                <th>Autor </th>
+                                <th>Categoría</th>
+                                <th>Acciones </th>
+                            </tr>
+                            <?php
+                            $obj = new métodosAdmin();
+                            $sql = "SELECT id, name, author, type, category FROM resource";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $info['id'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $info['name'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $info['type'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $info['author'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $info['category'] ?>
+                                        </td>
+                                        <td>
+                                            <div class="flex-element">
+                                                <div class="actions">
+                                                    <button><img src="../src/img/eye-svgrepo-com.png"></button>
+                                                </div>
+                                                <div class="actions">
+                                                    <button><img src="../src/img/documents-svgrepo-com.png"></button>
+                                                </div>
                                             </div>
-                                            <div class="actions">
-                                                <button><img src="../src/img/documents-svgrepo-com.png"></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <?php
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                            } else {
+                                echo "<td><h4>No hay datos</h4></td>";
                             }
-                        } else {
-                            echo "<td><h4>No hay datos</h4></td>";
-                        }
-                        ?>
-                    </table>
+                            ?>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
         <dialog>
-            <!--
-            <form method="POST" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="Titulo" autocomplete="off">
-                <input type="text" name="autor" placeholder="Autor" autocomplete="off">
-                <select name="tipo">
-                    <option value="" selected disabled>Tipo</option>
-                    <option value="Revista">Revista Académica</option>
-                    <option value="Libro">Libro</option>
-                    <option value="Tesis">Tesis</option>
-                </select>
-                <select name="cate">
-                    <option value="" selected disabled>Categoría</option>
-                    <option value="Ciencia">Ciencia</option>
-                    <option value="Literatura">Literatura</option>
-                    <option value="Física">Física</option>
-                    <option value="Economía">Economía</option>
-                    <option value="Historia">Historia</option>
-                </select>
-                <textarea placeholder="Descripción" name="desc"></textarea>
-                <input type="file" accept=".pdf" name="src">
-                <input type="file" accept="Image/*" name="img">
-                <button type="submit" name="enviar">OK</button>
-            </form>-->
-
             <form method="POST" enctype="multipart/form-data">
                 <h4>Agregar Recursos</h4>
                 <hr>
@@ -183,7 +189,8 @@ require_once("../php/methodsAdmin.php");
                     <label for="imagen" class="src">Imagen</label>
                     <input type="file" id="imagen" accept="Image/*" name="img"
                         onchange="vista_preliminar(event), validar()">
-                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
+                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image"
+                            id="img-preview">
                     </div>
                 </div>
                 <div class="btnPart">
@@ -193,32 +200,36 @@ require_once("../php/methodsAdmin.php");
 
             </form>
             <?php
-            $obj = new métodosAdmin();
-            if (isset($_POST['enviar'])) {
-                $name = trim($_POST['name']);
-                $autor = trim($_POST['autor']);
-                $type = trim($_POST['tipo']);
-                $cat = trim($_POST['cate']);
-                $desc = trim($_POST['desc']);
-                $nombreSrc = $_FILES['src']['name'];
-                $rutaSrc = $_FILES['src']['tmp_name'];
-                $src = "../src/files/" . $nombreSrc;
-                $nombreImg = $_FILES['img']['name'];
-                $rutaImg = $_FILES['img']['tmp_name'];
-                $img = "../src/img/" . $nombreImg;
-                $arr = array(
-                    $name,
-                    $autor,
-                    $type,
-                    $cat,
-                    $desc,
-                    $src,
-                    $img
-                );
-                if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
-                    $obj->insertData($arr);
-                    header("Location: ../html/catalog_filter.php");
+            // Procesamiento del formulario (POST)
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $obj = new métodosAdmin();
+                if (isset($_POST['enviar'])) {
+                    $name = trim($_POST['name']);
+                    $autor = trim($_POST['autor']);
+                    $type = trim($_POST['tipo']);
+                    $cat = trim($_POST['cate']);
+                    $desc = trim($_POST['desc']);
+                    $nombreSrc = $_FILES['src']['name'];
+                    $rutaSrc = $_FILES['src']['tmp_name'];
+                    $src = "../src/files/" . $nombreSrc;
+                    $nombreImg = $_FILES['img']['name'];
+                    $rutaImg = $_FILES['img']['tmp_name'];
+                    $img = "../src/img/" . $nombreImg;
+                    $arr = array(
+                        $name,
+                        $autor,
+                        $type,
+                        $cat,
+                        $desc,
+                        $src,
+                        $img
+                    );
+                    if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
+                        $obj->insertData($arr);
+                        header("Location: ../html/catalog_filter.php");
+                    }
                 }
+                exit; // Asegura que no haya más salida después de la redirección
             }
             ?>
         </dialog>
