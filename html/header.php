@@ -1,6 +1,14 @@
 <?php
 session_start();
-include_once("../php/functions.php");
+require_once ('../php/cone.php');
+require_once("../php/functions.php");
+require_once("../php/methods.php");
+$id = $_SESSION['user']['0'];
+$obj = new MétodosUser();
+$sql = "SELECT img from user where id = $id";
+$fetch = $obj->showData($sql);
+$fetch->setFetchMode(PDO::FETCH_ASSOC);
+$img = $fetch->fetch();
 ?>
 <header>
   <div>
@@ -30,7 +38,7 @@ include_once("../php/functions.php");
 
   <div id="user">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
-    <a href="../html/account.php"><img src="../src/user.png" alt="user-icon" /></a>
+    <a href="../html/account.php"><img src="data:Image/*;base64, <?php echo base64_encode($img['img']) ?>" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>

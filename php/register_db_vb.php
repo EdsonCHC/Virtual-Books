@@ -3,7 +3,7 @@
 require_once('../php/cone.php');
 require_once('../php/methods.php');
 
-$obj = new métodosUser();
+$obj = new MétodosUser();
 
 
 if (isset($_POST['register'])) {
@@ -12,7 +12,8 @@ if (isset($_POST['register'])) {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
     $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-    $arr = array($name,$lastName,$email,$password,$img);
+    $rol = "0";
+    $arr = array($name,$lastName,$email,$password,$img,$rol);
 
     $obj->insertData($arr);
 
