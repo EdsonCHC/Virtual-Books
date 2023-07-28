@@ -9,7 +9,7 @@ Create table IF NOT EXISTS `user`(
     email varchar(100) not null,
     password varchar(50) not null,
     img LONGBLOB,
-    rol CHAR(1) Not NULL
+    rol CHAR(1) Not NULL default "0"
 );
 
 CREATE TABLE IF NOT EXISTS `resource`(

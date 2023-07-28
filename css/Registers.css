@@ -4,7 +4,7 @@ body {
   background-color: #ffa372;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #title-ctn {
@@ -131,11 +131,12 @@ h5.primo{
 
 .img_chiquitas {
   padding: 10px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 
@@ -264,3 +265,20 @@ input[type="file"] {
   font-weight: 600;
   position:relative; 
 }
+
+.l-icon{
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.l-icon:has(input:checked){
+  border: 5px solid red;
+}
+
+.icons-user{
+  display: none;
+}
+

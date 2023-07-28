@@ -1,14 +1,16 @@
 <?php
 session_start();
-require_once ('../php/cone.php');
+require_once('../php/cone.php');
 require_once("../php/functions.php");
 require_once("../php/methods.php");
-$id = $_SESSION['user']['0'];
-$obj = new MétodosUser();
-$sql = "SELECT img from user where id = $id";
-$fetch = $obj->showData($sql);
-$fetch->setFetchMode(PDO::FETCH_ASSOC);
-$img = $fetch->fetch();
+if (isset($_SESSION['user'])) {
+  $id = $_SESSION['user']['0'];
+  $obj = new MétodosUser();
+  $sql = "SELECT img from user where id = $id";
+  $fetch = $obj->showData($sql);
+  $fetch->setFetchMode(PDO::FETCH_ASSOC);
+  $img = $fetch->fetch();
+}
 ?>
 <header>
   <div>
@@ -30,7 +32,7 @@ $img = $fetch->fetch();
           <p>Iniciar Sesión</p>
         </a></li>
       <li class="<?php esconder(); ?>">
-          <?php echo $_SESSION['user']['1']; ?>
+        <?php echo $_SESSION['user']['1']; ?>
         </h3>
       </li>
     </ul>
@@ -38,7 +40,8 @@ $img = $fetch->fetch();
 
   <div id="user">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
-    <a href="../html/account.php"><img src="data:Image/*;base64, <?php echo base64_encode($img['img']) ?>" alt="user-icon" /></a>
+    <a href="../html/account.php"><img src=" <?php echo $img['img'] ?>";
+        alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>

@@ -32,25 +32,6 @@ if (isset($_POST['Send'])) {
                     </script>";
             }
         }
-
-        //Administrador
-        // $STH = $DBH->query("SELECT * FROM `admin` WHERE `email`='$email' and `password`='$password'");
-        // if ($STH->rowCount() > 0) {
-        //     $STH->setFetchMode(PDO::FETCH_ASSOC);
-        //     $session = $STH->FETCH();
-        //     session_start();
-        //     $_SESSION['admin'] = array();
-        //     $_SESSION['admin'][0] = $session['id'];
-        //     echo "<script>
-        //             alert('Ha iniciado sesión correctamente');
-        //                 window.location = '../html/index_admin.php';
-        //             </script>";
-        // } else {
-        //     echo '<script>
-        //                 alert("Datos incorrectos");
-        //             window.location = "http://localhost/Virtual-Books/html/login.php";
-        //         </script>';
-        // }
     } else {
         echo '<script>
                 alert("Favor de rellenar todos los campos")
