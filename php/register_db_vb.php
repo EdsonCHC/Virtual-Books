@@ -13,12 +13,8 @@ if (isset($_POST['register'])) {
     $password = trim($_POST['password']);
     $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));
     $arr = array($name,$lastName,$email,$password,$img);
-
     $obj->insertData($arr);
 
-    echo "<script>
-            alert('Te registraste correctamente');
-            window.location.href = '../html/login.php';
-        </script>";
+    
 }
 ?>

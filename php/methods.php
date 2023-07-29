@@ -8,8 +8,8 @@ class MétodosUser implements plantilla
     {
         $obj = new DataBase();
         $DBH = $obj->connect();
-        $STH = $DBH->prepare("INSERT INTO `user` (`name`, `lastName`, `email`, `password`, `img`) 
-            VALUES (?, ?, ?, ?, ?)");
+        $STH = $DBH->prepare("INSERT INTO `user` (`name`, `lastName`, `email`, `password`, `img`, `hash`) 
+            VALUES (?, ?, ?, ?, ?, ?)");
         $STH->execute($arr);
         $DBH = null;
     }

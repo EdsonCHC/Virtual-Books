@@ -18,10 +18,10 @@ include_once("../php/functions.php");
 
   <div id="log-links">
     <ul>
-      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/register.php" class="link">
+      <li class="<?php esconderV2(); ?>"><a href="../html/register.php" class="link">
           <p>Registrarse</p>
         </a></li>
-      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">
+      <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
           <p>Iniciar Sesión</p>
         </a></li>
       <li class="<?php esconder(); ?>">
