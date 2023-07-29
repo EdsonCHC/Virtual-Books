@@ -95,7 +95,6 @@ $authUrl = $client->createAuthUrl();
     require_once("../php/login_db_vb.php");
     ?>
     <script src="https://accounts.google.com/gsi/client" async></script>
-    <!--Problemas con preventDeault()-->
     <script src="../js/valid/valLogin.js"></script>
 </body>
 

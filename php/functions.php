@@ -1,13 +1,15 @@
 <?php
-    function esconder(){ // El LogOut se muestra si hay sesion activa
+    function esconder(){ // Esconde si no hay sesión
         if(!isset($_SESSION['user']) ){
             echo "esconder";
         }
     }
 
-    function esconderV2(){ //El login y rester desactivados si hay sesion activa
+    function esconderV2(){ //Esconde si hay sesión
         if(isset($_SESSION['user'])){
             echo "esconder";
         }
     } 
+
+    //puchica alejandro ni comentar podes
 ?>

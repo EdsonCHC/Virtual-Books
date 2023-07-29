@@ -28,20 +28,16 @@ if (isset($_SESSION['user'])) {
 
   <div id="log-links">
     <ul>
-      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">
+      <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
           <p>Iniciar Sesión</p>
         </a></li>
-      <li class="<?php esconder(); ?>">
-        <?php echo $_SESSION['user']['1']; ?>
-        </h3>
-      </li>
     </ul>
   </div>
 
-  <div id="user">
+  <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
-    <a href="../html/account.php"><img src=" <?php echo $img['img'] ?>";
-        alt="user-icon" /></a>
+    <a href="../html/account.php">
+      <img src=" <?php echo $img['img']; ?>"alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>
