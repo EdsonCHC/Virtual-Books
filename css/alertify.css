@@ -867,6 +867,8 @@
           transition-duration: 250ms;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
+  color: #fff;
+  font-size: 1.5rem;
 }
 .alertify-notifier .ajs-message.ajs-visible {
   -webkit-transition-duration: 500ms;

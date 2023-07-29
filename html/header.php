@@ -1,6 +1,16 @@
 <?php
 session_start();
-include_once("../php/functions.php");
+require_once('../php/cone.php');
+require_once("../php/functions.php");
+require_once("../php/methods.php");
+if (isset($_SESSION['user'])) {
+  $id = $_SESSION['user']['0'];
+  $obj = new MétodosUser();
+  $sql = "SELECT img from user where id = $id";
+  $fetch = $obj->showData($sql);
+  $fetch->setFetchMode(PDO::FETCH_ASSOC);
+  $img = $fetch->fetch();
+}
 ?>
 <header>
   <div>
@@ -18,15 +28,11 @@ include_once("../php/functions.php");
 
   <div id="log-links">
     <ul>
-      <li class="<?php esconderV2(); ?>"><a href="../html/register.php" class="link">
-          <p>Registrarse</p>
-        </a></li>
-      <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
+      <li class="<?php esconderV2(); ?>"><a href="http://localhost/Virtual-Books/html/login.php" class="link">
           <p>Iniciar Sesión</p>
         </a></li>
       <li class="<?php esconder(); ?>">
-        <h3>Bienvenido 
-          <?php echo $_SESSION['user'][1]; ?>
+        <?php echo $_SESSION['user']['1']; ?>
         </h3>
       </li>
     </ul>
@@ -34,7 +40,8 @@ include_once("../php/functions.php");
 
   <div id="user">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
-    <a href="../html/account.php"><img src="../src/user.png" alt="user-icon" /></a>
+    <a href="../html/account.php"><img src=" <?php echo $img['img'] ?>";
+        alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>

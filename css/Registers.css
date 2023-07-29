@@ -4,7 +4,7 @@ body {
   background-color: #ffa372;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #title-ctn {
@@ -17,10 +17,8 @@ body {
   top: 40px;
 }
 
-#title-ctn a h1 {
-  position: relative;
+a{
   text-decoration: none;
-
 }
 
 #Ovalo_1 {
@@ -37,7 +35,7 @@ body {
   backdrop-filter: blur(5px);
   border-radius: 30px;
   width: 1500px;
-  height: 700px;
+  height: auto;
   margin: 10px auto 0;
   padding-bottom: 20px;
 }
@@ -100,6 +98,20 @@ body {
   margin: 0 auto;
 }
 
+.login_part{
+  position: relative;
+}
+
+.login_part p{
+  margin:  5% 0 9.8%  20% ;
+  color: #333333;
+  font-weight: 600;
+}
+.login_part a{
+  color: #465685;
+  text-decoration: none;
+}
+
 .grande{
   width: 100%;
   height: 100%;
@@ -119,11 +131,12 @@ h5.primo{
 
 .img_chiquitas {
   padding: 10px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 
@@ -193,16 +206,14 @@ div form button {
   height: 50px;
   left: -100px;
   top: 100px;
+  cursor: pointer;
 }
 
 #boton h6 {
   color: var(--main-white);
 }
 
-#boton {
-  transition: transform 0.5s;
-  cursor: pointer;
-}
+
 
 #boton:hover {
   transform: scale(1.05);
@@ -242,7 +253,7 @@ input[type="file"] {
 }
 
 
-#ojo, #ojo1{
+#ojo, #ojo2{
   width: 3.5rem;
   cursor: pointer;
 }
@@ -254,3 +265,20 @@ input[type="file"] {
   font-weight: 600;
   position:relative; 
 }
+
+.l-icon{
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.l-icon:has(input:checked){
+  border: 5px solid red;
+}
+
+.icons-user{
+  display: none;
+}
+

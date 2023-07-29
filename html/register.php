@@ -23,8 +23,6 @@ $authUrl = $client->createAuthUrl();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
-
-    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
@@ -46,13 +44,14 @@ $authUrl = $client->createAuthUrl();
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off" required>
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off"
+                        required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" required
-                        id="input2" autocomplete="no">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="input2"
+                        autocomplete="no">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
                         <h6>Correo Electrónico</h6>
@@ -84,6 +83,9 @@ $authUrl = $client->createAuthUrl();
                             </div>
                         </a>-->
                     </div>
+                    <div class="login_part">
+                        <p>¿Ya tienes cuenta? <a href="../html/login.php"> !Inicia Sesión¡</a></p>
+                    </div>
                 </div>
                 <div id="img-ctn">
                     <h5>Foto de Perfil</h5>
@@ -92,7 +94,7 @@ $authUrl = $client->createAuthUrl();
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
                         <input type="file" id="img_i" accept=".jpg,.png" name="img"
-                            onchange="vista_preliminar(event), validar()" >
+                            onchange="vista_preliminar(event), validar()">
                     </label>
                     <div id="warning"></div>
                     <div id="flex-lines">
@@ -100,14 +102,24 @@ $authUrl = $client->createAuthUrl();
                         <p>O</p>
                         <div class="line"></div>
                     </div>
-                    <h5 class="primo">Selecciona un avatar</h5>
-                    <img class="img_chiquitas" src="../src/user.png" alt="">
-                    <img class="img_chiquitas" src="../src/user.png" alt="">
-                    <img class="img_chiquitas" src="../src/user.png" alt="">
-                    <img class="img_chiquitas" src="../src/user.png" alt="">
+                    <h5 class="primo">Selecciona un avatar predeterminado</h5>
+                    <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                            id="user-icon-1"></label>
+                    <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                            id="user-icon-2"></label>
+                    <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                            id="user-icon-3">
+                    </label>
+                    <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                            id="user-icon-4">
+                    </label>
                 </div>
                 <button onclick="" id="boton" name="register" type="submit">
-                    <h6>Registrar</h6>
+                    <h6>Registrarse</h6>
                 </button>
             </form>
         </div>
@@ -119,8 +131,20 @@ $authUrl = $client->createAuthUrl();
     require_once("../php/register_db_vb.php");
     ?>
 </body>
+<script>
+    const form = document.getElementById("form");
+    form.addEventListener("submit", (e) => {
+        const pass1 = form.input4.value;
+        const pass2 = form.passConfirm.value;
+        if (pass1 != pass2) {
+            e.preventDefault();
+            alertify.error("Las contraseñas no coinciden");
+        }
+    });
+</script>
+<script src="../js/alertify.js"></script>
+<script src="../js/j_query.js"></script>
 <script src="../js/preview.js"></script>
-<!--Problemas con preventDeault()-->
 <script src="../js/valid/valRegister.js"></script>
 <script src="../js/valPattern.js"></script>
 
