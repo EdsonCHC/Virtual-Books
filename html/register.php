@@ -104,17 +104,17 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <h5 class="primo">Selecciona un avatar predeterminado</h5>
                     <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
-                            id="user-icon-1"></label>
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
+                            id="user-icon-1" checked></label>
                     <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
                             id="user-icon-2"></label>
                     <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
                             id="user-icon-3">
                     </label>
                     <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" values="../src/user.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
                             id="user-icon-4">
                     </label>
                 </div>

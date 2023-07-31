@@ -6,7 +6,7 @@ require_once('../php/methods.php');
 $obj = new MétodosUser();
 
 if (isset($_POST['register'])) {
-    extract($_POST); //extrae lo datos post y crea var con su contenido segun el name
+    extract($_POST); //extrae lo datos post y crea var con su contenido según el name
     $sql = "SELECT email FROM user Where email = '$email'";
     $row = $obj->showData($sql);
     if ($row->rowCount() > 0) {
@@ -15,17 +15,23 @@ if (isset($_POST['register'])) {
         window.location.href = '../html/register.php';
     </script>";
     } else {
-        $nameImg = $_FILES['img']['name'];
-        $rutaImg = $_FILES['img']['tmp_name'];
-        $img = "../src/user/" . $nameImg;
-        $rol = "0";
-        $arr = array($name, $lastName, $email, $password, $img, $rol);
-        if (move_uploaded_file($rutaImg, $img)) $obj->insertData($arr);
+        if (isset($_POST['img'])) { // Si no ingresa imagen
+            $nameImg = $_FILES['img']['name'];
+            $rutaImg = $_FILES['img']['tmp_name'];
+            $img = "../src/user/" . $nameImg;
+            move_uploaded_file($rutaImg, $img);
+        } else { //toma una de las que proporcionamos
+            $img = $_POST['user-pic'];
+            echo $img;
+            $rol = "0";
+            $arr = array($name, $lastName, $email, $password, $img, $rol);
+            $obj->insertData($arr);
+            echo "<script>
+                alert('Te registraste correctamente');
+                window.location.href = '../html/login.php';
+            </script>";
+        }
 
-        echo "<script>
-            alert('Te registraste correctamente');
-            window.location.href = '../html/login.php';
-        </script>";
     }
 }
 ?>
