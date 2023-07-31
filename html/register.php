@@ -103,18 +103,18 @@ $authUrl = $client->createAuthUrl();
                         <div class="line"></div>
                     </div>
                     <h5 class="primo">Selecciona un avatar predeterminado</h5>
-                    <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
+                    <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-1.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-man-1.png"
                             id="user-icon-1" checked></label>
-                    <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
+                    <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-1.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-woman-1.png"
                             id="user-icon-2"></label>
-                    <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
+                    <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-2.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-man-2.png"
                             id="user-icon-3">
                     </label>
-                    <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user.png"
+                    <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-2.png" alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-woman-2.png"
                             id="user-icon-4">
                     </label>
                 </div>

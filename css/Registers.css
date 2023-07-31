@@ -107,6 +107,7 @@ a{
   color: #333333;
   font-weight: 600;
 }
+
 .login_part a{
   color: #465685;
   text-decoration: none;
@@ -118,7 +119,7 @@ a{
   padding: 10px;
   border-radius: 50%;
   background-color: white;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 h5.primo{
