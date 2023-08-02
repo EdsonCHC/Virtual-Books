@@ -243,7 +243,7 @@ main {
   
 }
 
-#details_primary_part input{
+#details_primary_part select{
   margin: 0.5rem;
   height: 45px;
   width: 60%;

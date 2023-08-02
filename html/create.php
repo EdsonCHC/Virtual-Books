@@ -9,7 +9,7 @@ $id_recurso = $_GET['id'];
 
 if (isset($_SESSION['user'])) {
     $id_usuario = $_SESSION['user']['0'];
-    echo "hola:".$id_usuario;
+    echo "hola:" . $id_usuario;
 } else {
     echo "false";
 }
@@ -64,7 +64,11 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                         </div>
                         <div id="details_primary_part">
                             <h4><label for="valuation">Puntuacion</label></h4>
-                            <input type="text" name="valuation" id="valuation" placeholder="puntua" autocomplete="off">
+                            <select name="valuation">
+                                <option value="value1">Mala</option>
+                                <option value="value2" selected>Buena</option>
+                                <option value="value3">Excelente</option>
+                            </select>
                         </div>
                         <div id="post_enter">
                             <input type="submit" value="Postear">
@@ -76,10 +80,12 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                     <h3>Otros comentarios</h3>
                 </div>
                 <?php
-                foreach($fetch as $valoraciones){ ?>
-                    
+                foreach ($fetch as $valoraciones) { ?>
+
                     <div id="coments">
-                    <p><?php echo $valoraciones['description'];?></p>
+                        <p>
+                            <?php echo $valoraciones['description']; ?>
+                        </p>
                     </div>
 
                     <?php
