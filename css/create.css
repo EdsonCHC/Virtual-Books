@@ -243,3 +243,12 @@ main {
   
 }
 
+#details_primary_part input{
+  margin: 0.5rem;
+  height: 45px;
+  width: 60%;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+}

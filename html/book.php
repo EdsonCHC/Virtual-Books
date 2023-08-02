@@ -1,6 +1,7 @@
 <?php
 require_once("../php/interface.php");
 require_once("../php/cone.php");
+require_once("../php/functions.php");
 require_once("../php/methods.php");
 
 $id = $_GET['id'];
@@ -67,11 +68,23 @@ if ($row->rowCount() > 0) {
             </p>
           </div>
           <div id="buttons">
-            <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
+            <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
+                class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
             <a href="" class="book-link "><i class="fa-solid fa-plus"></i> Añadir al area de lectura</a>
-            <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i> Descargar</a>
+            <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i>
+              Descargar</a>
           </div>
         </div>
+      </div>
+      <div class="<?php esconder(); ?>">
+      <?php
+                  ?>
+                  <a id="fcc-btn" href="../html/create.php?id=<?php echo $info["id"] ?>">
+                    Comentar
+                  </a>
+                  <?php
+
+        ?>
       </div>
       <div id="more-books">
         <h2>Libros Similares</h2>
