@@ -212,14 +212,10 @@ main {
   border: 1px  solid #ccc;
   background-color:rgb(255, 255, 255);
   border-radius: 20px;
-  padding: 1rem;
-  margin: 0 5rem 0 5rem;
-  width: 35%;
+  padding: 4rem;
+  margin: 0 0rem 0 5rem;
   align-items: center;
   
-}
-#tittle_second_conteiner{
-  padding-left: 1rem;
 }
 
 #coments p{

@@ -84,12 +84,17 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                 <?php             
                 foreach ($fetch as $valoraciones) { ?>
                     <div id="coments">
+                        <hr>
                         <h4>
                         <?php echo "Autor: ".$valoraciones['name']; ?>
                         </h4>
-                        <P>
-                            <?php echo $valoraciones['valuation']; ?>
-                            <?php echo $valoraciones['description']; ?>           
+                        
+                            <h6>
+                            <?php echo "Puntuacion: ".$valoraciones['valuation']; ?>
+                            </h6>
+                            <P>
+                            <?php echo "Descripcion: ".$valoraciones['description']; ?>
+                                    
                         </p>
                     </div>
 
