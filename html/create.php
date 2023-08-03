@@ -81,18 +81,15 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                 <div id="tittle_second_conteiner">
                     <h3>Otros comentarios</h3>
                 </div>
-                <?php
+                <?php             
                 foreach ($fetch as $valoraciones) { ?>
-
                     <div id="coments">
                         <h4>
-                        <?php echo $valoraciones['name']; ?>
+                        <?php echo "Autor: ".$valoraciones['name']; ?>
                         </h4>
-                        <p>
-                            <?php echo $valoraciones['description']; ?>
-                        </p>
-                        <p>
+                        <P>
                             <?php echo $valoraciones['valuation']; ?>
+                            <?php echo $valoraciones['description']; ?>           
                         </p>
                     </div>
 
@@ -100,10 +97,7 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                 }
                 ?>
             </div>
-
         </div>
-
-
         </div>
         <script>
             let year = document.getElementById('year');
