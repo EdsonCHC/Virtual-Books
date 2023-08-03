@@ -1,3 +1,34 @@
+<?php
+require_once("../php/interface.php");
+require_once("../php/cone.php");
+require_once("../php/functions.php");
+require_once("../php/methods.php");
+require_once("../html/header.php");
+
+$id_recurso = $_GET['id'];
+
+if (isset($_SESSION['user'])) {
+    $id_usuario = $_SESSION['user']['0'];
+} else {
+    echo "Error";
+}
+if ($_POST) {
+    $texto = $_POST["texto"];
+    $valuation = $_POST["valuation"];
+    $obj = new Comentario();
+    $arr = array($texto, $valuation, $id_usuario, $id_recurso);
+    $obj->insertData($arr);
+    header("location: create.php?id=$id_recurso");
+}
+
+
+$obj = new Comentario();
+$sql = "select comment.description, comment.valuation, user.name from comment inner join user on comment.id_c = user.id where comment.id_rec = $id_recurso";
+$fetch = $obj->showData($sql);
+$fetch->setFetchMode(PDO::FETCH_ASSOC);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,49 +48,62 @@
 </head>
 
 <body>
-    <?php
-    require_once("../html/header.php");
-    ?>
+
     <main>
         <?php
         require_once("../html/aside.php");
         ?>
         <div id="content">
             <h2>Crear posteo</h2>
-            <div id="general_conteiner">
-                <div id="first_conteiner">
-                    <div id="post_desc">
-                        <textarea name="texto" rows="26" cols="100" placeholder="¿De qué quieres hablar?"></textarea>
+
+            <form method="POST">
+                <div id="general_conteiner">
+                    <div id="first_conteiner">
+                        <div id="post_desc">
+                            <textarea name="texto" rows="26" cols="100"
+                                placeholder="¿De qué quieres hablar?"></textarea>
+                        </div>
+                        <div id="details_primary_part">
+                            <h4><label for="valuation">Puntuacion</label></h4>
+                            <select name="valuation">
+                                <option value="Mala" selected>Mala</option>
+                                <option value="Buena">Buena</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+                        <div id="post_enter">
+                            <input type="submit" value="Postear">
+                        </div>
                     </div>
-                    <div id="post_enter">
-                        <input type="reset" value="Postear">
-                    </div>
+
+            </form>
+            <div id="second_conteiner">
+                <div id="tittle_second_conteiner">
+                    <h3>Otros Posteos</h3>
                 </div>
-                <div id="second_conteiner">
-                    <div id="tittle_second_conteiner">
-                        <h3>Otros comentarios</h3>
-                    </div>
-                    <div id="coments">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img
-                                    src="../src/Arrow.png" /></button></p>
+                <div id="coments">
+                <?php
+     
+                foreach ($fetch as $valoraciones) { ?>
+                    
 
-                    </div>
-                    <div id="coments">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img
-                                    src="../src/Arrow.png" /></button></p>
+                        <h5>
+                            <?php echo "Autor: " . $valoraciones['name']; ?>
+                        </h5>
 
-                    </div>
-                    <div id="coments">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error<button><img
-                                    src="../src/Arrow.png" /></button></p>
+                        <a>
+                            <?php echo "Puntuacion: " . $valoraciones['valuation']; ?>
+                        </a>
+                        <P>
+                            <?php echo "Descripcion: " . $valoraciones['description']; ?>
 
-                    </div>
+                        </p>
 
-                </div>
-
+                    <?php
+                }
+                ?>
             </div>
-
-
+        </div>
         </div>
         <script>
             let year = document.getElementById('year');
