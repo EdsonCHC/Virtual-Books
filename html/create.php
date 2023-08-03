@@ -9,9 +9,8 @@ $id_recurso = $_GET['id'];
 
 if (isset($_SESSION['user'])) {
     $id_usuario = $_SESSION['user']['0'];
-    echo "hola:" . $id_usuario;
 } else {
-    echo "false";
+    echo "Error";
 }
 if ($_POST) {
     $texto = $_POST["texto"];
@@ -22,10 +21,12 @@ if ($_POST) {
     header("location: create.php?id=$id_recurso");
 }
 
+
 $obj = new Comentario();
-$sql = "Select * from comment where id=$id_recurso";
+$sql = "select comment.description, comment.valuation, user.name from comment inner join user on comment.id_c = user.id where comment.id_rec = $id_recurso";
 $fetch = $obj->showData($sql);
 $fetch->setFetchMode(PDO::FETCH_ASSOC);
+
 
 ?>
 <!DOCTYPE html>
@@ -65,15 +66,16 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                         <div id="details_primary_part">
                             <h4><label for="valuation">Puntuacion</label></h4>
                             <select name="valuation">
-                                <option value="value1">Mala</option>
-                                <option value="value2" selected>Buena</option>
-                                <option value="value3">Excelente</option>
+                                <option value="Mala" selected >Mala</option>
+                                <option value="Buena" >Buena</option>
+                                <option value="Excelente">Excelente</option>
                             </select>
                         </div>
                         <div id="post_enter">
                             <input type="submit" value="Postear">
                         </div>
                     </div>
+                    
             </form>
             <div id="second_conteiner">
                 <div id="tittle_second_conteiner">
@@ -83,8 +85,14 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                 foreach ($fetch as $valoraciones) { ?>
 
                     <div id="coments">
+                        <h4>
+                        <?php echo $valoraciones['name']; ?>
+                        </h4>
                         <p>
                             <?php echo $valoraciones['description']; ?>
+                        </p>
+                        <p>
+                            <?php echo $valoraciones['valuation']; ?>
                         </p>
                     </div>
 

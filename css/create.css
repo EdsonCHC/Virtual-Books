@@ -182,7 +182,7 @@ main {
   }
   
 #content {
-    padding: 2rem 0 0 2.5rem;
+    padding: auto 0 0 auto;
   }  
 #general_conteiner{
     display: flex;
@@ -197,7 +197,8 @@ main {
  
 }
 #post_enter input{
-  margin-top: 1rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
     color:rgb(255, 255, 255);
     border:none;
     background: rgba(127, 0, 0, 0.9);
