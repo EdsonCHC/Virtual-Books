@@ -1,0 +1,79 @@
+@import url(../css/Rules.css);
+
+*{
+    text-align: center;
+}
+
+body {
+  background-color: #ffa372;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#form-ctn {
+    position: relative;
+    top: 8rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    width: 1500px;
+    height: 840px;
+    margin: 10px auto 0;
+    padding-bottom: 20px;
+  }
+
+  .ctn p{
+
+    position: relative;
+    font-size: 150px;
+    padding-top: 5rem;
+  }
+
+  .ctn h2{
+        padding-top: -15px;
+        font-size: 80px;
+  }
+
+
+.ctn h3{
+    position: relative;
+    font-size: 40px;
+    padding-top: 50px;
+}
+  .ctn button {
+    position: relative;
+    background-color: #800404;
+    color: #ffff;
+    border: none;
+    border-radius: 30px;
+    width: 400px;
+    height: 50px;
+    font-size:large;
+    margin-top: 150px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .ctn button a{
+    text-decoration: none;
+    color: #ffff;
+
+  }
+
+  #Ovalo_1 {
+    position: absolute;
+    inset: -10% 0 -35% 0;
+    opacity: 0.5;
+    z-index: -10;
+    width: 35%;
+    height: 70vh;
+  }
+
+  #Ovalo_2 {
+    position: absolute;
+    inset: 45rem 0 0 120rem;
+    width: 500px;
+    opacity: 0.5;
+    z-index: -20;
+  }
