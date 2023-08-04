@@ -23,7 +23,7 @@ if ($_POST) {
 
 
 $obj = new Comentario();
-$sql = "select comment.description, comment.valuation, user.name from comment inner join user on comment.id_c = user.id where comment.id_rec = $id_recurso";
+$sql = "SELECT comment.description, comment.valuation, user.name FROM comment INNER JOIN user on comment.id_c = user.id WHERE comment.id_rec = $id_recurso";
 $fetch = $obj->showData($sql);
 $fetch->setFetchMode(PDO::FETCH_ASSOC);
 

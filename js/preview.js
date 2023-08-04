@@ -35,7 +35,6 @@ const validar = () => {
 
   let archivo = document.getElementById("img_i").value,
     extension = archivo.substring(archivo.lastIndexOf("."), archivo.length);
-
   if (
     document
       .getElementById("img_i")
