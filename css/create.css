@@ -208,36 +208,46 @@ main {
     border-radius: 20px;
     font-size: 15px;
 }
+/*comentario*/
+
 #second_conteiner{
-  border: 1px  solid #ccc;
   background-color:rgb(255, 255, 255);
   border-radius: 20px;
   padding: 4rem;
-  margin: 0 0rem 0 5rem;
-  align-items: center;
-  
+  margin: 0 5rem 0 5rem;  
+}
+
+
+#tittle_second_conteiner{
+  margin-bottom: 3.5rem;
+  text-align: center;  
+}
+h3{
+  color: rgb(249, 96, 1);
+
+}
+
+
+
+#coments h5{
+  padding:0.5rem;
+  color: rgb(0, 0, 0); 
+}
+#coments a{
+  margin:1rem;
+  padding: 0.5rem;
+  color: rgb(29, 25, 255);
+  font-size: 12px;
+  border-radius: 5px;
+
 }
 
 #coments p{
-  background-color:#D9D9D9;
-  border-radius: 20px;
+  background-color:#d1d1d1 ;
+  border-radius: 12px;
   padding: 1.5rem;
-  margin:  2rem 1rem 2rem 1rem;
-  width: 90%;
-  font-size: 15px;
-}
-
-
-#coments button{
-  background: rgba(255, 255, 255, 0.9);
-  width: 13%;
-  padding-top: 0.4rem;
-  cursor: pointer;
-  border-radius: 20px;
-  border: 1px solid #BCBEC0;
-  margin-left: 90%;
-
-  
+  margin:  1rem 1rem 2rem 1rem;
+  font-size: 14px;
 }
 
 #details_primary_part select{

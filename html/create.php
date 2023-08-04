@@ -66,8 +66,8 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                         <div id="details_primary_part">
                             <h4><label for="valuation">Puntuacion</label></h4>
                             <select name="valuation">
-                                <option value="Mala" selected >Mala</option>
-                                <option value="Buena" >Buena</option>
+                                <option value="Mala" selected>Mala</option>
+                                <option value="Buena">Buena</option>
                                 <option value="Excelente">Excelente</option>
                             </select>
                         </div>
@@ -75,28 +75,29 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                             <input type="submit" value="Postear">
                         </div>
                     </div>
-                    
+
             </form>
             <div id="second_conteiner">
                 <div id="tittle_second_conteiner">
-                    <h3>Otros comentarios</h3>
+                    <h3>Otros Posteos</h3>
                 </div>
-                <?php             
+                <div id="coments">
+                <?php
+     
                 foreach ($fetch as $valoraciones) { ?>
-                    <div id="coments">
-                        <hr>
-                        <h4>
-                        <?php echo "Autor: ".$valoraciones['name']; ?>
-                        </h4>
-                        
-                            <h6>
-                            <?php echo "Puntuacion: ".$valoraciones['valuation']; ?>
-                            </h6>
-                            <P>
-                            <?php echo "Descripcion: ".$valoraciones['description']; ?>
-                                    
+                    
+
+                        <h5>
+                            <?php echo "Autor: " . $valoraciones['name']; ?>
+                        </h5>
+
+                        <a>
+                            <?php echo "Puntuacion: " . $valoraciones['valuation']; ?>
+                        </a>
+                        <P>
+                            <?php echo "Descripcion: " . $valoraciones['description']; ?>
+
                         </p>
-                    </div>
 
                     <?php
                 }
