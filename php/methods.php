@@ -30,5 +30,27 @@ class MétodosUser implements plantilla
     
 }
 
-?>
+class Comentario implements plantilla
+{
+    public function insertData($arr)
+    {
+        $obj = new DataBase();
+        $DBH = $obj->connect();
+        $STH = $DBH->prepare ("INSERT INTO `comment` (`description`, `valuation`, `id_c`, `id_rec`) 
+        VALUES (?, ?, ?, ?)");
+        $STH->execute($arr);
+        $DBH = null;
+        
+    }
+    public function showData($sql){
+        $obj = new DataBase();
+        $DBH = $obj->connect();
+        $STH = $DBH->query($sql);
+        return $STH;
+    }
+    public function updateData($sql){}
+    public function deleteData($sql){}
+    
+}
 
+?>

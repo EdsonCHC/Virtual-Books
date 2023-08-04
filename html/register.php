@@ -39,30 +39,30 @@ $authUrl = $client->createAuthUrl();
         </div>
         <img id="Ovalo_1" src="../src/login.png">
         <div id="form-ctn">
-            <form action="../php/register_db_vb.php" method="post" id="form" enctype="multipart/form-data">
+            <form id="form" enctype="multipart/form-data">
                 <div id="text-ctn">
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="input1" autocomplete="off"
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off"
                         required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="input2"
-                        autocomplete="no">
+                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="lastName" 
+                        autocomplete="off">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
                         <h6>Correo Electrónico</h6>
                     </label>
-                    <input type="email" name="email" placeholder="ejemplo@gmail.com" id="input3" autocomplete="off">
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com" id="email" autocomplete="off">
                     <p class="warnings" id="warnings3"></p>
                     <label for="">
                         <h6>Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" id="input4" autocomplete="off">
+                    <input type="password" name="password" placeholder="Contraseña" id="pass" autocomplete="off">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
@@ -125,16 +125,11 @@ $authUrl = $client->createAuthUrl();
         </div>
         <img id="Ovalo_2" src="../src/login.png">
     </div>
-
-    <!-- No tocar -->
-    <?php
-    require_once("../php/register_db_vb.php");
-    ?>
 </body>
 <script>
     const form = document.getElementById("form");
     form.addEventListener("submit", (e) => {
-        const pass1 = form.input4.value;
+        const pass1 = form.pass.value;
         const pass2 = form.passConfirm.value;
         if (pass1 != pass2) {
             e.preventDefault();
@@ -145,7 +140,8 @@ $authUrl = $client->createAuthUrl();
 <script src="../js/alertify.js"></script>
 <script src="../js/j_query.js"></script>
 <script src="../js/preview.js"></script>
+<script src="../js/app.js"></script>
 <script src="../js/valid/valRegister.js"></script>
-<script src="../js/valPattern.js"></script>
+<!-- <script src="../js/valPattern.js"></script> -->
 
 </html>
