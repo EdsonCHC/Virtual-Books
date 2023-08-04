@@ -185,6 +185,7 @@ if (isset($_SESSION['user'])) {
                                             window.location.href = '../html/account.php';
                                         </script>";
                             } else {
+                                #He de mencionar que el que captura es este porque todavia no se pero es por la conección
                                 echo "<script>
                                             alert('Datos actualizados');
                                             window.location.href = '../html/account.php';
