@@ -85,6 +85,7 @@
   min-height: 56px;
 }
 .alertify .ajs-body .ajs-content {
+  font-size: 2rem;
   padding: 16px 24px 16px 16px;
 }
 .alertify .ajs-footer {
@@ -225,6 +226,7 @@
   display: block;
 }
 .alertify.ajs-movable:not(.ajs-maximized) .ajs-header {
+  font-size: 3rem;
   cursor: move;
   font-weight: 600;
 }

@@ -41,7 +41,7 @@ $authUrl = $client->createAuthUrl();
     </div>
     <div class="general_part">
         <div class="primary_part">
-            <form action="../php/login_db_vb.php" method="POST" id="form">
+            <form id="form">
                 <div class="space_primary_part">
                     <div class="tittle_primary_part">
                         <a href="../html/index.php">
@@ -91,11 +91,11 @@ $authUrl = $client->createAuthUrl();
         <div class="secundary_part">
         </div>
     </div>
-    <?php
-    require_once("../php/login_db_vb.php");
-    ?>
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script src="../js/valid/valLogin.js"></script>
+    <script src="../js/alertify.js"></script>
+    <script src="../js/j_query.js"></script>
+    <script src="../js/log.js"></script>
 </body>
 
 </html>
