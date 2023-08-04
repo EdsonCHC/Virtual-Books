@@ -19,7 +19,13 @@ class MétodosUser implements plantilla
         $STH = $DBH->query($sql);
         return $STH;
     }
-    public function updateData($sql){}
+    public function updateData($sql, $arr){
+        $obj = new DataBase();
+        $DBH = $obj->connect();
+        $STH = $DBH->prepare($sql);
+        $STH->execute($arr);
+        $DBH = null;
+    }
     public function deleteData($sql){}
     
 }
