@@ -168,7 +168,7 @@ header {
   object-fit: cover;
   background-color: var(--main-white);
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 
 #log-links {

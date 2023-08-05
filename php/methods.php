@@ -40,15 +40,16 @@ class Comentario implements plantilla
         VALUES (?, ?, ?, ?)");
         $STH->execute($arr);
         $DBH = null;
-        
     }
+
     public function showData($sql){
         $obj = new DataBase();
         $DBH = $obj->connect();
         $STH = $DBH->query($sql);
         return $STH;
     }
-    public function updateData($sql){}
+    
+    public function updateData($sql, $arr){}
     public function deleteData($sql){}
     
 }

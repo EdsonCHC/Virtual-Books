@@ -13,12 +13,13 @@ class métodosAdmin implements plantilla
         $DBH = null;
     }
 
-    public function showData($sql){//ni yo se como funciona no toquen
+    public function showData($sql){
         $obj = new DataBase();
         $DBH = $obj->connect();
         $STH = $DBH->query($sql);
         return $STH;
     }
+
     public function updateData($sql,$arr){}
     public function deleteData($sql){}
 }

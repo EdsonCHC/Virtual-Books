@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('../php/cone.php');
 require_once("../php/functions.php");
 require_once("../php/methods.php");
