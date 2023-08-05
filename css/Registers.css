@@ -25,7 +25,7 @@ a{
   position: absolute;
   inset: -10% 0 -35% 0;
   opacity: 0.5;
-  z-index: -10;
+  z-index: -1;
   width: 35%;
   height: 70vh;
 }
@@ -223,9 +223,9 @@ div form button {
 #Ovalo_2 {
   position: absolute;
   inset: 45rem 0 0 140rem;
-  width: 550px;
+  width: 50rem;
   opacity: 0.5;
-  z-index: -20;
+  z-index: -1;
 }
 
 #flex-lines{

@@ -18,11 +18,11 @@
         </div>
 
         <div class="ctn">
-            <h3>La página no fue encontrada</h3>
+            <h4>Lo sentimos la página que buscas no se encontró</h4>
         </div>
 
         <div class="ctn">
-            <button type="button"><a href="#"><b>Regresar</b></a></button>
+            <button type="button"><a href="../html/index.php"><b>Regresar</b></a></button>
         </div>
 
     </div>
