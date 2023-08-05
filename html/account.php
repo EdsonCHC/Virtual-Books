@@ -137,7 +137,7 @@ if ($_SESSION['user']) {
                             if ($oldPass === $pass) {
                                 $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
                                 $result = $DBH->query($sql);
-                                if ($result) {
+                                if ($result !== false) {
                                     echo "<script>
                                             alert('Datos actualizados');
                                             window.location.href = '../html/account.php';
