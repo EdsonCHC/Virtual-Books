@@ -1,3 +1,26 @@
+<?php
+require_once("../php/interface.php");
+require_once('../php/cone.php');
+require_once("../php/functions.php");
+require_once("../php/methods.php");
+if (isset($_SESSION['user'])) {
+    $id = $_SESSION['user']['0'];
+    $obj = new MétodosUser();
+    $sql = "SELECT `name`, `lastName`, `email`, `password`, `img` FROM `user` WHERE id = ?";
+    $stmt = $obj->showData($sql);
+    $stmt->execute([$id]);
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($row) {
+        $name = $row['name'];
+        $lastName = $row['lastName'];
+        $email = $row['email'];
+        $pass = $row['password'];
+        $img = $row['img'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,116 +47,177 @@
         <?php
         require_once("../html/aside.php");
         ?>
-        <div id="paleta-der">
+        <div id="content">
             <div id="part1">
-                <p>Información Personal</p>
-            </div>
+                <h3>Información Personal</h3>
+                <div class="dataUser">
+                    <div>
+                        <div class="name">
+                            <?php
+                            $id = $_SESSION['user']['0'];
+                            $sql = "SELECT name from user where id = $id";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <label>Nombres
+                                        <input type="text" class="inputs" value="<?php echo $info["name"];
+                                        ; ?>">
+                                    </label>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="name">
+                            <?php
+                            $id = $_SESSION['user']['0'];
+                            $sql = "SELECT lastName from user where id = $id";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <label>Apellidos
+                                        <input type="text" class="inputs" value="<?php echo $info["lastName"]; ?>">
+                                    </label>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="name">
+                            <?php
+                            $id = $_SESSION['user']['0'];
+                            $sql = "SELECT email from user where id = $id";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <label>Correo Electrónico
+                                        <input type="text" class="inputs" value="<?php echo $info["email"]; ?>">
+                                    </label>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div class="name">
+                            <?php
+                            $id = $_SESSION['user']['0'];
+                            $sql = "SELECT password from user where id = $id";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <label>Contraseña
+                                        <input type="password" class="inputs" Value="<?php echo $info["password"]; ?>">
+                                    </label>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <label>Imagen de perfil
+                            <img src=" <?php echo $img['img']; ?>" alt="user-icon" /></a>
+                        </label>
+                    </div>
+                </div>
+                <dialog>
+                    <form method="POST" enctype="multipart/form-data" class="form">
+                        <h4>Actualizar tus datos!!</h4>
+                        <hr>
+                        <div class="content_form">
+                            <label for="title" class="form_text">Nombres</label>
+                            <input type="text" id="name" class="inputs" name="name">
+                        </div>
+                        <div class="content_form">
+                            <label for="autor" class="form_text">Apellidos</label>
+                            <input type="text" id="lastName" class="inputs" name="lastName">
+                        </div>
+                        <div class="content_form">
+                            <label for="autor" class="form_text">Correo Electrónico</label>
+                            <input type="email" id="email" class="inputs" name="email">
+                        </div>
+                        <div class="content_form">
+                            <label for="autor" class="form_text">Contraseña Actual</label>
+                            <input type="password" id="oldPass" class="inputs" name="oldPass">
+                        </div>
+                        <div class="content_form">
+                            <label for="autor" class="form_text">Nueva Contraseña</label>
+                            <input type="password" id="newPass" class="inputs" name="newPass">
+                        </div>
+                        <div class="content_form">
+                            <label for="imagen" class="src">Imagen</label>
+                            <input type="file" id="imagen" accept="Image/*" name="img"
+                                onchange="vista_preliminar(event), validar()">
+                            <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png"
+                                    alt="user_image" id="img-preview">
+                            </div>
+                        </div>
+                        <div class="btnPart">
+                            <button type="submit" name="update">Actualizar</button>
+                            <button type="button"><a href="../html/account.php">Cancelar</a></button>
+                        </div>
+                        <?php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $name = $_POST["name"];
+                            $lastName = $_POST["lastName"];
+                            $email = $_POST["email"];
+                            $pass = $_POST["newPass"];
+                            $nombreImg = $_FILES['img']['name'];
+                            $rutaImg = $_FILES['img']['tmp_name'];
+                            $img = "../src/img/" . $nombreImg;
 
+                            $obj = new DataBase();
+                            $DBH = $obj->connect();
+                            $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
+                            if ($DBH->query($sql) === TRUE) {
+                                echo "<script>
+                                            alert('Datos actualizados');
+                                            window.location.href = '../html/account.php';
+                                        </script>";
+                            } else {
+                                #He de mencionar que el que captura es este porque todavia no se pero es por la conección
+                                echo "<script>
+                                            alert('Datos actualizados');
+                                            window.location.href = '../html/account.php';
+                                        </script>";
+                            }
+
+                            $DBH = null;
+                        }
+                        ?>
+                    </form>
+                </dialog>
+            </div>
             <div id="part2">
-                <div id="form-ctn">
-                    <?php
-                    // Archivo: redirect.php
-                    require_once '../js/vendor/autoload.php';
-
-                    $client = new \Google\Client();
-                    $client->setAuthConfig('../js/credentials.json');
-                    $client->setRedirectUri('http://localhost/Virtual-Books/html/account.php');
-                    $client->addScope('name');
-                    $client->addScope('lastName');
-                    $client->addScope('email');
-                    // $client->addScope('profile');
-                    
-                    $authUrl = $client->createAuthUrl();
-
-                    if (isset($_GET['code'])) {
-                        $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-                        $client->setAccessToken($token);
-
-                        $refreshToken = null;
-                        if (array_key_exists('refresh_token', $token)) {
-                            $refreshToken = $token['refresh_token'];
-                        }
-
-                        if ($refreshToken) {
-                            // Obtener un nuevo token de acceso utilizando el refresh token
-                            $client->fetchAccessTokenWithRefreshToken($refreshToken);
-                            $newToken = $client->getAccessToken();
-                            $client->setAccessToken($newToken);
-
-                            // Realiza acciones adicionales utilizando el nuevo token de acceso
-                            // ...
-                        } else {
-                            echo 'No se encontró el refresh token.';
-                        }
-
-                        $service = new \Google\Service\Oauth2($client);
-                        $userInfo = $service->userinfo->get();
-
-                        // Aquí puedes acceder a los datos del usuario, como su ID, nombre y correo electrónico
-                        $userId = $userInfo->id;
-                        $name = $userInfo->name;
-                        //$lastName = $userInfo->lastName;
-                        $email = $userInfo->email;
-                        echo $name;
-                        //echo $lastName;
-                        echo $email;
-
-                    } else {
-                        //echo 'Error al obtener el código de autorización.';
-                    }
-                    ?>
-                    <form action="">
-                        <div id="text-ctn">
-                            <label for="">
-                                <h6>Nombres</h6>
-                                <p class="warnings" id="warnings"></p>
-                            </label>
-                            <input type="text" id="input1" placeholder="Martin Alejandro">
-                            <label for="">
-                                <h6>Apellidos</h6>
-                                <p class="warnings" id="warnings"></p>
-                            </label>
-                            <input type="text" id="input2" placeholder="Castro Lopez">
-                            <button id="boton" type=""> Actualizar
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                            <button id="boton1" type="">
-                                <i class="fa-regular fa-floppy-disk"></i>
-                            </button>
-                        </div>
-                        <div id="img-ctn">
-                            <h6>Imagen de perfil</h6>
-                            <img class="grande" src="../src/user.png" alt=""><br>
-                            <button class="upload">Actualizar
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
-                            </button>
-                            <button id="boton1" type="">
-                                <i class="fa-regular fa-floppy-disk"></i>
-                            </button>
-                        </div>
-                    </form>
-
-                    <p>Correo Electrónico</p>
+                <h3>Actualiza tus datos!!</h3>
+                <div class="dataUser">
+                    <div class="userUpdate">
+                        <label>
+                            <button class="btnUpdate" id="btnUpdate">Actualizar Datos</button>
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div id="part3">
-                <div id="contenido3">
-                    <form action="">
-                        <div id="text-ctn1">
-                            <label for="">
-                                <h6>Correo Electronico</h6>
-                                <p class="warnings" id="warnings"></p>
-                            </label>
-                            <input type="email" id="input3" placeholder="Lorem">
-                            <button id="boton2" type=""> Actualizar
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+
             </div>
         </div>
     </main>
+    <script>
+        document.querySelector("#btnUpdate").addEventListener("click", () => {
+            document.querySelector("dialog").showModal();
+        })
+    </script>
+    <script src="../js/preview.js">
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 // Datos de Nombre
-let inputName = document.getElementById("input1");
+let inputName = document.getElementById("name");
 let warningName = document.getElementById("warnings");
 
 var elementName = document.createElement("div");
@@ -27,7 +27,7 @@ inputName.addEventListener("input", function (event) {
 
 
 // Datos de Apellidos
-let inputLastName = document.getElementById("input2");
+let inputLastName = document.getElementById("lastName");
 let warningLastName = document.getElementById("warnings2");
 
 var elementLastName = document.createElement("div");
