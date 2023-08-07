@@ -28,7 +28,7 @@ $(function () {//función se ejecuta al principio
       data: formData, //data
       processData: false,
       contentType: false,
-      success: (response) => { //lo que se hará al obtener respuesta
+      success: (response) => {//lo que se hará al obtener respuesta
         if (response === "true") {
           alertify.alert("The has registrado", () => {
             window.location = "../html/login.php";
@@ -39,7 +39,7 @@ $(function () {//función se ejecuta al principio
       },
       error: (xhr, status, error) => { //manejo de error
         console.error(error);
-      },
+      }
     });
   });
 });

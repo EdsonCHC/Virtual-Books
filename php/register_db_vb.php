@@ -14,12 +14,16 @@ if ($row->rowCount() > 0) {
     exit();
 } else {
     $route = "../src/user/" . $img_name;
-    if(isset($_POST['file'])){
-        $file = $_FILES['file']['tmp_name'];
-        move_uploaded_file($file, $route);
+    if(isset($_FILES['file'])){
+       $file = $_FILES['file']['tmp_name'];
+       move_uploaded_file($file, $route);
     }
-    $arr = array($name, $lastName, $email, $password, $route, $rol);
-    $obj->insertData($arr);
-    echo "true";
-}
+    try{
+        $arr = array($name, $lastName, $email, $password, $route, $rol);
+        $obj->insertData($arr);
+        echo "true";
+    }catch(PDOException $e){
+        echo "Error ". $e->getMessage(); 
+    }
+    }
 ?>

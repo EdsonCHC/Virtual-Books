@@ -36,7 +36,7 @@ if (isset($_SESSION['user'])) {
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php">
-      <img src=" <?php echo $img['img']; ?>"alt="user-icon" /></a>
+      <img src="<?php echo $img['img']; ?>"alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>

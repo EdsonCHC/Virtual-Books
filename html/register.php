@@ -93,7 +93,7 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <label for="img_i" class="Upload">Subir Imagen
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
-                        <input type="file" id="img_i" accept=".jpg,.png" name="img"
+                        <input type="file" id="img_i" accept=".jpg,.png" name="file"
                             onchange="vista_preliminar(event), validar()">
                     </label>
                     <div id="warning"></div>
@@ -104,17 +104,17 @@ $authUrl = $client->createAuthUrl();
                     </div>
                     <h5 class="primo">Selecciona un avatar predeterminado</h5>
                     <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-1.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-man-1.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="user-man-1.png"
                             id="user-icon-1" checked></label>
                     <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-1.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-woman-1.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="/user-woman-1.png"
                             id="user-icon-2"></label>
                     <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-2.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-man-2.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="user-man-2.png"
                             id="user-icon-3">
                     </label>
                     <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-2.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="../src/user/user-woman-2.png"
+                        <input type="radio" name="user-pic" class="icons-user" value="user-woman-2.png"
                             id="user-icon-4">
                     </label>
                 </div>
@@ -140,8 +140,6 @@ $authUrl = $client->createAuthUrl();
 <script src="../js/alertify.js"></script>
 <script src="../js/j_query.js"></script>
 <script src="../js/preview.js"></script>
-<script src="../js/app.js"></script>
+<script src="../js/reg.js"></script>
 <script src="../js/valid/valRegister.js"></script>
-<!-- <script src="../js/valPattern.js"></script> -->
-
 </html>
