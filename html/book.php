@@ -12,7 +12,7 @@ if ($row->rowCount() > 0) {
   $row->setFetchMode(PDO::FETCH_ASSOC);
   $info = $row->fetch();
 } else {
-  echo "404 not found";
+  header("Location: ../html/error404.php");
 }
 ?>
 <!DOCTYPE html>
@@ -25,11 +25,7 @@ if ($row->rowCount() > 0) {
   <link rel="stylesheet" href="../css/Rules.css">
   <link rel="stylesheet" href="../css/libro.css">
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
-
-  <!-- Fonts and Boostrap-->
-  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
-
   <title>Libro</title>
 </head>
 
@@ -111,6 +107,7 @@ if ($row->rowCount() > 0) {
   <?php
   require_once("../html/footer.php");
   ?>
+  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

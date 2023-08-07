@@ -30,11 +30,13 @@ $(function () {//función se ejecuta al principio
       contentType: false,
       success: (response) => {//lo que se hará al obtener respuesta
         if (response === "true") {
-          alertify.alert("The has registrado", () => {
+            alertify.alert("The has registrado", () => {
             window.location = "../html/login.php";
           });
-        } else {
+        } else if(response === "false"){
           alertify.alert("El correo ya esta en uso");
+        }else{
+          alertify.alert("Ha ocurrido un error");
         }
       },
       error: (xhr, status, error) => { //manejo de error

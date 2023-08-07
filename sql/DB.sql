@@ -9,7 +9,8 @@ Create table IF NOT EXISTS `user`(
     email varchar(100) not null,
     password varchar(50) not null,
     img varchar(100) not null,
-    rol CHAR(1) Not NULL default "0"
+    rol CHAR(1) Not NULL default "0",
+    dateReg datetime(6) NOT NULL DEFAULT current_timestamp(6)
 );
 
 CREATE TABLE IF NOT EXISTS `resource`(
