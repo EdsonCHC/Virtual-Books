@@ -63,10 +63,13 @@ label {
   flex-direction: column;
   width: 200px;
   height: auto;
+  justify-content: center;
+  align-items: center;
 }
 .img img {
   width: 150px;
-  height: 150px;
+  height: 290px;
+  object-fit: contain;
   margin: 1rem auto;
 }
 
@@ -75,6 +78,18 @@ dialog {
   background: var(--main-white);
   width: 50rem;
   height: 55rem;
+  padding: 1.5rem;
+  position: absolute;
+  inset: 50% 0 0 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 5px;
+}
+
+#dialogDelete{
+  background: var(--main-white);
+  width: 50rem;
+  height: 15rem;
   padding: 1.5rem;
   position: absolute;
   inset: 50% 0 0 50%;
@@ -190,6 +205,19 @@ a{
 }
 
 /*Parte 2*/
+#part2 {
+  position: relative;
+  height: auto;
+  width: 95%;
+  margin-top: 30rem;
+}
+
+#part2 h3 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
 
 .userUpdate {
   display: flex;
@@ -209,16 +237,4 @@ a{
   font-size: 20px;
 }
 
-#part2 {
-  position: relative;
-  height: auto;
-  width: 95%;
-  margin-top: 30rem;
-}
 
-#part2 h3 {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px solid gray;
-  width: 100%;
-}

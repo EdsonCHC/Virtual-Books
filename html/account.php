@@ -132,7 +132,7 @@ if (isset($_SESSION['user'])) {
                 </div>
                 <dialog>
                     <form method="POST" enctype="multipart/form-data" class="form">
-                        <h4>Actualizar tus datos!!</h4>
+                        <h4>Actualiza tu cuenta</h4>
                         <hr>
                         <div class="content_form">
                             <label for="title" class="form_text">Nombres</label>
@@ -148,11 +148,11 @@ if (isset($_SESSION['user'])) {
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Contraseña Actual</label>
-                            <input type="password" id="oldPass" class="inputs" name="oldPass">
+                            <input type="password" id="oldPass" class="inputs" name="oldPass" required>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" name="newPass">
+                            <input type="password" id="newPass" class="inputs" name="newPass" required>
                         </div>
                         <div class="content_form">
                             <label for="imagen" class="src">Imagen</label>
@@ -168,52 +168,95 @@ if (isset($_SESSION['user'])) {
                         </div>
                         <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $name = $_POST["name"];
-                            $lastName = $_POST["lastName"];
-                            $email = $_POST["email"];
-                            $pass = $_POST["newPass"];
-                            $nombreImg = $_FILES['img']['name'];
-                            $rutaImg = $_FILES['img']['tmp_name'];
-                            $img = "../src/img/" . $nombreImg;
+                            if (isset($_POST['update'])) {
+                                $name = $_POST["name"];
+                                $lastName = $_POST["lastName"];
+                                $email = $_POST["email"];
+                                $pass = $_POST["newPass"];
+                                $nombreImg = $_FILES['img']['name'];
+                                $rutaImg = $_FILES['img']['tmp_name'];
+                                $img = "../src/img/" . $nombreImg;
 
-                            $obj = new DataBase();
-                            $DBH = $obj->connect();
-                            $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
-                            if ($DBH->query($sql) === TRUE) {
-                                echo "<script>
-                                            alert('Datos actualizados');
-                                            window.location.href = '../html/account.php';
-                                        </script>";
-                            } else {
-                                #He de mencionar que el que captura es este porque todavia no se pero es por la conección
-                                echo "<script>
-                                            alert('Datos actualizados');
-                                            window.location.href = '../html/account.php';
-                                        </script>";
+                                $obj = new DataBase();
+                                $DBH = $obj->connect();
+                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
+                                if ($DBH->query($sql) === TRUE) {
+                                    echo "<script>
+                                                alert('Datos actualizados 1');
+                                                window.location.href = '../html/account.php';
+                                            </script>";
+                                } else {
+                                    #He de mencionar que el que captura es este porque todavia no se pero es por la conección
+                                    echo "<script>
+                                                alert('Datos actualizados 2');
+                                                window.location.href = '../html/account¿.php';
+                                            </script>";
+                                }
+                                $DBH = null;
                             }
-
-                            $DBH = null;
+                        }
+                        ?>
+                    </form>
+                </dialog>
+                <dialog id="dialogDelete">
+                    <form method="POST" enctype="multipart/form-data" class="form">
+                        <h4>Elimina tu cuenta</h4>
+                        <hr>
+                        <div class="btnPart">
+                            <button type="submit" name="delete">Eliminar</button>
+                            <button type="button"><a href="../html/account.php">Cancelar</a></button>
+                        </div>
+                        <?php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            if (isset($_POST['delete'])) {
+                                $obj = new DataBase();
+                                $DBH = $obj->connect();
+                                $sql = "DELETE FROM user WHERE id = $id";
+                                if ($DBH->query($sql) === TRUE) {
+                                    echo "<script>
+                                                alert('Cuenta Eliminada');
+                                            </script>";
+                                            require_once '../php/log_out.php';
+                                            header("Location: ../html/index.php");
+                                } else {
+                                    echo "<script>
+                                                alert('Cuenta eliminada');
+                                            </script>";
+                                            require_once '../php/log_out.php';
+                                            header("Location: ../html/index.php");
+                                }
+                                $DBH = null;
+                            }
                         }
                         ?>
                     </form>
                 </dialog>
             </div>
             <div id="part2">
-                <h3>Actualiza tus datos!!</h3>
+                <h3></h3>
                 <div class="dataUser">
                     <div class="userUpdate">
                         <label>
-                            <button class="btnUpdate" id="btnUpdate">Actualizar Datos</button>
+                            <button class="btnUpdate" id="btnUpdate">Actualizar Cuenta</button>
                         </label>
                     </div>
+                    <div class="userUpdate">
+                        <label>
+                            <button class="btnDelete" id="btnDelete">Eliminar Cuenta</button>
+                        </label>
+                    </div>
+                    <div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
     <script>
         document.querySelector("#btnUpdate").addEventListener("click", () => {
             document.querySelector("dialog").showModal();
+        });
+        document.querySelector("#btnDelete").addEventListener("click", () => {
+            document.querySelector("#dialogDelete").showModal();
         })
     </script>
     <script src="../js/preview.js">
