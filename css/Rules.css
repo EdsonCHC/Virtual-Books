@@ -187,6 +187,24 @@ header {
   gap: 2rem;
 }
 
+.btnLogin {
+  background: var(--main-orange);
+  width: 20rem;
+  height: 4.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 2rem;
+  color: var(--main-black);
+  font-weight: 600;
+  transition: transform .3s ease-in;
+}
+
+.btnLogin:hover {
+  transform: scale(1.050);
+}
+
 /*  ESTILOS DE ETIQUETA LINK*/
 li {
   list-style: none;

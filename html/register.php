@@ -126,17 +126,6 @@ $authUrl = $client->createAuthUrl();
         <img id="Ovalo_2" src="../src/login.png">
     </div>
 </body>
-<script>
-    const form = document.getElementById("form");
-    form.addEventListener("submit", (e) => {
-        const pass1 = form.pass.value;
-        const pass2 = form.passConfirm.value;
-        if (pass1 != pass2) {
-            e.preventDefault();
-            alertify.error("Las contraseñas no coinciden");
-        }
-    });
-</script>
 <script src="../js/alertify.js"></script>
 <script src="../js/j_query.js"></script>
 <script src="../js/preview.js"></script>

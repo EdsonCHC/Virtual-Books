@@ -8,17 +8,18 @@ session_start();
 if ($_SESSION['user']) {
     $id = $_SESSION['user']['0'];
     $obj = new MétodosUser();
-    $sql = "SELECT name, lastName, email, password, img FROM user WHERE id = $id";
-    $stmt = $obj->showData($sql);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($row) {
-        $name = $row['name'];
-        $lastName = $row['lastName'];
-        $email = $row['email'];
-        $pass = $row['password'];
-        $img = $row['img'];
-    } else {
-        die("Ha ocurrido un error");
+    $sql = "SELECT name, lastName, email, img FROM user WHERE id = $id";
+    try {
+        $stmt = $obj->showData($sql);
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $name = $row['name'];
+            $lastName = $row['lastName'];
+            $email = $row['email'];
+            $img = $row['img'];
+        }
+    } catch (PDOException $e) {
+        die("Ha ocurrido un error" . $e->getMessage());
+
     }
 } else {
     header("Location: ../html/error404.php");
@@ -149,7 +150,7 @@ if ($_SESSION['user']) {
                                         </script>";
                                 }
                                 $DBH = null;
-                            }else{
+                            } else {
                                 echo "<script>
                                 alert('Contraseña incorrecta');
                                 window.location.href = '../html/account.php';
