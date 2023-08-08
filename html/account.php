@@ -77,6 +77,11 @@ if ($_SESSION['user']) {
                                     <button class="btnUpdate" id="btnUpdate">Actualizar Datos</button>
                                 </label>
                             </div>
+                            <div class="userUpdate">
+                                <label>
+                                    <button class="btnDelete" id="btnDelete">Eliminar Cuenta</button>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="img">
@@ -160,6 +165,39 @@ if ($_SESSION['user']) {
                         ?>
                     </form>
                 </dialog>
+                <dialog id="dialogDelete">
+                    <form method="POST" enctype="multipart/form-data" class="form">
+                        <h4>Elimina tu cuenta</h4>
+                        <hr>
+                        <div class="btnPart">
+                            <button type="submit" name="delete">Eliminar</button>
+                            <button type="button"><a href="../html/account.php">Cancelar</a></button>
+                        </div>
+                        <?php
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            if (isset($_POST['delete'])) {
+                                $obj = new DataBase();
+                                $DBH = $obj->connect();
+                                $sql = "DELETE FROM user WHERE id = $id";
+                                if ($DBH->query($sql) === TRUE) {
+                                    echo "<script>
+                                                alert('Cuenta Eliminada');
+                                            </script>";
+                                    require_once '../php/log_out.php';
+                                    header("Location: ../html/index.php");
+                                } else {
+                                    echo "<script>
+                                                alert('Cuenta eliminada');
+                                            </script>";
+                                    require_once '../php/log_out.php';
+                                    header("Location: ../html/index.php");
+                                }
+                                $DBH = null;
+                            }
+                        }
+                        ?>
+                    </form>
+                </dialog>
             </div>
         </div>
     </main>
@@ -168,8 +206,10 @@ if ($_SESSION['user']) {
             document.querySelector("dialog").showModal();
         })
     </script>
-    <script src="../js/preview.js">
-    </script>
+    <script src="../js/preview.js"></script>
+    <script src="../js/j_query.js"></script>
+    <script src="../js/alertify.js"></script>
+    <script src="../js/acc.js"></script>
 </body>
 
 </html>
