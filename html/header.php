@@ -26,18 +26,20 @@ if (isset($_SESSION['user'])) {
     </label>
   </form>
 
+
   <div id="log-links">
     <ul>
       <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
-          <p>Iniciar Sesión</p>
+          <button class="btnLogin"><span>Iniciar Sesión</span></button>
         </a></li>
     </ul>
   </div>
 
+
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php">
-      <img src=" <?php echo $img['img']; ?>"alt="user-icon" /></a>
+      <img src=" <?php echo $img['img']; ?>" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
         <h4>
@@ -55,5 +57,6 @@ if (isset($_SESSION['user'])) {
     </div>
   </div>
 </header>
+
 
 <script src="../js/toggle.js"></script>

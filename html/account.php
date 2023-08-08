@@ -188,8 +188,8 @@ if (isset($_SESSION['user'])) {
                                 } else {
                                     #He de mencionar que el que captura es este porque todavia no se pero es por la conección
                                     echo "<script>
-                                                alert('Datos actualizados 2');
-                                                window.location.href = '../html/account¿.php';
+                                                alert('Datos actualizados');
+                                                window.location.href = '../html/account.php';
                                             </script>";
                                 }
                                 $DBH = null;
@@ -213,17 +213,18 @@ if (isset($_SESSION['user'])) {
                                 $DBH = $obj->connect();
                                 $sql = "DELETE FROM user WHERE id = $id";
                                 if ($DBH->query($sql) === TRUE) {
+                                    session_destroy();
                                     echo "<script>
                                                 alert('Cuenta Eliminada');
+                                                window.location.href = '../html/index.php';
                                             </script>";
-                                            require_once '../php/log_out.php';
-                                            header("Location: ../html/index.php");
+                                    header("Location: ../html/index.php");
                                 } else {
+                                    session_destroy();
                                     echo "<script>
                                                 alert('Cuenta eliminada');
+                                                window.location.href = '../html/index.php';
                                             </script>";
-                                            require_once '../php/log_out.php';
-                                            header("Location: ../html/index.php");
                                 }
                                 $DBH = null;
                             }
