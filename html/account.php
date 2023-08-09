@@ -90,7 +90,7 @@ if ($_SESSION['user']) {
                         </label>
                     </div>
                 </div>
-                <dialog>
+                <dialog id="updateDialog">
                     <form method="POST" enctype="multipart/form-data" class="form">
                         <h4>Actualiza tu cuenta</h4>
                         <hr>
@@ -124,7 +124,7 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="btnPart">
                             <button type="submit" name="update">Actualizar</button>
-                            <button type="button"><a href="../html/account.php">Cancelar</a></button>
+                            <button type="button" id="cancel-btn">Cancelar</button>
                         </div>
                         <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -165,13 +165,13 @@ if ($_SESSION['user']) {
                         ?>
                     </form>
                 </dialog>
-                <dialog id="dialogDelete">
+                <!-- <dialog id="dialogDelete">
                     <form method="POST" enctype="multipart/form-data" class="form">
                         <h4>Elimina tu cuenta</h4>
                         <hr>
                         <div class="btnPart">
                             <button type="submit" name="delete">Eliminar</button>
-                            <button type="button"><a href="../html/account.php">Cancelar</a></button>
+                            <button type="button">Cancelar</button>
                         </div>
                         <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -197,7 +197,7 @@ if ($_SESSION['user']) {
                         }
                         ?>
                     </form>
-                </dialog>
+                </dialog> -->
             </div>
         </div>
     </main>
@@ -205,9 +205,10 @@ if ($_SESSION['user']) {
         document.querySelector("#btnUpdate").addEventListener("click", () => {
             document.querySelector("dialog").showModal();
         });
-        document.querySelector("#btnDelete").addEventListener("click", () => {
-            document.querySelector("#dialogDelete").showModal();
-        })
+
+        document.querySelector("#cancel-btn").addEventListener("click", () => {
+            document.querySelector("dialog").close();
+        });
     </script>
     <script src="../js/preview.js"></script>
     <script src="../js/j_query.js"></script>

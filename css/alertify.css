@@ -88,6 +88,11 @@
   font-size: 2rem;
   padding: 16px 24px 16px 16px;
 }
+
+.ajs-input{
+  padding: 0.5rem;
+}
+
 .alertify .ajs-footer {
   padding: 4px;
   margin-left: -24px;
