@@ -92,7 +92,7 @@ if ($_SESSION['user']) {
                 </div>
                 <dialog>
                     <form method="POST" enctype="multipart/form-data" class="form">
-                        <h4>Actualizar tus datos!!</h4>
+                        <h4>Actualiza tu cuenta</h4>
                         <hr>
                         <div class="content_form">
                             <label for="title" class="form_text">Nombres</label>
@@ -108,11 +108,11 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Contraseña Actual</label>
-                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off">
+                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off" required>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off">
+                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off" required>
                         </div>
                         <div class="content_form">
                             <label for="imagen" class="src">Imagen</label>
@@ -204,6 +204,9 @@ if ($_SESSION['user']) {
     <script>
         document.querySelector("#btnUpdate").addEventListener("click", () => {
             document.querySelector("dialog").showModal();
+        });
+        document.querySelector("#btnDelete").addEventListener("click", () => {
+            document.querySelector("#dialogDelete").showModal();
         })
     </script>
     <script src="../js/preview.js"></script>

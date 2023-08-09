@@ -66,19 +66,23 @@ if ($row->rowCount() > 0) {
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
-            <a href="" class="book-link "><i class="fa-solid fa-plus"></i> Añadir al area de lectura</a>
+            <form action="../php/favoritos.php" method="POST">
+              <button class="book-link" onclick="" name="favorito" type="submit">
+                <a ><i class="fa-solid fa-plus"></i> Añadir ah Favorito</a>
+              </button>
+            </form>
             <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i>
               Descargar</a>
           </div>
         </div>
       </div>
       <div class="<?php esconder(); ?>">
-      <?php
-                  ?>
-                  <a id="fcc-btn" href="../html/create.php?id=<?php echo $info["id"] ?>">
-                    Comentar
-                  </a>
-                  <?php
+        <?php
+        ?>
+        <a id="fcc-btn" href="../html/create.php?id=<?php echo $info["id"] ?>">
+          Comentar
+        </a>
+        <?php
 
         ?>
       </div>

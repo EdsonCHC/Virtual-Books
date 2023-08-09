@@ -25,6 +25,7 @@ if (isset($_SESSION['user'])) {
     </label>
   </form>
 
+
   <div id="log-links">
     <ul>
       <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
@@ -32,6 +33,7 @@ if (isset($_SESSION['user'])) {
         </a></li>
     </ul>
   </div>
+
 
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
@@ -54,5 +56,6 @@ if (isset($_SESSION['user'])) {
     </div>
   </div>
 </header>
+
 
 <script src="../js/toggle.js"></script>
