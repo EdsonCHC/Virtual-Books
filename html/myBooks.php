@@ -38,11 +38,6 @@
     require_once("../html/footer.php");
     ?>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-    <script>
-        let year = document.getElementById('year');
-        let y = new Date().getFullYear();
-        year.innerHTML = y;
-    </script>
     <script src="../js/toggle.js"></script>
 </body>
 

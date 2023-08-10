@@ -239,8 +239,7 @@ require_once("../php/methodsAdmin.php");
             document.querySelector("dialog").showModal();
         })
     </script>
-    <script src="../js/preview.js">
-    </script>
+    <script src="../js/preview.js"></Script>
 </body>
 
 </html>

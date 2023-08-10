@@ -1,0 +1,102 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "login": "Iniciar sesión",
+        "sign up": "Registrarse",
+        "about": "Acerca de",
+        "account": "Cuenta",
+        "upload": "Subir imagen",
+        "input": "<input type=\"search\" placeholder=\"Búsqueda\" autocomplete=\"off\">",
+        "cate": "Categorías"
+    },
+    "header": {
+        "title": "Bienvenido a PhotoGall",
+        "credit": "Imagen gracias a Wallhaven.cc"
+    },
+    "main": {
+        "legend": "Fotografías compartidas"
+    },
+    "cate": {
+        "Catein": "CATEGORÍAS EN PHOTOGALL",
+        "info": "Al ser un sitio con el objetivo principal de almacenar fotografías PhotoGall cuenta con las categorías mas comunes en el mundo de la fotografía, tales como:",
+        "p": "Paisajes",
+        "pinfo": "Los paisajes fueron unos de los primeros retratados en los inicios de la fotografía ayudando a su evolución y siendo unos de los favoritos de los fotógrafos.",
+        "C": "Comida",
+        "cinfo": "La fotografía de alimentos es una forma de fotografía comercial especializada en naturaleza muerta, destinada a la producción de fotografías atractivas de alimentos para su uso en publicidad, etiquetas o incluso arte abstracto.",
+        "R": "Retrato",
+        "Rinfo": "El retrato fotográfico es un género donde se reúnen toda una serie de iniciativas artísticas que giran en torno a la idea de mostrar las cualidades físicas o morales de las persona u animales que aparecen.",
+        "A": "Fotografía Artística",
+        "Ainfo": "La fotografía artística tiene como objetivo transmitir conceptos, sentimientos y emociones. Existe una intención por parte del autor en comunicar e invitar hacer una reflexión sobre un determinado tema.",
+        "prox": "Próximamente más categorías....",
+        "seeP": "Ver Fotografías de paisajes",
+        "seeC": "Ver Fotografías de Comida",
+        "seeR": "Ver Fotografías de Retratos",
+        "seeA": "Ver Fotografías Artríticas"
+    },
+    "footer": {
+        "shared": "Comparte tus fotografías totalmente gratis en PhotoGall",
+        "Cat": "Categorías",
+        "Tools": "Herramientas",
+        "lands": "Paisajes",
+        "food": "Comida",
+        "people": "Retrato",
+        "art": "Arte",
+        "More": "Mas Categorías...",
+        "foot": "Todas las fotografías son propiedad de sus dueños originales. © PhotoGall 2022."
+    },
+    "about": {
+        "about": "Sobre PhotoGall",
+        "what is": "¿QUÉ ES PHOTOGALL?",
+        "wstxt": "PhotoGall es un sitio web que permite el acceso, almacenamiento y subida de fotografías digitales para que los fotógrafos muestren su trabajo y talento en la fotografía.<br><br>Así mismo ofrecer una interfaz para el usuario que solamente desee observar, admirar y disfrutar estas fotografías pudiendo dar like a las fotografías y seguir a los usuarios en muestra de apoyo hacia ellos.",
+        "vision": "visión de PhotoGall",
+        "vtxt": "\"Ser una pagina centrada en el uso de nuevas tecnologías al servicio del cliente para que puedan descubrir y mostrar su potencial en la fotografía a todo el mundo\"",
+        "misión": "Misión de PhotoGall",
+        "mtxt": "\"Nuestra misión es elevar la calidad de experiencia del cliente haciendo uso del internet y la tecnología para ayudar al cliente a encontrar, descubrir el arte de otros y potenciar a los creadores de contenido y que alcancen el éxito\"",
+        "story": "HISTORIA",
+        "stxt": "El proyecto de PhotoGall nace en la menta de 3 estudiantes de bachillerato, que por pasión al mundo de la tecnología y las ganas de deciden empezar a crear esta pagina como proyecto educativo y en el proceso aprender nuevas cosas que les servirían en su futuro dándolo todo al servicio de las personas."
+    },
+    "login": {
+        "msm": "Bienvenido de vuelta",
+        "email": "Email <input type=\"email\" id=\"Email\" name=\"email\" placeholder=\"Ingrese su Email\" required>",
+        "pass": "Contraseña <input type=\"password\" id=\"Passwordf\" name=\"password\" placeholder=\"Ingrese su contraseña\" required minlength=\"8\" maxlength=\"10\"> <button type=\"button\" onclick=\"mostrarContraseña()\"><i><img src=\"../multimedia/iconos/ver.png\"></i></button>",
+        "inputL": "<input type=\"submit\" value=\"Iniciar sesión\">",
+        "sms": "¿No tienes cuenta? <a href=\"../html/signup.html\" target=\"_self\" id=\"signup\">Crea una</a>"
+    },
+    "signup": {
+        "msm2": "Formulario de registro",
+        "name": "Nombre <input type=\"text\" id=\"name\" placeholder=\"Ingresa aquí tu nombre\" name=\"Name\" required>",
+        "lastName": "Apellido <input type=\"text\" id=\"surname\" placeholder=\"ingresa aquí tu apellido\" name=\"Surname\" required>",
+        "email": "Email <input type=\"text\" id=\"email\" placeholder=\"ingresa aquí tu Email\" name=\"Email\" required>",
+        "gender": "Escoja su genero",
+        "male": "<input type=\"radio\" name=\"gender\" value=\"Masculino\" class=\"inline\" required>Masculino",
+        "Female": "<input type=\"radio\" name=\"gender\" value=\"Femenino\" class=\"inline\" required>Femenino",
+        "Prefer": "<input type=\"radio\" name=\"gender\" value=\"Incognito\" class=\"inline\" required checked>Prefiero no decirlo",
+        "pass2": "Contraseña (mínimo 8 caracteres) <input type=\"password\" placeholder=\"Ingresa aquí tu contraseña\" name=\"Password\" id=\"Passwordf\" required  minlength=\"8\"> <button type=\"button\" onclick=\"mostrarContraseña()\"><i><img src=\"../multimedia/iconos/ver.png\"></i></button>",
+        "sms2": "¿Ya tienes cuenta? <a href=\"../html/login.html\" target=\"_self\" id=\"login\">Inicia sesión</a>",
+        "inputS": "<input type=\"submit\" value=\"Registrarse\" id=\"Registrarsef\">"
+    },
+    "table": {
+        "name": "Nombre:",
+        "lastName": "Apellido:",
+        "gender": "Genero:"
+    },
+    "info": {
+        "author": "Autor:",
+        "tag": "Etiqueta:",
+        "Place": "Lugar:",
+        "cat": "Categoría"
+    },
+    "upload": {
+        "selectp": "Seleccionar fotografía <input type=\"file\" accept=\"image/*\" id=\"subir\" name=\"Subir\"  onchange=\"vista_preliminar(event)\"></input>",
+        "pinfo": "Información de la foto",
+        "tag": "Etiqueta <input type=\"text\" name=\"Name\" placeholder=\"Etiqueta\" required>",
+        "place": "Lugar <span class=\"sub\">(Opcional)</span> <input type=\"text\" id=\"lugar\" name=\"Lugar\" placeholder=\"Lugar\">",
+        "select": "Categoría <select name=\"categoría\" id=\"cat\" required> <option value=\"\" selected disabled>Selecciona una categoría</option><option value=\"Personas\">Retrato</option><option value=\"Paisajes\">Paisajes</option><option value=\"Comida\">Comida</option><option value=\"Animales\">Animales</option><option value=\"Arte\">Arte</option></select>",
+        "submit": "Subir fotografía"
+    }, 
+
+    "push":{
+        "footer": "Todo",
+        "comit": "bien"
+    }
+}
