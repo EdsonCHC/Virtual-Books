@@ -68,7 +68,7 @@ if ($_SESSION['user']) {
                     <div>
                         <div class="name">
                             <label>Correo Electrónico
-                                <input type="text" class="inputs" value="<?php echo $email; ?>" readonly>
+                                <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                             </label>
                         </div>
                         <div class="name">

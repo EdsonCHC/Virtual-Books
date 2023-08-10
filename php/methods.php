@@ -13,10 +13,11 @@ class MétodosUser implements plantilla
         $STH->execute($arr);
         $DBH = null;
     }
-    public function showData($sql){
+    public function showData($sql) : PDOStatement {
         $obj = new DataBase();
         $DBH = $obj->connect();
         $STH = $DBH->query($sql);
+        $DBH = null;
         return $STH;
     }
     public function updateData($sql, $arr){
@@ -26,8 +27,12 @@ class MétodosUser implements plantilla
         $STH->execute($arr);
         $DBH = null;
     }
-    public function deleteData($sql){}
-    
+    public function deleteData($sql){
+        $obj = new DataBase();
+        $DBH = $obj->connect();
+        $STH = $DBH->query($sql);
+        $DBH = null;
+    }
 }
 
 class Comentario implements plantilla
@@ -42,7 +47,7 @@ class Comentario implements plantilla
         $DBH = null;
     }
 
-    public function showData($sql){
+    public function showData($sql) : PDOStatement {
         $obj = new DataBase();
         $DBH = $obj->connect();
         $STH = $DBH->query($sql);
