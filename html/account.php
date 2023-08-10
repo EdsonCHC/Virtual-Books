@@ -164,40 +164,6 @@ if ($_SESSION['user']) {
                         }
                         ?>
                     </form>
-                </dialog>
-                <!-- <dialog id="dialogDelete">
-                    <form method="POST" enctype="multipart/form-data" class="form">
-                        <h4>Elimina tu cuenta</h4>
-                        <hr>
-                        <div class="btnPart">
-                            <button type="submit" name="delete">Eliminar</button>
-                            <button type="button">Cancelar</button>
-                        </div>
-                        <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            if (isset($_POST['delete'])) {
-                                $obj = new DataBase();
-                                $DBH = $obj->connect();
-                                $sql = "DELETE FROM user WHERE id = $id";
-                                if ($DBH->query($sql) === TRUE) {
-                                    echo "<script>
-                                                alert('Cuenta Eliminada');
-                                            </script>";
-                                    require_once '../php/log_out.php';
-                                    header("Location: ../html/index.php");
-                                } else {
-                                    echo "<script>
-                                                alert('Cuenta eliminada');
-                                            </script>";
-                                    require_once '../php/log_out.php';
-                                    header("Location: ../html/index.php");
-                                }
-                                $DBH = null;
-                            }
-                        }
-                        ?>
-                    </form>
-                </dialog> -->
             </div>
         </div>
     </main>

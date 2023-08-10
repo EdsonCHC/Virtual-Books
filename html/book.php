@@ -66,11 +66,10 @@ if ($row->rowCount() > 0) {
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
-            <form action="../php/favoritos.php" method="POST">
-              <button class="book-link" onclick="" name="favorito" type="submit">
-                <a ><i class="fa-solid fa-plus"></i> Añadir ah Favorito</a>
-              </button>
-            </form>
+            <div id="add-fav" class="book-link">
+              <i class="fa-solid fa-plus"></i> Añadir ah Favorito
+              <input type="hidden" value="<?php echo $id ?>" id="input-id">
+            </div>
             <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i>
               Descargar</a>
           </div>
@@ -111,6 +110,8 @@ if ($row->rowCount() > 0) {
   <?php
   require_once("../html/footer.php");
   ?>
+  <script src="../js/j_query.js"></script>
+  <script src="../js/add-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
