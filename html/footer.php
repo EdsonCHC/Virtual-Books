@@ -1,9 +1,17 @@
 <footer>
-    <h6>&copy; <span id="year"></span> Todos los derechos reservados Crea-J 2023</h6>
+    <h6 data-section="push" data-value="footer">&copy; <span id="year"></span> Todos los derechos reservados Crea-J 2023</h6>
 </footer>
-
 <script>
     let year = document.getElementById('year');
     let y = new Date().getFullYear();
     year.innerHTML = y;
 </script>
+<div id="flags">
+    <div data-language="en">
+        <div style="width: 20px; height: 20px; background-color: red;"></div>
+    </div>
+    <div data-language="es">
+        <div style="width: 20px; height: 20px; background-color: blue;"></div>
+    </div>
+</div>
+<script src = "../js/trad.js"></script> 

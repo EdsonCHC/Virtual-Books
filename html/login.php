@@ -62,8 +62,7 @@ $authUrl = $client->createAuthUrl();
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4> <label for="email">Contraseña</label></h4>
-
+                                <h4> <label  data-section="push" data-value="comit" for="email">Contraseña</label></h4>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Contraseña"
                                 autocomplete="off">
