@@ -8,7 +8,7 @@ main {
 #content {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /*Datos usuario*/
@@ -32,11 +32,9 @@ main {
   margin: 2.5rem 2rem;
   position: relative;
 }
-
 .name {
   margin: 1.5rem 0;
 }
-
 label {
   font-family: Valera !important;
   font-size: 1.8rem;
@@ -58,42 +56,42 @@ label {
   color: var(--main-black);
 }
 
-.img {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-  height: auto;
-  text-align: center;
-}
-.img img {
-  width: 100%;
-  height: 200px;
-  margin: 1rem auto;
-}
-
-/*Parte 2*/
-#part2 {
-  position: relative;
-  height: auto;
-  width: 100%;
+.dataImg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#part2 hr {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px solid gray;
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: auto;
+}
+
+.img label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
   width: 100%;
+  height: 200px;
+  margin: 1rem auto;
 }
 
 .userUpdate {
   display: flex;
   flex-direction: row;
-  width: 250px;
+  justify-content: center;
+  width: 150px;
   height: auto;
+  border-top: 1px solid gray;
 }
 
 .userUpdate button {

@@ -52,10 +52,13 @@ if ($_SESSION['user']) {
         require_once("../html/aside.php");
         ?>
         <div id="content">
+            <div>
+
+            </div>
             <div id="part1">
                 <h3>Información Personal</h3>
                 <div class="dataUser">
-                    <div>
+                    <div class="dataInp">
                         <div class="name">
                             <label>Nombres
                                 <input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
@@ -72,30 +75,28 @@ if ($_SESSION['user']) {
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <div class="dataImg">
                         <div class="img">
                             <label>Imagen de perfil
                                 <img src="<?php echo $img['img']; ?>" alt="user-icon" />
                             </label>
                         </div>
-                    </div>
-                </div>
-                <div id="part2">
-                    <hr>
-                    <div class="btnPart">
-                        <div class="userUpdate">
-                            <label>
-                                <button class="btnUpdate" id="btnUpdate"><i class="fa-solid fa-pen-to-square"
-                                        style="color: #ffffff;"></i>Cuenta</button>
-                            </label>
-                        </div>
-                        <div class="userUpdate">
-                            <label>
-                                <button class="btnDelete" id="btnDelete"><i class="fa-solid fa-trash"
-                                        style="color: #ffffff;"></i>Cuenta</button>
-                            </label>
+                        <div class="btnPart">
+                            <div class="userUpdate">
+                                <label>
+                                    <button class="btnUpdate" id="btnUpdate"><i class="fa-solid fa-pen-to-square"
+                                            style="color: #ffffff;"></i>Cuenta</button>
+                                </label>
+                            </div>
+                            <div class="userUpdate">
+                                <label>
+                                    <button class="btnDelete" id="btnDelete"><i class="fa-solid fa-trash"
+                                            style="color: #ffffff;"></i>Cuenta</button>
+                                </label>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <dialog id="updateDialog">
                     <form method="POST" enctype="multipart/form-data" class="form">
@@ -127,8 +128,8 @@ if ($_SESSION['user']) {
                             <label for="imagen" class="src">Imagen</label>
                             <input type="file" id="imagen" accept="Image/*" name="img"
                                 onchange="vista_preliminar(event), validar()">
-                            <div id="img-container"><img class="grande" src="../src/user.png"
-                                    alt="user_image" id="img-preview">
+                            <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image"
+                                    id="img-preview">
                             </div>
                         </div>
                         <div class="btnPart">
