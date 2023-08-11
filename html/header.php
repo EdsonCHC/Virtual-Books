@@ -59,3 +59,4 @@ if (isset($_SESSION['user'])) {
 
 
 <script src="../js/toggle.js"></script>
+<script src="../js/preview.js"></script>

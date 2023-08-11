@@ -84,14 +84,16 @@ if ($_SESSION['user']) {
                         <div class="btnPart">
                             <div class="userUpdate">
                                 <label>
-                                    <button class="btnUpdate" id="btnUpdate"><i class="fa-solid fa-pen-to-square"
-                                            style="color: #ffffff;"></i>Cuenta</button>
+                                    <button class="btnUpdate" id="btnUpdate">
+                                        <i class="fa-solid fa-pen-to-square white_i"></i>Cuenta
+                                    </button>
                                 </label>
                             </div>
                             <div class="userUpdate">
                                 <label>
-                                    <button class="btnDelete" id="btnDelete"><i class="fa-solid fa-trash"
-                                            style="color: #ffffff;"></i>Cuenta</button>
+                                    <button class="btnDelete" id="btnDelete">
+                                        <i class="fa-solid fa-trash white_i"></i>Cuenta
+                                    </button>
                                 </label>
                             </div>
                         </div>
@@ -186,7 +188,6 @@ if ($_SESSION['user']) {
             document.querySelector("dialog").close();
         });
     </script>
-    <script src="../js/preview.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/acc.js"></script>

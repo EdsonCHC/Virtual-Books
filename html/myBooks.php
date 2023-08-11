@@ -24,12 +24,8 @@
         ?>
         <div id="content">
             <h2>Mis Libros</h2>
-            <div class="categoria">
-                <div class="flex-books">
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+            <div class="categoría">
+                <div class="flex-books" id="book-container">
                 </div>
             </div>
         </div>
@@ -37,8 +33,9 @@
     <?php
     require_once("../html/footer.php");
     ?>
+    <script src="../js/j_query.js"></script>
+    <script src="../js/show-fav.js"></script>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-    <script src="../js/toggle.js"></script>
 </body>
 
 </html>
