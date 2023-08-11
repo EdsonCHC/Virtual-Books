@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +13,6 @@
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/myBooks.css" />
-
-    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
@@ -25,13 +28,9 @@
         require_once("../html/aside.php");
         ?>
         <div id="content">
-            <h2 data-section="MyBooks" data-value="book">Mis Libros</h2>
-            <div class="categoria">
-                <div class="flex-books">
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
-                    <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>
+            <h2>Mis Libros</h2>
+            <div class="categoría">
+                <div class="flex-books" id="book-container">
                 </div>
             </div>
         </div>
@@ -39,8 +38,9 @@
     <?php
     require_once("../html/footer.php");
     ?>
+    <script src="../js/j_query.js"></script>
+    <script src="../js/show-fav.js"></script>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-    <script src="../js/toggle.js"></script>
 </body>
 
 </html>

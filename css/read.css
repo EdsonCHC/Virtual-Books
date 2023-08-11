@@ -1,18 +1,47 @@
 @import url(../css/Rules.css);
 
-main{
-    display: flex;
-    gap: 1rem;
+main {
+  display: flex;
+  gap: 1rem;
 }
 
-div[id="content"]{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 1rem 0;
+div[id="content"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0;
 }
 
-object[id="book"]{
-    width: 150rem;
-    height: 80rem;
+object[id="book"] {
+  width: 120rem;
+  height: 80rem;
+}
+
+.btnPart {
+  display: flex;
+  justify-content: center;
+}
+
+.btnPart button {
+  margin: 3rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  background: var(--main-red);
+  height: 45px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btnPart button a {
+  color: rgb(255, 255, 255);
+  padding: 1.8rem 2rem;
+  text-decoration: none;
 }

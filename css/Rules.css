@@ -198,11 +198,11 @@ header {
   font-size: 2rem;
   color: var(--main-black);
   font-weight: 600;
-  transition: transform .3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
 .btnLogin:hover {
-  transform: scale(1.050);
+  transform: scale(1.05);
 }
 
 /*  ESTILOS DE ETIQUETA LINK*/
@@ -380,7 +380,48 @@ aside {
 footer {
   background-color: var(--secondary-orange);
   text-align: center;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
+
+#trad{
+  display: flex;
+  gap: 0.8rem;
+  cursor: pointer;
+  width: auto;
+}
+
+#flags{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trad{
+  width: 0;
+  height: 2rem;
+  overflow: hidden;
+  transition: width .3s ease;
+}
+
+.flag-cont{
+  width: 100%;
+  height: 100%;
+}
+
+.flag-cont img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trad.open{
+  width: 7rem;
+}
+
+/*FUNCIONES EXTRAS*/
 
 .esconder,
 .esconderV2 {

@@ -8,13 +8,14 @@ session_start();
 if ($_SESSION['user']) {
     $id = $_SESSION['user']['0'];
     $obj = new MétodosUser();
-    $sql = "SELECT name, lastName, email, img FROM user WHERE id = $id";
+    $sql = "SELECT name, lastName, email, password, img FROM user WHERE id = $id";
     try {
         $stmt = $obj->showData($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $name = $row['name'];
             $lastName = $row['lastName'];
             $email = $row['email'];
+            $pass = $row['password'];
             $img = $row['img'];
         }
     } catch (PDOException $e) {
@@ -35,6 +36,8 @@ if ($_SESSION['user']) {
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/Account.css">
     <link rel="stylesheet" href="../css/Rules.css">
+
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
@@ -50,10 +53,13 @@ if ($_SESSION['user']) {
         require_once("../html/aside.php");
         ?>
         <div id="content">
+            <div>
+
+            </div>
             <div id="part1">
                 <h3>Información Personal</h3>
                 <div class="dataUser">
-                    <div>
+                    <div class="dataInp">
                         <div class="name">
                             <label>Nombres
                                 <input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
@@ -64,31 +70,36 @@ if ($_SESSION['user']) {
                                 <input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
                             </label>
                         </div>
-                    </div>
-                    <div>
                         <div class="name">
                             <label>Correo Electrónico
                                 <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                             </label>
                         </div>
-                        <div class="name">
+                    </div>
+                    <div class="dataImg">
+                        <div class="img">
+                            <label>Imagen de perfil
+                                <img src="<?php echo $img['img']; ?>" alt="user-icon" />
+                            </label>
+                        </div>
+                        <div class="btnPart">
                             <div class="userUpdate">
-                                <label> Actualizar
-                                    <button class="btnUpdate" id="btnUpdate">Actualizar Datos</button>
+                                <label>
+                                    <button class="btnUpdate" id="btnUpdate">
+                                        <i class="fa-solid fa-pen-to-square white_i"></i>Cuenta
+                                    </button>
                                 </label>
                             </div>
                             <div class="userUpdate">
                                 <label>
-                                    <button class="btnDelete" id="btnDelete">Eliminar Cuenta</button>
+                                    <button class="btnDelete" id="btnDelete">
+                                        <i class="fa-solid fa-trash white_i"></i>Cuenta
+                                    </button>
                                 </label>
                             </div>
                         </div>
                     </div>
-                    <div class="img">
-                        <label>Imagen de perfil
-                            <img src="<?php echo $img['img']; ?>" alt="user-icon" />
-                        </label>
-                    </div>
+
                 </div>
                 <dialog id="updateDialog">
                     <form method="POST" enctype="multipart/form-data" class="form">
@@ -108,18 +119,20 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Contraseña Actual</label>
-                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off" required>
+                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off"
+                                required>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off" required>
+                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off"
+                                required>
                         </div>
                         <div class="content_form">
                             <label for="imagen" class="src">Imagen</label>
                             <input type="file" id="imagen" accept="Image/*" name="img"
                                 onchange="vista_preliminar(event), validar()">
-                            <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png"
-                                    alt="user_image" id="img-preview">
+                            <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image"
+                                    id="img-preview">
                             </div>
                         </div>
                         <div class="btnPart">
@@ -141,7 +154,7 @@ if ($_SESSION['user']) {
                             $obj = new DataBase();
                             $DBH = $obj->connect();
                             if ($oldPass === $pass) {
-                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
+                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$newPass', img='$img' WHERE id = $id";
                                 $result = $DBH->query($sql);
                                 if ($result !== false) {
                                     echo "<script>
@@ -164,40 +177,6 @@ if ($_SESSION['user']) {
                         }
                         ?>
                     </form>
-                </dialog>
-                <!-- <dialog id="dialogDelete">
-                    <form method="POST" enctype="multipart/form-data" class="form">
-                        <h4>Elimina tu cuenta</h4>
-                        <hr>
-                        <div class="btnPart">
-                            <button type="submit" name="delete">Eliminar</button>
-                            <button type="button">Cancelar</button>
-                        </div>
-                        <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            if (isset($_POST['delete'])) {
-                                $obj = new DataBase();
-                                $DBH = $obj->connect();
-                                $sql = "DELETE FROM user WHERE id = $id";
-                                if ($DBH->query($sql) === TRUE) {
-                                    echo "<script>
-                                                alert('Cuenta Eliminada');
-                                            </script>";
-                                    require_once '../php/log_out.php';
-                                    header("Location: ../html/index.php");
-                                } else {
-                                    echo "<script>
-                                                alert('Cuenta eliminada');
-                                            </script>";
-                                    require_once '../php/log_out.php';
-                                    header("Location: ../html/index.php");
-                                }
-                                $DBH = null;
-                            }
-                        }
-                        ?>
-                    </form>
-                </dialog> -->
             </div>
         </div>
     </main>
