@@ -8,11 +8,8 @@ include_once("../php/functions.php");
                 <a href="../html/index.php" class="link" data-section="asideU" data-value="IUser">Inicio</a>
                 <span> ></span>
             </li>
-            <!-- <li>
-                <i class="fa-solid fa-book-bookmark"></i>
-                <a href="../html/" class="link">Libros</a>
-                <span> > </span> FALTAAAAAAAAA XD
-            </li> -->
+
+        
             <li>
                 <i class="fa-solid fa-book-open-reader"></i>
                 <a href="../html/myBooks.php" class="link" data-section="asideU" data-value="ALUser">Area de lectura</a>
@@ -21,7 +18,20 @@ include_once("../php/functions.php");
         </nav>
     </div>
     <div id="settings">
-        <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i> Ayuda</a>
+        <div id="trad" onclick="toggleTrad()" >
+            <i class="fa-solid fa-globe"></i>
+            <p data-section="asideU" data-value="Idiom">Idioma</p>
+
+            <div id="flags" class="trad ">
+                <div class="flag-cont" data-language="en">
+                    <img src="../src/BanderaIngles.png" alt="en-flag">
+                </div>
+                <div class="flag-cont" data-language="es">
+                    <img src="../src/BanderaEspañol.jpg" alt="es-flag">
+                </div>
+            </div>
+        </div>
+        <a href="" class="link" data-section="asideU" data-value="Hp"><i class="fa-sharp fa-solid fa-circle-info"></i> Ayuda</a>
         <li class="<?php esconder(); ?>"><a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
     </div>
 </aside>

@@ -28,7 +28,7 @@ session_start();
         require_once("../html/aside.php");
         ?>
         <div id="content">
-            <h2>Mis Libros</h2>
+            <h2 data-section="MyBooks" data-value="book">Mis Libros</h2>
             <div class="categoría">
                 <div class="flex-books" id="book-container">
                 </div>

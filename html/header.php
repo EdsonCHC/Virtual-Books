@@ -21,7 +21,7 @@ if (isset($_SESSION['user'])) {
       <button type="submit">
         <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
       </button>
-      <input type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off" />
+      <input data-section="header" data-value="search" type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off" />
     </label>
   </form>
 
@@ -29,7 +29,7 @@ if (isset($_SESSION['user'])) {
   <div id="log-links">
     <ul>
       <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
-          <button class="btnLogin"><span>Iniciar Sesión</span></button>
+          <button class="btnLogin" data-section="header" data-value="sesionIni"><span>Iniciar Sesión</span></button>
         </a></li>
     </ul>
   </div>

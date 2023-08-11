@@ -1,8 +1,34 @@
 {
 
+    "header":{
+        "search":"<input  data-section='header' data-value='search' type='search' id='searchInput' placeholder='Search book' autocomplete='off' />",
+        "sesionIni": "log in"
+    },
+
+    "index":{
+        "cont": "Content",
+        "lit": "Literature",
+        "cien": "Science", 
+        "eco": "Economy",
+        "fis": "Physical",
+        "histo": "History", 
+        "mas": "See More..."
+    },
+    
+    "AsideA":{
+        "con":"Content",
+        "cat":"Catalogs",
+        "ges":"Manage",
+        "doc":"Document",
+        "help":"Help",
+        "cs":"Sign off"
+    },
+
     "asideU":{
         "IUser":"Home",
-        "ALUser": "Reading Area"
+        "ALUser": "Reading Area",
+        "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Help",
+        "Idiom": "Language"
     },
     
     "MyBooks":{

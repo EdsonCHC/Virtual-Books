@@ -1,10 +1,9 @@
 {
-
     "MyBooks":{
         "book": "Mis Libros"
     },
 
-    "push":{
+    "push":{    
         "footer": "Todos los derechos reservados Crea-J 2023"
     }
 }

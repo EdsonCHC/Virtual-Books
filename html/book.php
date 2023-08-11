@@ -65,8 +65,6 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="../css/libro.css">
   <link rel="stylesheet" href="../css/create.css" />
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
-
-  <!-- Fonts and Boostrap-->
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
 

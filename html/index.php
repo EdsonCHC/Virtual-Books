@@ -30,11 +30,11 @@ $obj = new métodosUser();
     <?php
     require_once("../html/aside.php");
     ?>
-    <div id="content">
-      <h2>Contenido</h2>
+    <div id="content" >
+      <h2 data-section="index" data-value="cont">Contenido</h2>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link">Literatura</a></h3>
+          <h3><a href="" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -55,7 +55,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link">Ciencia</a></h3>
+          <h3><a href="" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -76,7 +76,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link">Economía</a></h3>
+          <h3><a href="" class="link" data-section="index" data-value="eco">Economía</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -97,7 +97,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link">Física</a></h3>
+          <h3><a href="" class="link" data-section="index" data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
         <?php
@@ -117,7 +117,7 @@ $obj = new métodosUser();
         </div>
         <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link">Historia</a></h3>
+          <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
         </a>
         <div class="grid-books">
         <?php
@@ -136,7 +136,7 @@ $obj = new métodosUser();
           ?>
         </div>
       </div>
-      <h5 id="more"><a href="" class="link">Mirar Más...</a></h5>
+      <h5 id="more"><a href="" class="link" data-section="index" data-value="mas">Mirar Más...</a></h5>
     </div>
   </main>
   <?php

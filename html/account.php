@@ -36,8 +36,6 @@ if ($_SESSION['user']) {
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/Account.css">
     <link rel="stylesheet" href="../css/Rules.css">
-
-    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
