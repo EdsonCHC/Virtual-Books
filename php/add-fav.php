@@ -10,9 +10,9 @@
         $stmt = $DBH->prepare("INSERT INTO shelf(`id_r`) VALUES ($id)");
         $stmt->execute();
         if($stmt){
-            echo "funco";
+            echo true;
         }else{
-            echo "no funco";
+            echo false;
         }
     }catch(PDOException $e){
         die("Error " . $e->getMessage());

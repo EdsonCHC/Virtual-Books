@@ -141,12 +141,8 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
         </div>
       </div>
       <div class="<?php esconder(); ?>">
-
-
-        <div id="content">
+        <div id="content" >
           <h2>Crear posteo</h2>
-
-
           <form method="POST" onsubmit="return validarFormulario() ">
             <div id="general_conteiner">
               <div id="first_conteiner">
@@ -165,8 +161,6 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                   <input type="submit" value="Postear">
                 </div>
               </div>
-
-
           </form>
           <div id="second_conteiner">
             <div id="tittle_second_conteiner">
@@ -205,18 +199,14 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
       </div>
       <?php
       ?>
-
-      <script>
-        let year = document.getElementById('year');
-        let y = new Date().getFullYear();
-        year.innerHTML = y;
-      </script>
-      <script src="../js/toggle.js"></script>
     </div>
   </main>
   <?php
   require_once("../html/footer.php");
   ?>
+  <script src="../js/j_query.js"></script>
+  <script src="../js/alertify.js"></script>
+  <script src="../js/add-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
