@@ -35,6 +35,8 @@ if ($_SESSION['user']) {
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/Account.css">
     <link rel="stylesheet" href="../css/Rules.css">
+
+    <!-- Fonts and Boostrap-->
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
 
@@ -64,30 +66,35 @@ if ($_SESSION['user']) {
                                 <input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
                             </label>
                         </div>
-                    </div>
-                    <div>
                         <div class="name">
                             <label>Correo Electrónico
                                 <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                             </label>
                         </div>
-                        <div class="name">
-                            <div class="userUpdate">
-                                <label> Actualizar
-                                    <button class="btnUpdate" id="btnUpdate">Actualizar Datos</button>
-                                </label>
-                            </div>
-                            <div class="userUpdate">
-                                <label>
-                                    <button class="btnDelete" id="btnDelete">Eliminar Cuenta</button>
-                                </label>
-                            </div>
+                    </div>
+                    <div>
+                        <div class="img">
+                            <label>Imagen de perfil
+                                <img src="<?php echo $img['img']; ?>" alt="user-icon" />
+                            </label>
                         </div>
                     </div>
-                    <div class="img">
-                        <label>Imagen de perfil
-                            <img src="<?php echo $img['img']; ?>" alt="user-icon" />
-                        </label>
+                </div>
+                <div id="part2">
+                    <hr>
+                    <div class="btnPart">
+                        <div class="userUpdate">
+                            <label>
+                                <button class="btnUpdate" id="btnUpdate"><i class="fa-solid fa-pen-to-square"
+                                        style="color: #ffffff;"></i>Cuenta</button>
+                            </label>
+                        </div>
+                        <div class="userUpdate">
+                            <label>
+                                <button class="btnDelete" id="btnDelete"><i class="fa-solid fa-trash"
+                                        style="color: #ffffff;"></i>Cuenta</button>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <dialog id="updateDialog">
@@ -108,17 +115,19 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Contraseña Actual</label>
-                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off" required>
+                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off"
+                                required>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off" required>
+                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off"
+                                required>
                         </div>
                         <div class="content_form">
                             <label for="imagen" class="src">Imagen</label>
                             <input type="file" id="imagen" accept="Image/*" name="img"
                                 onchange="vista_preliminar(event), validar()">
-                            <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png"
+                            <div id="img-container"><img class="grande" src="../src/user.png"
                                     alt="user_image" id="img-preview">
                             </div>
                         </div>

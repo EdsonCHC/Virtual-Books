@@ -214,7 +214,7 @@ require_once("../php/methodsAdmin.php");
                     $src = "../src/files/" . $nombreSrc;
                     $nombreImg = $_FILES['img']['name'];
                     $rutaImg = $_FILES['img']['tmp_name'];
-                    $img = "../src/img/" . $nombreImg;
+                    $img = "../src/files/img" . $nombreImg;
                     $arr = array(
                         $name,
                         $autor,

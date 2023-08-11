@@ -198,11 +198,11 @@ header {
   font-size: 2rem;
   color: var(--main-black);
   font-weight: 600;
-  transition: transform .3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
 .btnLogin:hover {
-  transform: scale(1.050);
+  transform: scale(1.05);
 }
 
 /*  ESTILOS DE ETIQUETA LINK*/

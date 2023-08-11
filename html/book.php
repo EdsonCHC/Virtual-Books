@@ -6,7 +6,6 @@ require_once("../php/cone.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
 require_once("../html/header.php");
-session_start();
 
 $id = $_GET['id'];
 $obj = new métodosUser();
@@ -18,6 +17,7 @@ if ($row->rowCount() > 0) {
 } else {
   header("Location: ../html/error404.php");
 }
+
 //Comentarios
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $id_recurso = $_GET['id'];
@@ -53,7 +53,6 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,11 +66,9 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="../css/create.css" />
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
 
-
   <!-- Fonts and Boostrap-->
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
-
 
   <title>Libro</title>
 </head>
