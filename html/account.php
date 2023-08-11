@@ -8,13 +8,14 @@ session_start();
 if ($_SESSION['user']) {
     $id = $_SESSION['user']['0'];
     $obj = new MétodosUser();
-    $sql = "SELECT name, lastName, email, img FROM user WHERE id = $id";
+    $sql = "SELECT name, lastName, email, password, img FROM user WHERE id = $id";
     try {
         $stmt = $obj->showData($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $name = $row['name'];
             $lastName = $row['lastName'];
             $email = $row['email'];
+            $pass = $row['password'];
             $img = $row['img'];
         }
     } catch (PDOException $e) {
@@ -188,6 +189,7 @@ if ($_SESSION['user']) {
             document.querySelector("dialog").close();
         });
     </script>
+    <script src="../js/preview.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/acc.js"></script>
