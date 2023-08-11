@@ -77,7 +77,8 @@ if ($_SESSION['user']) {
                     <div class="dataImg">
                         <div class="img">
                             <label>Imagen de perfil
-                                <img src="<?php echo $img['img']; ?>" alt="user-icon" />
+                                <img src="<?php echo $img['img']; ?>" alt="user-icon">
+                                <input type="hidden"  id="imgData" value="<?php echo $img['img']; ?>">
                             </label>
                         </div>
                         <div class="btnPart">
@@ -100,30 +101,28 @@ if ($_SESSION['user']) {
 
                 </div>
                 <dialog id="updateDialog">
-                    <form method="POST" enctype="multipart/form-data" class="form">
+                    <form enctype="multipart/form-data" class="form" id="form-diag">
                         <h4>Actualiza tu cuenta</h4>
                         <hr>
                         <div class="content_form">
                             <label for="title" class="form_text">Nombres</label>
-                            <input type="text" id="name" class="inputs" name="name" autocomplete="off">
+                            <input type="text" id="name" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Apellidos</label>
-                            <input type="text" id="lastName" class="inputs" name="lastName" autocomplete="off">
+                            <input type="text" id="lastName" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Correo Electrónico</label>
-                            <input type="email" id="email" class="inputs" name="email" autocomplete="off">
+                            <input type="email" id="email" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Contraseña Actual</label>
-                            <input type="password" id="oldPass" class="inputs" name="oldPass" autocomplete="off"
-                                required>
+                            <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" name="newPass" autocomplete="off"
-                                required>
+                            <input type="password" id="newPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
                             <label for="imagen" class="src">Imagen</label>
@@ -134,46 +133,9 @@ if ($_SESSION['user']) {
                             </div>
                         </div>
                         <div class="btnPart">
-                            <button type="submit" name="update">Actualizar</button>
+                            <button id="btn-update">Actualizar</button>
                             <button type="button" id="cancel-btn">Cancelar</button>
                         </div>
-                        <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $name = $_POST["name"];
-                            $lastName = $_POST["lastName"];
-                            $email = $_POST["email"];
-                            $oldPass = $_POST["oldPass"];
-                            $newPass = $_POST["newPass"];
-                            $nombreImg = $_FILES['img']['name'];
-                            $rutaImg = $_FILES['img']['tmp_name'];
-                            $img = "../src/img/" . $nombreImg;
-                            move_uploaded_file($rutaImg, $img);
-
-                            $obj = new DataBase();
-                            $DBH = $obj->connect();
-                            if ($oldPass === $pass) {
-                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$newPass', img='$img' WHERE id = $id";
-                                $result = $DBH->query($sql);
-                                if ($result !== false) {
-                                    echo "<script>
-                                            alert('Datos actualizados');
-                                            window.location.href = '../html/account.php';
-                                        </script>";
-                                } else {
-                                    echo "<script>
-                                            alert('Ha ocurrido un error');
-                                            window.location.href = '../html/account.php';
-                                        </script>";
-                                }
-                                $DBH = null;
-                            } else {
-                                echo "<script>
-                                alert('Contraseña incorrecta');
-                                window.location.href = '../html/account.php';
-                            </script>";
-                            }
-                        }
-                        ?>
                     </form>
             </div>
         </div>

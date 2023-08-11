@@ -20,12 +20,17 @@ class MétodosUser implements plantilla
         $DBH = null;
         return $STH;
     }
-    public function updateData($sql, $arr){
+    public function updateData($sql, $arr) : bool{
         $obj = new DataBase();
         $DBH = $obj->connect();
-        $STH = $DBH->prepare($sql);
-        $STH->execute($arr);
-        $DBH = null;
+        try{
+            $STH = $DBH->prepare($sql);
+            $STH->execute($arr);
+            $DBH = null;
+            return true;
+        }catch(PDOException $e){
+            die("Error ". $e->getMessage());
+        }
     }
     public function deleteData($sql){
         $obj = new DataBase();

@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 //Mostrar comentarios
 $obj = new Comentario();
-$sql = "SELECT comment.description, comment.valuation, user.name FROM comment INNER JOIN user on comment.id_c = user.id WHERE comment.id_rec = $id";
+$sql = "SELECT comment.description, comment.valuation, user.name,user.img FROM comment INNER JOIN user on comment.id_c = user.id WHERE comment.id_rec = $id";
 $fetch = $obj->showData($sql);
 $fetch->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -118,6 +118,53 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
           </div>
         </div>
       </div>
+
+
+  
+        <div id="content">
+          <h3>Comentarios</h3>
+          <div id="second_conteiner">
+            <?php
+            foreach ($fetch as $valoraciones) { ?>
+              <div id="coments">
+                <img src="<?php echo $valoraciones['img']; ?>" /></a>
+                <h6>
+                  <?php echo "Autor: " . $valoraciones['name']; ?>
+                </h6>
+                <a>
+                  <?php echo "Puntuacion: " . $valoraciones['valuation']; ?>
+                </a>
+                <P>
+                  <?php echo "Descripcion: " . $valoraciones['description']; ?>
+                </p>
+              </div>
+
+              <?php
+            }
+            ?>
+          </div>
+          <form method="POST" onsubmit="return validarFormulario() " class="<?php esconder(); ?>">
+            <div id="general_conteiner">
+              <div id="first_conteiner">
+                <div id="post_desc">
+                  <textarea autocomplete="off" name="texto" rows="5" cols="60"
+                    placeholder="¿De qué quieres hablar?"></textarea>
+                </div>
+                <div id="details_primary_part">
+                  <h4><label for="valuation">Calificar</label></h4>
+                  <select name="valuation">
+                    <option value="Mala" selected>Mala</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Excelente">Excelente</option>
+                  </select>
+                </div>
+                <div id="post_enter">
+                  <input type="submit" value="Postear">
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
       <div id="more-books">
         <h2>Libros Similares</h2>
         <div id="similar-books">
@@ -138,65 +185,6 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
           ?>
         </div>
       </div>
-      <div class="<?php esconder(); ?>">
-        <div id="content" >
-          <h2>Crear posteo</h2>
-          <form method="POST" onsubmit="return validarFormulario() ">
-            <div id="general_conteiner">
-              <div id="first_conteiner">
-                <div id="post_desc">
-                  <textarea autocomplete="off" name="texto" rows="26" cols="100" placeholder="¿De qué quieres hablar?"></textarea>
-                </div>
-                <div id="details_primary_part">
-                  <h4><label for="valuation">Puntuacion</label></h4>
-                  <select name="valuation">
-                    <option value="Mala" selected>Mala</option>
-                    <option value="Buena">Buena</option>
-                    <option value="Excelente">Excelente</option>
-                  </select>
-                </div>
-                <div id="post_enter">
-                  <input type="submit" value="Postear">
-                </div>
-              </div>
-          </form>
-          <div id="second_conteiner">
-            <div id="tittle_second_conteiner">
-              <h3>Otros Posteos</h3>
-            </div>
-            <div id="coments">
-              <?php
-
-
-              foreach ($fetch as $valoraciones) { ?>
-
-
-
-
-                <h5>
-                  <?php echo "Autor: " . $valoraciones['name']; ?>
-                </h5>
-
-
-                <a>
-                  <?php echo "Puntuacion: " . $valoraciones['valuation']; ?>
-                </a>
-                <P>
-                  <?php echo "Descripcion: " . $valoraciones['description']; ?>
-
-
-                </p>
-
-
-                <?php
-              }
-              ?>
-            </div>
-          </div>
-        </div>
-      </div>
-      <?php
-      ?>
     </div>
   </main>
   <?php
