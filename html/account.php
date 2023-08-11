@@ -154,7 +154,7 @@ if ($_SESSION['user']) {
                             $obj = new DataBase();
                             $DBH = $obj->connect();
                             if ($oldPass === $pass) {
-                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$pass', img='$img' WHERE id = $id";
+                                $sql = "UPDATE user SET name='$name', lastName='$lastName', email='$email', password='$newPass', img='$img' WHERE id = $id";
                                 $result = $DBH->query($sql);
                                 if ($result !== false) {
                                     echo "<script>
