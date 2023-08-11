@@ -1,17 +1,18 @@
 <?php
+session_start();
 require_once("../php/interface.php");
 require_once("../php/cone.php");
 require_once("../php/methods.php");
 
 $id = $_GET['id'];
 $obj = new métodosUser();
-$sql = "SELECT src FROM resource WHERE id = $id";
+$sql = "SELECT * FROM resource WHERE id = $id";
 $row = $obj->showData($sql);
 if ($row->rowCount() > 0) {
   $row->setFetchMode(PDO::FETCH_ASSOC);
   $info = $row->fetch();
 } else {
-  echo "404 not found";
+  header("Location: ../html/error404.php");
 }
 ?>
 <!DOCTYPE html>
@@ -45,11 +46,10 @@ if ($row->rowCount() > 0) {
       <object id="book" data="<?php echo $info['src'] ?>#toolbar=0&view=fitB" type="application/pdf">
       </object>
       <div class="btnPart">
-        <a href="../html/book.php">
-          <button><span>Regresar</span></button>
+        <a href="../html/book.php? id= <?php echo $info['id'] ?> ">
+          <button class="btnLogin"><span>Regresar</span></button>
         </a>
       </div>
-    </div>
     </div>
   </main>
   <?php

@@ -6,7 +6,7 @@ require_once("../php/cone.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
 require_once("../html/header.php");
-//mostrar recurso
+
 $id = $_GET['id'];
 $obj = new métodosUser();
 $sql = "SELECT * FROM resource WHERE id = $id";
@@ -15,8 +15,9 @@ if ($row->rowCount() > 0) {
   $row->setFetchMode(PDO::FETCH_ASSOC);
   $info = $row->fetch();
 } else {
-  echo "404 not found";
+  header("Location: ../html/error404.php");
 }
+
 //Comentarios
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $id_recurso = $_GET['id'];
@@ -50,11 +51,7 @@ $sql = "SELECT comment.description, comment.valuation, user.name FROM comment IN
 $fetch = $obj->showData($sql);
 $fetch->setFetchMode(PDO::FETCH_ASSOC);
 
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,11 +66,9 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="../css/create.css" />
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
 
-
   <!-- Fonts and Boostrap-->
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
-
 
   <title>Libro</title>
 </head>
@@ -116,12 +111,10 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
-            <form action="../php/favorito.php" method="POST">
-              <input class="book-link" type="submit" name="favorito_submit" value="Añadir Favorito">
-            </form>
-
-
-            </form>
+            <div id="add-fav" class="book-link">
+              <i class="fa-solid fa-plus"></i> Añadir ah Favorito
+              <input type="hidden" value="<?php echo $id ?>" id="input-id">
+            </div>
             <a href="<?php echo $info['src'] ?>" class="book-link down" download><i class="fa-solid fa-download"></i>
               Descargar</a>
           </div>
@@ -148,12 +141,8 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
         </div>
       </div>
       <div class="<?php esconder(); ?>">
-
-
-        <div id="content">
+        <div id="content" >
           <h2>Crear posteo</h2>
-
-
           <form method="POST" onsubmit="return validarFormulario() ">
             <div id="general_conteiner">
               <div id="first_conteiner">
@@ -172,8 +161,6 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
                   <input type="submit" value="Postear">
                 </div>
               </div>
-
-
           </form>
           <div id="second_conteiner">
             <div id="tittle_second_conteiner">
@@ -212,18 +199,15 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
       </div>
       <?php
       ?>
-
-      <script>
-        let year = document.getElementById('year');
-        let y = new Date().getFullYear();
-        year.innerHTML = y;
-      </script>
-      <script src="../js/toggle.js"></script>
     </div>
   </main>
   <?php
   require_once("../html/footer.php");
   ?>
+  <script src="../js/j_query.js"></script>
+  <script src="../js/alertify.js"></script>
+  <script src="../js/add-fav.js"></script>
+  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
 

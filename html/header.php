@@ -56,6 +56,3 @@ if (isset($_SESSION['user'])) {
     </div>
   </div>
 </header>
-
-
-<script src="../js/toggle.js"></script>
