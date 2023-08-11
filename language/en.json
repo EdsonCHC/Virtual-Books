@@ -1,102 +1,16 @@
 {
-    "nav": {
-        "home": "Home",
-        "login": "Login",
-        "sign up": "Sign up",
-        "about": "About",
-        "account": "Account",
-        "upload": "Upload",
-        "input": "<input type=\"search\" placeholder=\"Search\" autocomplete=\"off\">",
-        "cate": "Categories"
+
+    "asideU":{
+        "IUser":"Home",
+        "ALUser": "Reading Area"
     },
-    "header": {
-        "title": "Welcome to PhotoGall",
-        "credit": "Image thanks to Wallhaven.cc"
-    },
-    "main": {
-        "legend": "Photographs shared"
-    },
-    "cate": {
-        "Catein": "CATEGORIES IN PHOTOGALL",
-        "info": "Being a site with the main objective of storing photographs, PhotoGall has the most common categories in the world of photography, such as:",
-        "p": "Landscapes",
-        "pinfo":"Landscapes were among the first to be portrayed in the beginnings of photography, helping its evolution and being one of the favorites of photographers.",
-        "C":"Food",
-        "cinfo":"Food photography is a form of commercial photography specializing in still life, intended for the production of attractive photographs of food for use in advertising, labels or even abstract art.",
-        "R":"Portrait",
-        "Rinfo":"The photographic portrait is a genre that brings together a series of artistic initiatives that revolve around the idea of showing the physical or moral qualities of the person or animals that appear.",
-        "A":"Art Photography",
-        "Ainfo":"Artistic photography aims to convey concepts, feelings and emotions. There is an intention on the part of the author to communicate and invite reflection on a certain theme.",
-        "prox":"More categories coming soon....",
-        "seeP":"View Landscape photographs",
-        "seeC":"View Food Photos",
-        "seeR":"View Portrait photographs",
-        "seeA":"View Artistic Photographs"
-    },
-    "footer": {
-        "shared": "Share your photos for free on PhotoGall",
-        "Cat": "Categories",
-        "Tools": "Tools",
-        "lands": "Landscapes",
-        "food": "Food",
-        "people": "Portrait",
-        "art": "Art",
-        "More": "More Categories...",
-        "foot": "All photographs are property of their original owners. © PhotoGall 2022."
-    },
-    "about": {
-        "about": " About PhotoGall",
-        "what is": "WHAT IS PHOTOGALL?",
-        "wstxt": "PhotoGall is a website that allows access, storage and uploading of digital photographs for photographers to show their work and talent in photography.<br><br>Also offer an interface for the user who only want to observe, admire and enjoy these photographs can give like to the photographs and follow users in support of them.",
-        "vision": "vision of PhotoGall",
-        "vtxt": "\"To be a website focused on the use of new technologies to the service of the client so that they can discover and show their potential in photography to the whole world. world.\"",
-        "misión": "Misión of PhotoGall",
-        "mtxt": "\"Our mission is to elevate the quality of customer experience by leveraging the internet and technology to help customers find, discover the art of others and empower content creators to succeed.\"",
-        "story": "HISTORY",
-        "stxt": "The PhotoGall project was born in the minds of 3 high school students, who by passion to the world of technology and the desire to decide to start creating this page as an educational project and in the process learn new things that would serve them in their future giving everything to the service of people."
-    },
-    "login": {
-        "msm": "Welcome back",
-        "email": "Email <input type=\"email\" id=\"Email\" name=\"email\" placeholder=\"Enter your Email\" required>",
-        "pass": "Password <input type=\"password\" id=\"Passwordf\" name=\"password\" placeholder=\"Enter your Password\" required minlength=\"8\" maxlength=\"10\"> <button type=\"button\" onclick=\"mostrarContraseña()\"><i><img src=\"../multimedia/iconos/ver.png\"></i></button>",
-        "inputL": "<input type=\"submit\" value=\"Login\">",
-        "sms": "Don't have an account? <a href=\"../html/signup.html\" target=\"_self\" id=\"signup\"> Create an </a>"
-    },
-    "signup": {
-        "msm2": "Registration Form",
-        "name": "Name <input type=\"text\" id=\"name\" placeholder=\"Enter your name here\" name=\"Name\" required>",
-        "lastName": "Last Name <input type=\"text\" id=\"surname\" placeholder=\"Enter your last name here\" name=\"Surname\" required>",
-        "email": "Email <input type=\"text\" id=\"email\" placeholder=\"Enter your Email here\" name=\"Email\" required>",
-        "gender": "Choose your gender",
-        "male": "<input type=\"radio\" name=\"gender\" value=\"Male\" class=\"inline\" required> Male",
-        "Female": "<input type=\"radio\" name=\"gender\" value=\"Female\" class=\"inline\" required> Female",
-        "Prefer": "<input type=\"radio\" name=\"gender\" value=\"Incognito\" class=\"inline\" required checked> I prefer not to say",
-        "pass2": "Password (minimum 8 characters) <input type=\"password\" placeholder=\"Enter your Password here\" name=\"Password\" id=\"Passwordf\" required  minlength=\"8\"> <button type=\"button\" onclick=\"mostrarContraseña()\"><i><img src=\"../multimedia/iconos/ver.png\"></i></button>",
-        "sms2": "Already have an account? <a href=\"../html/login.html\" target=\"_self\" id=\"login\">Sign in</a>",
-        "inputS": "<input type=\"submit\" value=\"Register\" id=\"Registrarsef\">"
-    },
-    "table": {
-        "name": "Name:",
-        "lastName": "Last Name:",
-        "gender": "Gender:"
-    },
-    "info": {
-        "author": "Author:",
-        "tag": "Tag:",
-        "Place": "Place:",
-        "cat": "Categories"
-    },
-    "upload": {
-        "selectp": "Select photo  <input type=\"file\" accept=\"image/*\" id=\"subir\" name=\"Subir\"  onchange=\"vista_preliminar(event)\"></input>",
-        "pinfo": "Photo information",
-        "tag": "Tag <input type=\"text\" name=\"Name\" placeholder=\"Tag\" required>",
-        "place": "Place <span class=\"sub\">(Optional)</span> <input type=\"text\" id=\"lugar\" name=\"Lugar\" placeholder=\"Place\">",
-        "select": "Category <select name=\"categoría\" id=\"cat\" required> <option value=\"\" selected disabled>Select a category</option><option value=\"Personas\">Portrait</option><option value=\"Paisajes\">Landscapes</option><option value=\"Comida\">Food</option><option value=\"Animales\">Animals</option><option value=\"Arte\">Art</option></select>",
-        "submit": "Upload photo"
+    
+    "MyBooks":{
+        "book": "My Books"
     },
 
     "push":{
-        "footer": "All",
-        "comit": "good"
+        "footer": "All rights reserved Crea-J 2023"
+
     }
 }

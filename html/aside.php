@@ -5,7 +5,7 @@ include_once("../php/functions.php");
     <div id="home">
         <nav id="books-nav">
             <li><i class="fa-solid fa-house"></i>
-                <a href="../html/index.php" class="link">Inicio</a>
+                <a href="../html/index.php" class="link" data-section="asideU" data-value="IUser">Inicio</a>
                 <span> ></span>
             </li>
             <!-- <li>
@@ -15,7 +15,7 @@ include_once("../php/functions.php");
             </li> -->
             <li>
                 <i class="fa-solid fa-book-open-reader"></i>
-                <a href="../html/myBooks.php" class="link">Area de lectura</a>
+                <a href="../html/myBooks.php" class="link" data-section="asideU" data-value="ALUser">Area de lectura</a>
                 <span> ></span>
             </li>
         </nav>

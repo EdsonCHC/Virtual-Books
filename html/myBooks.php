@@ -25,7 +25,7 @@
         require_once("../html/aside.php");
         ?>
         <div id="content">
-            <h2>Mis Libros</h2>
+            <h2 data-section="MyBooks" data-value="book">Mis Libros</h2>
             <div class="categoria">
                 <div class="flex-books">
                     <a href=""><img src="../img/Rectangle 1412.png" alt="" /></a>

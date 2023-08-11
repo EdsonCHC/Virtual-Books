@@ -33,7 +33,7 @@ $authUrl = $client->createAuthUrl();
     <div id="mother-ctn">
         <div id="title-ctn">
             <a href="../html/index.php">
-                <h1>Virtual Books</h1>
+                <h1 data-section="title" data-value="VB">Virtual Books</h1>
             </a>
             <H4>Registro</H4>
         </div>
