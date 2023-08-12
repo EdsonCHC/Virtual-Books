@@ -1,7 +1,7 @@
 :root {
   --main-black: #010101;
   --main-white: #ffffff;
-  --main-grey: rgba(255, 255, 255, 0.3);
+  --secondary-white: #ddd;
   --main-red: #7f0000;
   --secondary-red: #bd0003;
   --ternary-red: #ff0000;
