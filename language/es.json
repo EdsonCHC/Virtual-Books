@@ -1,9 +1,42 @@
 {
-    "MyBooks":{
-        "book": "Mis Libros"
+
+    "header":{
+        "search":"<input type='search' id='searchInput' placeholder='Buscar un libro' autocomplete='off'>",
+        "sesionIni": "Login"
     },
 
-    "push":{    
-        "footer": "Todos los derechos reservados Crea-J 2023"
+    "index":{
+        "cont": "Content",
+        "lit": "Literature",
+        "cien": "Science", 
+        "eco": "Economy",
+        "fis": "Physical",
+        "histo": "History", 
+        "mas": "See More..."
+    },
+    
+    "AsideA":{
+        "con":"Content",
+        "cat":"Catalogs",
+        "ges":"Manage",
+        "doc":"Document",
+        "help":"Help",
+        "cs":"Sign off"
+    },
+
+    "asideU":{
+        "IUser":"Home",
+        "ALUser": "Reading Area",
+        "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Help",
+        "Idiom": "Language"
+    },
+    
+    "MyBooks":{
+        "book": "My Books"
+    },
+
+    "push":{
+        "footer": "Todos los derechos reservados Crea-J"
+
     }
 }

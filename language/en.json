@@ -1,8 +1,8 @@
 {
 
     "header":{
-        "search":"<input  data-section='header' data-value='search' type='search' id='searchInput' placeholder='Search book' autocomplete='off' />",
-        "sesionIni": "log in"
+        "search":"<input type='search' id='searchInput' placeholder='Search a book' autocomplete='off'>",
+        "sesionIni": "Login"
     },
 
     "index":{
@@ -36,7 +36,6 @@
     },
 
     "push":{
-        "footer": "All rights reserved Crea-J 2023"
-
+        "footer": "All rights reserved Crea-J"
     }
 }

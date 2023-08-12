@@ -4,8 +4,7 @@ let textsChange = document.querySelectorAll("[data-section]")
 
 //TRADUCCION MENU NORMAL//
 flagsElements.addEventListener("click", (e) => {
-  changeLanguage(e.target.parentElement.dataset.language)
-  console.log(e.target.parentElement.dataset.language); 
+  changeLanguage(e.target.parentElement.dataset.language);
 });
 
 const changeLanguage = async (language) => {
@@ -17,7 +16,6 @@ const changeLanguage = async (language) => {
   for (const textChange of textsChange) {
     const section = textChange.dataset.section;
     const value = textChange.dataset.value;
-
     textChange.innerHTML = texts[section][value];
   }
 };

@@ -21,7 +21,9 @@ if (isset($_SESSION['user'])) {
       <button type="submit">
         <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
       </button>
-      <input data-section="header" data-value="search" type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off" />
+      <div data-section="header" data-value="search">
+        <input type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off">
+      </div>
     </label>
   </form>
 
