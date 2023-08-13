@@ -120,16 +120,26 @@ header {
   margin-left: 2rem;
 }
 
+.contentBuscador{
+  margin: 1rem 0;
+}
+
 #labelInput {
   background-color: #fff;
   width: 25rem;
   height: 3.5rem;
   border-radius: 8px;
+  border: none;
   display: flex;
   gap: 1rem;
   padding: 2px;
 }
-
+#labelInput input {
+  border: transparent;
+  background-color: transparent;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
 #labelInput button {
   border: none;
   background-color: transparent;
@@ -213,6 +223,7 @@ li {
 .link {
   color: var(--main-black);
   text-decoration: none;
+  display: flex;
 }
 
 .link:hover {
@@ -235,8 +246,7 @@ li {
   height: 0px;
   right: 6%;
   top: 50%;
-  overflow: hidden;
-  border-radius: 8px 10px;
+  overflow: scroll;
   background-color: aliceblue;
   transition: height 0.5s ease;
 }
@@ -252,25 +262,28 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 #notis-info h4 {
   width: 100%;
   border-bottom: 2px solid var(--main-black);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #notis-nav {
+  width: 100%;
   list-style: none;
 }
 
-#notis-nav li {
+#notis-nav li{
   width: 100%;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
+  height: auto;
+  margin-bottom: 1.5rem;
+  background-color: #ddd;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
+
 
 /* ESTILOS ASIDE */
 aside {
@@ -343,7 +356,7 @@ aside {
   left: 0;
   background: var(--main-blue);
   height: 100vh;
-  width: 11%;
+  width: 11.5%;
   display: flex;
   flex-direction: column;
   align-items: center;

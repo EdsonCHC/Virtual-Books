@@ -1,7 +1,9 @@
 <?php
 require_once('../php/cone.php');
+require_once("../php/interface.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
+
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
   $obj = new MétodosUser();
@@ -10,22 +12,15 @@ if (isset($_SESSION['user'])) {
   $fetch->setFetchMode(PDO::FETCH_ASSOC);
   $img = $fetch->fetch();
 }
+
 ?>
 <header>
   <div>
-    <a href="http://localhost/Virtual-Books/html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
+    <a href="../html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
         id="logo" /></a>
   </div>
-  <form action="">
-    <label for="searchInput" id="labelInput">
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
-      </button>
-      <div data-section="header" data-value="search">
-        <input type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off">
-      </div>
-    </label>
-  </form>
+
+
 
 
   <div id="log-links">
@@ -35,8 +30,6 @@ if (isset($_SESSION['user'])) {
         </a></li>
     </ul>
   </div>
-
-
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php">
@@ -47,12 +40,38 @@ if (isset($_SESSION['user'])) {
           Notificaciones
         </h4>
         <nav id="notis-nav">
+<<<<<<< HEAD
           <li><a href="" class="link">
               <h5 data-section="header" data-value="publi">Se ha publicado un nuevo libro en la sección deportes</h5>
             </a></li>
           <li><a href="" class="link">
               <h5>Lorem.</h5>
             </a></li>
+=======
+          <?php
+          //$id = $_GET['id'];
+          $obj = new MétodosUser();
+          $sql = "SELECT * FROM resource";
+          #La idea es asi
+          //$sql = "SELECT * FROM resource WHERE id = $id";
+          $row = $obj->showData($sql);
+          if ($row->rowCount() > 0) {
+            while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
+              ?>
+
+              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
+                  <h5>Se ha publicado:
+                    <p>
+                      <?php echo $not['name']; ?>
+                    </p>
+                  </h5>
+                </a></li>
+
+              <?php
+            }
+          }
+          ?>
+>>>>>>> 0407b574d6de410b53ee512f08b76e0bc776383f
         </nav>
       </div>
     </div>

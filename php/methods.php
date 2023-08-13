@@ -8,10 +8,14 @@ class MétodosUser implements plantilla
     {
         $obj = new DataBase();
         $DBH = $obj->connect();
-        $STH = $DBH->prepare("INSERT INTO `user` (`name`, `lastName`, `email`, `password`, `img`, `rol`, `dateReg`) 
+        try {
+            $STH = $DBH->prepare("INSERT INTO `user` (`name`, `lastName`, `email`, `password`, `img`, `rol`, `dateReg`) 
             VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $STH->execute($arr);
-        $DBH = null;
+            $STH->execute($arr);
+            $DBH = null;
+        } catch (PDOException $e) {
+            die("Error " . $e->getMessage());
+        }
     }
     public function showData($sql): PDOStatement
     {
@@ -51,7 +55,7 @@ class MétodosUser implements plantilla
     }
 }
 
-class Comentario extends MétodosUser // cone herencia le pasas los reciclamos métodos happy :v
+class Comentario extends MétodosUser // con herencia le pasas los reciclamos métodos happy :v
 {
     public function insertData($arr)
     {
@@ -75,12 +79,12 @@ class MétodosAdmin extends MétodosUser
     {
         $obj = new DataBase();
         $DBH = $obj->connect();
-        try{
+        try {
             $STH = $DBH->prepare("INSERT INTO resource(`name`, `author`, `type`, `category`, `description`,`src`, `img`)
             VALUES (?,?,?,?,?,?,?)");
             $STH->execute($arr);
             $DBH = null;
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             die("Error " . $e->getMessage());
         }
 

@@ -165,7 +165,6 @@ require_once("../php/methods.php");
                         <option value="Tesis" data-section="catalogo" data-value="tesis">Tesis</option>
                     </select>
                 </div>
-
                 <div class="content_form">
                     <label for="tipo" class="form_text" data-section="catalogo" data-value="cate">Categoría</label>
                     <select id="categoría" name="cate">
@@ -214,7 +213,7 @@ require_once("../php/methods.php");
                     $src = "../src/files/" . $nombreSrc;
                     $nombreImg = $_FILES['img']['name'];
                     $rutaImg = $_FILES['img']['tmp_name'];
-                    $img = "../src/files/img" . $nombreImg;
+                    $img = "../src/files/img/" . $nombreImg;
                     $arr = array(
                         $name,
                         $autor,
