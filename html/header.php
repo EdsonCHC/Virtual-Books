@@ -43,12 +43,12 @@ if (isset($_SESSION['user'])) {
       <img src="<?php echo $img['img']; ?>" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
-        <h4>
+        <h4 data-section="header" data-value="not" >
           Notificaciones
         </h4>
         <nav id="notis-nav">
           <li><a href="" class="link">
-              <h5>Se ha publicado un nuevo libro en la sección deportes</h5>
+              <h5 data-section="header" data-value="publi">Se ha publicado un nuevo libro en la sección deportes</h5>
             </a></li>
           <li><a href="" class="link">
               <h5>Lorem.</h5>

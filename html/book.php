@@ -105,7 +105,7 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
             <div id="add-fav" class="book-link">
-              <i class="fa-solid fa-plus"></i> Añadir ah Favorito
+              <i class="fa-solid fa-plus"></i> Añadir a Favorito
               <input type="hidden" value="<?php echo $id ?>" id="input-id">
             </div>
             <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download><i class="fa-solid fa-download"></i>

@@ -2,41 +2,106 @@
 
     "header":{
         "search":"<input type='search' id='searchInput' placeholder='Buscar un libro' autocomplete='off'>",
-        "sesionIni": "Login"
+        "sesiónIni": "Iniciar Sesión",
+        "not":"Notificaciones",
+        "publi":"Se ha publicado un nuevo libro en la sección deportes"
     },
 
     "index":{
-        "cont": "Content",
-        "lit": "Literature",
-        "cien": "Science", 
-        "eco": "Economy",
-        "fis": "Physical",
-        "histo": "History", 
-        "mas": "See More..."
+        "cont": "Contenido",
+        "lit": "Literatura",
+        "cien": "Ciencia", 
+        "eco": "Economia",
+        "fis": "Física",
+        "histo": "Historia", 
+
+        "mas": "Ver más..."
     },
     
     "AsideA":{
-        "con":"Content",
-        "cat":"Catalogs",
+        "con":"Contenido",
+        "cat":"Catalogo",
         "ges":"Manage",
-        "doc":"Document",
-        "help":"Help",
-        "cs":"Sign off"
+        "doc":"Documento",
+        "help":"Ayuda",
+        "cs":"Cerrar Sesión"
     },
 
     "asideU":{
-        "IUser":"Home",
-        "ALUser": "Reading Area",
-        "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Help",
-        "Idiom": "Language"
-    },
+        "IUser":"Inicio",
+        "ALUser": "Area de lectura",
+        "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Ayuda",
+        "Idiom": "Idioma",
+        "closes":"Cerrar Sesión"
+        },
     
     "MyBooks":{
-        "book": "My Books"
+        "book": "Mis Libros"
     },
 
     "push":{
         "footer": "Todos los derechos reservados Crea-J"
 
+    },
+
+    "account":{
+        "info":"Informacion Personal",
+        "names":"Nombres",
+        "Lnames":"Apellidos",
+        "email":"Correo Electrónico",
+        "img":"Imagen de perfil",
+        "count":"Cuenta",
+        "count1":"Cuenta",
+        "Upload":"Actualizar tu cuenta",
+        "Nombres":"Nombres",
+        "Apellidos":"Apellidos",
+        "Correo":"Correo Electrónico",
+        "Contra":"Contraseña actual",
+        "ContraN":"Nueva contraseña",
+        "imagen":"Imagen",
+        "actualizar":"Actualizar",
+        "cancelar":"Cancelar"
+    },
+
+    "catalogo":{
+        "Bienvenido":"Bienvenido",
+        "catalog":"Catálogos/Artículos de catálogo",
+        "articulos":"Artículos",
+        "administre":"Administre los catálogos de su biblioteca aquí.", 
+        "titulos":"Titulo a buscar",
+        "autors":"Autor a buscar",
+        "tipo":"Tipo",
+        "revista":"Revista academica",
+        "libro":"Libro",
+        "tesis":"Tesis",
+        "cate":"Categoria", 
+        "titulo":"Titulo",
+        "autor":"Autor",
+        "editor":"Editor",
+        "buscar":"Buscar",
+        "añadir":"Agregar",
+        "acciones":"acciones",
+        "tipoR":"Tipo de recursos",
+        "ciencia":"Ciencia",
+        "literatura":"Literatura",
+        "fisica":"Física",
+        "economia":"Economia",
+        "historia":"Historia",
+        "desc":"Descripción",
+        "art":"Articulo",
+        "img":"Imagen",
+        "agregar":"Agregar Recuersos",
+        "cancelar":"Cancelar"
+    },
+
+    "IndexA":{
+        "bien":"Bienvenido",
+        "recien":"Recién agregado",
+        "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
+        "estad":"Estadisticas de usuario",
+        "coment":"Comentarios",
+        "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
+    
     }
+    
 }

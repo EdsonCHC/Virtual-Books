@@ -55,28 +55,28 @@ if ($_SESSION['user']) {
 
             </div>
             <div id="part1">
-                <h3>Información Personal</h3>
+                <h3 data-section="account" data-value="info">Información Personal</h3>
                 <div class="dataUser">
                     <div class="dataInp">
                         <div class="name">
-                            <label>Nombres
+                            <label data-section="account" data-value="names">Nombres
                                 <input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
                             </label>
                         </div>
                         <div class="name">
-                            <label>Apellidos
+                            <label data-section="account" data-value="Lnames">Apellidos
                                 <input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
                             </label>
                         </div>
                         <div class="name">
-                            <label>Correo Electrónico
+                            <label data-section="account" data-value="email">Correo Electrónico
                                 <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                             </label>
                         </div>
                     </div>
                     <div class="dataImg">
                         <div class="img">
-                            <label>Imagen de perfil
+                            <label data-section="account" data-value="img">Imagen de perfil
                                 <img src="<?php echo $img['img']; ?>" alt="user-icon">
                                 <input type="hidden"  id="imgData" value="<?php echo $img['img']; ?>">
                             </label>
@@ -85,14 +85,14 @@ if ($_SESSION['user']) {
                             <div class="userUpdate">
                                 <label>
                                     <button class="btnUpdate" id="btnUpdate">
-                                        <i class="fa-solid fa-pen-to-square white_i"></i>Cuenta
+                                        <i class="fa-solid fa-pen-to-square white_i"></i><p data-section="account" data-value="count">Cuenta</p>
                                     </button>
                                 </label>
                             </div>
                             <div class="userUpdate">
                                 <label>
                                     <button class="btnDelete" id="btnDelete">
-                                        <i class="fa-solid fa-trash white_i"></i>Cuenta
+                                        <i class="fa-solid fa-trash white_i"></i><p data-section="account" data-value="count1">Cuenta</p>
                                     </button>
                                 </label>
                             </div>
@@ -102,30 +102,30 @@ if ($_SESSION['user']) {
                 </div>
                 <dialog id="updateDialog">
                     <form enctype="multipart/form-data" class="form" id="form-diag">
-                        <h4>Actualiza tu cuenta</h4>
+                        <h4 data-section="account" data-value="Upload">Actualiza tu cuenta</h4>
                         <hr>
                         <div class="content_form">
-                            <label for="title" class="form_text">Nombres</label>
+                            <label for="title" class="form_text" data-section="account" data-value="Nombres">Nombres</label>
                             <input type="text" id="name" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text">Apellidos</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="Apellidos">Apellidos</label>
                             <input type="text" id="lastName" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text">Correo Electrónico</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="Correo">Correo Electrónico</label>
                             <input type="email" id="email" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text">Contraseña Actual</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="Contra">Contraseña Actual</label>
                             <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text">Nueva Contraseña</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="ContraN">Nueva Contraseña</label>
                             <input type="password" id="newPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
-                            <label for="imagen" class="src">Imagen</label>
+                            <label for="imagen" class="src" data-section="account" data-value="imagen">Imagen</label>
                             <input type="file" id="imagen" accept="Image/*" name="img"
                                 onchange="vista_preliminar(event), validar()">
                             <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image"
@@ -133,8 +133,8 @@ if ($_SESSION['user']) {
                             </div>
                         </div>
                         <div class="btnPart">
-                            <button id="btn-update">Actualizar</button>
-                            <button type="button" id="cancel-btn">Cancelar</button>
+                            <button id="btn-update" data-section="account" data-value="actualizar">Actualizar</button>
+                            <button type="button" id="cancel-btn" data-section="account" data-value="cancelar">Cancelar</button>
                         </div>
                     </form>
             </div>
@@ -153,6 +153,8 @@ if ($_SESSION['user']) {
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/acc.js"></script>
+
+
 </body>
 
 </html>

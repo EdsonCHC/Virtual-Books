@@ -26,12 +26,12 @@ if (isset($_SESSION['admin'])){
         require_once("../html/aside_admin.php");
         ?>
         <div id="content">
-            <h4>Bienvenido</h4>
+            <h4 data-section="indexA" data-value="bien">Bienvenido</h4>
             <div class="grid-content">
                 <div class="element e1">
                     <div class="flex-element">
-                        <h5>Recién agregados</h5>
-                        <div class="btn-div">
+                        <h5 data-section="indexA" data-value="recien">Recién agregados</h5>
+                        <div class="btn-div" data-section="indexA" data-value="cambio">
                             <input class="btn" type="button" value="Agregar">
                             <input class="btn" type="button" value="Catalogo">
                         </div>
@@ -39,12 +39,12 @@ if (isset($_SESSION['admin'])){
                     <hr>
                 </div>
                 <div class="e2">
-                    <h5>Estadística de Usuarios</h5>
+                    <h5 data-section="indexA" data-value="estad">Estadística de Usuarios</h5>
                 </div>
                 <div class="element e3">
                     <div class="flex-element">
-                        <h5>Comentarios</h5>
-                        <div class="btn-div">
+                        <h5 data-section="indexA" data-value="coment">Comentarios</h5>
+                        <div class="btn-div" data-section="indexA" data-value="cambios">
                             <input class="btn" type="button" value="Agregar">
                             <input class="btn" type="button" value="Ver todos">
                         </div>

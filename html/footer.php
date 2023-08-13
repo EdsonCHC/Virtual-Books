@@ -10,4 +10,4 @@
 </script>
 
 <script src="../js/toggle.js"></script>
-<script src="../js/trad.js"></script>
+<script src="../js/trad.js"></script> 

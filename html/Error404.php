@@ -20,12 +20,12 @@
         </div>
 
         <div class="ctn">
-            <h4>Lo sentimos la página que buscas no se encontró</h4>
+            <h4 data-section="Error" data-value="Sorry">Lo sentimos la página que buscas no se encontró</h4>
         </div>
 
         <div class="ctn">
             <button type="button">
-                <a href="../html/index.php">Regresar al inicio
+                <a href="../html/index.php" data-section="Error" data-value="Back">Regresar al inicio
                     <i class="fa-sharp fa-solid fa-house white_i"></i>
                 </a>
             </button>

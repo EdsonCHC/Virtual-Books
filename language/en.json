@@ -2,7 +2,9 @@
 
     "header":{
         "search":"<input type='search' id='searchInput' placeholder='Search a book' autocomplete='off'>",
-        "sesiónIni": "Login"
+        "sesiónIni": "Login",
+        "not":"Notifications",
+        "publi":"A new book has been published in the sports section"
     },
 
     "index":{
@@ -12,6 +14,7 @@
         "eco": "Economy",
         "fis": "Physical",
         "histo": "History", 
+
         "mas": "See More..."
     },
     
@@ -21,14 +24,15 @@
         "ges":"Manage",
         "doc":"Document",
         "help":"Help",
-        "cs":"Sign off"
+        "cs":"Log out"
     },
 
     "asideU":{
         "IUser":"Home",
         "ALUser": "Reading Area",
         "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Help",
-        "Idiom": "Language"
+        "Idiom": "Language",
+        "closes":"Log out"
     },
     
     "MyBooks":{
@@ -37,5 +41,65 @@
 
     "push":{
         "footer": "All rights reserved Crea-J"
+    },
+
+    "account":{
+        "info":"Personal information",
+        "names":"Names",
+        "Lnames":"Last Names",
+        "email":"Email",
+        "img":"Profile picture",
+        "count":"Account",
+        "count1":"Account",
+        "Upload":"Upload your account",
+        "Nombres":"Names",
+        "Apellidos":"Last Names",
+        "Correo":"Email",
+        "Contra":"Current password",
+        "ContraN":"New password",
+        "imagen":"Image",
+        "actualizar":"Upload",
+        "cancelar":"Cancel"
+    },
+
+    "catalogo":{
+        "Bienvenido":"Welcome",
+        "catalog":"Catalog /Catalog item",
+        "articulos":"Items",
+        "administre":"Manage your library's catalogs here.", 
+        "titulos":"Title to search",
+        "autors":"Author to search",
+        "tipo":"Type",
+        "revista":"Academic magazine",
+        "libro":"Book",
+        "tesis":"thesis",
+        "cate":"Category", 
+        "titulo":"Title",
+        "autor":"Author",
+        "editor":"Editor",
+        "buscar":"Search",
+        "añadir":"Add",
+        "acciones":"Actions",
+        "tipoR":"Type of Resources",
+        "ciencia":"Science",
+        "literatura":"Literature",
+        "fisica":"Physical",
+        "economia":"Economy",
+        "historia":"History",
+        "desc":"Description",
+        "art":"Item",
+        "img":"Image",
+        "agregar":"Add Resources",
+        "cancelar":"Cancel"
+    },
+
+    "IndexA":{
+        "bien":"Welcome",
+        "recien":"Just added",
+        "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
+        "estad":"User Statistics",
+        "coment":"Comments",
+        "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
+    
     }
 }
