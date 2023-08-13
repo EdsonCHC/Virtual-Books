@@ -213,6 +213,7 @@ li {
 .link {
   color: var(--main-black);
   text-decoration: none;
+  display: flex;
 }
 
 .link:hover {
@@ -343,7 +344,7 @@ aside {
   left: 0;
   background: var(--main-blue);
   height: 100vh;
-  width: 11%;
+  width: 11.5%;
   display: flex;
   flex-direction: column;
   align-items: center;

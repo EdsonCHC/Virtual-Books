@@ -6,13 +6,17 @@ require_once("../php/methods.php");
 
 $id = $_GET['id'];
 $obj = new métodosUser();
-$sql = "SELECT * FROM resource WHERE id = $id";
-$row = $obj->showData($sql);
-if ($row->rowCount() > 0) {
-  $row->setFetchMode(PDO::FETCH_ASSOC);
-  $info = $row->fetch();
-} else {
-  header("Location: ../html/error404.php");
+
+try {
+  $sql = "SELECT * FROM resource WHERE id = $id";
+  $row = $obj->showData($sql);
+  if ($row->rowCount() > 0) {
+    $info = $row->fetch(PDO::FETCH_ASSOC);
+  } else {
+    header("Location: ../html/error404.php");
+  }
+}catch(PDOException $e){
+  die("Error ". $e->getMessage());
 }
 
 //Comentarios
@@ -41,9 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 //Mostrar comentarios
-$sql = "SELECT c.description, c.valuation, u.name, u.img FROM comment c INNER JOIN user u on c.id_c = u.id WHERE c.id_rec = $id";
-$fetch = $obj->showData($sql);
-$fetch->setFetchMode(PDO::FETCH_ASSOC);
+try {
+  $sql = "SELECT c.description, c.valuation, u.name, u.img FROM comment c INNER JOIN `user` u on c.id_c = u.id WHERE c.id_rec = $id";
+  $datos = $obj->showData($sql);
+  $datos->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,13 +61,12 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/Rules.css">
   <link rel="stylesheet" href="../css/libro.css">
   <link rel="stylesheet" href="../css/create.css" />
-  <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
-
+  <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <title>Libro</title>
 </head>
 
@@ -67,7 +74,7 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
 <body>
   <?php
   require_once("../html/header.php")
-  ?>
+    ?>
   <main>
     <?php
     require_once("../html/aside.php");
@@ -101,11 +108,12 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
-            <div id="add-fav" class="book-link">
+            <div id="add-fav" class="book-link <?php esconder(); ?>">
               <i class="fa-solid fa-plus"></i> Añadir ah Favorito
               <input type="hidden" value="<?php echo $id ?>" id="input-id">
             </div>
-            <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download><i class="fa-solid fa-download"></i>
+            <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download><i
+                class="fa-solid fa-download"></i>
               Descargar</a>
           </div>
         </div>
@@ -113,30 +121,30 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
       <div id="content">
         <h3>Comentarios</h3>
         <div id="second_container">
-          <?php
-            if($fetch->rowCount() > 0){
-              foreach ($fetch as $valoraciones) { ?>
-                <div id="comments">
-                  <img src="<?php echo $valoraciones['img']; ?>" /></a>
-                  <h6>
-                    <?php echo "Autor: " . $valoraciones['name']; ?>
-                  </h6>
-                  <a>
-                    <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
-                  </a>
-                  <P>
-                    <?php echo "Descripción: " . $valoraciones['description']; ?>
-                  </p>
-                </div>
-    
+          <div id="comments">
+            <?php
+            if ($datos->rowCount() > 0) {
+              foreach ($datos as $valoraciones) { ?>
+                <img src="<?php echo $valoraciones['img']; ?>" /></a>
+                <h6>
+                  <?php echo "Autor: " . $valoraciones['name']; ?>
+                </h6>
+                <a>
+                  <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
+                </a>
+                <p>
+                  <?php echo "Descripción: " . $valoraciones['description']; ?>
+                </p>
+
                 <?php
               }
-            }else{
-              echo "<h6>Este Libro aun no tiene comentarios :c</h6>";
+            } else {
+              echo "<h6>Este Libro aun no tiene comentarios :c </h6>";
             }
-          ?>
+            ?>
+          </div>
         </div>
-        <form method="POST" onsubmit="return validarFormulario() " class="<?php esconder(); ?>">
+        <form method="POST" onsubmit="" class="<?php esconder(); ?>">
           <div id="general_container">
             <div id="first_container">
               <div id="post_desc">

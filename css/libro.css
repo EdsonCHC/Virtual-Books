@@ -7,13 +7,13 @@ main {
 
 #book {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   margin: 3.5rem;
 }
 
-#container{
-    display: flex;
-    gap: 2rem ;
+#container {
+  display: flex;
+  gap: 2rem;
 }
 
 #imgContainer {
@@ -46,51 +46,51 @@ main {
 }
 
 #buttons {
-    width: 100%;
-    height: 10rem;
-    margin: 2rem 0 0 0;
-    display:flex;
-    columns: 3;
-    align-items: center;
-    gap: 1rem;
+  width: 100%;
+  height: 10rem;
+  margin: 2rem 0 0 0;
+  display: flex;
+  columns: 3;
+  align-items: center;
+  gap: 1rem;
 }
 
-.book-link{
-    width: 30rem;
-    background-color: var(--main-red);
-    color: #fff;
-    font-size: 1.8rem;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 2rem;
-    padding: 0.5rem;
-    cursor: pointer;
+.book-link {
+  width: 30rem;
+  background-color: var(--main-red);
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
-.book-link.down{
-    background-color: var(--secondary-orange) !important;
+.book-link.down {
+  background-color: var(--secondary-orange) !important;
 }
 
-.book-link i{
-    color: #fff !important;
+.book-link i {
+  color: #fff !important;
 }
 
-#more-books{
-    margin: 4rem 0;
+#more-books {
+  margin: 4rem 0;
 }
 
-#similar-books{
-    width: 80%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-    gap: 1rem;
+#similar-books {
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 1rem;
 }
 
-#similar-books img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+#similar-books img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 #fcc-btn {
   background-color: var(--main-red);
@@ -104,4 +104,62 @@ main {
 
 #fcc-btn:hover {
   background-color: #b32b2f;
+}
+
+#content {
+  margin: 5rem 0 5rem 0;
+  padding: 2rem;
+  width: 50rem;
+  background-color: var(--main-white);
+  border-radius: 0.8rem;
+}
+
+#post_desc textarea {
+  padding: 1.5rem;
+  width: 98%;
+  outline: none;
+  border-radius: 1.5rem;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  resize: none;
+  background-color: var(--main-grey);
+}
+
+#post_enter input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  background: rgba(127, 0, 0, 0.9);
+  height: 45px;
+  width: 20%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+/*comentario*/
+#coments {
+  background-color: #d1d1d1;
+  border-radius: 30px;
+  width: 70%;
+  padding: 1.5%;
+  margin: 2%;
+}
+
+#coments a {
+  color: var(--main-blue);
+}
+
+#coments p {
+}
+
+#details_primary_part select {
+  margin: 0.5rem;
+  height: 45px;
+  width: 40%;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
 }
