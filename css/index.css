@@ -18,6 +18,14 @@ main {
   margin: 0 0 1.5rem 0;
 }
 
+a{
+  text-decoration: none;
+}
+
+.filtro{
+  display: none;
+}
+
 .grid-books{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));

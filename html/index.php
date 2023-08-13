@@ -32,62 +32,36 @@ $obj = new métodosUser();
     ?>
     <div id="content">
       <h2 data-section="index" data-value="cont">Contenido</h2>
-      <form action="" method="GET">
-        <label for="searchInput" id="labelInput">
-          <div data-section="header" data-value="search">
-            <input type="text" id="search" name="search" placeholder="Buscar Un Libro">
-          </div>
-          <button type="submit" name="send">
-            <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
-          </button>
-        </label>
-      </form>
-
       <div id="table_resultado">
-
       </div>
-      <?php
-      //Busqueda
-      // $filtro = ""; // Inicializar el filtro vacío
-      // if (isset($_POST['search']) && $_POST['search'] != "") {
-      //   $filtro = "WHERE name LIKE '%" . $_POST['search'] . "%'"; // Construir el filtro si se proporciona una búsqueda
-      // }
-
-      // $cone = mysqli_connect("localhost", "root", "", "vb");
-
-      // if (!$cone) {
-      //   die("Error de conexión: " . mysqli_connect_error());
-      // }
-
-      // $sql = "SELECT * FROM resource $filtro";
-      // $result = mysqli_query($cone, $sql);
-
-      // if (!$result) {
-      //   die("Error en la consulta: " . mysqli_error($cone));
-      // }
-
-      // while ($row = mysqli_fetch_assoc($result)) {
-      //     echo $row['name'];
-      // }
-
-      // mysqli_close($cone);  
-      ?>
-
       <div class="categoria">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
+        <div class="contentBuscador">
+          <label for="searchInput" id="labelInput">
+            <input type="text" id="buscarInpLite" name="buscarInp" placeholder="Buscar Un Libro">
+            <button type="submit" name="buscarBtn" id="buscarBtn">
+              <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+            </button>
+          </label>
+        </div>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Literatura'";
+          $sql = "SELECT id, name, img from resource where category = 'Literatura'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-              </a>
+              <li class="resourseLite">
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <p>
+                    <?php echo $info["name"]; ?>
+                  </p>
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </a>
+              </li>
               <?php
             }
           }
@@ -98,17 +72,30 @@ $obj = new métodosUser();
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
         </a>
+        <div class="contentBuscador">
+          <label for="searchInput" id="labelInput">
+            <input type="text" id="buscarInpCien" name="buscarInp" placeholder="Buscar Un Libro">
+            <button type="submit" name="buscarBtn" id="buscarBtn">
+              <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+            </button>
+          </label>
+        </div>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Ciencia' LIMIT 5";
+          $sql = "SELECT id, name, img from resource where category = 'Ciencia' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-              </a>
+              <li class="resourseCien">
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <p>
+                    <?php echo $info["name"]; ?>
+                  </p>
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </a>
+              </li>
               <?php
             }
           }
@@ -119,17 +106,30 @@ $obj = new métodosUser();
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="eco">Economía</a></h3>
         </a>
+        <div class="contentBuscador">
+          <label for="searchInput" id="labelInput">
+            <input type="text" id="buscarInpEco" name="buscarInp" placeholder="Buscar Un Libro">
+            <button type="submit" name="buscarBtn" id="buscarBtn">
+              <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+            </button>
+          </label>
+        </div>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Economía' LIMIT 5";
+          $sql = "SELECT id, name, img from resource where category = 'Economía' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-              </a>
+              <li class="resourseEco">
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <p>
+                    <?php echo $info["name"]; ?>
+                  </p>
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </a>
+              </li>
               <?php
             }
           }
@@ -140,17 +140,30 @@ $obj = new métodosUser();
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="fis">Física</a></h3>
         </a>
+        <div class="contentBuscador">
+          <label for="searchInput" id="labelInput">
+            <input type="text" id="buscarInpFisic" name="buscarInp" placeholder="Buscar Un Libro">
+            <button type="submit" name="buscarBtn" id="buscarBtn">
+              <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+            </button>
+          </label>
+        </div>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Física'";
+          $sql = "SELECT id, name, img from resource where category = 'Física'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-              </a>
+              <li class="resourseFisic">
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <p>
+                    <?php echo $info["name"]; ?>
+                  </p>
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </a>
+              </li>
               <?php
             }
           }
@@ -160,17 +173,30 @@ $obj = new métodosUser();
           <a href="" class="tag-link">
             <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
           </a>
+          <div class="contentBuscador">
+            <label for="searchInput" id="labelInput">
+              <input type="text" id="buscarInpHisto" name="buscarInp" placeholder="Buscar Un Libro">
+              <button type="submit" name="buscarBtn" id="buscarBtn">
+                <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+              </button>
+            </label>
+          </div>
           <div class="grid-books">
             <?php
-            $sql = "SELECT id, img from resource where category = 'Historia'";
+            $sql = "SELECT id, name, img from resource where category = 'Historia'";
             $row = $obj->showData($sql);
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
                 ?>
-                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-                </a>
+                <li class="resourseHisto">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <p>
+                      <?php echo $info["name"]; ?>
+                    </p>
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  </a>
+                </li>
                 <?php
               }
             }
@@ -185,4 +211,5 @@ $obj = new métodosUser();
   ?>
 </body>
 <script src="../js/buscador.js"></script>
+
 </html>

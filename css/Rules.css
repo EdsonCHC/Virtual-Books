@@ -120,16 +120,26 @@ header {
   margin-left: 2rem;
 }
 
+.contentBuscador{
+  margin: 1rem 0;
+}
+
 #labelInput {
   background-color: #fff;
   width: 25rem;
   height: 3.5rem;
   border-radius: 8px;
+  border: none;
   display: flex;
   gap: 1rem;
   padding: 2px;
 }
-
+#labelInput input {
+  border: transparent;
+  background-color: transparent;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+}
 #labelInput button {
   border: none;
   background-color: transparent;
