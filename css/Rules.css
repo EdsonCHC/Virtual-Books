@@ -236,8 +236,7 @@ li {
   height: 0px;
   right: 6%;
   top: 50%;
-  overflow: hidden;
-  border-radius: 8px 10px;
+  overflow: scroll;
   background-color: aliceblue;
   transition: height 0.5s ease;
 }
@@ -253,25 +252,25 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 #notis-info h4 {
   width: 100%;
   border-bottom: 2px solid var(--main-black);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #notis-nav {
   list-style: none;
 }
 
-#notis-nav li {
-  width: 100%;
+#notis-nav li .notisLink{
+  width: 100px;
+  height: auto;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ddd;
 }
+
 
 /* ESTILOS ASIDE */
 aside {

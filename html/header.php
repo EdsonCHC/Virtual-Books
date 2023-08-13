@@ -1,5 +1,6 @@
 <?php
 require_once('../php/cone.php');
+require_once("../php/interface.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
 
@@ -11,13 +12,14 @@ if (isset($_SESSION['user'])) {
   $fetch->setFetchMode(PDO::FETCH_ASSOC);
   $img = $fetch->fetch();
 }
+
 ?>
 <header>
   <div>
     <a href="http://localhost/Virtual-Books/html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
         id="logo" /></a>
   </div>
-  
+
 
 
 
@@ -37,14 +39,31 @@ if (isset($_SESSION['user'])) {
         <h4>
           Notificaciones
         </h4>
-        <nav id="notis-nav">
-          <li><a href="" class="link">
-              <h5>Se ha publicado un nuevo libro en la sección deportes</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-        </nav>
+        <?php
+        //$id = $_GET['id'];
+        $obj = new MétodosUser();
+        $sql = "SELECT * FROM resource";
+        #La idea es asi
+        //$sql = "SELECT * FROM resource WHERE id = $id";
+        $row = $obj->showData($sql);
+        if ($row->rowCount() > 0) {
+          $row->setFetchMode(PDO::FETCH_ASSOC);
+          while ($info = $row->fetch()) {
+            ?>
+            <nav id="notis-nav">
+              <li><a href="../html/book.php?id=<?php echo $info["id"] ?>" class="notisLink">
+                  <h5>Se ha publicado:
+                    <p>
+                      <?php echo $info['name']; ?>
+                    </p>
+                  </h5>
+                </a></li>
+            </nav>
+            <?php
+          }
+        }
+        ?>
+
       </div>
     </div>
   </div>
