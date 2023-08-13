@@ -130,14 +130,14 @@ try {
                   <?php echo $valoraciones['name']; ?>
                 </p>
               </div>
-              <div id="coment">
-                <p>
-                  <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
-                </p>
+              <div id="comment">
                 <div id="text">
-                  <a>
+                  <p>
                     <?php echo $valoraciones['description']; ?>
-                  </a>
+                  </p>
+                  <p>
+                    <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
+                  </p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ try {
 
           <div id="general_container">
             <div id="first_container">
-            <div class="linea"></div>
+              <div class="linea"></div>
 
               <div id="post_desc">
                 <textarea autocomplete="off" name="texto" rows="5" cols="60"
