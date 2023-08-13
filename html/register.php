@@ -118,7 +118,7 @@ $authUrl = $client->createAuthUrl();
                             id="user-icon-4">
                     </label>
                 </div>
-                <button onclick="" id="boton" name="register" type="submit">
+                <button onclick="" id="botón" name="register" type="submit">
                     <h6>Registrarse</h6>
                 </button>
             </form>

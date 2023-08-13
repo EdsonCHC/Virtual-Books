@@ -31,7 +31,7 @@ if (isset($_SESSION['user'])) {
   <div id="log-links">
     <ul>
       <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
-          <button class="btnLogin" data-section="header" data-value="sesionIni"><span>Iniciar Sesión</span></button>
+          <button class="btnLogin" data-section="header" data-value="sesiónIni"><span>Iniciar Sesión</span></button>
         </a></li>
     </ul>
   </div>

@@ -186,6 +186,8 @@ main {
 }
 
 #content {
+  width: 80%;
+  height: auto;
   padding: 2rem 0 0 0;
 }
 
@@ -197,33 +199,26 @@ main {
   margin: 0 0 1.5rem 0;
 }
 
-.flex-books{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: auto;
-  height: 32rem;
+#books{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  width: 100%;
+  height: auto;
   margin-bottom: 3.5rem;
+}
+
+.flex-books{
+  width: 100%;
+  height: auto;
 }
 
 .flex-books img{
   width: 100%;
   height: auto;
   object-fit: cover;
-
 }
 
 #more{
   text-align: center;
   margin: 0 0 2rem 0;
-}
-
-/*ESTILOS FOOTER */
-
-footer{
-  width: 100%;
-  height: auto;
-  background-color: var(--secondary-orange);
-  text-align: center;
-  padding: 0.5rem;
 }

@@ -2,7 +2,7 @@
 
     "header":{
         "search":"<input type='search' id='searchInput' placeholder='Search a book' autocomplete='off'>",
-        "sesionIni": "Login"
+        "sesiónIni": "Login"
     },
 
     "index":{

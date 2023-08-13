@@ -32,7 +32,7 @@ $obj = new métodosUser();
     ?>
     <div id="content" >
       <h2 data-section="index" data-value="cont">Contenido</h2>
-      <div class="categoria">
+      <div class="categoría">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
@@ -53,13 +53,13 @@ $obj = new métodosUser();
           ?>
         </div>
       </div>
-      <div class="categoria">
+      <div class="categoría">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Ciencia'";
+          $sql = "SELECT id, img from resource where category = 'Ciencia' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -74,13 +74,13 @@ $obj = new métodosUser();
           ?>
         </div>
       </div>
-      <div class="categoria">
+      <div class="categoría">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="eco">Economía</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, img from resource where category = 'Economía'";
+          $sql = "SELECT id, img from resource where category = 'Economía' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -95,13 +95,13 @@ $obj = new métodosUser();
           ?>
         </div>
       </div>
-      <div class="categoria">
+      <div class="categoría">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
         <?php
-          $sql = "SELECT id, img from resource where category = 'Física'";
+          $sql = "SELECT id, img from resource where category = 'Física' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -115,13 +115,13 @@ $obj = new métodosUser();
           }
           ?>
         </div>
-        <div class="categoria">
+        <div class="categoría">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
         </a>
         <div class="grid-books">
         <?php
-          $sql = "SELECT id, img from resource where category = 'Historia'";
+          $sql = "SELECT id, img from resource where category = 'Historia' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
