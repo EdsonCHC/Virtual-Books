@@ -2,6 +2,7 @@
 require_once('../php/cone.php');
 require_once("../php/functions.php");
 require_once("../php/methods.php");
+
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
   $obj = new MétodosUser();
@@ -35,8 +36,6 @@ if (isset($_SESSION['user'])) {
         </a></li>
     </ul>
   </div>
-
-
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php">

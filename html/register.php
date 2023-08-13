@@ -3,6 +3,7 @@ require_once('../php/cone.php');
 require_once('../php/interface.php');
 require_once('../php/methods.php');
 require_once "../js/vendor/autoload.php";
+session_start();
 
 $client = new \Google\Client();
 $client->setAuthConfig('../js/credentials.json');
@@ -11,8 +12,16 @@ $client->setRedirectUri('http://localhost/Virtual-Books/html/account.php');
 // $client->addScope('lastName');
 $client->addScope('email');
 $client->addScope('profile');
-
 $authUrl = $client->createAuthUrl();
+
+
+if (isset($_SESSION['user'])){
+    if($_SESSION['user'][2] === '0'){
+        header("Location: ../html/index.php");
+    }else{
+        header("Location: ../html/index_admin.php");
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

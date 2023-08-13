@@ -1,11 +1,8 @@
 <?php
 session_start();
-
 require_once("../php/interface.php");
 require_once("../php/cone.php");
-require_once("../php/functions.php");
 require_once("../php/methods.php");
-require_once("../html/header.php");
 
 $id = $_GET['id'];
 $obj = new métodosUser();
@@ -70,7 +67,7 @@ $fetch->setFetchMode(PDO::FETCH_ASSOC);
 <body>
   <?php
   require_once("../html/header.php")
-    ?>
+  ?>
   <main>
     <?php
     require_once("../html/aside.php");
