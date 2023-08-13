@@ -15,8 +15,8 @@ try {
   } else {
     header("Location: ../html/error404.php");
   }
-}catch(PDOException $e){
-  die("Error ". $e->getMessage());
+} catch (PDOException $e) {
+  die("Error " . $e->getMessage());
 }
 
 //Comentarios
@@ -120,33 +120,41 @@ try {
       </div>
       <div id="content">
         <h3>Comentarios</h3>
-        <div id="second_container">
-          <div id="comments">
-            <?php
-            if ($datos->rowCount() > 0) {
-              foreach ($datos as $valoraciones) { ?>
+        <?php
+        if ($datos->rowCount() > 0) {
+          foreach ($datos as $valoraciones) { ?>
+            <div id="comments">
+              <div id="person">
                 <img src="<?php echo $valoraciones['img']; ?>" /></a>
-                <h6>
-                  <?php echo "Autor: " . $valoraciones['name']; ?>
-                </h6>
-                <a>
-                  <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
-                </a>
                 <p>
-                  <?php echo "Descripción: " . $valoraciones['description']; ?>
+                  <?php echo $valoraciones['name']; ?>
                 </p>
+              </div>
+              <div id="coment">
+                <p>
+                  <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
+                </p>
+                <div id="text">
+                  <a>
+                    <?php echo $valoraciones['description']; ?>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <?php
+          }
+        } else {
+          echo "<h6>Este Libro aun no tiene comentarios :c </h6>";
+        }
+        ?>
 
-                <?php
-              }
-            } else {
-              echo "<h6>Este Libro aun no tiene comentarios :c </h6>";
-            }
-            ?>
-          </div>
-        </div>
+
         <form method="POST" onsubmit="" class="<?php esconder(); ?>">
+
           <div id="general_container">
             <div id="first_container">
+            <div class="linea"></div>
+
               <div id="post_desc">
                 <textarea autocomplete="off" name="texto" rows="5" cols="60"
                   placeholder="¿De qué quieres hablar?"></textarea>
