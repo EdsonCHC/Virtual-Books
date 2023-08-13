@@ -16,16 +16,8 @@ if (isset($_SESSION['user'])) {
     <a href="http://localhost/Virtual-Books/html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
         id="logo" /></a>
   </div>
-  <form action="">
-    <label for="searchInput" id="labelInput">
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
-      </button>
-      <div data-section="header" data-value="search">
-        <input type="search" id="searchInput" placeholder="Buscar Un Libro" autocomplete="off">
-      </div>
-    </label>
-  </form>
+  
+
 
 
   <div id="log-links">

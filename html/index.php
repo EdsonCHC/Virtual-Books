@@ -30,8 +30,45 @@ $obj = new métodosUser();
     <?php
     require_once("../html/aside.php");
     ?>
-    <div id="content" >
+    <div id="content">
       <h2 data-section="index" data-value="cont">Contenido</h2>
+      <form action="" method="GET">
+        <label for="searchInput" id="labelInput">
+          <div data-section="header" data-value="search">
+            <input type="text" id="searchInput" name="search" placeholder="Buscar Un Libro">
+          </div>
+          <button type="submit" name="send">
+            <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
+          </button>
+        </label>
+      </form>
+      <?php
+      if (isset($_GET['send'])) {
+        if (!empty($_GET['search'])) {
+          $search = $_GET['search'];
+          $search = filter_var($search, FILTER_SANITIZE_STRING);
+
+          try {
+            $obj = new MétodosUser();
+            $result = $obj->showData($search);
+
+            if (!empty($result)) { 
+              echo "Resultados: ";
+              foreach ($result as $row) {
+                echo "Nombre: " . htmlspecialchars($row['name']) . "<br>";
+              }
+            } else {
+              echo "<p>No se encontraron resultados.</p>";
+            }
+          } catch (PDOException $e) {
+            echo sprintf("Error en la consulta: %s", $e->getMessage());
+          }
+        }
+      }
+
+
+      ?>
+
       <div class="categoria">
         <a href="" class="tag-link">
           <h3><a href="" class="link" data-section="index" data-value="lit">Literatura</a></h3>
@@ -47,7 +84,7 @@ $obj = new métodosUser();
               <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                 <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
               </a>
-            <?php
+              <?php
             }
           }
           ?>
@@ -68,7 +105,7 @@ $obj = new métodosUser();
               <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                 <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
               </a>
-            <?php
+              <?php
             }
           }
           ?>
@@ -89,7 +126,7 @@ $obj = new métodosUser();
               <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                 <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
               </a>
-            <?php
+              <?php
             }
           }
           ?>
@@ -100,7 +137,7 @@ $obj = new métodosUser();
           <h3><a href="" class="link" data-section="index" data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
-        <?php
+          <?php
           $sql = "SELECT id, img from resource where category = 'Física'";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
@@ -110,34 +147,34 @@ $obj = new métodosUser();
               <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                 <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
               </a>
-            <?php
+              <?php
             }
           }
           ?>
         </div>
         <div class="categoria">
-        <a href="" class="tag-link">
-          <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
-        </a>
-        <div class="grid-books">
-        <?php
-          $sql = "SELECT id, img from resource where category = 'Historia'";
-          $row = $obj->showData($sql);
-          if ($row->rowCount() > 0) {
-            $row->setFetchMode(PDO::FETCH_ASSOC);
-            while ($info = $row->fetch()) {
-              ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
-              </a>
+          <a href="" class="tag-link">
+            <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
+          </a>
+          <div class="grid-books">
             <?php
+            $sql = "SELECT id, img from resource where category = 'Historia'";
+            $row = $obj->showData($sql);
+            if ($row->rowCount() > 0) {
+              $row->setFetchMode(PDO::FETCH_ASSOC);
+              while ($info = $row->fetch()) {
+                ?>
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <img src="<?php echo $info["img"] ?>" alt="no funciona xd">
+                </a>
+                <?php
+              }
             }
-          }
-          ?>
+            ?>
+          </div>
         </div>
+        <h5 id="more"><a href="" class="link" data-section="index" data-value="mas">Mirar Más...</a></h5>
       </div>
-      <h5 id="more"><a href="" class="link" data-section="index" data-value="mas">Mirar Más...</a></h5>
-    </div>
   </main>
   <?php
   require_once("../html/footer.php");
