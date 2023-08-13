@@ -8,7 +8,7 @@
             </li>
             <li>
                 <i class="fa-solid fa-database"></i>
-                <a href="../html/catalog_filter.php" class="link" data-section="AsideA" data-value="cat">Catalogos</a>
+                <a href="../html/catalog_filter.php" class="link" data-section="AsideA" data-value="cat">Catálogos</a>
                 <span> ></span>
             </li>
             <li>

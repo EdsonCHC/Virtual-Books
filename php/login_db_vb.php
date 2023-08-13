@@ -18,6 +18,7 @@ if ($STH->rowCount() > 0) {
     $_SESSION['user'] = array();
     $_SESSION['user'][0] = $session['id'];
     $_SESSION['user'][1] = $session['name'];
+    $_SESSION['user'][2] = $session['rol'];
 
     $json = array(
         'name' => $session['name'],

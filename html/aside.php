@@ -1,6 +1,3 @@
-<?php
-include_once("../php/functions.php");
-?>
 <aside>
     <div id="home">
         <nav id="books-nav">

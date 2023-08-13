@@ -2,6 +2,7 @@
 require_once('../php/cone.php');
 require_once("../php/functions.php");
 require_once("../php/methods.php");
+
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
   $obj = new MétodosUser();
@@ -23,12 +24,10 @@ if (isset($_SESSION['user'])) {
   <div id="log-links">
     <ul>
       <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
-          <button class="btnLogin" data-section="header" data-value="sesionIni"><span>Iniciar Sesión</span></button>
+          <button class="btnLogin" data-section="header" data-value="sesiónIni"><span>Iniciar Sesión</span></button>
         </a></li>
     </ul>
   </div>
-
-
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
     <a href="../html/account.php">

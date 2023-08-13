@@ -3,6 +3,7 @@ require_once('../php/cone.php');
 require_once('../php/interface.php');
 require_once('../php/methods.php');
 require_once "../js/vendor/autoload.php";
+session_start();
 
 $client = new \Google\Client();
 $client->setAuthConfig('../js/credentials.json');
@@ -13,6 +14,14 @@ $client->addScope('email');
 // $client->addScope('profile');
 
 $authUrl = $client->createAuthUrl();
+
+if (isset($_SESSION['user'])){
+    if($_SESSION['user'][2] === '0'){
+        header("Location: ../html/index.php");
+    }else{
+        header("Location: ../html/index_admin.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,13 +31,11 @@ $authUrl = $client->createAuthUrl();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/login.css" />
-
-    <!-- Fonts and Boostrap-->
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
     <title>Iniciar Sesión</title>
 </head>
@@ -87,7 +94,7 @@ $authUrl = $client->createAuthUrl();
                 </div>
             </form>
         </div>
-        <div class="secundary_part">
+        <div class="secondary_part">
         </div>
     </div>
     <script src="https://accounts.google.com/gsi/client" async></script>

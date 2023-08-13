@@ -11,13 +11,11 @@ if (isset($_SESSION['admin'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/index_admin.css" />
-
-    <!-- Fonts and Boostrap-->
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
     <title>Inicio Admin</title>
 </head>
@@ -32,7 +30,7 @@ if (isset($_SESSION['admin'])){
             <div class="grid-content">
                 <div class="element e1">
                     <div class="flex-element">
-                        <h5>Recien agregados</h5>
+                        <h5>Recién agregados</h5>
                         <div class="btn-div">
                             <input class="btn" type="button" value="Agregar">
                             <input class="btn" type="button" value="Catalogo">
@@ -41,7 +39,7 @@ if (isset($_SESSION['admin'])){
                     <hr>
                 </div>
                 <div class="e2">
-                    <h5>Estadistica de Usuarios</h5>
+                    <h5>Estadística de Usuarios</h5>
                 </div>
                 <div class="element e3">
                     <div class="flex-element">

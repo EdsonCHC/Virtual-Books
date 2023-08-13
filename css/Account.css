@@ -54,6 +54,7 @@ label {
   font-size: 15px;
   background: var(--main-white);
   color: var(--main-black);
+  cursor: auto;
 }
 
 .dataImg {

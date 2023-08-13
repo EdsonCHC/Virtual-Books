@@ -10,7 +10,7 @@ Create table IF NOT EXISTS `user`(
     password varchar(50) not null,
     img varchar(100) not null,
     rol CHAR(1) Not NULL default "0",
-    dateReg date NOT NULL
+    dateReg date NOT NULL default "2023-01-01"
 );
 
 CREATE TABLE IF NOT EXISTS `resource`(

@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +8,11 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/myBooks.css" />
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
     <title>Mis Libros</title>
 </head>
@@ -29,9 +27,8 @@ session_start();
         ?>
         <div id="content">
             <h2 data-section="MyBooks" data-value="book">Mis Libros</h2>
-            <div class="categoría">
-                <div class="flex-books" id="book-container">
-                </div>
+            <div id="books">
+                <div class="flex-books" id="book-container"></div>
             </div>
         </div>
     </main>

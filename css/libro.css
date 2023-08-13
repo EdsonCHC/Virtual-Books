@@ -17,7 +17,7 @@ main {
 }
 
 #imgContainer {
-  width: 19%;
+  width: 25rem;
   height: 100%;
   overflow: hidden;
 }
