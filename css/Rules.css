@@ -402,9 +402,12 @@ footer {
 
 #trad{
   display: flex;
-  gap: 0.8rem;
   cursor: pointer;
   width: auto;
+}
+
+#trad p{
+  margin: 0 0.5rem 0 0;
 }
 
 #flags{

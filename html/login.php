@@ -55,13 +55,13 @@ if (isset($_SESSION['user'])){
                             <h1>Virtual Books</h1>
                         </a>
                     </div>
-                    <div class="subtittle_primary_part">
+                    <div class="subtitle_primary_part">
                         <h3>Inicia Sesión</h3>
                     </div>
                     <div class="form_primary_part">
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4><label for="email">Correo Electronico</label></h4>
+                                <h4><label for="email">Correo Electrónico</label></h4>
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com"
                                 autocomplete="off">
@@ -69,7 +69,7 @@ if (isset($_SESSION['user'])){
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4> <label  data-section="push" data-value="comit" for="email">Contraseña</label></h4>
+                                <h4> <label  data-section="push" data-value="footer" for="email">Contraseña</label></h4>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Contraseña"
                                 autocomplete="off">
@@ -93,6 +93,19 @@ if (isset($_SESSION['user'])){
                     </div>
                 </div>
             </form>
+            <div id="trad" onclick="toggleTrad()">
+            <i class="fa-solid fa-globe"></i>
+            <p data-section="asideU" data-value="Idiom">Idioma</p>
+
+            <div id="flags" class="trad ">
+                <div class="flag-cont" data-language="en">
+                    <img src="../src/BanderaIngles.png" alt="en-flag">
+                </div>
+                <div class="flag-cont" data-language="es">
+                    <img src="../src/BanderaEspañol.jpg" alt="es-flag">
+                </div>
+            </div>
+        </div>
         </div>
         <div class="secondary_part">
         </div>
@@ -102,6 +115,8 @@ if (isset($_SESSION['user'])){
     <script src="../js/alertify.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/log.js"></script>
+    <script src="../js/trad.js"></script>
+    <script src="../js/toggle.js"></script>
 </body>
 
 </html>

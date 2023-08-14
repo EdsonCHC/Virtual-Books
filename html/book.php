@@ -107,14 +107,10 @@ try {
           </div>
           <div id="buttons">
             <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
-                class="fa-sharp fa-solid fa-book-open-reader"></i> Leer</a>
-<<<<<<< HEAD
-            <div id="add-fav" class="book-link">
-              <i class="fa-solid fa-plus"></i> Añadir a Favorito
-=======
+                class="fa-sharp fa-solid fa-book-open-reader"></i> Leer
+            </a>
             <div id="add-fav" class="book-link <?php esconder(); ?>">
               <i class="fa-solid fa-plus"></i> Añadir ah Favorito
->>>>>>> 0407b574d6de410b53ee512f08b76e0bc776383f
               <input type="hidden" value="<?php echo $id ?>" id="input-id">
             </div>
             <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download><i

@@ -35,7 +35,7 @@ a{
     text-decoration: none;
 }
 
-.subtittle_primary_part {
+.subtitle_primary_part {
   padding-top: 5%;
 }
 
@@ -129,6 +129,12 @@ a{
   height: 200px;
   left: 90%;
   transform: translate(-40%, 250%);
+}
+
+#trad{
+  position: absolute !important;
+  top: 90% !important;
+  left: 5% !important;
 }
 
 /* Validación*/

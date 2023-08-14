@@ -283,3 +283,9 @@ input[type="file"] {
   display: none;
 }
 
+#trad{
+  position: absolute !important;
+  top: 90% !important;
+  left: 5% !important;
+}
+

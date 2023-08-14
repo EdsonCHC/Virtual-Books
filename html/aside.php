@@ -5,8 +5,6 @@
                 <a href="../html/index.php" class="link" data-section="asideU" data-value="IUser">Inicio</a>
                 <span> ></span>
             </li>
-
-        
             <li>
                 <i class="fa-solid fa-book-open-reader"></i>
                 <a href="../html/myBooks.php" class="link" data-section="asideU" data-value="ALUser">Area de lectura</a>
@@ -15,7 +13,7 @@
         </nav>
     </div>
     <div id="settings">
-        <div id="trad" onclick="toggleTrad()" >
+        <div id="trad" onclick="toggleTrad()">
             <i class="fa-solid fa-globe"></i>
             <p data-section="asideU" data-value="Idiom">Idioma</p>
 
@@ -28,8 +26,12 @@
                 </div>
             </div>
         </div>
-        <a href="" class="link" data-section="asideU" data-value="Hp"><i class="fa-sharp fa-solid fa-circle-info"></i> Ayuda</a>
-        <li class="<?php esconder(); ?>"><a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> <p data-section="asideU" data-value="closes">Cerrar Sesión</p></a></li>
+        <a href="" class="link" data-section="asideU" data-value="Hp"><i class="fa-sharp fa-solid fa-circle-info"></i>
+            Ayuda</a>
+        <li class="<?php esconder(); ?>"><a href="../php/log_out.php" class="link"><i
+                    class="fa-solid fa-right-from-bracket"></i>
+                <p data-section="asideU" data-value="closes">Cerrar Sesión</p>
+            </a></li>
     </div>
 </aside>
 

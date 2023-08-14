@@ -15,10 +15,10 @@ $client->addScope('profile');
 $authUrl = $client->createAuthUrl();
 
 
-if (isset($_SESSION['user'])){
-    if($_SESSION['user'][2] === '0'){
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user'][2] === '0') {
         header("Location: ../html/index.php");
-    }else{
+    } else {
         header("Location: ../html/index_admin.php");
     }
 }
@@ -32,8 +32,8 @@ if (isset($_SESSION['user'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
+    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
     <title>Registrarse</title>
 </head>
@@ -53,13 +53,12 @@ if (isset($_SESSION['user'])){
                     <label for="">
                         <h6>Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off"
-                        required>
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off" required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6>Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="lastName" 
+                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="lastName"
                         autocomplete="off">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
@@ -112,17 +111,20 @@ if (isset($_SESSION['user'])){
                         <div class="line"></div>
                     </div>
                     <h5 class="primo">Selecciona un avatar predeterminado</h5>
-                    <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-1.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="user-man-1.png"
-                            id="user-icon-1" checked></label>
-                    <label for="user-icon-2" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-1.png" alt="">
+                    <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-1.png"
+                            alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="user-man-1.png" id="user-icon-1"
+                            checked></label>
+                    <label for="user-icon-2" class="l-icon"><img class="img_chiquitas"
+                            src="../src/user/user-woman-1.png" alt="">
                         <input type="radio" name="user-pic" class="icons-user" value="/user-woman-1.png"
                             id="user-icon-2"></label>
-                    <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-2.png" alt="">
-                        <input type="radio" name="user-pic" class="icons-user" value="user-man-2.png"
-                            id="user-icon-3">
+                    <label for="user-icon-3" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-2.png"
+                            alt="">
+                        <input type="radio" name="user-pic" class="icons-user" value="user-man-2.png" id="user-icon-3">
                     </label>
-                    <label for="user-icon-4" class="l-icon"><img class="img_chiquitas" src="../src/user/user-woman-2.png" alt="">
+                    <label for="user-icon-4" class="l-icon"><img class="img_chiquitas"
+                            src="../src/user/user-woman-2.png" alt="">
                         <input type="radio" name="user-pic" class="icons-user" value="user-woman-2.png"
                             id="user-icon-4">
                     </label>
@@ -134,10 +136,25 @@ if (isset($_SESSION['user'])){
         </div>
         <img id="Ovalo_2" src="../src/login.png">
     </div>
+    <div id="trad" onclick="toggleTrad()">
+        <i class="fa-solid fa-globe"></i>
+        <p data-section="asideU" data-value="Idiom">Idioma</p>
+
+        <div id="flags" class="trad ">
+            <div class="flag-cont" data-language="en">
+                <img src="../src/BanderaIngles.png" alt="en-flag">
+            </div>
+            <div class="flag-cont" data-language="es">
+                <img src="../src/BanderaEspañol.jpg" alt="es-flag">
+            </div>
+        </div>
+    </div>
 </body>
 <script src="../js/alertify.js"></script>
 <script src="../js/j_query.js"></script>
 <script src="../js/preview.js"></script>
 <script src="../js/reg.js"></script>
+<script src="../js/toggle.js"></script>
+<script src="../js/trad.js"></script>
 <script src="../js/valid/valRegister.js"></script>
 </html>
