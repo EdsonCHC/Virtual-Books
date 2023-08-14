@@ -16,7 +16,7 @@ if (isset($_SESSION['user'])) {
 ?>
 <header>
   <div>
-    <a href="http://localhost/Virtual-Books/html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
+    <a href="../html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
         id="logo" /></a>
   </div>
 
@@ -39,31 +39,31 @@ if (isset($_SESSION['user'])) {
         <h4>
           Notificaciones
         </h4>
-        <?php
-        //$id = $_GET['id'];
-        $obj = new MétodosUser();
-        $sql = "SELECT * FROM resource";
-        #La idea es asi
-        //$sql = "SELECT * FROM resource WHERE id = $id";
-        $row = $obj->showData($sql);
-        if ($row->rowCount() > 0) {
-          $row->setFetchMode(PDO::FETCH_ASSOC);
-          while ($info = $row->fetch()) {
-            ?>
-            <nav id="notis-nav">
-              <li><a href="../html/book.php?id=<?php echo $info["id"] ?>" class="notisLink">
+        <nav id="notis-nav">
+          <?php
+          //$id = $_GET['id'];
+          $obj = new MétodosUser();
+          $sql = "SELECT * FROM resource";
+          #La idea es asi
+          //$sql = "SELECT * FROM resource WHERE id = $id";
+          $row = $obj->showData($sql);
+          if ($row->rowCount() > 0) {
+            while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
+              ?>
+
+              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
                   <h5>Se ha publicado:
                     <p>
-                      <?php echo $info['name']; ?>
+                      <?php echo $not['name']; ?>
                     </p>
                   </h5>
                 </a></li>
-            </nav>
-            <?php
-          }
-        }
-        ?>
 
+              <?php
+            }
+          }
+          ?>
+        </nav>
       </div>
     </div>
   </div>

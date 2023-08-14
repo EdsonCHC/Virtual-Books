@@ -261,14 +261,17 @@ li {
 }
 
 #notis-nav {
+  width: 100%;
   list-style: none;
 }
 
-#notis-nav li .notisLink{
-  width: 100px;
+#notis-nav li{
+  width: 100%;
   height: auto;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  background-color: #ddd;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 

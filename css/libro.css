@@ -2,10 +2,11 @@
 
 main {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 #book {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 3.5rem;
@@ -34,8 +35,7 @@ main {
   max-width: 80rem;
 }
 
-#author-info,
-#description {
+#author-info, #description {
   word-wrap: break-word;
   width: 75%;
   white-space: normal;
@@ -93,6 +93,7 @@ main {
   height: auto;
   object-fit: cover;
 }
+
 #fcc-btn {
   background-color: var(--main-red);
   color: white;
@@ -106,8 +107,6 @@ main {
 #fcc-btn:hover {
   background-color: #b32b2f;
 }
-
-
 
 #post_desc textarea {
   padding: 1.5rem;
@@ -132,7 +131,8 @@ main {
   border-radius: 20px;
   font-size: 15px;
 }
-#details_primary_part select{
+
+#details_primary_part select {
   margin: 0.5rem;
   height: 45px;
   width: 40%;
@@ -141,69 +141,75 @@ main {
   border: 1px solid #ccc;
   padding-left: 15px;
 }
+
 /*comentario*/
+
 #content {
-  margin: 5rem 0 5rem  0;
-  padding: 1.5rem  ;
-  width: 85%;
-  background-color:var( --main-white)
-}  
-#comments{
-  display: flex;
-  flex-direction: row;
-  background-color:#d1d1d1 ;
-  border-radius: 30px;
-  width: 97%;
-  padding:1.5%;
-  margin: 2%;
+  width: 50%;
+  margin: 5rem 0 5rem 0;
+  padding: 1.5rem;
+  background-color: var(--main-white);
+  border-radius: 0.8rem;
 }
-#person{
+
+#comments {
+  width: 50%;
   display: flex;
-  width: 25%;
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  background-color: #d1d1d1;
+}
+
+#person {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
-#person img{
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    padding: 0.3rem;
-    border-radius: 50%;
-}
-#person p{
-    font-size: 2.2rem;
-    color: var(--main-black);
+#person img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--main-white);
 }
 
+#person p {
+  font-size: 1.8rem;
+  color: var(--main-black);
+}
 
-#coment{
+#comment {
   display: flex;
-  width: 75%;
+  flex: 2;
   flex-direction: column;
-  align-itemsalign-items: start;
   justify-content: center;
- 
 }
-#coment p{
+
+
+#comment p{
+  font-size: 1.8rem;
   font-weight: 600;
 }
-#coment a{
-  font-size: 1.8rem;
 
-
+#comment p:nth-child(2) {
+  font-size: 1rem;
 }
-#text{
+
+#text {
   word-wrap: break-word;
   width: 85%;
   white-space: normal;
 }
+
 .linea {
-  width: 96%; 
-  height: 1px; 
-  background-color: #333; 
+  width: 96%;
+  height: 1px;
+  background-color: #333;
   align-items: center;
   margin: 2rem;
 }
