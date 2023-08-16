@@ -36,7 +36,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="" class="link" data-section="index" data-value="lit">Literatura</a></h3>
+          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
         <div class="contentBuscador">
           <label for="searchInput" id="labelInput">

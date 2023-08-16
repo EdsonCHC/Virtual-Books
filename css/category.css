@@ -1,0 +1,34 @@
+@import url(../css/Rules.css);
+
+main {
+  display: flex;
+  gap: 3rem;
+}
+
+#container {
+  padding: 2rem 0 0 0;
+  width: 70%;
+}
+
+#container h1{
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+
+#content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+#content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
