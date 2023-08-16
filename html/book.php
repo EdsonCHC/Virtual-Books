@@ -180,7 +180,7 @@ try {
       <div id="similar-books">
         <?php
         $cat = $info['category'];
-        $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id'";
+        $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id' LIMIT 4";
         $row2 = $obj->showData($sql);
         if ($row2->rowCount() > 0) {
           while ($info = $row2->fetch(PDO::FETCH_ASSOC)) {
