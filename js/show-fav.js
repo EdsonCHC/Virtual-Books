@@ -6,7 +6,7 @@ $(function () {
       let data = JSON.parse(response);
       let plantilla = "";
       data.forEach((datas) => {
-        plantilla = `
+        plantilla += `
             <a href="../html/book.php?id=${datas.id}">
                 <img src="${datas.img}" alt="book-image">
             </a>

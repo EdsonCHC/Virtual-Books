@@ -40,3 +40,15 @@ CREATE TABLE IF NOT EXISTS `shelf`(
     constraint foreign key (id_r) references `resource`(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+-- para la api de carga XD
+
+DELIMITER //
+CREATE PROCEDURE SeleccionarSiguientesDatos(IN valor_anterior INT, IN categoría VARCHAR(50))
+BEGIN
+    SELECT * FROM resource
+    WHERE id > valor_anterior AND category = categoría
+    ORDER BY id ASC
+    LIMIT 5;
+END //
+DELIMITER ;
+
