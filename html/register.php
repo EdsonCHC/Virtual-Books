@@ -30,55 +30,54 @@ if (isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-section="register" data-value="title">Registrarse</title>
     <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/alertify.css">
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-
-    <title>Registrarse</title>
 </head>
 
 <body>
     <div id="mother-ctn">
         <div id="title-ctn">
             <a href="../html/index.php">
-                <h1 data-section="title" data-value="VB">Virtual Books</h1>
+                <h1>Virtual Books</h1>
             </a>
-            <H4>Registro</H4>
+            <H4 data-section="register" data-value="title">Registro</H4>
         </div>
         <img id="Ovalo_1" src="../src/login.png">
         <div id="form-ctn">
             <form id="form" enctype="multipart/form-data">
                 <div id="text-ctn">
                     <label for="">
-                        <h6>Nombres</h6>
+                        <h6 data-section="register" data-value="name">Nombres</h6>
                     </label>
                     <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off" required>
                     <p class="warnings" id="warnings"></p>
                     <label for="">
-                        <h6>Apellidos</h6>
+                        <h6 data-section="register" data-value="lastname">Apellidos</h6>
                     </label>
                     <input type="text" name="lastName" placeholder="Castro Lopez" required id="lastName"
                         autocomplete="off">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
-                        <h6>Correo Electrónico</h6>
+                        <h6 data-section="login" data-value="mail">Correo Electrónico</h6>
                     </label>
                     <input type="email" name="email" placeholder="ejemplo@gmail.com" id="email" autocomplete="off">
                     <p class="warnings" id="warnings3"></p>
                     <label for="">
-                        <h6>Contraseña</h6>
+                        <h6 data-section="login" data-value="pass">Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" name="password" placeholder="Contraseña" id="pass" autocomplete="off">
+                    <input type="password" name="password" placeholder="*******" id="pass" autocomplete="off">
                     <div id="eye">
                         <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                     </div>
                     <label for="">
-                        <h6>Confirmar Contraseña</h6>
+                        <h6 data-section="register" data-value="pass-con">Confirmar Contraseña</h6>
                         <p class="warnings" id="warnings"></p>
                     </label>
-                    <input type="password" id="passConfirm" placeholder="Confirmar Contraseña" autocomplete="off">
+                    <input type="password" id="passConfirm" placeholder="*******" autocomplete="off">
 
                     <div id="aparte">
                         <!-- Registro con google-->
@@ -91,7 +90,7 @@ if (isset($_SESSION['user'])) {
                             </div>
                         </a>-->
                     </div>
-                    <div class="login_part">
+                    <div class="login_part" data-section="register" data-value="log-acc">
                         <p>¿Ya tienes cuenta? <a href="../html/login.php"> !Inicia Sesión¡</a></p>
                     </div>
                 </div>
@@ -99,7 +98,7 @@ if (isset($_SESSION['user'])) {
                     <h5>Foto de Perfil</h5>
                     <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image" id="img-preview">
                     </div>
-                    <label for="img_i" class="Upload">Subir Imagen
+                    <label for="img_i" class="Upload">
                         <i class="fa-solid fa-cloud-arrow-up white_i"></i>
                         <input type="file" id="img_i" accept=".jpg,.png" name="file"
                             onchange="vista_preliminar(event), validar()">
@@ -110,7 +109,8 @@ if (isset($_SESSION['user'])) {
                         <p>O</p>
                         <div class="line"></div>
                     </div>
-                    <h5 class="primo">Selecciona un avatar predeterminado</h5>
+                    <h5 class="primo" data-section="register" data-value="avatar">Selecciona un avatar predeterminado
+                    </h5>
                     <label for="user-icon-1" class="l-icon"><img class="img_chiquitas" src="../src/user/user-man-1.png"
                             alt="">
                         <input type="radio" name="user-pic" class="icons-user" value="user-man-1.png" id="user-icon-1"
@@ -157,4 +157,5 @@ if (isset($_SESSION['user'])) {
 <script src="../js/toggle.js"></script>
 <script src="../js/trad.js"></script>
 <script src="../js/valid/valRegister.js"></script>
+
 </html>

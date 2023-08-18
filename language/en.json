@@ -1,11 +1,25 @@
 {
 
     "header":{
-        "search":"<input type='search' id='searchInput' placeholder='Search a book' autocomplete='off'>",
         "sesiónIni": "Login",
-        "not":"Notifications",
-        "publi":"A new book has been published in the sports section"
+        "not":"Notifications"
     },
+
+    "login":{
+        "title" : "Login",
+        "mail" : "Email",
+        "pass" : "Password",
+        "reg-acc" : "<p>Don't have an account? <a href='../html/register.php'> !Sign up¡</a></p>"
+    },
+
+    "register" : {
+        "title" : "SignUp",
+        "name" : "Name",
+        "lastname" : "Last Name",
+        "pass-con" : "Confirm Password",
+        "avatar" : "Select a default avatar",
+        "log-acc" : " <p >¿Already have an account?? <a href='../html/login.php'> !LogIn¡</a></p>"
+        },
 
     "index":{
         "cont": "Content",
@@ -14,7 +28,6 @@
         "eco": "Economy",
         "fis": "Physical",
         "histo": "History", 
-
         "mas": "See More..."
     },
     
@@ -67,7 +80,7 @@
         "catalog":"Catalog /Catalog item",
         "articulos":"Items",
         "administre":"Manage your library's catalogs here.", 
-        "titulos":"Title to search",
+        "titulos":"Search for a resource",
         "autors":"Author to search",
         "tipo":"Type",
         "revista":"Academic magazine",
@@ -100,6 +113,10 @@
         "estad":"User Statistics",
         "coment":"Comments",
         "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
-    
+    },
+
+    "error": {
+        "sorry": "Sorry, the page you are looking for was not found.",
+        "back": " Back to home <i class='fa-sharp fa-solid fa-house white_i'></i>"
     }
 }

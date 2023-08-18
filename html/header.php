@@ -40,14 +40,6 @@ if (isset($_SESSION['user'])) {
           Notificaciones
         </h4>
         <nav id="notis-nav">
-<<<<<<< HEAD
-          <li><a href="" class="link">
-              <h5 data-section="header" data-value="publi">Se ha publicado un nuevo libro en la sección deportes</h5>
-            </a></li>
-          <li><a href="" class="link">
-              <h5>Lorem.</h5>
-            </a></li>
-=======
           <?php
           //$id = $_GET['id'];
           $obj = new MétodosUser();
@@ -71,7 +63,6 @@ if (isset($_SESSION['user'])) {
             }
           }
           ?>
->>>>>>> 0407b574d6de410b53ee512f08b76e0bc776383f
         </nav>
       </div>
     </div>

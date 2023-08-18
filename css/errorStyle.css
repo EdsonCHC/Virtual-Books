@@ -29,6 +29,7 @@ body {
 .ctn h4 {
   margin-top: 50px;
 }
+
 .ctn button {
   position: relative;
   background-color: #800404;
@@ -63,4 +64,10 @@ body {
   width: 500px;
   opacity: 0.5;
   z-index: -20;
+}
+
+#trad {
+  position: absolute !important;
+  top: 90% !important;
+  left: 5% !important;
 }

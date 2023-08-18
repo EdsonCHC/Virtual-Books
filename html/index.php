@@ -115,10 +115,12 @@ $obj = new métodosUser();
               ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <p>
-                    <?php echo $info["name"]; ?>
-                  </p>
-                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  <div class="book-container">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                    <p>
+                      <?php echo $info["name"]; ?>
+                    </p>
+                  </div>
                 </a>
               </li>
               <?php
@@ -141,10 +143,12 @@ $obj = new métodosUser();
               ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <p>
-                    <?php echo $info["name"]; ?>
-                  </p>
-                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                <div class="book-container">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                    <p>
+                      <?php echo $info["name"]; ?>
+                    </p>
+                  </div>
                 </a>
               </li>
               <?php
@@ -166,10 +170,12 @@ $obj = new métodosUser();
                 ?>
                 <li class="resourse">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <div class="book-container">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                     <p>
                       <?php echo $info["name"]; ?>
                     </p>
-                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  </div>
                   </a>
                 </li>
                 <?php
