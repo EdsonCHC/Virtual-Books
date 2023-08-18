@@ -3,6 +3,7 @@ require_once('../php/cone.php');
 require_once("../php/interface.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
+require_once("../php/buscador.php");
 
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
@@ -16,11 +17,25 @@ if (isset($_SESSION['user'])) {
 ?>
 <header>
   <div>
-    <a href="../html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo"
-        id="logo" /></a>
+    <a href="../html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo" id="logo" /></a>
   </div>
 
-
+  <div class="content_description_search">
+    <form id="search_form">
+      <div class="content_items">
+        <div>
+          <label class="searchTitle" data-section="catalogo" data-value="titulos">
+            <input type="text" name="searchTitle" class="content_items_search" placeholder="Buscar">
+          </label>
+        </div>
+        <div>
+          <table id="search_results">
+            <!-- Aca van los resultados -->
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
   <div id="log-links">
@@ -36,7 +51,7 @@ if (isset($_SESSION['user'])) {
       <img src="<?php echo $img['img']; ?>" alt="user-icon" /></a>
     <div id="notisMenu" class="notis">
       <div id="notis-info">
-        <h4 data-section="header" data-value="not" >
+        <h4 data-section="header" data-value="not">
           Notificaciones
         </h4>
         <nav id="notis-nav">
@@ -49,7 +64,7 @@ if (isset($_SESSION['user'])) {
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
-              ?>
+          ?>
 
               <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
                   <h5>Se ha publicado:
@@ -59,7 +74,7 @@ if (isset($_SESSION['user'])) {
                   </h5>
                 </a></li>
 
-              <?php
+          <?php
             }
           }
           ?>
@@ -68,3 +83,4 @@ if (isset($_SESSION['user'])) {
     </div>
   </div>
 </header>
+<script src="../js/buscador.js"></script>
