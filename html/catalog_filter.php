@@ -1,8 +1,3 @@
-<?php
-require_once("../php/interface.php");
-require_once("../php/cone.php");
-require_once("../php/methods.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +5,11 @@ require_once("../php/methods.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/catalogfilter.css" />
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/alertify.css">
     <script src="../js/j_query.js"></Script>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-
     <title>Admin Catálogo</title>
 </head>
 
@@ -28,10 +21,11 @@ require_once("../php/methods.php");
         <div id="content">
 
             <h4 data-section="catalogo" data-value="Bienvenido">Bienvenido</h4>
+            <div class="content_tittle">
+                <h6 data-section="catalogo" data-value="catalog">Catálogos/Artículos de catálogo</h6>
+            </div>
             <div class="content_table">
-                <div class="content_tittle">
-                    <h6 data-section="catalogo" data-value="catalog">Catálogos/Artículos de catálogo</h6>
-                </div>
+
                 <div class="content_description">
                     <div class="content_description_text">
                         <h6 data-section="catalogo" data-value="articulos">
@@ -40,56 +34,32 @@ require_once("../php/methods.php");
                         <p data-section="catalogo" data-value="administre">
                             Administre los catálogos de su biblioteca aquí.
                         </p>
-                    </div>
-                    <div class="content_description_search">
-                        <form action="catalog_filter.php" method="post">
-                            <div class="content_items">
-                                <div>
-                                    <label class="searchTitle" data-section="catalogo" data-value="titulos">Titulo a buscar
-                                        <input type="text" name="searchTitle" class="content_items_search">
-                                    </label>
-                                    <label class="searchTitle" data-section="catalogo" data-value="autors">Autor a buscar
-                                        <input type="text" name="searchAutor" class="content_items_search">
-                                    </label>
-                                </div>
-                                <div class="content_items_slt">
+                        <div class="content_description_search">
+                            <form id="search_form">
+                                <div class="content_items">
                                     <div>
-                                        <label class="searchTitleSlt" data-section="catalogo" data-value="tipo">Tipo
-                                            <select name="menu" class="content_items_menu">
-                                                <option value="" selected disabled data-section="catalogo" data-value="tipo">Tipo</option>
-                                                <option value="Revista" data-section="catalogo" data-value="revista">Revista Académica</option>
-                                                <option value="Libro" data-section="catalogo" data-value="libro">Libro</option>
-                                                <option value="Tesis" data-section="catalogo" data-value="tesis">Tesis</option>
-                                            </select>
+                                        <label class="searchTitle" data-section="catalogo" data-value="titulos">
+                                            Buscar un recurso
+                                            <input type="text" name="searchTitle" class="content_items_search">
                                         </label>
                                     </div>
                                     <div>
-                                        <label class="searchTitleSlt" data-section="catalogo" data-value="cate">Categoría
-                                            <select name="menu" class="content_items_menu">
-                                                <option selected disabled data-section="catalogo" data-value="cate">Categoría</option>
-                                                <option>Id</option>
-                                                <option data-section="catalogo" data-value="titulo">Titulo</option>
-                                                <option data-section="catalogo" data-value="tipo">Tipo</option>
-                                                <option data-section="catalogo" data-value="autor">Autor</option>
-                                                <option data-section="catalogo" data-value="editor">Editor</option>
-                                            </select>
-                                        </label>
+                                        <table id="search_results">
+                                            <!-- Aca van los resultados -->
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="btnSearch">
-                                    <button type="submit" class="content_items_button_search"
-                                        name="buscar" data-section="catalogo" data-value="buscar">Buscar</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
+
                 </div>
                 <div class="contentArticle">
                     <div class="flex-element">
                         <button class="btn" id="oP" data-section="catalogo" data-value="añadir">Añadir</button>
                     </div>
-                    <div class="table">
-                        <table>
+                    <div class="table" id="table">
+                        <table id="table_content">
                             <tr>
                                 <th>ID</th>
                                 <th data-section="catalogo" data-value="titulo">Titulo </th>
@@ -98,47 +68,6 @@ require_once("../php/methods.php");
                                 <th data-section="catalogo" data-value="cate">Categoría</th>
                                 <th data-section="catalogo" data-value="acciones">Acciones </th>
                             </tr>
-                            <?php
-                            $obj = new métodosAdmin();
-                            $sql = "SELECT id, name, author, type, category FROM resource";
-                            $row = $obj->showData($sql);
-                            if ($row->rowCount() > 0) {
-                                $row->setFetchMode(PDO::FETCH_ASSOC);
-                                while ($info = $row->fetch()) {
-                                    ?>
-                                    <tr>
-                                        <td>
-                                            <?php echo $info['id'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $info['name'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $info['type'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $info['author'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $info['category'] ?>
-                                        </td>
-                                        <td>
-                                            <div class="flex-element">
-                                                <div class="actions">
-                                                    <button><i class="fa-solid fa-eye"></i></button>
-                                                </div>
-                                                <div class="actions">
-                                                    <button><i class="fa-solid fa-book"></i></button>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
-                            } else {
-                                echo "<td><h4>No hay datos</h4></td>";
-                            }
-                            ?>
                         </table>
                     </div>
                 </div>
@@ -157,9 +86,10 @@ require_once("../php/methods.php");
                     <input type="text" id="autor" class="inputs" name="autor" autocomplete="off">
                 </div>
                 <div class="content_form">
-                    <label for="tipo" class="form_text" data-section="catalogo" data-value="tipoR">Tipo de recurso</label>
+                    <label for="tipo" class="form_text" data-section="catalogo" data-value="tipoR">Tipo de
+                        recurso</label>
                     <select id="tipo" class="recurso" name="tipo">
-                        <option value="" selected disabled  data-section="catalogo" data-value="tipo">Tipo</option>
+                        <option value="" selected disabled data-section="catalogo" data-value="tipo">Tipo</option>
                         <option value="Revista" data-section="catalogo" data-value="revista">Revista Académica</option>
                         <option value="Libro" data-section="catalogo" data-value="libro">Libro</option>
                         <option value="Tesis" data-section="catalogo" data-value="tesis">Tesis</option>
@@ -177,7 +107,8 @@ require_once("../php/methods.php");
                     </select>
                 </div>
                 <div class="content_form">
-                    <label for="descripción" class="form_text" data-section="catalogo" data-value="desc">Descripción</label>
+                    <label for="descripción" class="form_text" data-section="catalogo"
+                        data-value="desc">Descripción</label>
                     <textarea id="descripción" class="descripción" name="desc"></textarea>
                 </div>
                 <div class="content_form">
@@ -194,7 +125,8 @@ require_once("../php/methods.php");
                 </div>
                 <div class="btnPart">
                     <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>
-                    <button type="button" id="cancel-btn" data-section="catalogo" data-value="cancelar">Cancelar</button>
+                    <button type="button" id="cancel-btn" data-section="catalogo"
+                        data-value="cancelar">Cancelar</button>
                 </div>
 
             </form>
@@ -244,7 +176,8 @@ require_once("../php/methods.php");
         })
     </script>
     <script src="../js/preview.js"></Script>
-
+    <script src="../js/j_query.js"></Script>
+    <script src="../js/show-res.js"></script>
 </body>
 
 </html>

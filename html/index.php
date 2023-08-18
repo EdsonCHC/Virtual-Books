@@ -46,7 +46,8 @@ $obj = new métodosUser();
       </form>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a></h3>
+          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
+              data-value="lit">Literatura</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -56,8 +57,15 @@ $obj = new métodosUser();
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <li class="resource" id="resource">
-                
+              <li class="resourse">
+                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <div class="book-container">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                    <p>
+                      <?php echo $info["name"]; ?>
+                    </p>
+                  </div>
+                </a>
               </li>
               <?php
             }
@@ -79,10 +87,12 @@ $obj = new métodosUser();
               ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <p>
-                    <?php echo $info["name"]; ?>
-                  </p>
-                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  <div class="book-container">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                    <p>
+                      <?php echo $info["name"]; ?>
+                    </p>
+                  </div>
                 </a>
               </li>
               <?php

@@ -10,10 +10,10 @@ $(function () {
   window.addEventListener("scroll", () => {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
     if (!isLoading && scrollTop + clientHeight > scrollHeight - 10) {
-      isLoading = true; console.log(isLoading);
+      isLoading = true; 
       setTimeout(() => {
         newData();
-        isLoading = false; console.log(isLoading);
+        isLoading = false;
       }, 1000);
     }
   });
@@ -25,6 +25,7 @@ $(function () {
     }
 
     $.post("../php/scroll-api.php", post_data, async (response) => {
+      console.log(response);
       let data = await JSON.parse(response);
       let plantilla = "";
       data.forEach((book) => {

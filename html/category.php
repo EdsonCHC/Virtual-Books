@@ -2,13 +2,12 @@
 extract($_GET);
 if(isset($category)){
     $cat = strtolower($category);
-    if($cat != 'literatura' && $cat != 'ciencia'/*mas condiciones*/){
+    if($cat != 'literatura' && $cat != 'ciencia' && $cat != 'física' && $cat != 'historia' && $cat != 'economía'){
         header('Location: ../html/error404.php');
     }
 }
    
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
