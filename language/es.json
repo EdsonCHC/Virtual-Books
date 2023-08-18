@@ -1,107 +1,109 @@
 {
-
-    "header":{
-        "search":"<input type='search' id='searchInput' placeholder='Buscar un libro' autocomplete='off'>",
+    "header": {
         "sesiónIni": "Iniciar Sesión",
-        "not":"Notificaciones",
-        "publi":"Se ha publicado un nuevo libro en la sección deportes"
+        "not": "Notificaciones"
     },
-
-    "index":{
+    "login": {
+        "title": "Inicia Sesíon",
+        "mail": "Correo Electronico",
+        "pass": "Contraseña",
+        "reg-acc": "<p>¿No tienes cuenta? <a href='../html/register.php'> !Regístrate¡</a></p>"
+    },
+    "register": {
+        "title": "Registrase",
+        "name": "Nombre",
+        "lastname": "Apellido",
+        "pass-con": "Confirmar contraseña",
+        "avatar": "Selecciona un avatar predeterminado",
+        "log-acc": " <p >¿Ya tienes cuenta? <a href='../html/login.php'> !Inicia Sesión¡</a></p>"
+    },
+    "index": {
         "cont": "Contenido",
         "lit": "Literatura",
-        "cien": "Ciencia", 
+        "cien": "Ciencia",
         "eco": "Economia",
         "fis": "Física",
-        "histo": "Historia", 
-
+        "histo": "Historia",
         "mas": "Ver más..."
     },
-    
-    "AsideA":{
-        "con":"Contenido",
-        "cat":"Catalogo",
-        "ges":"Manage",
-        "doc":"Documento",
-        "help":"Ayuda",
-        "cs":"Cerrar Sesión"
+    "AsideA": {
+        "con": "Contenido",
+        "cat": "Catalogo",
+        "ges": "Gestionar",
+        "doc": "Documento",
+        "help": "Ayuda",
+        "cs": "Cerrar Sesión"
     },
-
-    "asideU":{
-        "IUser":"Inicio",
+    "asideU": {
+        "IUser": "Inicio",
         "ALUser": "Area de lectura",
         "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Ayuda",
         "Idiom": "Idioma",
-        "closes":"Cerrar Sesión"
-        },
-    
-    "MyBooks":{
+        "closes": "Cerrar Sesión"
+    },
+    "MyBooks": {
         "book": "Mis Libros"
     },
-
-    "push":{
+    "push": {
         "footer": "Todos los derechos reservados Crea-J"
-
     },
-
-    "account":{
-        "info":"Informacion Personal",
-        "names":"Nombres",
-        "Lnames":"Apellidos",
-        "email":"Correo Electrónico",
-        "img":"Imagen de perfil",
-        "count":"Cuenta",
-        "count1":"Cuenta",
-        "Upload":"Actualizar tu cuenta",
-        "Nombres":"Nombres",
-        "Apellidos":"Apellidos",
-        "Correo":"Correo Electrónico",
-        "Contra":"Contraseña actual",
-        "ContraN":"Nueva contraseña",
-        "imagen":"Imagen",
-        "actualizar":"Actualizar",
-        "cancelar":"Cancelar"
+    "account": {
+        "info": "Informacion Personal",
+        "names": "Nombres",
+        "Lnames": "Apellidos",
+        "email": "Correo Electrónico",
+        "img": "Imagen de perfil",
+        "count": "Cuenta",
+        "count1": "Cuenta",
+        "Upload": "Actualizar tu cuenta",
+        "Nombres": "Nombres",
+        "Apellidos": "Apellidos",
+        "Correo": "Correo Electrónico",
+        "Contra": "Contraseña actual",
+        "ContraN": "Nueva contraseña",
+        "imagen": "Imagen",
+        "actualizar": "Actualizar",
+        "cancelar": "Cancelar"
     },
-
-    "catalogo":{
-        "Bienvenido":"Bienvenido",
-        "catalog":"Catálogos/Artículos de catálogo",
-        "articulos":"Artículos",
-        "administre":"Administre los catálogos de su biblioteca aquí.", 
-        "titulos":"Titulo a buscar",
-        "autors":"Autor a buscar",
-        "tipo":"Tipo",
-        "revista":"Revista academica",
-        "libro":"Libro",
-        "tesis":"Tesis",
-        "cate":"Categoria", 
-        "titulo":"Titulo",
-        "autor":"Autor",
-        "editor":"Editor",
-        "buscar":"Buscar",
-        "añadir":"Agregar",
-        "acciones":"acciones",
-        "tipoR":"Tipo de recursos",
-        "ciencia":"Ciencia",
-        "literatura":"Literatura",
-        "fisica":"Física",
-        "economia":"Economia",
-        "historia":"Historia",
-        "desc":"Descripción",
-        "art":"Articulo",
-        "img":"Imagen",
-        "agregar":"Agregar Recuersos",
-        "cancelar":"Cancelar"
+    "catalogo": {
+        "Bienvenido": "Bienvenido",
+        "catalog": "Catálogos/Artículos de catálogo",
+        "articulos": "Artículos",
+        "administre": "Administre los catálogos de su biblioteca aquí.",
+        "titulos": "Buscar un recurso",
+        "tipo": "Tipo",
+        "revista": "Revista academica",
+        "libro": "Libro",
+        "tesis": "Tesis",
+        "cate": "Categoria",
+        "titulo": "Titulo",
+        "autor": "Autor",
+        "buscar": "Buscar",
+        "añadir": "Agregar",
+        "acciones": "acciones",
+        "tipoR": "Tipo de recursos",
+        "ciencia": "Ciencia",
+        "literatura": "Literatura",
+        "fisica": "Física",
+        "economia": "Economia",
+        "historia": "Historia",
+        "desc": "Descripción",
+        "art": "Articulo",
+        "img": "Imagen",
+        "agregar": "Agregar Recuersos",
+        "cancelar": "Cancelar"
     },
-
-    "IndexA":{
-        "bien":"Bienvenido",
-        "recien":"Recién agregado",
+    "IndexA": {
+        "bien": "Bienvenido",
+        "recien": "Recién agregado",
         "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
-        "estad":"Estadisticas de usuario",
-        "coment":"Comentarios",
-        "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
-    
+        "estad": "Estadisticas de usuario",
+        "coment": "Comentarios",
+        "cambios": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
+    },
+
+    "error": {
+        "sorry": "Lo sentimos la página que buscas no se encontró",
+        "back": "Regresar al inicio <i class='fa-sharp fa-solid fa-house white_i'></i>"
     }
-    
 }

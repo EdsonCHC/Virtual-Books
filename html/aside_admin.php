@@ -33,10 +33,8 @@
             </div>
         </div>
         <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i><p  data-section="AsideA" data-value="doc"> Documentación</p></a>
-        <a href="" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i><p  data-section="AsideA" data-value="help">Ayuda</P></a>
         <a href="../php/log_out.php" class="link"><i class="fa-solid fa-right-from-bracket"></i> <P  data-section="AsideA" data-value="cs">Cerrar Sesión</P></a>
     </div>
 </aside>
 <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 <script src="../js/toggle.js"></script>
-<script src="../js/trad.js"></script>

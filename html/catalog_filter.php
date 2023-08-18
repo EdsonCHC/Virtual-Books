@@ -1,7 +1,6 @@
 <?php
 require_once("../php/methods.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +43,8 @@ require_once("../php/methods.php");
                                     <div>
                                         <label class="searchTitle" data-section="catalogo" data-value="titulos">
                                             Buscar un recurso
+                                        </label>
+                                        <label class="searchTitle">
                                             <input type="text" name="searchTitle" class="content_items_search">
                                         </label>
                                     </div>
@@ -128,7 +129,6 @@ require_once("../php/methods.php");
                     <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>
                     <button type="button" id="cancel-btn" data-section="catalogo" data-value="cancelar">Cancelar</button>
                 </div>
-
             </form>
             <?php
             // Envió de datos
@@ -157,7 +157,6 @@ require_once("../php/methods.php");
                     );
                     if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
                         $obj->insertData($arr);
-                        header("Location: ../html/catalog_filter.php");
                     }
                 }
                 exit;
@@ -178,6 +177,7 @@ require_once("../php/methods.php");
     <script src="../js/preview.js"></Script>
     <script src="../js/j_query.js"></Script>
     <script src="../js/show-res.js"></script>
+    <script src="../js/trad.js"></script>
 </body>
 
 </html>

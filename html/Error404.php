@@ -20,18 +20,34 @@
         </div>
 
         <div class="ctn">
-            <h4 data-section="Error" data-value="Sorry">Lo sentimos la página que buscas no se encontró</h4>
+            <h4 data-section="error" data-value="sorry">Lo sentimos la página que buscas no se encontró</h4>
         </div>
 
         <div class="ctn">
             <button type="button">
-                <a href="../html/index.php" data-section="Error" data-value="Back">Regresar al inicio
+                <a href="../html/index.php" data-section="error" data-value="back">
+                    Regresar al inicio
                     <i class="fa-sharp fa-solid fa-house white_i"></i>
                 </a>
             </button>
         </div>
     </div>
+    <div id="trad" onclick="toggleTrad()">
+        <i class="fa-solid fa-globe"></i>
+        <p data-section="asideU" data-value="Idiom">Idioma</p>
+
+        <div id="flags" class="trad ">
+            <div class="flag-cont" data-language="en">
+                <img src="../src/BanderaIngles.png" alt="en-flag">
+            </div>
+            <div class="flag-cont" data-language="es">
+                <img src="../src/BanderaEspañol.jpg" alt="es-flag">
+            </div>
+        </div>
+    </div>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+    <script src="../js/toggle.js"></script>
+    <script src="../js/trad.js"></script>
 </body>
 
 </html>
