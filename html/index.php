@@ -34,20 +34,10 @@ $obj = new métodosUser();
       <h2 data-section="index" data-value="cont">Contenido</h2>
       <div id="table_resultado">
       </div>
-      <form action="../php/buscador.php" method="POST">
-        <div class="contentBuscador">
-          <label for="searchInput" id="labelInput">
-            <input type="text" id="buscarInp" name="buscarInp" placeholder="Buscar Un Libro">
-            <button type="submit" name="buscarBtn" id="buscarBtn">
-              <i class="fa-solid fa-magnifying-glass" id="open-notis"></i>
-            </button>
-          </label>
-        </div>
-      </form>
+
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
-              data-value="lit">Literatura</a></h3>
+          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -56,7 +46,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -67,7 +57,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </li>
-              <?php
+          <?php
             }
           }
           ?>
@@ -84,7 +74,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -95,7 +85,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </li>
-              <?php
+          <?php
             }
           }
           ?>
@@ -112,7 +102,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <p>
@@ -121,7 +111,7 @@ $obj = new métodosUser();
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                 </a>
               </li>
-              <?php
+          <?php
             }
           }
           ?>
@@ -138,7 +128,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <li class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <p>
@@ -147,7 +137,7 @@ $obj = new métodosUser();
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                 </a>
               </li>
-              <?php
+          <?php
             }
           }
           ?>
@@ -163,7 +153,7 @@ $obj = new métodosUser();
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
-                ?>
+            ?>
                 <li class="resourse">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                     <p>
@@ -172,7 +162,7 @@ $obj = new métodosUser();
                     <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                   </a>
                 </li>
-                <?php
+            <?php
               }
             }
             ?>
