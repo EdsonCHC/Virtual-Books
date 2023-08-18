@@ -112,8 +112,7 @@ require_once("../php/methods.php");
                     </select>
                 </div>
                 <div class="content_form">
-                    <label for="descripción" class="form_text" data-section="catalogo"
-                        data-value="desc">Descripción</label>
+                    <label for="descripción" class="form_text" data-section="catalogo" data-value="desc">Descripción</label>
                     <textarea id="descripción" class="descripción" name="desc"></textarea>
                 </div>
                 <div class="content_form">
@@ -122,16 +121,13 @@ require_once("../php/methods.php");
                 </div>
                 <div class="content_form">
                     <label for="imagen" class="src" data-section="catalogo" data-value="img">Imagen</label>
-                    <input type="file" id="imagen" accept="Image/*" name="img"
-                        onchange="vista_preliminar(event), validar()">
-                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image"
-                            id="img-preview">
+                    <input type="file" id="imagen" accept="Image/*" name="img" onchange="vista_preliminar(event), validar()">
+                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
                     </div>
                 </div>
                 <div class="btnPart">
                     <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>
-                    <button type="button" id="cancel-btn" data-section="catalogo"
-                        data-value="cancelar">Cancelar</button>
+                    <button type="button" id="cancel-btn" data-section="catalogo" data-value="cancelar">Cancelar</button>
                 </div>
             </form>
             <?php

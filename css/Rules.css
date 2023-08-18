@@ -120,41 +120,101 @@ header {
   margin-left: 2rem;
 }
 
-/*Buscador*/
-.contentBuscador{
-  margin: 1rem 0;
-}
-
-#labelInput {
-  background-color: #fff;
-  width: 25rem;
-  height: 3.5rem;
-  border-radius: 8px;
-  border: none;
+/*Estilos buscador*/
+.content_description_search {
+  position: relative;
   display: flex;
-  gap: 1rem;
-  padding: 2px;
-}
-#labelInput input {
-  border: transparent;
-  background-color: transparent;
-  margin: 0 0 0 5px;
-  cursor: pointer;
-}
-#labelInput button {
-  border: none;
-  background-color: transparent;
-  margin: 0 0 0 5px;
-  cursor: pointer;
+  width: 42rem;
+  height: auto;
+  margin: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  background: var(--main-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#searchInput {
-  border: none;
-  width: 100%;
-  height: 100%;
-  outline: none;
+.content_items {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  
 }
 
+.searchTitle{
+  font-family: Poppins !important;
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+.searchTitle input{
+  display: flex;
+  width: 400px;
+  height: 40px;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  background:var(--main-white);
+  color: var(--main-black);
+}
+
+.content_items_slt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.searchTitleSlt{
+  font-family: Poppins !important;
+  font-size: 2rem;
+  color: var(--main-black);
+}
+
+.content_items_search {
+  margin: 0.5%;
+  padding: 0.3%;
+  width: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff;
+}
+
+.content_items_slt{
+  margin-top: 1rem;
+}
+
+.content_items_menu {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: #ddd;
+  color: var(--main-black);
+}
+
+.btnSearch{
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+}
+
+.content_items_button_search {
+  width: 10rem;
+  height: 3.8rem;
+  background-color: #00a0fb;
+  border-radius: 5px;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  cursor: pointer;
+  border-color: #00a0fb;
+  margin: 1rem;
+}
+
+
+/*Usuario*/
 #user {
   margin: 0 2rem 0 0;
   display: flex;
