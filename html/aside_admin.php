@@ -11,11 +11,6 @@
                 <a href="../html/catalog_filter.php" class="link" data-section="AsideA" data-value="cat">Catálogos</a>
                 <span> ></span>
             </li>
-            <li>
-                <i class="fa-solid fa-user"></i>
-                <a href="#" class="link" data-section="AsideA" data-value="ges">Gestionar</a>
-                <span> ></span>
-            </li>
         </nav>
     </div>
     <div id="settings_admin">

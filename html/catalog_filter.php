@@ -71,15 +71,15 @@ require_once("../php/methods.php");
                                 <th data-section="catalogo" data-value="tipo">Tipo </th>
                                 <th data-section="catalogo" data-value="autor">Autor </th>
                                 <th data-section="catalogo" data-value="cate">Categoría</th>
-                                <th data-section="catalogo" data-value="acciones">Acciones </th>
+                                <th data-section="catalogo" data-value="acciones">Acciones</th>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        <dialog>
-            <form method="POST" enctype="multipart/form-data" id="form-dialog">
+        <dialog class="dialogIn">
+            <form method="POST" enctype="multipart/form-data" id="form-dialog-insert">
                 <h4 data-section="catalogo" data-value="agregar">Agregar Recursos</h4>
                 <hr>
                 <div class="content_form">
@@ -112,7 +112,8 @@ require_once("../php/methods.php");
                     </select>
                 </div>
                 <div class="content_form">
-                    <label for="descripción" class="form_text" data-section="catalogo" data-value="desc">Descripción</label>
+                    <label for="descripción" class="form_text" data-section="catalogo"
+                        data-value="desc">Descripción</label>
                     <textarea id="descripción" class="descripción" name="desc"></textarea>
                 </div>
                 <div class="content_form">
@@ -121,13 +122,16 @@ require_once("../php/methods.php");
                 </div>
                 <div class="content_form">
                     <label for="imagen" class="src" data-section="catalogo" data-value="img">Imagen</label>
-                    <input type="file" id="imagen" accept="Image/*" name="img" onchange="vista_preliminar(event), validar()">
-                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
+                    <input type="file" id="imagen" accept="Image/*" name="img"
+                        onchange="vista_preliminar(event), validar()">
+                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image"
+                            id="img-preview">
                     </div>
                 </div>
                 <div class="btnPart">
                     <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>
-                    <button type="button" id="cancel-btn" data-section="catalogo" data-value="cancelar">Cancelar</button>
+                    <button type="button" id="btnCancelIn" data-section="catalogo"
+                        data-value="cancelar">Cancelar</button>
                 </div>
             </form>
             <?php
@@ -166,12 +170,11 @@ require_once("../php/methods.php");
     </main>
     <script>
         document.querySelector("#oP").addEventListener("click", () => {
-            document.querySelector("dialog").showModal();
+            document.querySelector(".dialogIn").showModal();
         })
-
-        document.querySelector("#cancel-btn").addEventListener("click", () => {
-            document.querySelector("dialog").close();
-            $("#form-dialog").trigger('reset');
+        document.querySelector("#btnCancelIn").addEventListener("click", () => {
+            document.querySelector(".dialogIn").close();
+            $("#form-dialog-insert").trigger('reset');
         })
     </script>
     <script src="../js/preview.js"></Script>

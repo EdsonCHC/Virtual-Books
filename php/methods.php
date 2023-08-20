@@ -87,9 +87,21 @@ class MétodosAdmin extends MétodosUser
         } catch (PDOException $e) {
             die("Error " . $e->getMessage());
         }
+    }
+    public function updateData($sql, $arr): bool
+    {
+        $obj = new DataBase();
+        $DBH = $obj->connect();
+        try {
+            $STH = $DBH->prepare($sql);
+            $STH->execute($arr);
+            $DBH = null;
+            return true;
+        } catch (PDOException $e) {
+            die("Error " . $e->getMessage());
+        }
 
     }
-
 }
 
 ?>
