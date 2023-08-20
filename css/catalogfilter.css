@@ -91,7 +91,8 @@ a {
   padding: 0.3%;
   width: 60%;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  background: #fff;
+  background: #ddd !important;
+  outline: none;
 }
 
 .content_items_slt{

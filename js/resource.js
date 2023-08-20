@@ -1,16 +1,17 @@
-export function updateResource() {
+export { updateResource};
+
+function updateResource() {
+
   $("#btnUpdate").on("click", (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("oldName", $("#name").val());
     formData.append("autor", $("#autor").val());
     formData.append("tipo", $("#tipo").val());
-    formData.append("categoria", $("#categoria").val());
-    formData.append("descripcion", $("#descripción").val());
+    formData.append("categoría", $("#categoría").val());
+    formData.append("descripción", $("#descripción").val());
     formData.append("articulo", $("#articulo").val());
     formData.append("oldImg", $("#imagen").val());
-
-    // console.log(formData);
     let selected_file = $("#imagen")[0].files[0];
     let image = null;
 

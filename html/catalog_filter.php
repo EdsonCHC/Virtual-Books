@@ -171,11 +171,12 @@ require_once("../php/methods.php");
     <script>
         document.querySelector("#oP").addEventListener("click", () => {
             document.querySelector(".dialogIn").showModal();
-        })
+        });
+
         document.querySelector("#btnCancelIn").addEventListener("click", () => {
             document.querySelector(".dialogIn").close();
             $("#form-dialog-insert").trigger('reset');
-        })
+        });
     </script>
     <script src="../js/preview.js"></Script>
     <script src="../js/j_query.js"></Script>
