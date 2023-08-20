@@ -1,0 +1,129 @@
+@import url(../css/Rules.css);
+
+main {
+  display: flex;
+  gap: 3rem;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 2.5rem 2rem;
+    position: relative;
+}
+
+
+.img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img img{
+    width: 80%;
+    height: 500px;
+    margin: 1rem auto;
+}
+.container{
+    display: flex;
+   flex-direction: column;
+    width:60%;
+    gap: 20px;
+}
+.container .tab{
+    position:relative;
+    background-color: rgb(233, 239, 239);
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgb(136, 135, 135);
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.container .tab input{
+appearance: none;
+}
+.container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .tab label::after{
+content: '+';
+position: absolute;
+right: 20px;
+font-size: 3.5em;
+color: rgb(183, 183, 183);
+transition: transform 1s;
+}
+.container .tab:hover label::after{
+    color: black;
+
+}
+.container .tab input:checked ~ label::after{ 
+    transform: rotate(135deg);
+
+}
+.container .tab:nth-child(2) label h2{
+ background: linear-gradient(135deg,#fa2121,#c92d2d);
+}
+.container .tab:nth-child(3) label h2{
+    background: linear-gradient(135deg,#98de2f,#98de2f);
+}
+.container .tab:nth-child(4) label h2{
+    background: linear-gradient(135deg,#4727e6,#4727e6);
+}
+.container .tab:nth-child(5) label h2{
+    background: linear-gradient(135deg,#be7828,#be7828);
+}
+.container .tab label h2{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.container .tab input:checked ~ label h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(101, 101, 101);
+    font-size: 8rem;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.container .tab label h3{
+    position:relative;
+    font-weight: 500;
+    color: #333;
+    z-index: 10;
+}
+.container .tab input:checked ~ label h3 {
+    color: #ffffff;
+
+}
+.container .tab .content {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.container .tab input:checked ~ .content {
+    max-height: 100ch;
+
+}
+.container .tab .content p {
+    position: relative;
+    padding: 10px 0;
+    color: #ffffff;
+    z-index: 10;
+}

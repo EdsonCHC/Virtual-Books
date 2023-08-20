@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <a href="" class="link" data-section="asideU" data-value="Hp"><i class="fa-sharp fa-solid fa-circle-info"></i>
+        <a href="../html/help.php"  class="link" data-section="asideU" data-value="Hp"><i class="fa-sharp fa-solid fa-circle-info"></i>
             Ayuda</a>
         <li class="<?php esconder(); ?>"><a href="../php/log_out.php" class="link"><i
                     class="fa-solid fa-right-from-bracket"></i>
