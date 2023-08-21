@@ -134,52 +134,11 @@ require_once("../php/methods.php");
                         data-value="cancelar">Cancelar</button>
                 </div>
             </form>
-            <?php
-            // Envió de datos
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $obj = new métodosAdmin();
-                if (isset($_POST['enviar'])) {
-                    $name = trim($_POST['name']);
-                    $autor = trim($_POST['autor']);
-                    $type = trim($_POST['tipo']);
-                    $cat = trim($_POST['cate']);
-                    $desc = trim($_POST['desc']);
-                    $nombreSrc = $_FILES['src']['name'];
-                    $rutaSrc = $_FILES['src']['tmp_name'];
-                    $src = "../src/files/" . $nombreSrc;
-                    $nombreImg = $_FILES['img']['name'];
-                    $rutaImg = $_FILES['img']['tmp_name'];
-                    $img = "../src/files/img/" . $nombreImg;
-                    $arr = array(
-                        $name,
-                        $autor,
-                        $type,
-                        $cat,
-                        $desc,
-                        $src,
-                        $img
-                    );
-                    if (move_uploaded_file($rutaSrc, $src) && move_uploaded_file($rutaImg, $img)) {
-                        $obj->insertData($arr);
-                    }
-                }
-                exit;
-            }
-            ?>
         </dialog>
     </main>
-    <script>
-        document.querySelector("#oP").addEventListener("click", () => {
-            document.querySelector(".dialogIn").showModal();
-        });
-
-        document.querySelector("#btnCancelIn").addEventListener("click", () => {
-            document.querySelector(".dialogIn").close();
-            $("#form-dialog-insert").trigger('reset');
-        });
-    </script>
     <script src="../js/preview.js"></Script>
     <script src="../js/j_query.js"></Script>
+    <script src="../js/alertify.js"></Script>
     <script src="../js/show-res.js"></script>
     <script src="../js/trad.js"></script>
 </body>

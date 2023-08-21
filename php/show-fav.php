@@ -17,8 +17,10 @@ try {
         }
         $json_str = json_encode($json);
         echo $json_str;
+        exit();
     } else {
         echo false;
+        exit();
     }
 } catch (PDOException $e) {
     die("Error " . $e->getMessage());
