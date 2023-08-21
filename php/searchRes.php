@@ -9,7 +9,7 @@ extract($_POST);
 $search = $_POST['search'];
 
 if (!empty($search)) {
-    $sql = "SELECT * from resource where name like '%$search%'";
+    $sql = "SELECT * from resource where name like '%$search%' OR author like '%$search%' ";
     $result = mysqli_query($conex, $sql);
     if (!$result) {
         die('Query Error' . mysqli_error($conex));

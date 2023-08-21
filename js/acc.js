@@ -29,12 +29,25 @@ $(function () {
         );
     });
 
+
+    $("#btnUpdate").on("click", (e) =>{
+        const oldEmail = $("#emailVal").val();
+        $.post("../php/accUpVal.php", {oldEmail} ,  (response)=>{
+            let data = JSON.parse(response);
+            let info = data[0];
+            $("#name").val(info.name);
+            $("#lastName").val(info.lastName);
+            $("#email").val(info.email);
+            $("#img-preview").attr("src", info.img);
+        });
+    }); 
+
     $("#btn-update").on("click", (e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append("name", $("#name").val());
         formData.append("lastName", $("#lastName").val());
-        formData.append("oldEmail", $("#emailVal").val());
+        formData.append("oldEmail", oldEmail);
         formData.append("email", $("#email").val());
         formData.append("oldPass", $("#oldPass").val());
         formData.append("newPass", $("#newPass").val());

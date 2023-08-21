@@ -10,10 +10,6 @@
                 <a href="../html/myBooks.php" class="link" data-section="asideU" data-value="ALUser">Area de lectura</a>
                 <span> ></span>
             </li>
-            <li><i class="fa-solid fa-house"></i>
-                <a href="../html/aboutus.php" class="link" data-section="Suser" data-value="SNuser">Sobre Nosotros</a>
-                <span> ></span>
-            </li>
         </nav>
     </div>
     <div id="settings">

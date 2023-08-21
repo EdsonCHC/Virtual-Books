@@ -109,7 +109,7 @@
         "back": "Regresar al inicio <i class='fa-sharp fa-solid fa-house white_i'></i>"
     },
 
-    "book":{
+    "book":{        
         "tipo":"Tipo:",
         "categ":"Categoría:",
         "desc":"Descripción",
@@ -127,5 +127,7 @@
         "com": "Este libro no tiene comentarios"
     },
 
-    "SNuser":"Sobre Nosotros"
+    "Suser":{ 
+        "SNuser":"About Us"
+    }
 }

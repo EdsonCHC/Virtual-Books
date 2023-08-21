@@ -32,7 +32,7 @@ if (isset($valor_anterior)) {
 
 if (isset($search)) {
     try {
-        $sql = "SELECT * FROM resource where name like '%$search' or author like '%$search'";
+        $sql = "SELECT * FROM resource where name like '%$search%' or author like '%$search%' ";
         $row = $obj->showData($sql);
 
         if ($row->rowCount() > 0) {

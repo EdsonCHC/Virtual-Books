@@ -32,12 +32,12 @@ if (isset($_SESSION['user'])) {
       <div class="content_items">
         <input type="search" id="search" class="content_items_search" placeholder="Buscar">
       </div>
-      <div id="resResult">
-        <table id="containerRes">
-          <!-- Aca van los resultados -->
-        </table>
-      </div>
     </form>
+    <div id="resResult">
+      <table id="containerRes">
+        <!-- Aca van los resultados -->
+      </table>
+    </div>
   </div>
 
 
@@ -59,18 +59,14 @@ if (isset($_SESSION['user'])) {
         </h4>
         <nav id="notis-nav">
           <?php
-          //$id = $_GET['id'];
           $obj = new MétodosUser();
           $sql = "SELECT * FROM resource";
-          #La idea es asi
-          //$sql = "SELECT * FROM resource WHERE id = $id";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
-              ?>
-
-              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink" >
-              <h5 data-section="header" data-value="public">Se ha publicado:</h5>
+          ?>
+              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
+                  <h5 data-section="header" data-value="public">Se ha publicado:</h5>
                   <h5>
                     <p>
                       <?php echo $not['name']; ?>
@@ -78,7 +74,7 @@ if (isset($_SESSION['user'])) {
                   </h5>
                 </a></li>
 
-              <?php
+          <?php
             }
           }
           ?>
