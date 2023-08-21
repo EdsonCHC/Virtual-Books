@@ -64,7 +64,6 @@ try {
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/Rules.css">
   <link rel="stylesheet" href="../css/libro.css">
-  <link rel="stylesheet" href="../css/create.css" />
   <link rel="stylesheet" href="../css/alertify.css">
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <title>Libro</title>

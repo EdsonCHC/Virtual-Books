@@ -40,8 +40,6 @@ $(function () {
         formData.append("newPass", $("#newPass").val());
         formData.append("oldImg", $("#imgData").val());
 
-        // console.log(formData);
-
         let selected_file = $("#imagen")[0].files[0];
         let image = null;
 

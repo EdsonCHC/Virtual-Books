@@ -54,6 +54,7 @@ if (isset($_SESSION['admin'])){
             </div>
         </div>
     </main>
+    <script src="../js/trad.js"></script>
 </body>
 
 </html>

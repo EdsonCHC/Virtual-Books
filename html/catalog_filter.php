@@ -139,7 +139,7 @@ require_once("../php/methods.php");
     <script src="../js/preview.js"></Script>
     <script src="../js/j_query.js"></Script>
     <script src="../js/alertify.js"></Script>
-    <script src="../js/show-res.js"></script>
+    <script src="../js/resource.js"></script>
     <script src="../js/trad.js"></script>
 </body>
 

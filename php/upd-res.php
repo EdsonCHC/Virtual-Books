@@ -1,5 +1,8 @@
 <?php
+require_once("../php/methods.php");
+$obj = new MétodosAdmin;
 
+extract($_POST);
 
 try {
 
@@ -9,11 +12,10 @@ try {
     $rutaImg = "../src/files/img/" . $img_name;
 
     unlink($oldFile);
-    unlink($oldImg);
-
+    unlink($oldImage);
 
     $sql = "UPDATE resource SET name=?, author=?, type=?,
-         category=?, description=?, src=?, img=? WHERE id = '$id'";
+         category=?, description=?, src=?, img=? WHERE id = '$idFileUpdate'";
 
     $arr = array(
         $title,
@@ -25,13 +27,13 @@ try {
         $rutaImg
     );
 
-    if (move_uploaded_file($src, $rutaSrc) && move_uploaded_file($img, $rutaImg)) {
-        $obj->insertData($arr);
-        echo true;
-        exit;
-    }
+    move_uploaded_file($src, $rutaSrc);
+    move_uploaded_file($img, $rutaImg);
 
     $obj->updateData($sql, $arr);
+    echo true;
+
+    exit();
 } catch (Exception $e) {
     echo false;
     die("Error: " . $e->getMessage());

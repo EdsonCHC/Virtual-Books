@@ -6,7 +6,7 @@ extract($_POST);
 if (isset($valor_anterior)) {
     $val = $valor_anterior;
     try {
-        $sql = "SELECT id, name, author, type, category, src, img FROM resource where id > '$val' limit 8";
+        $sql = "SELECT id, name, author, type, category FROM resource where id > '$val' limit 8";
         $row = $obj->showData($sql);
 
         if ($row->rowCount() > 0) {
@@ -18,8 +18,6 @@ if (isset($valor_anterior)) {
                     "author" => $info['author'],
                     "type" => $info['type'],
                     "category" => $info['category'],
-                    "src" => $info['src'],
-                    "img" => $info['img']
                 );
             }
             $json_str = json_encode($json);
@@ -76,6 +74,7 @@ if(isset($id)) {
                 "type" => $row['type'],
                 "category" => $row['category'],
                 "description" => $row['description'],
+                "src" => $row['src'],
                 "img" => $row['img']
             );
         }
