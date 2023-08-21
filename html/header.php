@@ -3,7 +3,7 @@ require_once('../php/cone.php');
 require_once("../php/interface.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
-require_once("../php/buscador.php");
+
 
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
@@ -15,24 +15,27 @@ if (isset($_SESSION['user'])) {
 }
 
 ?>
+
+<head>
+  <link rel="stylesheet" href="../css/Rules.css">
+  <link rel="stylesheet" href="../css/alertify.css">
+  <script src="../js/j_query.js"></Script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 <header>
   <div>
     <a href="../html/index.php"> <img src="../src/logo creaj 2023.png" alt="logo" id="logo" /></a>
   </div>
 
   <div class="content_description_search">
-    <form id="search_form">
+    <form id="formSearch">
       <div class="content_items">
-        <div>
-          <label class="searchTitle" data-section="catalogo" data-value="titulos">
-            <input type="text" name="searchTitle" class="content_items_search" placeholder="Buscar">
-          </label>
-        </div>
-        <div>
-          <table id="search_results">
-            <!-- Aca van los resultados -->
-          </table>
-        </div>
+        <input type="search" id="search" class="content_items_search" placeholder="Buscar">
+      </div>
+      <div id="resResult">
+        <table id="containerRes">
+          <!-- Aca van los resultados -->
+        </table>
       </div>
     </form>
   </div>
@@ -64,7 +67,7 @@ if (isset($_SESSION['user'])) {
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
-          ?>
+              ?>
 
               <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
                   <h5>Se ha publicado:
@@ -74,7 +77,7 @@ if (isset($_SESSION['user'])) {
                   </h5>
                 </a></li>
 
-          <?php
+              <?php
             }
           }
           ?>
@@ -82,5 +85,7 @@ if (isset($_SESSION['user'])) {
       </div>
     </div>
   </div>
+
+  <script src="../js/searchRes.js"></script>
+  <script src="../js/j_query.js"></Script>
 </header>
-<script src="../js/buscador.js"></script>

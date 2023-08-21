@@ -133,37 +133,57 @@ header {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.content_description_search form {
+  width: 100%;
+}
+
 .content_items {
   display: flex;
   flex-direction: column;
   padding: 2%;
-  
+  width: 670px;
+  border: none;
 }
 
-.searchTitle{
+.content_items input {
+  border: none;
+}
+
+#search {
   font-family: Poppins !important;
   font-size: 2rem;
   color: var(--main-black);
 }
 
-.searchTitle input{
+#search input {
   display: flex;
-  width: 400px;
+  width: 500px;
   height: 40px;
   border: none;
   padding: 20px;
   font-size: 15px;
-  background:var(--main-white);
+  background: var(--main-white);
   color: var(--main-black);
 }
 
-.content_items_slt{
+.result_li {
+  width: 400px;
+  padding: 0.5rem 0rem;
+  border-bottom: 1px solid #ddd;
+  font-family: Valera !important;
+  font-size: 1.4rem;
+  color: var(--main-black);
+  overflow: hidden;
+}
+
+
+.content_items_slt {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.searchTitleSlt{
+.searchTitleSlt {
   font-family: Poppins !important;
   font-size: 2rem;
   color: var(--main-black);
@@ -177,7 +197,7 @@ header {
   background: #fff;
 }
 
-.content_items_slt{
+.content_items_slt {
   margin-top: 1rem;
 }
 
@@ -194,7 +214,7 @@ header {
   color: var(--main-black);
 }
 
-.btnSearch{
+.btnSearch {
   display: flex;
   justify-content: end;
   margin-top: 1rem;
@@ -212,7 +232,6 @@ header {
   border-color: #00a0fb;
   margin: 1rem;
 }
-
 
 /*Usuario*/
 #user {
@@ -336,7 +355,7 @@ li {
   list-style: none;
 }
 
-#notis-nav li{
+#notis-nav li {
   width: 100%;
   height: auto;
   margin-bottom: 1.5rem;
@@ -344,7 +363,6 @@ li {
   padding: 0.5rem;
   border-radius: 0.3rem;
 }
-
 
 /* ESTILOS ASIDE */
 aside {
@@ -461,40 +479,40 @@ footer {
   position: relative;
 }
 
-#trad{
+#trad {
   display: flex;
   cursor: pointer;
   width: auto;
 }
 
-#trad p{
+#trad p {
   margin: 0 0.5rem 0 0;
 }
 
-#flags{
+#flags {
   display: flex;
   gap: 0.5rem;
 }
 
-.trad{
+.trad {
   width: 0;
   height: 2rem;
   overflow: hidden;
-  transition: width .3s ease;
+  transition: width 0.3s ease;
 }
 
-.flag-cont{
+.flag-cont {
   width: 100%;
   height: 100%;
 }
 
-.flag-cont img{
+.flag-cont img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.trad.open{
+.trad.open {
   width: 7rem;
 }
 
