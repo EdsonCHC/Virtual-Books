@@ -200,7 +200,7 @@ try {
   <script src="../js/j_query.js"></script>
   <script src="../js/alertify.js"></script>
   <script src="../js/add-fav.js"></script>
-    <script src="../js/show-fav.js"></script>
+  <script src="../js/show-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
 </body>
