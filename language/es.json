@@ -125,5 +125,7 @@
         "simil":"Libros Similares",
         "hablar":"<textarea autocomplete='off' name='texto' rows='5' cols='60' placeholder='¿De qué quieres hablar?'></textarea>",
         "com": "Este libro no tiene comentarios"
-    }
+    },
+
+    "SNuser":"Sobre Nosotros"
 }

@@ -137,5 +137,7 @@
         "simil":"Similar Books",
         "hablar":" <textarea autocomplete='off' name='texto' rows='5' cols='60' placeholder='What do you want to talk about?'></textarea>",
         "com": "This Book has no comments yet"
-    }
+    },
+
+    "SNuser":"About Us"
 }
