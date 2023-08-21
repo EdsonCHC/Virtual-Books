@@ -1,18 +1,34 @@
 $(function () {
   get_books();
 
+  //Visualiza el libro
   function get_books() {
     $.get("../php/show-fav.php", (response) => {
-      let data = JSON.parse(response);
+      let resource = JSON.parse(response);
       let plantilla = "";
-      data.forEach((datas) => {
+      resource.forEach((data) => {
         plantilla += `
-            <a href="../html/book.php?id=${datas.id}">
-                <img src="${datas.img}" alt="book-image">
-            </a>
+          <div class="flex-books" resId="${data.id}">
+          <a href="../html/book.php?id=${data.id}">
+                <img src="${data.img}" alt="book-image">
+                <p>${data.name}</p>
+              </a>
+          </div>
             `;
       });
-      $("#book-container").html(plantilla);
+      $("#resource").html(plantilla);
     });
   }
+
+  //Elimina el libro
+  $(document).on("click", ".res-delete", function () {
+    if (confirm("Estas seguro de eliminar?")) {
+      let element = $(this)[0].parentElement.parentElement;
+      let id = $(element).attr("resId");
+      //Se envia al backend para escuchar su respuesta
+      $.post("taskDelete.php", { id }, function (response) {
+        fetchTasks();
+      });
+    }
+  });
 });

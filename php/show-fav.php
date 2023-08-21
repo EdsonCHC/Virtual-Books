@@ -3,15 +3,16 @@ require_once('../php/cone.php');
 require_once('../php/methods.php');
 $obj = new MétodosUser();
 try {
-    $sql = "SELECT r.id, r.img FROM shelf s LEFT JOIN resource r on s.id_r = r.id";
+    $sql = "SELECT r.id, r.name, r.img FROM shelf s LEFT JOIN resource r on s.id_r = r.id";
     $stmt = $obj->showData($sql);
 
     if ($stmt->rowCount() > 0) {
 
         $json = array();
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $json[] = array(
                 'id' => $row['id'],
+                'name' => $row['name'],
                 'img' => $row['img']
             );
         }
