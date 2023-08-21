@@ -139,5 +139,7 @@
         "com": "This Book has no comments yet"
     },
 
-    "SNuser":"About Us"
+    "Suser":{ 
+        "SNuser":"About Us"
+}
 }
