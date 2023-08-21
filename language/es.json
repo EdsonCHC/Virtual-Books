@@ -1,7 +1,9 @@
 {
     "header": {
         "sesiónIni": "Iniciar Sesión",
-        "not": "Notificaciones"
+        "not": "Notificaciones",
+        "public":"Se ha publicado"
+
     },
     "login": {
         "title": "Inicia Sesíon",
@@ -48,7 +50,7 @@
         "footer": "Todos los derechos reservados Crea-J"
     },
     "account": {
-        "info": "Informacion Personal",
+        "info": "Información Personal",
         "names": "Nombres",
         "Lnames": "Apellidos",
         "email": "Correo Electrónico",
@@ -105,5 +107,23 @@
     "error": {
         "sorry": "Lo sentimos la página que buscas no se encontró",
         "back": "Regresar al inicio <i class='fa-sharp fa-solid fa-house white_i'></i>"
+    },
+
+    "book":{
+        "tipo":"Tipo:",
+        "categ":"Categoría:",
+        "desc":"Descripción",
+        "leer":"Leer",
+        "fav":"Favoritos",
+        "descargar":"Descargar",
+        "comentarios":"Comentarios",
+        "calificar":"Calificar",
+        "mala":"Mala",
+        "buena":"Buena",
+        "excelente":"Excelente",
+        "comentar":"<input type='submit' value='Comentar'>",
+        "simil":"Libros Similares",
+        "hablar":"<textarea autocomplete='off' name='texto' rows='5' cols='60' placeholder='¿De qué quieres hablar?'></textarea>",
+        "com": "Este libro no tiene comentarios"
     }
 }

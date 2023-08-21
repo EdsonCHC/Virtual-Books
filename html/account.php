@@ -60,26 +60,32 @@ if ($_SESSION['user']) {
                     <div class="dataInp">
                         <div class="name">
                             <label data-section="account" data-value="names">Nombres
-                                <input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
+                                <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
                             </label>
+                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
                         </div>
                         <div class="name">
                             <label data-section="account" data-value="Lnames">Apellidos
-                                <input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
+                            <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
+
                             </label>
+                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
                         </div>
                         <div class="name">
                             <label data-section="account" data-value="email">Correo Electrónico
-                                <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
+                            <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
+
                             </label>
+                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                         </div>
                     </div>
                     <div class="dataImg">
                         <div class="img">
                             <label data-section="account" data-value="img">Imagen de perfil
-                                <img src="<?php echo $img['img']; ?>" alt="user-icon">
-                                <input type="hidden"  id="imgData" value="<?php echo $img['img']; ?>">
+                               <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
                             </label>
+                            <!-- (r) --><img src="<?php echo $img['img']; ?>" alt="user-icon">
+                                <input type="hidden"  id="imgData" value="<?php echo $img['img']; ?>">
                         </div>
                         <div class="btnPart">
                             <div class="userUpdate">
@@ -149,6 +155,9 @@ if ($_SESSION['user']) {
             document.querySelector("dialog").close();
         });
     </script>
+      <?php
+  require_once("../html/footer.php");
+  ?>
     <script src="../js/preview.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>

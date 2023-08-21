@@ -2,7 +2,8 @@
 
     "header":{
         "sesiónIni": "Login",
-        "not":"Notifications"
+        "not":"Notifications",
+        "public":"Was published:"
     },
 
     "login":{
@@ -118,5 +119,23 @@
     "error": {
         "sorry": "Sorry, the page you are looking for was not found.",
         "back": " Back to home <i class='fa-sharp fa-solid fa-house white_i'></i>"
+    },
+
+    "book":{
+        "tipo":"Type:",
+        "categ":"Category:",
+        "desc":"Description",
+        "leer":"Read",
+        "fav":"Favorite",
+        "descargar":"Download",
+        "comentarios":"Comments",
+        "calificar":"Qualify",
+        "mala":"Bad",
+        "buena":"Good",
+        "excelente":"Excelent",
+        "comentar":"<input type='submit' value='Comment'>",
+        "simil":"Similar Books",
+        "hablar":" <textarea autocomplete='off' name='texto' rows='5' cols='60' placeholder='What do you want to talk about?'></textarea>",
+        "com": "This Book has no comments yet"
     }
 }

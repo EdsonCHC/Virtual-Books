@@ -92,35 +92,34 @@ try {
             <h5>
               <?php echo $info['author'] ?>
             </h5>
-            <h5>Tipo:
+            <h5 data-section="book" data-value="tipo">Tipo:
               <?php echo $info['type'] ?>
             </h5>
-            <h5>Categoría:
+            <h5 data-section="book" data-value="categ">Categoría:
               <?php echo $info['category'] ?>
             </h5>
           </div>
           <div id="description">
-            <h3>Descripción</h3>
+            <h3 data-section="book" data-value="desc">Descripción</h3>
             <p>
               <?php echo $info['description'] ?>
             </p>
           </div>
           <div id="buttons">
-            <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link "><i
+            <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link " data-section="book" data-value="leer"><i
                 class="fa-sharp fa-solid fa-book-open-reader"></i> Leer
             </a>
-            <div id="add-fav" class="book-link <?php esconder(); ?>">
-              <i class="fa-solid fa-plus"></i> Añadir ah Favorito
+            <div id="add-fav" class="book-link <?php esconder(); ?>" data-section="book" data-value="fav">
+              <i class="fa-solid fa-plus"></i>Añadir a Favorito
               <input type="hidden" value="<?php echo $id ?>" id="input-id">
             </div>
-            <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download><i
-                class="fa-solid fa-download"></i>
-              Descargar</a>
+            <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download data-section="book" data-value="descargar"><i
+                class="fa-solid fa-download"></i>Descargar</a>
           </div>
         </div>
       </div>
       <div id="content">
-        <h3>Comentarios</h3>
+        <h3 data-section="book" data-value="comentarios">Comentarios</h3>
         <?php
         if ($datos->rowCount() > 0) {
           foreach ($datos as $valoraciones) { ?>
@@ -145,7 +144,7 @@ try {
             <?php
           }
         } else {
-          echo "<h6>Este Libro aun no tiene comentarios :c </h6>";
+          echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
         }
         ?>
 
@@ -156,19 +155,19 @@ try {
             <div id="first_container">
               <div class="linea"></div>
 
-              <div id="post_desc">
+              <div id="post_desc" data-section="book" data-value="hablar">
                 <textarea autocomplete="off" name="texto" rows="5" cols="60"
                   placeholder="¿De qué quieres hablar?"></textarea>
               </div>
               <div id="details_primary_part">
-                <h4><label for="valuation">Calificar</label></h4>
+                <h4><label for="valuation" data-section="book" data-value="calificar">Calificar</label></h4>
                 <select name="valuation">
-                  <option value="Mala" selected>Mala</option>
-                  <option value="Buena">Buena</option>
-                  <option value="Excelente">Excelente</option>
+                  <option value="Mala" selected data-section="book" data-value="mala">Mala</option>
+                  <option value="Buena" data-section="book" data-value="buena">Buena</option>
+                  <option value="Excelente" data-section="book" data-value="excelente">Excelente</option>
                 </select>
               </div>
-              <div id="post_enter">
+              <div id="post_enter" data-section="book" data-value="comentar"  >
                 <input type="submit" value="Comentar">
               </div>
             </div>
@@ -176,7 +175,7 @@ try {
       </div>
     </div>
     <div id="more-books">
-      <h2>Libros Similares</h2>
+      <h2 data-section="book" data-value="simil">Libros Similares</h2>
       <div id="similar-books">
         <?php
         $cat = $info['category'];
@@ -203,6 +202,7 @@ try {
   <script src="../js/alertify.js"></script>
   <script src="../js/add-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
+
 </body>
 
 

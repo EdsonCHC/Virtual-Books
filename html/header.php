@@ -66,8 +66,9 @@ if (isset($_SESSION['user'])) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
           ?>
 
-              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
-                  <h5>Se ha publicado:
+              <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink" >
+              <h5 data-section="header" data-value="public">Se ha publicado:</h5>
+                  <h5>
                     <p>
                       <?php echo $not['name']; ?>
                     </p>
