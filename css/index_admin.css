@@ -56,6 +56,38 @@ main {
     justify-content: space-between;
 }
 
+
+
+.grid-books img{
+    width: 5rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+.grid-books img p{
+    text-decoration: none;
+}
+
+.textRes{
+    margin: 2rem;
+}
+
+.resourse{
+    display: flex;
+    
+}
+
+.book-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    ;
+}
+
 .flex-element + hr{
     border: 1px solid #ddd;
 }

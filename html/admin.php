@@ -1,7 +1,13 @@
 <?php
-if (isset($_SESSION['admin'])){
+if (isset($_SESSION['admin'])) {
     header("Location: ../html/login.php");
 }
+
+require_once("../php/interface.php");
+require_once("../php/cone.php");
+require_once("../php/methods.php");
+$obj = new MétodosAdmin();
+?>
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +38,34 @@ if (isset($_SESSION['admin'])){
                     <div class="flex-element">
                         <h5 data-section="indexA" data-value="recien">Recién agregados</h5>
                         <div class="btn-div" data-section="indexA" data-value="cambio">
-                            <input class="btn" type="button" value="Agregar">
-                            <input class="btn" type="button" value="Catalogo">
+                            <a href="../html/catalog_filter.php"><input class="btn" type="button" value="Catalogo"></a>
                         </div>
+                        
                     </div>
                     <hr>
+                    <div class="grid-books">
+                            <?php
+                            $sql = "SELECT id, name, img from resource Limit 7";
+                            $row = $obj->showData($sql);
+                            if ($row->rowCount() > 0) {
+                                $row->setFetchMode(PDO::FETCH_ASSOC);
+                                while ($info = $row->fetch()) {
+                                    ?>
+                                    <div class="resourse">
+                                        <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                                            <div class="book-container">
+                                                <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                                                <p class="textRes">
+                                                    <?php echo $info["name"]; ?>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
                 </div>
                 <div class="e2">
                     <h5 data-section="indexA" data-value="estad">Estadística de Usuarios</h5>

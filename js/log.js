@@ -14,7 +14,7 @@ $(function () {
                 });
             }else if(account.rol === '1'){
                 alertify.alert(`Bienvenido ${account.name}`, () => {
-                    window.location = "../html/index_admin.php";
+                    window.location = "../html/admin.php";
                 });
             }else{
                 alertify.alert("La datos ingresados son incorrectos");
