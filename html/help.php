@@ -3,7 +3,7 @@ require_once("../php/interface.php");
 require_once("../php/cone.php");
 require_once("../php/methods.php");
 session_start();
-$obj = new métodosUser();
+
 ?>
 
 <!DOCTYPE html>
