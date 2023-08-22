@@ -47,10 +47,9 @@ $(function () {
         const formData = new FormData();
         formData.append("name", $("#name").val());
         formData.append("lastName", $("#lastName").val());
-        formData.append("oldEmail", oldEmail);
+        formData.append("lastEmail", $("#emailVal").val());
         formData.append("email", $("#email").val());
-        formData.append("oldPass", $("#oldPass").val());
-        formData.append("newPass", $("#newPass").val());
+        formData.append("Pass", $("#oldPass").val());    
         formData.append("oldImg", $("#imgData").val());
 
         let selected_file = $("#imagen")[0].files[0];
@@ -71,6 +70,7 @@ $(function () {
             processData: false,
             contentType: false,
             success: (response) => {
+                console.log(response);
                 if (response !== "bad-pass") {
                     alertify.success("Datos actualizados");
                     $("#updateDialog").hide();

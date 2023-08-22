@@ -127,10 +127,6 @@ if ($_SESSION['user']) {
                             <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text" data-section="account" data-value="ContraN">Nueva Contraseña</label>
-                            <input type="password" id="newPass" class="inputs" autocomplete="off" required>
-                        </div>
-                        <div class="content_form">
                             <label for="imagen" class="src" data-section="account" data-value="imagen">Imagen</label>
                             <input type="file" id="imagen" accept="Image/*" name="img"
                                 onchange="vista_preliminar(event), validar()">

@@ -41,7 +41,7 @@ $(function () {
         success: (response) => {
           //lo que se hará al obtener respuesta
           if (response === "true") {
-            alertify.alert("The has registrado", () => {
+            alertify.alert("Te has registrado", () => {
               window.location = "../html/login.php";
             });
           } else if (response === "false") {
