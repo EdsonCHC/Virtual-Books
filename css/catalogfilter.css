@@ -36,14 +36,12 @@ a {
   justify-content: space-between;
 }
 
-
-
 /*Estilos buscador*/
 .content_description_search {
   position: relative;
   display: flex;
   width: 42rem;
-  height: auto;
+  height: auto !important;
   margin: 3rem;
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: rgba(196, 196, 196, 0.1);
@@ -54,7 +52,6 @@ a {
   display: flex;
   flex-direction: column;
   padding: 2%;
-  
 }
 
 .searchTitle{

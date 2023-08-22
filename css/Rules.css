@@ -415,12 +415,12 @@ aside {
   cursor: pointer;
   background: transparent;
   color: var(--main-black);
+  transition: all 0.5s ease;
 }
 
 .btnAside:hover {
   list-style: none;
   transform: scale(1.05);
-  transition-duration: 0.8s;
   background: var(--secondary-white);
   color: var(--main-black);
 }
