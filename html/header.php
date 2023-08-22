@@ -42,11 +42,15 @@ if (isset($_SESSION['user'])) {
 
 
   <div id="log-links">
-    <ul>
-      <li class="<?php esconderV2(); ?>"><a href="../html/login.php" class="link">
-          <button class="btnLogin" data-section="header" data-value="sesiónIni"><span>Iniciar Sesión</span></button>
-        </a></li>
-    </ul>
+    <li class="<?php esconderV2(); ?>">
+      <a href="../html/login.php" class="link">
+
+        <button class="btnLogin" data-section="header" data-value="sesiónIni">
+          <!-- <i class="fa-solid fa-user" style="color: #19191a;"></i> -->
+          <span>Iniciar Sesión</span></button>
+      </a>
+    </li>
+
   </div>
   <div id="user" class="<?php esconder(); ?>">
     <i class="fa-regular fa-bell" onclick="toggleMenu()" id="close"></i>
@@ -64,7 +68,7 @@ if (isset($_SESSION['user'])) {
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {
-          ?>
+              ?>
               <li><a href="../html/book.php?id=<?php echo $not["id"] ?>" class="notisLink">
                   <h5 data-section="header" data-value="public">Se ha publicado:</h5>
                   <h5>
@@ -74,7 +78,7 @@ if (isset($_SESSION['user'])) {
                   </h5>
                 </a></li>
 
-          <?php
+              <?php
             }
           }
           ?>
