@@ -129,7 +129,7 @@ header {
   flex-direction: column;
   border-radius: 10px;
   background: var(--main-white);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .content_description_search form {
@@ -167,8 +167,7 @@ header {
   color: var(--main-black);
 }
 
-
-#resResult{
+#resResult {
   background-color: var(--main-white);
   width: auto;
   height: auto;
@@ -184,7 +183,6 @@ header {
   border-bottom: 1px solid #ddd;
   cursor: pointer;
 }
-
 
 .content_items_slt {
   display: flex;
@@ -312,11 +310,8 @@ li {
 .link {
   color: var(--main-black);
   text-decoration: none;
+  list-style: none;
   display: flex;
-}
-
-.link:hover {
-  text-decoration: underline;
 }
 
 .esconder {
@@ -324,7 +319,6 @@ li {
 }
 
 /*ESTILO PARA ICONO NOTIS*/
-
 #close {
   cursor: pointer;
 }
@@ -380,7 +374,7 @@ aside {
   left: 0;
   background-color: #fff;
   height: 91.3vh;
-  width: 11.5%;
+  width: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,16 +408,33 @@ aside {
   text-decoration: none;
 }
 
-#books-nav li > span {
-  position: absolute;
-  left: 90%;
-  font-style: bold;
-  font-weight: 800;
-  transition: transform 0.3s ease-in-out;
+.btnAside {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 3px solid var(--secondary-white);
+  cursor: pointer;
+  background: transparent;
+  color: var(--main-black);
 }
 
-#books-nav li:hover > span {
-  transform: rotate(90deg);
+.btnAside:hover {
+  list-style: none;
+  transform: scale(1.05);
+  transition-duration: 0.8s;
+  background: var(--secondary-white);
+  color: var(--main-black);
+}
+
+.btnAside i a {
+  text-align: justify;
+  width: 100%;
+}
+
+.btnLink {
+  width: 14.5rem;
+  color: var(--main-black);
+  text-decoration: none;
+  list-style: none;
 }
 
 #settings {
@@ -435,6 +446,7 @@ aside {
   width: 100%;
   gap: 0.5rem;
 }
+
 
 /*ESTILOS ASIDE ADMIN*/
 
