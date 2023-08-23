@@ -124,6 +124,7 @@ header {
 .content_description_search {
   width: 42rem;
   height: 5rem;
+  margin: 0 2rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -416,6 +417,7 @@ aside {
   background: transparent;
   color: var(--main-black);
   transition: all 0.5s ease;
+  display: flex;
 }
 
 .btnAside:hover {
@@ -447,7 +449,6 @@ aside {
   gap: 0.5rem;
 }
 
-
 /*ESTILOS ASIDE ADMIN*/
 
 .admin {
@@ -456,7 +457,7 @@ aside {
   left: 0;
   background: var(--main-blue);
   height: 100vh;
-  width: 11.5%;
+  width: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -479,14 +480,19 @@ aside {
   gap: 0.5rem;
 }
 
+
 #settings_admin {
-  border-top: 2px solid var(--main-black);
+  border-top: 2px solid var(--secondary-white);
   padding: 0.5rem 0 0 0;
   font-size: 1.8rem;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
+}
+
+#settings_admin .btnAside a{
+  display: flex;
 }
 
 /*ESTILOS FOOTER*/
@@ -542,4 +548,17 @@ footer {
 .esconder,
 .esconderV2 {
   display: none !important;
+}
+
+/*Responsive*/
+@media (max-width: 900px) {
+  /*Header*/
+  .btnLogin {
+    width: 17rem;
+  }
+
+  /*Aside*/
+  aside {
+    width: 15rem;
+  }
 }
