@@ -79,67 +79,8 @@ try {
     require_once("../html/aside.php");
     ?>
     <div id="book">
-      <div id="container">
-        <div id="imgContainer">
-          <img src="<?php echo $info['img'] ?>" alt="libro-imagen">
-        </div>
-        <div id="book-info">
-          <div id="titleBook">
-            <h3>
-              <?php echo $info['name'] ?>
-            </h3>
-          </div>
-          <div id="authorBook">
-            <h4>Autor </h4>
-            <p>
-              <?php echo $info['author'] ?>
-            </p>
-          </div>
-          <div id="typeBook">
-            <h5 data-section="book" data-value="tipo">Tipo</h5>
-            <p>
-              <?php echo $info['type'] ?>
-            </p>
-          </div>
-          <div id="cateBook">
-            <h5 data-section="book" data-value="categ">Categoría</h5>
-            <p>
-              <?php echo $info['category'] ?>
-            </p>
-          </div>
-          <div id="descriptionBook">
-            <h3 data-section="book" data-value="desc">Descripción</h3>
-            <p>
-              <?php echo $info['description'] ?>
-            </p>
-          </div>
-          <div id="buttons">
-            <div class="btnRead">
-              <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
-                <i class="fa-sharp fa-solid fa-book-open-reader"></i>
-                <p data-section="book" data-value="leer">Leer</p>
-              </a>
-            </div>
-            <div id="btnFav">
-              <div id="addFav" class="book-link <?php esconder(); ?>" onclick="seeBtn(true)">
-                <i class="fa-solid fa-plus"></i>
-                <p data-section="book" data-value="fav">Favoritos</p>
-                <input type="hidden" value="<?php echo $id ?>" id="input-id">
-              </div>
-              <div id="delFav" class="book-link <?php esconder(); ?>" onclick="seeBtn(false)">
-                <i class="fa-solid fa-trash" style="color: #141414;"></i>
-                <p data-section="book" data-value="fav">Favoritos</p>
-                <input type="hidden" value="<?php echo $id ?>" id="input-id">
-              </div>
-            </div>
-            <div class="btnDown">
-              <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download>
-                <i class="fa-solid fa-download"></i>
-                <p data-section="book" data-value="descargar">Descargar</p>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="dataBook">
+
       </div>
       <div id="content">
         <h3 data-section="book" data-value="comentarios">Comentarios</h3>
