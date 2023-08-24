@@ -28,12 +28,7 @@
                 </div>
             </div>
         </div>
-        <li class="btnAside">
-            <a href="../html/aboutus.php" class="btnLink">
-                <i class="fa-sharp fa-solid fa-circle-info"></i>
-                <p data-section="AsideA" data-value="doc"> Documentación</p>
-            </a>
-        </li>
+
         <li class="btnAside">
             <a href="../php/log_out.php" class="btnLink">
                 <i class="fa-solid fa-right-from-bracket"></i>
