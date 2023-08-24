@@ -35,17 +35,6 @@ main {
   max-width: 80rem;
 }
 
-#author-info, #description {
-  word-wrap: break-word;
-  width: 75%;
-  white-space: normal;
-}
-
-#description {
-  text-align: justify;
-  margin-top: 10rem;
-}
-
 #buttons {
   width: 100%;
   height: 10rem;
@@ -54,6 +43,46 @@ main {
   columns: 3;
   align-items: center;
   gap: 1rem;
+}
+
+.btnRead a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnRead a p {
+  color: var(--main-white);
+}
+
+#addFav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#addFav p {
+  color: var(--main-white);
+}
+
+#delFav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#delFav  p {
+  color: var(--main-white);
+}
+
+.btnDown a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnDown a p {
+  color: var(--main-white);
 }
 
 .book-link {
@@ -193,8 +222,7 @@ main {
   justify-content: center;
 }
 
-
-#comment p{
+#comment p {
   font-size: 1.8rem;
   font-weight: 600;
 }

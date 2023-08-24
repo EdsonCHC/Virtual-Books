@@ -5,7 +5,7 @@ require_once("../php/cone.php");
 require_once("../php/methods.php");
 
 $id = $_GET['id'];
-$obj = new métodosUser();
+$obj = new MétodosUser();
 
 try {
   $sql = "SELECT * FROM resource WHERE id = $id";
@@ -63,7 +63,7 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/Rules.css">
-  <link rel="stylesheet" href="../css/libro.css">
+  <link rel="stylesheet" href="../css/book.css">
   <link rel="stylesheet" href="../css/alertify.css">
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <title>Libro</title>
@@ -84,36 +84,60 @@ try {
           <img src="<?php echo $info['img'] ?>" alt="libro-imagen">
         </div>
         <div id="book-info">
-          <div id="author-info">
+          <div id="titleBook">
             <h3>
               <?php echo $info['name'] ?>
             </h3>
-            <h5>
-              <?php echo $info['author'] ?>
-            </h5>
-            <h5 data-section="book" data-value="tipo">Tipo:
-              <?php echo $info['type'] ?>
-            </h5>
-            <h5 data-section="book" data-value="categ">Categoría:
-              <?php echo $info['category'] ?>
-            </h5>
           </div>
-          <div id="description">
+          <div id="authorBook">
+            <h4>Autor </h4>
+            <p>
+              <?php echo $info['author'] ?>
+            </p>
+          </div>
+          <div id="typeBook">
+            <h5 data-section="book" data-value="tipo">Tipo</h5>
+            <p>
+              <?php echo $info['type'] ?>
+            </p>
+          </div>
+          <div id="cateBook">
+            <h5 data-section="book" data-value="categ">Categoría</h5>
+            <p>
+              <?php echo $info['category'] ?>
+            </p>
+          </div>
+          <div id="descriptionBook">
             <h3 data-section="book" data-value="desc">Descripción</h3>
             <p>
               <?php echo $info['description'] ?>
             </p>
           </div>
           <div id="buttons">
-            <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link " data-section="book" data-value="leer"><i
-                class="fa-sharp fa-solid fa-book-open-reader"></i> Leer
-            </a>
-            <div id="add-fav" class="book-link <?php esconder(); ?>" data-section="book" data-value="fav">
-              <i class="fa-solid fa-plus"></i>Añadir a Favorito
-              <input type="hidden" value="<?php echo $id ?>" id="input-id">
+            <div class="btnRead">
+              <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
+                <i class="fa-sharp fa-solid fa-book-open-reader"></i>
+                <p data-section="book" data-value="leer">Leer</p>
+              </a>
             </div>
-            <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download data-section="book" data-value="descargar"><i
-                class="fa-solid fa-download"></i>Descargar</a>
+            <div id="btnFav">
+              <div id="addFav" class="book-link <?php esconder(); ?>" onclick="seeBtn(true)">
+                <i class="fa-solid fa-plus"></i>
+                <p data-section="book" data-value="fav">Favoritos</p>
+                <input type="hidden" value="<?php echo $id ?>" id="input-id">
+              </div>
+              <div id="delFav" class="book-link <?php esconder(); ?>" onclick="seeBtn(false)">
+                <i class="fa-solid fa-trash" style="color: #141414;"></i>
+                <p data-section="book" data-value="fav">Favoritos</p>
+                <input type="hidden" value="<?php echo $id ?>" id="input-id">
+              </div>
+            </div>
+            <div class="btnDown">
+              <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download>
+                <i class="fa-solid fa-download"></i>
+                <p data-section="book" data-value="descargar">Descargar</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +190,7 @@ try {
                   <option value="Excelente" data-section="book" data-value="excelente">Excelente</option>
                 </select>
               </div>
-              <div id="post_enter" data-section="book" data-value="comentar"  >
+              <div id="post_enter" data-section="book" data-value="comentar">
                 <input type="submit" value="Comentar">
               </div>
             </div>
@@ -199,9 +223,10 @@ try {
   ?>
   <script src="../js/j_query.js"></script>
   <script src="../js/alertify.js"></script>
-  <script src="../js/add-fav.js"></script>
+  <script src="../js/fav.js"></script>
   <script src="../js/show-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

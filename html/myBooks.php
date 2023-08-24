@@ -38,7 +38,7 @@ session_start();
     require_once("../html/footer.php");
     ?>
     <script src="../js/j_query.js"></script>
-    <script src="../js/show-fav.js"></script>
+    <script src="../js/fav.js"></script>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </body>
 
