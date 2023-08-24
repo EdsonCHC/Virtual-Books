@@ -38,6 +38,4 @@
     </div>
 </aside>
 <script src="../js/toggle.js"></script>
-<script src="../js/trad.js"></script>
 <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-<script src="../js/toggle.js"></script>

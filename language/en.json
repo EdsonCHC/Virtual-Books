@@ -79,7 +79,7 @@
     "catalogo":{
         "Bienvenido":"Welcome",
         "catalog":"Catalog /Catalog item",
-        "articulos":"Items",
+        "artículos":"Items",
         "administre":"Manage your library's catalogs here.", 
         "titulos":"Search for a resource",
         "autors":"Author to search",

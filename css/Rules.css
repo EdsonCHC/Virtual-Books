@@ -124,7 +124,7 @@ header {
 .content_description_search {
   width: 42rem;
   height: 5rem;
-  margin: 0 2rem;
+  margin: 2rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -433,7 +433,8 @@ aside {
 }
 
 .btnLink {
-  width: 14.5rem;
+  width: 100%;
+  display: flex;
   color: var(--main-black);
   text-decoration: none;
   list-style: none;
