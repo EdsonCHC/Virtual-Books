@@ -110,27 +110,35 @@ try {
 
                     </div>
                     <hr>
-                    <div>
+                    <div class="grid-coments">
                         <?php
                         if ($datos->rowCount() > 0) {
                             foreach ($datos as $valoraciones) { ?>
-                                <div id="comments">
-                                    <div id="person">
-                                        <p>
-                                            <?php echo $valoraciones['name']; ?>
-                                        </p>
-                                    </div>
-                                    <div id="comment">
-                                        <div id="text">
-                                            <p>
-                                                <?php echo $valoraciones['description']; ?>
-                                            </p>
-                                            <p>
-                                                <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div id="comments">
+                                                <div id="person">
+                                                    <p>
+                                                        <?php echo $valoraciones['name']; ?>
+                                                    </p>
+                                                </div>
+                                                <div id="comment">
+                                                    <div id="text">
+
+                                                        <p>
+                                                            <?php echo $valoraciones['description']; ?>
+                                                        </p>
+                                                        <p>
+                                                            <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                                 <?php
                             }
                         } else {
