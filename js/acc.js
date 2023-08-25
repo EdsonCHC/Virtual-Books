@@ -73,7 +73,7 @@ $(function () {
                 console.log(response);
                 if (response !== "bad-pass") {
                     alertify.success("Datos actualizados");
-                    $("#updateDialog").hide();
+                    document.querySelector("#updateDialog").close();
                     $("#form-diag").trigger('reset');
                 }else if (response === "bad-pass"){
                     alertify.error("Contraseña incorrecta");
