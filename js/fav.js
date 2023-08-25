@@ -1,53 +1,12 @@
 $(function () {
   //Variables
-  let table = document.getElementById("table");
-  let valor_anterior = 0;
-
-  //Pagina myBook.php
-  get_books();
-
-  //Visualiza el libro in myBooks
-  function get_books() {
-    $.get("../php/show-fav.php", (response) => {
-      let resource = JSON.parse(response);
-      let plantilla = "";
-      resource.forEach((data) => {
-        plantilla += `
-          <div class="flex-books" resId="${data.id}">
-          <a href="../html/book.php?id=${data.id}">
-                <img src="${data.img}" alt="book-image">
-                <p>${data.name}</p>
-              </a>
-          </div>
-            `;
-      });
-      $("#resource").html(plantilla);
-    });
-  }
-
-  //Pagina Book.php
-  var addFav = document.getElementById("addFav");
-  var delFav = document.getElementById("delFav");
-
-  // Añadir favoritos
-  $("#addFav").on("click", () => {
-    let id = $("#input-id").val();
-    $.post("../php/addFav.php", { id }, (response) => {
-      if (response) {
-        alertify.success("Añadido Correctamente");
-        addFav.style.display = "none";
-        delFav.style.display = "flex";
-      } else {
-        alertify.error("Error");
-      }
-    });
-  });
-
-  //Mostrar datos en Book
+  let id = $("#input-id").val();
   showDataBook();
 
+  //Mostrar datos en Book
+
   function showDataBook() {
-    $.post("../php/showResBook.php", { valor_anterior }, async (response) => {
+    $.post("../php/showResBook.php", {id} , (response) => {
       if (response) {
         let resource = JSON.parse(response);
         let template = "";
@@ -74,7 +33,7 @@ $(function () {
                 <p>${data.category}</p>
               </div>
               <div id="descriptionBook">
-                <h4>Descripcion</h4>
+                <h4>Descripción</h4>
                 <p>${data.description}</p>
               </div>
             </div>
@@ -115,7 +74,7 @@ $(function () {
 
   // Eliminar favoritos
   $(document).on("click", "#delFav", function () {
-    alertify.comfirm("¿Eliminar De Favoritos?", function () {
+    alertify.confirm("¿Eliminar De Favoritos?", function () {
       let btn = $(this)[0].parentElement.parentElement;
       let id = $(btn).attr("resId");
       $.post("../php/delFav.php", { id }, (response) => {
