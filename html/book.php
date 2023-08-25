@@ -5,6 +5,7 @@ require_once("../php/cone.php");
 require_once("../php/methods.php");
 
 $id = $_GET['id'];
+$id_rec = $_GET['id'];
 $obj = new MétodosUser();
 
 try {
@@ -80,7 +81,7 @@ try {
     ?>
     <div id="book">
       <div class="dataBook">
-
+      <input type="hidden" value="<?php echo $id_rec; ?>" id="input-id">
       </div>
       <div id="content">
         <h3 data-section="book" data-value="comentarios">Comentarios</h3>
@@ -111,8 +112,6 @@ try {
           echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
         }
         ?>
-
-
         <form method="POST" onsubmit="" class="<?php esconder(); ?>">
 
           <div id="general_container">
@@ -165,7 +164,6 @@ try {
   <script src="../js/j_query.js"></script>
   <script src="../js/alertify.js"></script>
   <script src="../js/fav.js"></script>
-  <script src="../js/show-fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 
 </body>

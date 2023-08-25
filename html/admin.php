@@ -2,43 +2,19 @@
 if (isset($_SESSION['admin'])) {
     header("Location: ../html/login.php");
 }
-require_once("../php/interface.php");
-require_once("../php/cone.php");
 require_once("../php/methods.php");
-// $id = $_GET['id'];
-
 $obj = new MétodosAdmin();
-
-//Comentarios
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_recurso = $_GET['id'];
-    $id_usuario = $_SESSION['user'][0];
-
-    if (isset($_POST['texto']) && isset($_POST['valuation'])) {
-        $texto = $_POST['texto'];
-        $valuation = $_POST['valuation'];
-        // Verifica si los campos están vacíos
-        if (empty($texto) || empty($valuation)) {
-            echo '<div class="popup-container" id="popup">
-        <span class="close-btn" id="closeButton">&times;</span>
-        <p>Por favor, completa todos los campos.
-        </p>
-        </div>';
-        } else {
-            $obj = new Comentario();
-            $arr = array($texto, $valuation, $id_usuario, $id_recurso);
-            $obj->insertData($arr);
-            header("Location: book.php?id=$id_recurso");
-            exit;
-        }
-    }
-}
 
 //Mostrar comentarios
 try {
     $sql = "SELECT c.description, c.valuation, u.name FROM comment c INNER JOIN `user` u on c.id_c = u.id";
     $datos = $obj->showData($sql);
     $datos->setFetchMode(PDO::FETCH_ASSOC);
+
+    $date = date("Y-m-d");
+    $last_date = date("Y-m-d", strtotime($date . " -1 day"));
+    $count = $obj->showData("SELECT COUNT(*) FROM user where dateReg <=  '$last_date'");
+    $user_count = $count->fetch();
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -102,7 +78,8 @@ try {
                     </div>
                 </div>
                 <div class="e2">
-                    <h5 data-section="indexA" data-value="estad">Estadística de Usuarios</h5>
+                    <h5 data-section="indexA" data-value="estad">Nuevos Usuarios</h5>
+                    <h4><?php echo $user_count[0]; ?></h4>
                 </div>
                 <div class="element e3">
                     <div class="flex-element">

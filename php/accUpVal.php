@@ -34,8 +34,8 @@ if (isset($Pass)) {
     }
     if ($row['password'] === $Pass) {
         // Verificar si se ha proporcionado una nueva imagen
-        if (isset($_FILES['file'])) {
-            $file = $_FILES['file']['tmp_name'];
+        if (isset($_FILES['img'])) {
+            $file = $_FILES['img']['tmp_name'];
             $route = "../src/user/" . $img_name;
             if ($oldImg !== "../src/user/user-man-1.png" && $oldImg !== "../src/user/user-man-2.png" && $oldImg !== "../src/user/user-woman-1.png" && $oldImg !== "../src/user/user-woman-2.png") {
                 unlink($oldImg);

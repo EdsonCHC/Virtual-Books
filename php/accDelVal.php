@@ -17,7 +17,7 @@ try {
 if ($row['password'] === $password) {
     echo true;
     try{
-        $sql = "DELETE FROM user WHERE email = '$email'";
+        $sql = "DELETE FROM user WHERE email = :email";
         $obj->deleteData($sql);
         session_start();
         session_destroy();

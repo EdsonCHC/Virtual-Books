@@ -128,6 +128,7 @@ $(function () {
       contentType: false,
       success: (response) => {
         if (response) {
+          console.log(response);
           alertify.success("Éxito");
           document.querySelector(".dialogIn").close();
           $("#form-dialog-insert").trigger("reset");
@@ -144,7 +145,6 @@ $(function () {
     });
   });
 
-  //mostrar datos
   function showData() {
     $.post("../php/show-rec.php", { valor_anterior }, async (response) => {
       if (response) {
