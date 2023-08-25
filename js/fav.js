@@ -88,8 +88,8 @@ $(function () {
   $(document).on("click", "#delFav", function () {
     alertify.confirm("¿Eliminar De Favoritos?", function () {
       let btn = $(this)[0].parentElement.parentElement;
-      let id = $(btn).attr("resId");
-      $.post("../php/delFav.php", { id }, (response) => {
+      let id_add = $(btn).attr("resId");
+      $.post("../php/delFav.php", { id_add }, (response) => {
         if (response) {
           alertify.success("Eliminado");
           addFav.style.display = "none";
