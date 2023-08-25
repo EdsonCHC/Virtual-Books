@@ -1,12 +1,14 @@
 $(function () {
   //Variables
   let id = $("#input-id").val();
+  let addFav = $("#addFav");
+  let delFav = $("#delFav");
   showDataBook();
 
   //Mostrar datos en Book
 
   function showDataBook() {
-    $.post("../php/showResBook.php", {id} , (response) => {
+    $.post("../php/showResBook.php", { id }, (response) => {
       if (response) {
         let resource = JSON.parse(response);
         let template = "";
@@ -48,12 +50,10 @@ $(function () {
                 <div id="addFav" class="book-link esconder();">
                   <i class="fa-solid fa-plus"></i>
                   <p data-section="book" data-value="fav">Favoritos</p>
-                  <input type="hidden" value="${data.id}" id="input-id">
                 </div>
                 <div id="delFav" class="book-link esconder();">
                   <i class="fa-solid fa-trash" style="color: #141414;"></i>
                   <p data-section="book" data-value="fav">Favoritos</p>
-                  <input type="hidden" value="${data.id}" id="input-id">
                 </div>
               </div>
               <div class="btnDown">
@@ -72,6 +72,18 @@ $(function () {
     });
   }
 
+  $(document).on("click", "#addFav", function () {
+    let btn = $(this)[0].parentElement.parentElement.parentElement;
+    let id = $(btn).attr("ResIdBook");
+    $.post("../php/addFav.php", { id }, (response) => {
+      if (response) {
+        alertify.success("Agregado");
+      } else {
+        alertify.error("Error");
+      }
+    });
+  });
+
   // Eliminar favoritos
   $(document).on("click", "#delFav", function () {
     alertify.confirm("¿Eliminar De Favoritos?", function () {
@@ -80,8 +92,8 @@ $(function () {
       $.post("../php/delFav.php", { id }, (response) => {
         if (response) {
           alertify.success("Eliminado");
-          delFav.style.display = "none";
-          addFav.style.display = "flex";
+          addFav.style.display = "none";
+          delFav.style.display = "block";
         } else {
           alertify.error("Error");
         }
@@ -89,21 +101,8 @@ $(function () {
     });
   });
 
-  // $("#delFav").on("click", () => {
-  //   let id = $("#input-id").val();
-  //   $.post("../php/delFav.php", { id }, (response) => {
-  //     if (response) {
-  //       alertify.success("Eliminado");
-  //       delFav.style.display = "none";
-  //       addFav.style.display = "flex";
-  //     } else {
-  //       alertify.error("Error");
-  //     }
-  //   });
-  // });
   //Visualizar datos del formulario
   function fetchTasks() {
-    //Ajax metodo "GET"
     $.ajax({
       url: "taskList.php",
       type: "GET",
