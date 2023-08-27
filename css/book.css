@@ -55,23 +55,31 @@ main {
   color: var(--main-white);
 }
 
-#addFav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #addFav p {
   color: var(--main-white);
 }
 
-#delFav {
+.book-link.active {
   display: none;
-  justify-content: center;
-  align-items: center;
 }
 
-#delFav  p {
+.book-link.inactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30rem;
+  background-color: var(--main-red);
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#delFav p {
   color: var(--main-white);
 }
 
