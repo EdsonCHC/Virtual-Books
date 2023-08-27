@@ -76,8 +76,6 @@ $(function () {
   $(document).on("click", "#addFav", function () {
     let container = $(this).closest("#container");
     let id_add = container.data("id");
-    let addFavBtn = container.find("#addFav");
-    let delFavBtn = container.find("#delFav");
     $.post("../php/Fav.php", { id_add }, (response) => {
       if (response === "Added" || response === "Success") {
         console.log(response);
@@ -92,8 +90,6 @@ $(function () {
   $(document).on("click", "#delFav", function () {
     let container = $(this).closest("#container"); // Buscar el contenedor más cercano
     let id_del = container.data("id"); // Obtener el atributo ResIdBook
-    let addFavBtn = container.find("#addFav");
-    let delFavBtn = container.find("#delFav");
     $.post("../php/Fav.php", { id_del }, (response) => {
       if (response === "Removed") {
         alertify.success("Eliminado");

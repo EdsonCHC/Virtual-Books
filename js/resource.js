@@ -122,7 +122,6 @@ $(function () {
       contentType: false,
       success: (response) => {
         if (response) {
-          console.log(response);
           alertify.success("Éxito");
           document.querySelector(".dialogIn").close();
           $("#form-dialog-insert").trigger("reset");
@@ -175,7 +174,6 @@ $(function () {
     document.querySelector(".dialogIn").showModal();
     let button = $(this)[0].parentElement.parentElement.parentElement;
     let id = $(button).attr("book-id");
-
     $.post("../php/show-rec.php", { id }, (response) => {
       const input = JSON.parse(response);
       $("#title").val(input.name);
@@ -199,9 +197,9 @@ $(function () {
       "Estas seguro de eliminar este recurso",
       function () {
         $.post("../php/del-res.php", { id }, (response) => {
-          console.log(response);
           if (response){
             alertify.success("Eliminado");
+            showData();
           }else{
             alertify.error("Error");
           }

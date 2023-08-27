@@ -32,12 +32,12 @@ if (isset($id_del)) {
     try {
         $sql = "DELETE FROM shelf WHERE id_r = :id";
         $stmt = $DBH->prepare($sql);
-        $stmt->bindParam(':id', $id_del, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id_del);
         $stmt->execute();
         echo "Removed";
 
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        die("Error: " . $e->getMessage());
     }
 }
 ?>

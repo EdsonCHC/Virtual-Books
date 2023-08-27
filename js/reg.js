@@ -1,26 +1,43 @@
 $(function () {
-  //función se ejecuta al principio
+  // función se ejecuta al principio
   $("#form").submit((e) => {
-    
-    e.preventDefault(); //detenemos el envió del form
-    if ($("#passConfirm").val() !== $("#pass").val()) {
+    e.preventDefault(); // detenemos el envío del form
 
-      e.preventDefault();
+    const name = $("#name").val();
+    const lastName = $("#lastName").val();
+    const email = $("#email").val();
+    const password = $("#pass").val();
+    const passConfirm = $("#passConfirm").val(); // Nueva variable para confirmación de contraseña
+
+    // Validar que no se ingresen scripts en los campos
+    if (containsScript(name) || containsScript(lastName) || containsScript(email) || containsScript(password) || containsScript(passConfirm)) {
+      alertify.alert("No se permiten scripts en los campos.");
+      return; // Detener la ejecución si se detecta un script
+    }
+
+    if (name.trim() === "" || lastName.trim() === "" || email.trim() === "" || password.trim() === "" || passConfirm.trim() === "") {
+      alertify.alert("Por favor, completa todos los campos.");
+      return; // Detener la ejecución si algún campo está vacío
+    }
+
+    if (!/^[A-Za-záéíóúñÑ\s]+$/.test(name) || !/^[A-Za-záéíóúñÑ\s]+$/.test(lastName)) {
+      alertify.alert("El nombre y el apellido no pueden contener números ni caracteres especiales.");
+      return; // Detener la ejecución si el nombre o apellido contienen números o caracteres especiales
+    }
+
+    if (password !== passConfirm) {
       alertify.error("Las contraseñas no coinciden");
-
     } else {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("lastName", lastName);
+      formData.append("email", email);
+      formData.append("password", password);
 
-      const formData = new FormData(); //nuevo objeto para contener datos key:value
-      formData.append("name", $("#name").val());
-      formData.append("lastName", $("#lastName").val());
-      formData.append("email", $("#email").val());
-      formData.append("password", $("#pass").val());
-
-      let selected_file = $("#img_i")[0].files[0]; //input file
+      let selected_file = $("#img_i")[0].files[0];
       let image = null;
 
       if (selected_file) {
-        //validación input file
         image = selected_file.name;
         formData.append("file", selected_file);
         formData.append("img_name", image);
@@ -32,29 +49,31 @@ $(function () {
       }
 
       $.ajax({
-        //método ajax de jquery
-        url: "../php/register_db_vb.php", //url
-        type: "POST", //method
-        data: formData, //data
+        url: "../php/register_db_vb.php",
+        type: "POST",
+        data: formData,
         processData: false,
         contentType: false,
         success: (response) => {
-          //lo que se hará al obtener respuesta
           if (response === "true") {
             alertify.alert("Te has registrado", () => {
               window.location = "../html/login.php";
             });
           } else if (response === "false") {
-            alertify.alert("El correo ya esta en uso");
+            alertify.alert("El correo ya está en uso");
           } else {
             alertify.alert("Ha ocurrido un error");
           }
         },
         error: (xhr, status, error) => {
-          //manejo de error
           console.error(error);
         },
       });
     }
   });
 });
+
+function containsScript(text) {
+  const scriptTags = /<script.*?>|<\/script>/gi;
+  return scriptTags.test(text);
+}
