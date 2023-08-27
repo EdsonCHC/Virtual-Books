@@ -1,3 +1,5 @@
+
+
 <?php
 if (isset($_SESSION['admin'])) {
     header("Location: ../html/login.php");
@@ -7,13 +9,11 @@ $obj = new MétodosAdmin();
 
 //Mostrar comentarios
 try {
-    $sql = "SELECT c.description, c.valuation, u.name FROM comment c INNER JOIN `user` u on c.id_c = u.id";
-    $datos = $obj->showData($sql);
-    $datos->setFetchMode(PDO::FETCH_ASSOC);
+
 
     $date = date("Y-m-d");
     $last_date = date("Y-m-d", strtotime($date . " -1 day"));
-    $count = $obj->showData("SELECT COUNT(*) FROM user where dateReg <=  '$last_date'");
+    $count = $obj->showData("SELECT COUNT(*) FROM user WHERE dateReg <= '$last_date' AND rol = 0");
     $user_count = $count->fetch();
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
@@ -62,15 +62,13 @@ try {
                             while ($info = $row->fetch()) {
                                 ?>
                                 <div class="resourse">
-                                    <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                                        <div class="book-container">
-                                            <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
-                                            <p class="textRes">
-                                                <?php echo $info["name"]; ?>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
+                                    \ <div class="book-container">
+                                        <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                                        <p class="textRes">
+                                            <?php echo $info["name"]; ?>
+                                        </p>
+                                    </div>
+                                    \ </div>
                                 <?php
                             }
                         }
@@ -79,53 +77,34 @@ try {
                 </div>
                 <div class="e2">
                     <h5 data-section="indexA" data-value="estad">Nuevos Usuarios</h5>
-                    <h4><?php echo $user_count[0]; ?></h4>
+                    <h4>
+                        <?php echo $user_count[0]; ?>
+                    </h4>
                 </div>
                 <div class="element e3">
                     <div class="flex-element">
                         <h5 data-section="indexA" data-value="coment">Comentarios</h5>
-
                     </div>
                     <hr>
-                    <div class="grid-coments">
-                        <?php
-                        if ($datos->rowCount() > 0) {
-                            foreach ($datos as $valoraciones) { ?>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <div id="comments">
-                                                <div id="person">
-                                                    <p>
-                                                        <?php echo $valoraciones['name']; ?>
-                                                    </p>
-                                                </div>
-                                                <div id="comment">
-                                                    <div id="text">
-
-                                                        <p>
-                                                            <?php echo $valoraciones['description']; ?>
-                                                        </p>
-                                                        <p>
-                                                            <?php echo "Puntuación: " . $valoraciones['valuation']; ?>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-                                <?php
-                            }
-                        } else {
-                            echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
-                        }
-                        ?>
+                    <div class="contentArticle">
+                        <div class="table" id="table">
+                            <table id="table_content">
+                                <tr>
+                                    <th>ID</th>
+                                    <th data-section="coment" data-value="description">Description</th>
+                                    <th data-section="coment" data-value="valuation">Valuation</th>
+                                    <th data-section="coment" data-value="acciones">Acciones</th>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
     </main>
+    <script src="../js/preview.js"></Script>
+    <script src="../js/j_query.js"></Script>
+    <script src="../js/alertify.js"></Script>
+    <script src="../js/coment.js"></script>
     <script src="../js/trad.js"></script>
 </body>
 

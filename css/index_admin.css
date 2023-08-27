@@ -56,8 +56,6 @@ main {
     justify-content: space-between;
 }
 
-
-
 .grid-books img{
     width: 5rem;
     height: 8rem;
@@ -112,3 +110,47 @@ a{
     height: 330px;
     overflow: auto;
 }
+/*Estilos tabla*/
+.table{
+    width: 500px;
+    height: 330px; 
+    overflow: auto;
+}
+  
+  th {
+    font-family: Poppins !important;
+    font-size: 1.5rem;
+    color: var(--main-white);
+    background: #00a0fb;
+    padding: 2rem 2rem;
+  }
+  
+  td:not(.result_td) {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .copies {
+    background-color: rgb(66, 235, 181);
+    border-radius: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+  }
+  
+  .actions button {
+    width: 4.3rem;
+    height: 3.8rem;
+    background-color: #00a0fb;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    cursor: pointer;
+    border-color: #00a0fb;
+    margin: 0.2rem;
+  }
+  
+  .actions img {
+    width: 30px;
+  }
