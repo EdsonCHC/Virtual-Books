@@ -7,15 +7,26 @@ $DBH = $obj->connect();
 extract($_POST);
 if (isset($id_add)) {
     try {
-        $sql = "INSERT INTO shelf (id_r) VALUES (:id)";
-        $stmt = $DBH->prepare($sql);
-        $stmt->bindParam(':id', $id_add, PDO::PARAM_INT);
-        $stmt->execute();
-        echo "Success";
+        $checkQuery = "SELECT * FROM shelf WHERE id_r = :id";
+        $checkStmt = $DBH->prepare($checkQuery);
+        $checkStmt->bindParam(':id', $id_add, PDO::PARAM_INT);
+        $checkStmt->execute();
+        $isAdded = $checkStmt->fetchColumn();
+
+        if ($isAdded) {
+            echo "Added";
+        } else {
+            $insertQuery = "INSERT INTO shelf (id_r) VALUES (:id)";
+            $insertStmt = $DBH->prepare($insertQuery);
+            $insertStmt->bindParam(':id', $id_add, PDO::PARAM_INT);
+            $insertStmt->execute();
+            echo "Success";
+        }
     } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        echo "Error";
     }
 }
+
 
 if (isset($id_del)) {
     try {
@@ -23,7 +34,8 @@ if (isset($id_del)) {
         $stmt = $DBH->prepare($sql);
         $stmt->bindParam(':id', $id_del, PDO::PARAM_INT);
         $stmt->execute();
-        echo "Success";
+        echo "Removed";
+
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }

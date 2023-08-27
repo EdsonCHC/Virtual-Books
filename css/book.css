@@ -59,11 +59,7 @@ main {
   color: var(--main-white);
 }
 
-.book-link.active {
-  display: none;
-}
-
-.book-link.inactive {
+.book-link {
   display: flex;
   justify-content: center;
   align-items: center;

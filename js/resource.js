@@ -44,12 +44,6 @@ $(function () {
                   <td class="result_td" book-id="${item.id}">
                       <div class="flex-element">
                           <div class="actions">
-                              <button><i class="fa-solid fa-eye"></i></button>
-                          </div>
-                          <div class="actions">
-                              <button><i class="fa-solid fa-book"></i></button>
-                          </div>
-                          <div class="actions">
                             <button class="update-item"><i class="fa-solid fa-file-pen"></i></button>
                           </div>
                           <div class="actions">
@@ -160,12 +154,6 @@ $(function () {
               <td>${book.category}</td>
               <td book-id="${book.id}">
                   <div class="flex-element">
-                      <div class="actions">
-                          <button><i class="fa-solid fa-eye"></i></button>
-                      </div>
-                      <div class="actions">
-                          <button><i class="fa-solid fa-book"></i></button>
-                      </div>
                       <div class="actions">
                           <button class="update-item"><i class="fa-solid fa-file-pen"></i></button>
                       </div>
