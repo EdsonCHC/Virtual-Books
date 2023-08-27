@@ -74,15 +74,13 @@ $(function () {
 
   //Añadir favoritos
   $(document).on("click", "#addFav", function () {
-    let container = $(this).closest("#container"); // Buscar el contenedor más cercano
-    let id_add = container.attr("ResIdBook"); // Obtener el atributo ResIdBook
-    let addFavBtn = container.find("#addFav");
-    let delFavBtn = container.find("#delFav");
+    let container = $(this).closest("#container"); 
+    let id_add = container.attr("ResIdBook"); 
     $.post("../php/Fav.php", { id_add }, (response) => {
-      if (response === "Success") {
+      if (response) {
         alertify.success("Agregado");
-        addFavBtn.removeClass("inactive").addClass("active");
-        delFavBtn.removeClass("active").addClass("inactive");
+        $("#addFav").removeClass("inactive").addClass("active");
+        $("#delFav").removeClass("active").addClass("inactive");
       } else {
         alertify.error("Error al agregar");
       }
@@ -91,15 +89,13 @@ $(function () {
 
   // Eliminar favoritos
   $(document).on("click", "#delFav", function () {
-    let container = $(this).closest("#container"); // Buscar el contenedor más cercano
-    let id_del = container.attr("ResIdBook"); // Obtener el atributo ResIdBook
-    let addFavBtn = container.find("#addFav");
-    let delFavBtn = container.find("#delFav");
+    let container = $(this).closest("#container"); 
+    let id_del = container.attr("ResIdBook"); 
     $.post("../php/Fav.php", { id_del }, (response) => {
-      if (response === "Success") {
+      if (response) {
         alertify.success("Eliminado");
-        delFavBtn.removeClass("inactive").addClass("active");
-        addFavBtn.removeClass("active").addClass("inactive");
+        $("#delFav").removeClass("inactive").addClass("active");
+        $("#addFav").removeClass("active").addClass("inactive");
       } else {
         alertify.error("Error al eliminar");
       }

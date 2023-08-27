@@ -16,7 +16,6 @@ try {
                 'img' => $row['img']
             );
         }
-        
         $json_str = json_encode($json);
         echo $json_str;
         exit();

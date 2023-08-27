@@ -375,7 +375,8 @@ aside {
   left: 0;
   background-color: #fff;
   height: 91.3vh;
-  width: 22rem;
+  min-width: 23rem;
+  max-width: 23rem;
   display: flex;
   flex-direction: column;
   align-items: center;
