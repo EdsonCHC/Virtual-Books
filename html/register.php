@@ -52,12 +52,12 @@ if (isset($_SESSION['user'])) {
                     <label for="">
                         <h6 data-section="register" data-value="name">Nombres</h6>
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off" required>
+                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off" >
                     <p class="warnings" id="warnings"></p>
                     <label for="">
                         <h6 data-section="register" data-value="lastname">Apellidos</h6>
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez" required id="lastName"
+                    <input type="text" name="lastName" placeholder="Castro Lopez"  id="lastName"
                         autocomplete="off">
                     <p class="warnings" id="warnings2"></p>
                     <label for="">
