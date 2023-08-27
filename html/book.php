@@ -115,13 +115,13 @@ try {
             </p>
           </div>
           <div id="buttons">
-            <div class="btnRead">
+            <div class="btnRead <?php esconder();?>">
               <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
                 <i class="fa-sharp fa-solid fa-book-open-reader"></i>
                 <p data-section="book" data-value="leer">Leer</p>
               </a>
             </div>
-            <div id="btnFav">
+            <div id="btnFav" class="<?php esconder();?>"> 
               <?php
               $obj2 = new DataBase();
               $DBH = $obj2->connect();
@@ -131,7 +131,7 @@ try {
               $stmt->execute();
               $isInFavorites = $stmt->fetchColumn() > 0;
               if ($isInFavorites) {
-                echo '<div id="delFav" class="book-link active">
+                echo '<div id="delFav" class="book-link active " >
                           <i class="fa-solid fa-trash"></i>
                           <p data-section="book" data-value="fav">Favoritos</p>
                         </div>';
@@ -149,7 +149,7 @@ try {
               ?>
             </div>
             <div class="btnDown">
-              <a href="<?php echo $info['src'] ?>" class="book-link down <?php esconder(); ?>" download>
+              <a href="<?php echo $info['src'] ?>" class="book-link down" download>
                 <i class="fa-solid fa-download"></i>
                 <p data-section="book" data-value="descargar">Descargar</p>
               </a>
