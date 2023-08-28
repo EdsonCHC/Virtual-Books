@@ -12,8 +12,8 @@ $obj = new métodosUser();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/Rules.css" />
-  <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/index.css" />
+  <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/alertify.css">
 
@@ -32,7 +32,6 @@ $obj = new métodosUser();
       <h2 data-section="index" data-value="cont">Contenido</h2>
       <div id="table_resultado">
       </div>
-
       <div class="categoria">
         <a href="" class="tag-link">
           <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
@@ -46,7 +45,14 @@ $obj = new métodosUser();
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <div class="resourse">
+              <div class="resource">
+                <!-- <div class="card">
+                  <div class="lines"></div>
+                  <div class="imgBook">
+                    <img src="" alt="libro-imagen">
+                  </div>
+                  <div class="content"></div>
+                </div> -->
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
                     <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">

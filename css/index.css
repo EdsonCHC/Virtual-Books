@@ -26,7 +26,122 @@ a{
 .filtro{
   display: none;
 }
+/*Estilo cartas*/
+/* .grid-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
 
+.resource {
+  position: relative;
+  display: flex;
+  padding: 8rem 4rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background: #333;
+  transition: 0.5s;
+}
+
+.card:hover {
+  height: 450px;
+}
+
+.card.lines {
+  position: relative;
+  inset: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+.card.lines::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff,
+    transparent
+  );
+  animation: animate 4s linear infinite;
+  animation-play-state: paused;
+}
+
+.card:hover.lines::before {
+  animation-play-state: running;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card.lines::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.card .imgBook {
+  top: -60px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translateX(-50%);
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover .imgBook {
+  top: 25px;
+  width: 250px;
+  height: 250px;
+}
+
+.card.imgBook::backdrop {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    #ff3c7b,
+    #ff3c7b,
+    #ff3c7b,
+    transparent
+  );
+  animation: animate2 6s linear infinite;
+} */
 .grid-books{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
