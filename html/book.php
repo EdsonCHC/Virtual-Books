@@ -115,13 +115,13 @@ try {
             </p>
           </div>
           <div id="buttons">
-            <div class="btnRead <?php esconder();?>">
+            <div class="btnRead <?php esconder(); ?>">
               <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
                 <i class="fa-sharp fa-solid fa-book-open-reader"></i>
                 <p data-section="book" data-value="leer">Leer</p>
               </a>
             </div>
-            <div id="btnFav" class="<?php esconder();?>"> 
+            <div id="btnFav" class="<?php esconder(); ?>">
               <?php
               $obj2 = new DataBase();
               $DBH = $obj2->connect();
@@ -131,7 +131,7 @@ try {
               $stmt->execute();
               $isInFavorites = $stmt->fetchColumn() > 0;
               if ($isInFavorites) {
-                echo '<div id="delFav" class="book-link active " >
+                echo '<div id="delFav" class="book-link active">
                           <i class="fa-solid fa-trash"></i>
                           <p data-section="book" data-value="fav">Favoritos</p>
                         </div>';
@@ -140,7 +140,7 @@ try {
                 <i class="fa-solid fa-plus"></i>
                 <p data-section="book" data-value="fav">Favoritos</p>
               </div>';
-              } else{
+              } else {
                 echo '<div id="delFav" class="book-link active">
                 <i class="fa-solid fa-trash"></i>
                 <p data-section="book" data-value="fav">Favoritos</p>
@@ -186,7 +186,7 @@ try {
           echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
         }
         ?>
-        <form method="POST" onsubmit="" class="<?php esconder(); ?>">
+        <form id="commentForm" method="POST" onsubmit="" class="<?php esconder(); ?>">
 
           <div id="general_container">
             <div id="first_container">
