@@ -7,7 +7,7 @@ $id_rec = $_GET['id'];
 $obj = new MétodosUser();
 
 try {
-  $sql = "SELECT * FROM resource WHERE id = $id";
+  $sql = "SELECT * FROM resource WHERE id = '$id'";
   $row = $obj->showData($sql);
   if ($row->rowCount() > 0) {
     $info = $row->fetch(PDO::FETCH_ASSOC);
@@ -152,7 +152,7 @@ try {
           echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
         }
         ?>
-        <form id="commentForm" method="POST" onsubmit="return commentForm();" class="<?php esconder(); ?>">
+        <form id="commentForm" class="<?php esconder(); ?>">
           <div id="general_container">
             <div id="first_container">
               <div class="linea"></div>
@@ -168,10 +168,9 @@ try {
                   <option value="Excelente" data-section="book" data-value="excelente">Excelente</option>
                 </select>
               </div>
-
               <div id="post_enter" data-section="book" data-value="comentar">
-                <input type="hidden" name="user" id="user" value="<?php echo $_SESSION['user'][0]; ?>">
-                <input type="hidden" name="id_recurso" id="id_recurso" value="...">
+                <input type="hidden" id="id_usuario" value="<?php echo $_SESSION['user'][0]; ?>">
+                <input type="hidden" id="id_recurso" value="<?php echo $id_rec ?>">
                 <input type="submit" value="Comentar">
               </div>
 
@@ -205,9 +204,9 @@ try {
   <?php
   require_once("../html/footer.php");
   ?>
-  <script src="../js/valcoment.js"></script>
   <script src="../js/j_query.js"></script>
   <script src="../js/alertify.js"></script>
+  <script src="../js/valcoment.js"></script>
   <script src="../js/fav.js"></script>
   <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 

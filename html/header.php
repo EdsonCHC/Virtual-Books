@@ -1,6 +1,4 @@
 <?php
-require_once('../php/cone.php');
-require_once("../php/interface.php");
 require_once("../php/functions.php");
 require_once("../php/methods.php");
 
@@ -88,5 +86,4 @@ if (isset($_SESSION['user'])) {
   </div>
 
   <script src="../js/searchRes.js"></script>
-  <script src="../js/j_query.js"></Script>
 </header>

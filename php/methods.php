@@ -67,7 +67,7 @@ class Comentario extends MÃ©todosUser // con herencia le pasas los reciclamos mÃ
         try {
             $STH = $DBH->prepare("INSERT INTO `comment` (`description`, `valuation`, `id_c`, `id_rec`) 
             VALUES (?, ?, ?, ?)");
-            $STH->execute($arr);
+            var_dump($STH->execute($arr));
             $DBH = null;
         } catch (PDOException $e) {
             die("Error " . $e->getMessage());
