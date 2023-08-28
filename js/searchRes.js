@@ -12,7 +12,7 @@ $(document).ready(function () {
             resource.forEach((data) => {
               template += `
                 <a href="../html/book.php?id=${data.id}">
-                  <li class="result_li">${data.name}</li>
+                  <li class="result_li">${data.name} - ${data.author}</li>
                 </a>
               `;
             });

@@ -19,6 +19,7 @@ if (!empty($search)) {
         //Datos del json
         $json[] = array(
             'name' => $row['name'],
+            'author' => $row['author'],
             'id' => $row['id']
         );
     }
