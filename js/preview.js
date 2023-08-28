@@ -47,7 +47,7 @@ const validar = () => {
   text.innerHTML = warnings;
 };
 
-//VEr contraseña
+//ver contraseña
 const eye = () => {
   if (input.type === "password") {
     input.type = "text";

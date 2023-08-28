@@ -25,18 +25,19 @@ $(function () {
     }
 
     $.post("../php/scroll-api.php", post_data, async (response) => {
-      console.log(response);
-      let data = await JSON.parse(response);
-      let plantilla = "";
-      data.forEach((book) => {
-        plantilla += `
-            <a href="../html/book.php?id=${book.id}">
-                <img src="${book.img}" alt="book-image">
-            </a>
-            `;
-        valor_anterior = book.id;
-      });
-      $("#content").append(plantilla);
+      if(response === true){
+        let data = await JSON.parse(response);
+        let plantilla = "";
+        data.forEach((book) => {
+          plantilla += `
+              <a href="../html/book.php?id=${book.id}">
+                  <img src="${book.img}" alt="book-image">
+              </a>
+              `;
+          valor_anterior = book.id;
+        });
+        $("#content").append(plantilla);
+      }
     });
   }
 });

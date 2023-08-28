@@ -4,7 +4,7 @@ $(function () {
 
     function showComentarios() {
         $.post("../php/show-com.php", { valor_anterior }, async (response) => {
-            if (response) {
+            if (response === true) {
                 let data = await JSON.parse(response);
                 let plantilla = "";
                 data.forEach((comentario) => {
@@ -35,7 +35,6 @@ $(function () {
             "Estás seguro de eliminar este comentario",
             function () {
                 $.post("../php/del-com.php", { id }, (response) => {
-                    console.log(response);
                     if (response) {
                         alertify.success("Comentario eliminado");
                     } else {

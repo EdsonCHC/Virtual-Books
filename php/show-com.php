@@ -1,12 +1,9 @@
-
-
-
-
 <?php
 require_once("../php/methods.php");
 $obj = new Comentario();
 
 extract($_POST);
+
 if (isset($valor_anterior)) {
     $val = $valor_anterior;
     try {
@@ -24,7 +21,7 @@ if (isset($valor_anterior)) {
             }
             $json_str = json_encode($json);
             echo ($json_str);
-        } else {
+        } else{
             echo false;
         }
     } catch (PDOException $e) {
