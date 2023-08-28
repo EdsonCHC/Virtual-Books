@@ -51,34 +51,31 @@ if (isset($_SESSION['user'])) {
                 <div id="text-ctn">
                     <label for="">
                         <h6 data-section="register" data-value="name">Nombres</h6>
+                        <input type="text" placeholder="Martin Alejandro" id="name" autocomplete="off">
                     </label>
-                    <input type="text" name="name" placeholder="Martin Alejandro" id="name" autocomplete="off" >
-                    <p class="warnings" id="warnings"></p>
+                    <p class="warnings" id="warnName"></p>
                     <label for="">
                         <h6 data-section="register" data-value="lastname">Apellidos</h6>
+                        <input type="text" placeholder="Castro Lopez" id="lastName" autocomplete="off">
                     </label>
-                    <input type="text" name="lastName" placeholder="Castro Lopez"  id="lastName"
-                        autocomplete="off">
-                    <p class="warnings" id="warnings2"></p>
+                    <p class="warnings" id="warnLName"></p>
                     <label for="">
                         <h6 data-section="login" data-value="mail">Correo Electrónico</h6>
+                        <input type="email" name="email" placeholder="ejemplo@gmail.com" id="email" autocomplete="off">
                     </label>
-                    <input type="email" name="email" placeholder="ejemplo@gmail.com" id="email" autocomplete="off">
-                    <p class="warnings" id="warnings3"></p>
+                    <p class="warnings" id="warnEmail"></p>
                     <label for="">
                         <h6 data-section="login" data-value="pass">Contraseña</h6>
-                        <p class="warnings" id="warnings"></p>
+                        <input type="password" name="password" placeholder="*******" id="pass" autocomplete="off">
                     </label>
-                    <input type="password" name="password" placeholder="*******" id="pass" autocomplete="off">
-                    <div id="eye">
-                        <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
-                    </div>
                     <label for="">
                         <h6 data-section="register" data-value="pass-con">Confirmar Contraseña</h6>
-                        <p class="warnings" id="warnings"></p>
+                        <input type="password" id="passConfirm" placeholder="*******" autocomplete="off">
+                        <div id="eye">
+                            <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
+                        </div>
                     </label>
-                    <input type="password" id="passConfirm" placeholder="*******" autocomplete="off">
-
+                    <p class="warnings" id="warnings"></p>
                     <div id="aparte">
                         <!-- Registro con google-->
                         <!--<a href="<?php echo $client->createAuthUrl(); ?>>">
@@ -130,7 +127,7 @@ if (isset($_SESSION['user'])) {
                     </label>
                 </div>
                 <button onclick="" id="botón" name="register" type="submit">
-                    <h6>Registrarse</h6>
+                    <h6 style="color: white !important;">Registrarse</h6>
                 </button>
             </form>
         </div>
@@ -156,6 +153,5 @@ if (isset($_SESSION['user'])) {
 <script src="../js/reg.js"></script>
 <script src="../js/toggle.js"></script>
 <script src="../js/trad.js"></script>
-<script src="../js/valid/valRegister.js"></script>
 
 </html>

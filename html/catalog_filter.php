@@ -121,12 +121,12 @@ require_once("../php/methods.php");
                     <input type="file" id="articulo" accept=".pdf" name="src" autocomplete="off">
                 </div>
                 <div class="content_form">
-                    <label for="imagen" class="src" data-section="catalogo" data-value="img">Imagen</label>
-                    <input type="file" id="imagen" accept="Image/*" name="img"
-                        onchange="vista_preliminar(event), validar()">
-                    <div id="img-container"><img class="grande" src="../src/img/icons8-book-100.png" alt="user_image"
-                            id="img-preview">
+                    <label for="img_i" class="src" data-section="catalogo" data-value="img">Imagen</label>
+                    <input type="file" id="img_i" accept=".jpg,.png" onchange="vista_preliminar(event), validar()">
+                    <div id="img-container">
+                        <img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
                     </div>
+                    <div id="warning"></div>
                 </div>
                 <div class="btnPart">
                     <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>

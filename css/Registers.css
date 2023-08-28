@@ -69,16 +69,18 @@ a{
   color: gray;
 }
 
-#eye1{
-  position: absolute;
-  left: 490px;
-  top: 410px;
+#eye {
+  position: relative;
+  left: 80%;
+  top: -40px;
 }
 
-#eye {
-  position: absolute;
-  left: 490px;
-  top: 520px;
+#warning{
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
 }
 
 #img-ctn {
@@ -210,12 +212,6 @@ div form button {
   cursor: pointer;
 }
 
-#boton h6 {
-  color: var(--main-white);
-}
-
-
-
 #boton:hover {
   transform: scale(1.05);
 }
@@ -253,12 +249,10 @@ input[type="file"] {
   display: none;
 }
 
-
-#ojo, #ojo2{
+#ojo{
   width: 3.5rem;
   cursor: pointer;
 }
-
 
 /* Validación*/
 .warnings{

@@ -5,7 +5,6 @@ $(document).ready(function () {
         let search = $("#search").val();
         let template = "";
 
-        /*Ocupe este poque es mas corto que el ajax normal xd*/
         $.post("../php/searchRes.php", { search }, (response) => {
           if (response) {
             let resource = JSON.parse(response);

@@ -325,8 +325,16 @@ input,
 }
 
 #articulo,
-#imagen {
+#img_i {
   display: none;
+}
+
+#warning{
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
 }
 
 #img-container {
