@@ -34,25 +34,30 @@ $obj = new métodosUser();
       </div>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
-              data-value="lit">Literatura</a></h3>
+          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Literatura' Limit 7";
+          $sql = "SELECT id, name, img, description from resource where category = 'Literatura' Limit 7";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
-              <div class="resource">
-                <!-- <div class="card">
-                  <div class="lines"></div>
-                  <div class="imgBook">
-                    <img src="" alt="libro-imagen">
-                  </div>
-                  <div class="content"></div>
-                </div> -->
+          ?>
+              <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3><?php echo $info["name"]; ?></h3>
+                </div>
+                <div class="button-wrapper">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill">Acerca</button>
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="container">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
                     <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -61,8 +66,8 @@ $obj = new métodosUser();
                     </p>
                   </div>
                 </a>
-              </div>
-              <?php
+              </div> -->
+          <?php
             }
           }
           ?>
@@ -79,7 +84,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -90,7 +95,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-              <?php
+          <?php
             }
           }
           ?>
@@ -107,7 +112,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -118,7 +123,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-              <?php
+          <?php
             }
           }
           ?>
@@ -135,7 +140,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-              ?>
+          ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -146,7 +151,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-              <?php
+          <?php
             }
           }
           ?>
@@ -162,7 +167,7 @@ $obj = new métodosUser();
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
-                ?>
+            ?>
                 <div class="resourse">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                     <div class="book-container">
@@ -173,7 +178,7 @@ $obj = new métodosUser();
                     </div>
                   </a>
                 </div>
-                <?php
+            <?php
               }
             }
             ?>
