@@ -60,45 +60,42 @@ if ($_SESSION['user']) {
                     <div class="dataInp">
                         <div class="name">
                             <label data-section="account" data-value="names">Nombres
-                                <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
                             </label>
-                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
+                            <input type="text" class="inputs" value="<?php echo $name; ?>" readonly>
                         </div>
                         <div class="name">
                             <label data-section="account" data-value="Lnames">Apellidos
-                            <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
-
                             </label>
-                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
+                            <input type="text" class="inputs" value="<?php echo $lastName; ?>" readonly>
                         </div>
                         <div class="name">
                             <label data-section="account" data-value="email">Correo Electrónico
-                            <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
 
                             </label>
-                            <!-- (r) --><input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
+                            <input type="text" class="inputs" value="<?php echo $email; ?>" readonly id="emailVal">
                         </div>
                     </div>
                     <div class="dataImg">
                         <div class="img">
                             <label data-section="account" data-value="img">Imagen de perfil
-                               <!-- se saco input(r) del label volver a incluir en caso de catastrofe -->
                             </label>
-                            <!-- (r) --><img src="<?php echo $img['img']; ?>" alt="user-icon">
-                                <input type="hidden"  id="imgData" value="<?php echo $img['img']; ?>">
+                            <img src="<?php echo $img['img']; ?>" alt="user-icon">
+                            <input type="hidden" id="imgData" value="<?php echo $img['img']; ?>">
                         </div>
                         <div class="btnPart">
                             <div class="userUpdate">
                                 <label>
                                     <button class="btnUpdate" id="btnUpdate">
-                                        <i class="fa-solid fa-pen-to-square white_i"></i><p data-section="account" data-value="count">Cuenta</p>
+                                        <i class="fa-solid fa-pen-to-square white_i"></i>
+                                        <p data-section="account" data-value="count">Cuenta</p>
                                     </button>
                                 </label>
                             </div>
                             <div class="userUpdate">
                                 <label>
                                     <button class="btnDelete" id="btnDelete">
-                                        <i class="fa-solid fa-trash white_i"></i><p data-section="account" data-value="count1">Cuenta</p>
+                                        <i class="fa-solid fa-trash white_i"></i>
+                                        <p data-section="account" data-value="count1">Cuenta</p>
                                     </button>
                                 </label>
                             </div>
@@ -111,19 +108,23 @@ if ($_SESSION['user']) {
                         <h4 data-section="account" data-value="Upload">Actualiza tu cuenta</h4>
                         <hr>
                         <div class="content_form">
-                            <label for="title" class="form_text" data-section="account" data-value="Nombres">Nombres</label>
+                            <label for="title" class="form_text" data-section="account"
+                                data-value="Nombres">Nombres</label>
                             <input type="text" id="name" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text" data-section="account" data-value="Apellidos">Apellidos</label>
+                            <label for="autor" class="form_text" data-section="account"
+                                data-value="Apellidos">Apellidos</label>
                             <input type="text" id="lastName" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text" data-section="account" data-value="Correo">Correo Electrónico</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="Correo">Correo
+                                Electrónico</label>
                             <input type="email" id="email" class="inputs" autocomplete="off">
                         </div>
                         <div class="content_form">
-                            <label for="autor" class="form_text" data-section="account" data-value="Contra">Contraseña Actual</label>
+                            <label for="autor" class="form_text" data-section="account" data-value="Contra">Contraseña
+                                Actual</label>
                             <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
@@ -136,7 +137,8 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="btnPart">
                             <button id="btn-update" data-section="account" data-value="actualizar">Actualizar</button>
-                            <button type="button" id="cancel-btn" data-section="account" data-value="cancelar">Cancelar</button>
+                            <button type="button" id="cancel-btn" data-section="account"
+                                data-value="cancelar">Cancelar</button>
                         </div>
                     </form>
             </div>
@@ -151,9 +153,9 @@ if ($_SESSION['user']) {
             document.querySelector("dialog").close();
         });
     </script>
-      <?php
-  require_once("../html/footer.php");
-  ?>
+    <?php
+    require_once("../html/footer.php");
+    ?>
     <script src="../js/preview.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>

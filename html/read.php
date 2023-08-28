@@ -44,7 +44,7 @@ if ($row->rowCount() > 0) {
       <object id="book" data="<?php echo $info['src'] ?>#toolbar=0&view=fitB" type="application/pdf">
       </object>
       <div class="btnPart">
-        <a href="../html/book.php? id= <?php echo $info['id'] ?> ">
+        <a href="../html/book.php?id=<?php echo $info['id'] ?>">
           <button class="btnLogin">Regresar</button>
         </a>
       </div>

@@ -1,7 +1,5 @@
 <?php
 session_start();
-require_once("../php/interface.php");
-require_once("../php/cone.php");
 require_once("../php/methods.php");
 
 $id = $_GET['id'];
@@ -115,7 +113,7 @@ try {
             </p>
           </div>
           <div id="buttons">
-            <div class="btnRead <?php esconder(); ?>">
+            <div class="btnRead">
               <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
                 <i class="fa-sharp fa-solid fa-book-open-reader"></i>
                 <p data-section="book" data-value="leer">Leer</p>
@@ -123,32 +121,24 @@ try {
             </div>
             <div id="btnFav" class="<?php esconder(); ?>">
               <?php
-              $obj2 = new DataBase();
-              $DBH = $obj2->connect();
-              $sql = "SELECT * FROM shelf WHERE id_r = :book_id"; // Corrección aquí
-              $stmt = $DBH->prepare($sql);
-              $stmt->bindParam(':book_id', $info['id'], PDO::PARAM_INT);
-              $stmt->execute();
+              $id_r = $info['id'];
+              $sql = "SELECT * FROM shelf WHERE id_r = '$id_rec'";
+              $stmt = $obj->showData($sql);
               $isInFavorites = $stmt->fetchColumn() > 0;
               if ($isInFavorites) {
                 echo '<div id="delFav" class="book-link active">
-                          <i class="fa-solid fa-trash"></i>
+                          <i class="fa-solid fa-trash" id="icon-fav"></i>
                           <p data-section="book" data-value="fav">Favoritos</p>
-                        </div>';
-              } elseif (!$isInFavorites) {
+                      </div>';
+              }else{
                 echo '<div id="addFav" class="book-link inactive">
-                <i class="fa-solid fa-plus"></i>
-                <p data-section="book" data-value="fav">Favoritos</p>
-              </div>';
-              } else {
-                echo '<div id="delFav" class="book-link active">
-                <i class="fa-solid fa-trash"></i>
-                <p data-section="book" data-value="fav">Favoritos</p>
-              </div>';
+                  <i class="fa-solid fa-plus" id="icon-fav"></i>
+                  <p data-section="book" data-value="fav">Favoritos</p>
+                </div>';
               }
               ?>
             </div>
-            <div class="btnDown">
+            <div class="btnDown <?php esconder(); ?>">
               <a href="<?php echo $info['src'] ?>" class="book-link down" download>
                 <i class="fa-solid fa-download"></i>
                 <p data-section="book" data-value="descargar">Descargar</p>
@@ -216,7 +206,7 @@ try {
       <div id="similar-books">
         <?php
         $cat = $info['category'];
-        $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id' LIMIT 4";
+        $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id_rec' LIMIT 4";
         $row2 = $obj->showData($sql);
         if ($row2->rowCount() > 0) {
           while ($info = $row2->fetch(PDO::FETCH_ASSOC)) {

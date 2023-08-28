@@ -42,13 +42,13 @@ class MétodosUser implements plantilla
             die("Error " . $e->getMessage());
         }
     }
-    public function deleteData($sql, $id) : bool
+    public function deleteData($sql, $key) : bool
     {
         $obj = new DataBase();
         $DBH = $obj->connect();
         try {
             $STH = $DBH->prepare($sql);
-            $STH->bindParam(':id', $id, PDO::PARAM_INT);
+            $STH->bindParam(':id', $key);
             $STH->execute();
             $DBH = null;
             return true;
