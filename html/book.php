@@ -18,30 +18,6 @@ try {
   die("Error " . $e->getMessage());
 }
 
-//Comentarios
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $id_recurso = $_GET['id'];
-  $id_usuario = $_SESSION['user'][0];
-
-  if (isset($_POST['texto']) && isset($_POST['valuation'])) {
-    $texto = $_POST['texto'];
-    $valuation = $_POST['valuation'];
-    // Verifica si los campos están vacíos
-    if (empty($texto) || empty($valuation)) {
-      echo '<div class="popup-container" id="popup">
-      <span class="close-btn" id="closeButton">&times;</span>
-      <p>Por favor, completa todos los campos.
-      </p>
-      </div>';
-    } else {
-      $obj = new Comentario();
-      $arr = array($texto, $valuation, $id_usuario, $id_recurso);
-      $obj->insertData($arr);
-      header("Location: book.php?id=$id_recurso");
-      exit;
-    }
-  }
-}
 
 //Mostrar comentarios
 try {
@@ -130,7 +106,7 @@ try {
                           <i class="fa-solid fa-trash" id="icon-fav"></i>
                           <p data-section="book" data-value="fav">Favoritos</p>
                       </div>';
-              }else{
+              } else {
                 echo '<div id="addFav" class="book-link inactive">
                   <i class="fa-solid fa-plus" id="icon-fav"></i>
                   <p data-section="book" data-value="fav">Favoritos</p>
@@ -176,54 +152,60 @@ try {
           echo "<h6  data-section='book' data-value='com' > Este Libro aun no tiene comentarios</h6>";
         }
         ?>
-        <form id="commentForm" method="POST" onsubmit="" class="<?php esconder(); ?>">
-
+        <form id="commentForm" method="POST" onsubmit="return commentForm();" class="<?php esconder(); ?>">
           <div id="general_container">
             <div id="first_container">
               <div class="linea"></div>
-
               <div id="post_desc" data-section="book" data-value="hablar">
-                <textarea autocomplete="off" name="texto" rows="5" cols="60"
+                <textarea autocomplete="off" name="texto" id="texto" rows="5" cols="60"
                   placeholder="¿De qué quieres hablar?"></textarea>
               </div>
               <div id="details_primary_part">
                 <h4><label for="valuation" data-section="book" data-value="calificar">Calificar</label></h4>
-                <select name="valuation">
+                <select name="valuation" id="valuation">
                   <option value="Mala" selected data-section="book" data-value="mala">Mala</option>
                   <option value="Buena" data-section="book" data-value="buena">Buena</option>
                   <option value="Excelente" data-section="book" data-value="excelente">Excelente</option>
                 </select>
               </div>
+
               <div id="post_enter" data-section="book" data-value="comentar">
+                <input type="hidden" name="user" id="user" value="<?php echo $_SESSION['user'][0]; ?>">
+                <input type="hidden" name="id_recurso" id="id_recurso" value="...">
                 <input type="submit" value="Comentar">
               </div>
+
             </div>
+          </div>
         </form>
+
       </div>
-    </div>
-    <div id="more-books">
-      <h2 data-section="book" data-value="simil">Libros Similares</h2>
-      <div id="similar-books">
-        <?php
-        $cat = $info['category'];
-        $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id_rec' LIMIT 4";
-        $row2 = $obj->showData($sql);
-        if ($row2->rowCount() > 0) {
-          while ($info = $row2->fetch(PDO::FETCH_ASSOC)) {
-            ?>
-            <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-              <img src="<?php echo $info["img"] ?>" alt="book-image">
-            </a>
-            <?php
+      <div id="more-books">
+        <h2 data-section="book" data-value="simil">Libros Similares</h2>
+        <div id="similar-books">
+          <?php
+          $cat = $info['category'];
+          $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id_rec' LIMIT 4";
+          $row2 = $obj->showData($sql);
+          if ($row2->rowCount() > 0) {
+            while ($info = $row2->fetch(PDO::FETCH_ASSOC)) {
+              ?>
+              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                <img src="<?php echo $info["img"] ?>" alt="book-image">
+              </a>
+              <?php
+            }
           }
-        }
-        ?>
+          ?>
+        </div>
       </div>
     </div>
+
   </main>
   <?php
   require_once("../html/footer.php");
   ?>
+  <script src="../js/valcoment.js"></script>
   <script src="../js/j_query.js"></script>
   <script src="../js/alertify.js"></script>
   <script src="../js/fav.js"></script>
