@@ -12,17 +12,17 @@ $(function () {
     // Validar que no se ingresen scripts en los campos
     if (containsScript(name) || containsScript(lastName) || containsScript(email) || containsScript(password) || containsScript(passConfirm)) {
       alertify.alert("No se permiten scripts en los campos.");
-      return; // Detener la ejecución si se detecta un script
+      return;
     }
 
     if (name.trim() === "" || lastName.trim() === "" || email.trim() === "" || password.trim() === "" || passConfirm.trim() === "") {
       alertify.alert("Por favor, completa todos los campos.");
-      return; // Detener la ejecución si algún campo está vacío
+      return; 
     }
 
-    if (!/^[A-Za-záéíóúñÑ\s]+$/.test(name) || !/^[A-Za-záéíóúñÑ\s]+$/.test(lastName)) {
+    if (!/^[a-zA-ZáéíóúñÑ\s]+$/.test(name) || !/^[a-zA-ZáéíóúñÑ\s]+$/.test(lastName)) {
       alertify.alert("El nombre y el apellido no pueden contener números ni caracteres especiales.");
-      return; // Detener la ejecución si el nombre o apellido contienen números o caracteres especiales
+      return; 
     }
 
     if (password !== passConfirm) {

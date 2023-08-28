@@ -4,7 +4,6 @@ use Google\Service\AlertCenter\User;
 require_once('../php/methods.php');
 $obj = new MétodosUser();
 extract($_POST);
-
 if (isset($oldEmail)) {
     try {
         $user = $obj->showData("SELECT * FROM user where email ='$oldEmail'");
@@ -50,8 +49,7 @@ if (isset($Pass)) {
                 $email,
             );
 
-            // Verificar si se ha proporcionado una nueva imagen y agregar la columna img si es necesario
-            if (isset($_FILES['file'])) {
+            if (isset($_FILES['img'])) {
                 $sql .= ", img= ?";
                 $arr[] = $route;
             }

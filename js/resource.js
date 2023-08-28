@@ -203,7 +203,6 @@ $(function () {
           }else{
             alertify.error("Error");
           }
-          showData();
         });
       },
       function () {

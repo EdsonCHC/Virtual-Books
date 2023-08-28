@@ -17,8 +17,8 @@ try {
 if ($row['password'] === $password) {
     echo true;
     try{
-        $sql = "DELETE FROM user WHERE email = :email";
-        $obj->deleteData($sql);
+        $sql = "DELETE FROM user WHERE email = :id";
+        $obj->deleteData($sql, $email);
         session_start();
         session_destroy();
     }catch (PDOException $e) {
