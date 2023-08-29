@@ -29,12 +29,24 @@ $obj = new métodosUser();
     require_once("../html/aside.php");
     ?>
     <div id="content">
-      <h2 data-section="index" data-value="cont">Contenido</h2>
-      <div id="table_resultado">
+      <div class="welcome">
+        <div class="text-welcome">
+          <h2>Bienvenido a Virtual Books</h2>
+          <p>Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!</p>
+        </div>
+        <div class="icon-welcome">
+        <img src="../src/logo.png" alt="">
+        </div>
+        <div class="img-welcome">
+          <img src="../src/img/vista-superior-disposicion-libros.jpg" alt="">
+        </div>
+        <div>-</div>
       </div>
+      <h2 data-section="index" data-value="cont">Contenido</h2>
       <div class="categoria">
         <a href="" class="tag-link">
-          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a></h3>
+          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
+              data-value="lit">Literatura</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -43,13 +55,15 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="container">
                 <div class="banner-image">
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                 </div>
                 <div class="banner-text">
-                  <h3><?php echo $info["name"]; ?></h3>
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
@@ -58,7 +72,7 @@ $obj = new métodosUser();
                 </div>
               </div>
 
-          <?php
+              <?php
             }
           }
           ?>
@@ -75,7 +89,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -86,7 +100,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -103,7 +117,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -114,7 +128,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -131,7 +145,7 @@ $obj = new métodosUser();
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="resourse">
                 <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                   <div class="book-container">
@@ -142,7 +156,7 @@ $obj = new métodosUser();
                   </div>
                 </a>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -158,7 +172,7 @@ $obj = new métodosUser();
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
-            ?>
+                ?>
                 <div class="resourse">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                     <div class="book-container">
@@ -169,7 +183,7 @@ $obj = new métodosUser();
                     </div>
                   </a>
                 </div>
-            <?php
+                <?php
               }
             }
             ?>
