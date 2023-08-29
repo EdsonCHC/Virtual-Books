@@ -7,10 +7,6 @@
             </li>
             <li class="btnAside">
                 <i class="fa-solid fa-house"></i>
-                <a href="../html/libro.php" class="btnLink" data-section="LUser" data-value="LUser">Libros</a>
-            </li>
-            <li class="btnAside">
-                <i class="fa-solid fa-house"></i>
                 <a href="../html/aboutus.php" class="btnLink" data-section="SUser" data-value="SUser">Sobre Nosotros</a>
             </li>
             <li class="<?php esconder(); ?> btnAside">
