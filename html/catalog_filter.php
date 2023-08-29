@@ -3,6 +3,11 @@ session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: ../html/index.php");
 }
+
+if (isset($_SESSION['user'])) {
+    header("Location: ../html/index.php");
+}
+
 require_once("../php/methods.php");
 ?>
 <!DOCTYPE html>
@@ -115,8 +120,8 @@ require_once("../php/methods.php");
                         <option value="" selected disabled data-section="catalogo" data-value="cate">Categoría</option>
                         <option value="Ciencia" data-section="catalogo" data-value="ciencia">Ciencia</option>
                         <option value="Literatura" data-section="catalogo" data-value="literatura">Literatura</option>
-                        <option value="Física" data-section="catalogo" data-value="fisica">Física</option>
-                        <option value="Economía" data-section="catalogo" data-value="economia">Economía</option>
+                        <option value="Física" data-section="catalogo" data-value="física">Física</option>
+                        <option value="Economía" data-section="catalogo" data-value="economía">Economía</option>
                         <option value="Historia" data-section="catalogo" data-value="historia">Historia</option>
                     </select>
                 </div>

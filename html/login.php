@@ -16,12 +16,13 @@ $client->addScope('email');
 $authUrl = $client->createAuthUrl();
 
 if (isset($_SESSION['user'])) {
-    if ($_SESSION['user'][2] === '0') {
-        header("Location: ../html/index.php");
-    } else {
-        header("Location: ../html/index_admin.php");
-    }
+    header("Location: ../html/index.php");
 }
+
+if (isset($_SESSION['admin'])) {
+    header("Location: ../html/admin.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,8 @@ if (isset($_SESSION['user'])) {
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
-                                <h4> <label data-section="login" data-value="pass" for="password">Contraseña</label></h4>
+                                <h4> <label data-section="login" data-value="pass" for="password">Contraseña</label>
+                                </h4>
                             </div>
                             <input type="password" name="password" id="password" placeholder="***********"
                                 autocomplete="off">

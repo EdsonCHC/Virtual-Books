@@ -3,6 +3,11 @@ session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: ../html/index.php");
 }
+
+if (isset($_SESSION['user'])) {
+    header("Location: ../html/index.php");
+}
+
 require_once("../php/methods.php");
 $obj = new MétodosAdmin();
 

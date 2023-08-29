@@ -2,7 +2,6 @@
 require_once("../php/functions.php");
 require_once("../php/methods.php");
 
-
 if (isset($_SESSION['user'])) {
   $id = $_SESSION['user']['0'];
   $obj = new MétodosUser();
@@ -28,7 +27,7 @@ if (isset($_SESSION['user'])) {
   <div class="content_description_search">
     <form id="formSearch">
       <div class="content_items">
-        <input type="search" id="search" class="content_items_search" placeholder="Buscar">
+        <input type="search" id="search" class="content_items_search" placeholder="Buscar" autocomplete="">
       </div>
     </form>
     <div id="resResult">
