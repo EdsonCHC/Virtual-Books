@@ -86,7 +86,7 @@ $(function () {
     formData.append("categoría", $("#categoría").val());
     formData.append("descripción", $("#descripción").val());
 
-    let selected_image = $("#imagen")[0].files[0];
+    let selected_image = $("#img_i")[0].files[0];
     let image = null;
     let selected_file = $("#articulo")[0].files[0];
     let file = null;
@@ -122,7 +122,11 @@ $(function () {
       contentType: false,
       success: (response) => {
         if (response) {
-          alertify.success("Éxito");
+          if(edit){
+            alertify.success("Actualizado");
+          }else{
+            alertify.success("Agregado");
+          }
           document.querySelector(".dialogIn").close();
           $("#form-dialog-insert").trigger("reset");
           edit = false;
@@ -164,7 +168,7 @@ $(function () {
             </tr>`;
           valor_anterior = book.id;
         });
-        $("#table_content").append(plantilla);
+        $("#t_body").append(plantilla);
       }
     });
   }
@@ -199,10 +203,12 @@ $(function () {
         $.post("../php/del-res.php", { id }, (response) => {
           if (response){
             alertify.success("Eliminado");
-            showData();
           }else{
             alertify.error("Error");
           }
+          $("#t_body").empty();
+          valor_anterior = 0;
+          showData();
         });
       },
       function () {

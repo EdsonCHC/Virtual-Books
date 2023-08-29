@@ -14,11 +14,21 @@ $STH = $DBH->query("SELECT * FROM `user` WHERE `email`='$email' and `password`='
 if ($STH->rowCount() > 0) {
     $STH->setFetchMode(PDO::FETCH_ASSOC);
     $session = $STH->fetch();
-    session_start();
-    $_SESSION['user'] = array();
-    $_SESSION['user'][0] = $session['id'];
-    $_SESSION['user'][1] = $session['name'];
-    $_SESSION['user'][2] = $session['rol'];
+    if($session['rol'] === "0"){
+        session_start();
+        $_SESSION['user'] = array();
+        $_SESSION['user'][0] = $session['id'];
+        $_SESSION['user'][1] = $session['name'];
+        $_SESSION['user'][2] = $session['rol'];
+    }
+
+    if ($session['rol'] === "1"){
+        session_start();
+        $_SESSION['admin'] = array();
+        $_SESSION['admin'][0] = $session['id'];
+        $_SESSION['admin'][1] = $session['name'];
+        $_SESSION['admin'][2] = $session['rol'];
+    }
 
     $json = array(
         'name' => $session['name'],

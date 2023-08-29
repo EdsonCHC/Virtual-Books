@@ -1,16 +1,13 @@
-
-
 <?php
-if (isset($_SESSION['admin'])) {
-    header("Location: ../html/login.php");
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: ../html/index.php");
 }
 require_once("../php/methods.php");
 $obj = new MétodosAdmin();
 
 //Mostrar comentarios
 try {
-
-
     $date = date("Y-m-d");
     $last_date = date("Y-m-d", strtotime($date . " -1 day"));
     $count = $obj->showData("SELECT COUNT(*) FROM user WHERE dateReg <= '$last_date' AND rol = 0");

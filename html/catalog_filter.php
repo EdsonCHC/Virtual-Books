@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: ../html/index.php");
+}
 require_once("../php/methods.php");
 ?>
 <!DOCTYPE html>
@@ -45,7 +49,7 @@ require_once("../php/methods.php");
                                             Buscar un recurso
                                         </label>
                                         <label class="searchTitle">
-                                            <input type="text" name="searchTitle" class="content_items_search">
+                                            <input type="text" name="searchTitle" class="content_items_search" autocomplete="off">
                                         </label>
                                     </div>
                                     <div>
@@ -65,14 +69,19 @@ require_once("../php/methods.php");
                     </div>
                     <div class="table" id="table">
                         <table id="table_content">
-                            <tr>
-                                <th>ID</th>
-                                <th data-section="catalogo" data-value="titulo">Titulo </th>
-                                <th data-section="catalogo" data-value="tipo">Tipo </th>
-                                <th data-section="catalogo" data-value="autor">Autor </th>
-                                <th data-section="catalogo" data-value="cate">Categoría</th>
-                                <th data-section="catalogo" data-value="acciones">Acciones</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th data-section="catalogo" data-value="titulo">Titulo </th>
+                                    <th data-section="catalogo" data-value="tipo">Tipo </th>
+                                    <th data-section="catalogo" data-value="autor">Autor </th>
+                                    <th data-section="catalogo" data-value="cate">Categoría</th>
+                                    <th data-section="catalogo" data-value="acciones">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="t_body">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>
