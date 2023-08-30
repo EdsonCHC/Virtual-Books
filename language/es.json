@@ -34,6 +34,7 @@
         "eco": "Economia",
         "fis": "Física",
         "histo": "Historia",
+        "Acerca":"Acerca",
         "mas": "Ver más..."
     },
 
@@ -49,6 +50,7 @@
     "asideU": {
         "IUser": "Inicio",
         "ALUser": "Area de lectura",
+        "nosotros": "Sobre nosotros",
         "Hp": "<i class='fa-sharp fa-solid fa-circle-info'></i> Ayuda",
         "Idiom": "Idioma",
         "closes": "Cerrar Sesión"
@@ -154,5 +156,22 @@
         "description": "Descripción",
         "valuation": "Valoración",
         "acciones": "Acciones"
+    },
+
+    "read":{
+        "regresar": "Regresar"
+    },
+
+
+    "faqs":{
+        "PregF": "Preguntas Frecuentes",
+        "como":"¿Cómo puedo acceder a los libros y recursos de Virtual Books?",
+        "unaV": "Una vez, logueado y registrado el usuario tendra la posibilidad de visualizar los libros en la pagina principal, o tiene la posibilidad de buscarlos por su nombre en el buscador en la parte superior. En dado caso se encuentre en una interfaz diferente a la pagina de inicio puede buscar la opcion (Inicio) en el lado izquierdo de la página.",
+        "Pue":"¿Puedo acceder desde cualquier lugar y en cualquier momento?",
+        "Si":"Si! Puedes Disfrutar de Virtual Books y de tus libros favoritos en cualquier parte del camino y en cualquier momento; Podras continuar con tu historia justo donde la dejaste.",
+        "que": "¿Qué herramientas necesito para leer libros digitales en Virtual Books?",
+        "para":"Para ser capaz de hacerlo, necesitaras el navegador web de tu preferencia; !Pero no te preocupes¡ pues Virtual Books es compatible con la mayoria de navegadores web. Ademas de esto necesitaras conexión  a internet si aun no has descargado tu libro.",
+        "comoF": "¿Cómo funcionan las opciones de lectura?",
+        "tengas":"Una vez tengas elegído el libro que deseas leer, tienes la opcion de leerlo desde la plataforma mediante conexión a internet o descargarlo de manera PDF y disfrutar del libro sin necesidad de conexión, tambien puedes agregarlo a favoritos para leerlo mas tarde si asi lo deseas"
     }
 }

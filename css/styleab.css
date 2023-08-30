@@ -1,0 +1,117 @@
+@import url(../css/Rules.css);
+
+main {
+  display: flex;
+  gap: 3rem;
+}
+
+
+
+#title h1 p{
+  position: relative;
+  left: 70%;
+  margin: auto;
+  text-align: center;
+  font-size: 100px;
+  top: 50px;
+}
+
+#vb-ctn{
+  position: absolute;
+  display: inline-block;
+  left: 30pc;
+  width: 600px;
+  height: 100px;
+  top: 500px;
+  text-align: justify;
+}
+
+#vb-ctn h5 p{
+  color: #be7828;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+#vb-ctn p{
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.imagenes img{
+  position: absolute; 
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+
+
+.imagenes img[src="../src/img/f1.jpeg"]{
+  left: 1550px;
+  top:1050px ;
+
+}
+.imagenes img[src="../src/img/f2.jpeg"]{
+  left: 1200px;
+  top: 1000px;
+  z-index: 1;
+}
+.imagenes img[src="../src/img/f3.jpg"]{
+  left: 1400px;
+  top:800px;
+}
+
+
+
+.M, .V{
+  position: absolute;
+  width: 30%;
+  text-align: justify;
+}
+
+.M{
+  top: 1400px;
+  left: 30pc;
+}
+
+.V{
+  top: 1950px;
+  left: 80pc;
+  padding-bottom: 50px;
+
+}
+
+.M h5 p, .V h5 p{
+  color: #be7828;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+.M p, .V p{
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.imagen img{
+  position: absolute; 
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+
+
+.imagen img[src="../src/img/f4.jpg"]{
+  left: 800px;
+  top:2100px ;
+
+}
+.imagen img[src="../src/img/f5.jpg"]{
+  left: 700px;
+  top: 1900px;
+  z-index: 1;
+}
+.imagen img[src="../src/img/f6.jpg"]{
+  left: 500px;
+  top:2050px;
+}

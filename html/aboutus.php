@@ -14,9 +14,11 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="shortcut icon" href="../src/icons8-book-50.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/aboutus.css">
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alertify.css">
+    <link rel="stylesheet" href="../css/styleab.css">
+
+
 
     <title>Ayuda</title>
 </head>
@@ -29,45 +31,56 @@ session_start();
         <?php
         require_once("../html/aside.php");
         ?>
-        <div class="wrapper">
-            <div class="row">
-                <div class="image-section">
-                    <img src="../src/about.jpg">
-                </div>
-                <div class="content">
-                    <h1>Sobre Nosotros</h1>
-                    <h2>Virtual Books</h2>
-                    <p>
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
-                        Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
-                        impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de
-                        textos y los mezcló
-                    </p>
+        <div>
+            
+            <div id="title">
+                <h1><p data-section="About" data-value="Ab">Sobre Nosotros</p></h1>
+            </div>
+
+            <div id="vb-ctn">
+                <h5><p data-section="About" data-value="vb">Virtual Books</p></h5>
+                <p data-section="About" data-value="vbS">
+                    Virtual Books es un sitio web mediente el cual se le es posible a los usuarios
+                    poder obtener libros, revistas, tesis, etc. De manera rápida y sencilla, permitiendo
+                    asi que pueda disfrutar de sus libros en cualquier momento y lugar del camino.
+                </p>
+            </div>
+            
+            <div id="imagensctn">
+                <div class="imagenes"><img src="../src/img/f1.jpeg"  ></div>
+                <div class="imagenes"><img src="../src/img/f2.jpeg"  ></div>
+                <div class="imagenes"><img src="../src/img/f3.jpg" ></div>
+            </div>
+
+
+
+            <div class="MV">
+                <div class="M">
+                    <h5><p data-section="About" data-value="M">Misión</p></h5>
+                    <p data-section="About" data-value="Prh">
+                    Promover el habito de la lectura y permitirle a los usuarios disfrutar de los libros 
+                    que mas les gusta en cualquier lugar y en cualquier momento, ofreciendoles siempre 
+                    una gran variedad de recursos.
+                </p>
 
                 </div>
+                <div class="V">
+                    <h5><p data-section="About" data-value="V">Visión</p></h5>
+                    <p data-section="About" data-value="Ss">
+                        Ser siempre uno de los mejores sitios web con referencia al ambito de libros y lectura, 
+                        manteniendo la preferencia de nuestros usuarios por mantenernos innovando y ofreciendo de la mejor maneranuevos 
+                        servivios para que ellos puedan seguir disfrutando 
+                        de su lectura
+                </p>
+                </div>
             </div>
-            <div class="row">
-                <div class="content">
-                    <h2> Mision</h2>
-                    <p>
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
-                        Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
-                        impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de
-                        textos y los mezcló
-                    </p>
 
-                    <h2> vision</h2>
-                    <p>
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem
-                        Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
-                        impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de
-                        textos y los mezcló
-                    </p>
-                </div>
-                <div class="image-section">
-                    <img src="../src/mision.png">
-                </div>
+            <div id="imagenesctn">
+                <div class="imagen"><img src="../src/img/f4.jpg"  ></div>
+                <div class="imagen"><img src="../src/img/f5.jpg"  ></div>
+                <div class="imagen"><img src="../src/img/f6.jpg" ></div>
             </div>
+
 
         </div>
     </main>

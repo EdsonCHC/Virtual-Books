@@ -69,8 +69,8 @@ $obj = new métodosUser();
                   </h3>
                 </div>
                 <div class="button-wrapper">
-                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
+                  <a  href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill"> Acerca</button>
                   </a>
                 </div>
               </div>

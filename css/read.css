@@ -41,7 +41,7 @@ a {
   text-decoration: none;
 }
 
-.btnPart button a {
+.btnPart button a p{
   color: rgb(255, 255, 255);
   padding: 1.8rem 2rem;
   text-decoration: none;
