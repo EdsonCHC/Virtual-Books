@@ -35,12 +35,11 @@ $obj = new métodosUser();
           <p>Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!</p>
         </div>
         <div class="icon-welcome">
-        <img src="../src/logo.png" alt="">
+          <img src="../src/logo.png" alt="">
         </div>
         <div class="img-welcome">
           <img src="../src/img/vista-superior-disposicion-libros.jpg" alt="">
         </div>
-        <div>-</div>
       </div>
       <h2 data-section="index" data-value="cont">Contenido</h2>
       <div class="categoria">
@@ -71,7 +70,6 @@ $obj = new métodosUser();
                   </a>
                 </div>
               </div>
-
               <?php
             }
           }
@@ -90,15 +88,20 @@ $obj = new métodosUser();
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <div class="resourse">
-                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <div class="book-container">
-                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
-                    <p>
-                      <?php echo $info["name"]; ?>
-                    </p>
-                  </div>
-                </a>
+              <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
+                </div>
+                <div class="button-wrapper">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill">Acerca</button>
+                  </a>
+                </div>
               </div>
               <?php
             }
@@ -118,15 +121,20 @@ $obj = new métodosUser();
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <div class="resourse">
-                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <div class="book-container">
-                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
-                    <p>
-                      <?php echo $info["name"]; ?>
-                    </p>
-                  </div>
-                </a>
+              <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
+                </div>
+                <div class="button-wrapper">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill">Acerca</button>
+                  </a>
+                </div>
               </div>
               <?php
             }
@@ -146,15 +154,20 @@ $obj = new métodosUser();
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
               ?>
-              <div class="resourse">
-                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                  <div class="book-container">
-                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
-                    <p>
-                      <?php echo $info["name"]; ?>
-                    </p>
-                  </div>
-                </a>
+              <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
+                </div>
+                <div class="button-wrapper">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill">Acerca</button>
+                  </a>
+                </div>
               </div>
               <?php
             }
@@ -173,16 +186,21 @@ $obj = new métodosUser();
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
                 ?>
-                <div class="resourse">
+                <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
+                </div>
+                <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <div class="book-container">
-                      <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
-                      <p>
-                        <?php echo $info["name"]; ?>
-                      </p>
-                    </div>
+                    <button class="btn fill">Acerca</button>
                   </a>
                 </div>
+              </div>
                 <?php
               }
             }
