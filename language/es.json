@@ -3,14 +3,21 @@
         "sesiónIni": "Iniciar Sesión",
         "not": "Notificaciones",
         "public":"Se ha publicado"
-
     },
+
     "login": {
         "title": "Inicia Sesíon",
         "mail": "Correo Electronico",
         "pass": "Contraseña",
         "reg-acc": "<p>¿No tienes cuenta? <a href='../html/register.php'> !Regístrate¡</a></p>"
     },
+
+    "welcome":{
+        "welcome" : "Bienvenido a Virtual Books",
+        "legend" : "Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!"
+    },
+
+
     "register": {
         "title": "Registrase",
         "name": "Nombre",
@@ -19,6 +26,7 @@
         "avatar": "Selecciona un avatar predeterminado",
         "log-acc": " <p >¿Ya tienes cuenta? <a href='../html/login.php'> !Inicia Sesión¡</a></p>"
     },
+
     "index": {
         "cont": "Contenido",
         "lit": "Literatura",
@@ -28,6 +36,7 @@
         "histo": "Historia",
         "mas": "Ver más..."
     },
+
     "AsideA": {
         "con": "Contenido",
         "cat": "Catalogo",
@@ -36,6 +45,7 @@
         "help": "Ayuda",
         "cs": "Cerrar Sesión"
     },
+
     "asideU": {
         "IUser": "Inicio",
         "ALUser": "Area de lectura",
@@ -43,12 +53,15 @@
         "Idiom": "Idioma",
         "closes": "Cerrar Sesión"
     },
+
     "MyBooks": {
         "book": "Mis Libros"
     },
+
     "push": {
         "footer": "Todos los derechos reservados Crea-J"
     },
+
     "account": {
         "info": "Información Personal",
         "names": "Nombres",
@@ -67,10 +80,11 @@
         "actualizar": "Actualizar",
         "cancelar": "Cancelar"
     },
+
     "catalogo": {
         "Bienvenido": "Bienvenido",
         "catalog": "Catálogos/Artículos de catálogo",
-        "articulos": "Artículos",
+        "artículos": "Artículos",
         "administre": "Administre los catálogos de su biblioteca aquí.",
         "titulos": "Buscar un recurso",
         "tipo": "Tipo",
@@ -95,11 +109,12 @@
         "agregar": "Agregar Recuersos",
         "cancelar": "Cancelar"
     },
+
     "IndexA": {
         "bien": "Bienvenido",
         "recien": "Recién agregado",
         "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
-        "estad": "Estadisticas de usuario",
+        "estad": "Nuevos Usuarios",
         "coment": "Comentarios",
         "cambios": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
     },
@@ -127,7 +142,17 @@
         "com": "Este libro no tiene comentarios"
     },
 
-    "Suser":{ 
-        "SNuser":"About Us"
+    "SUser":{ 
+        "SNuser":"Sobre nosotros"
+    },
+
+    "inputs":{
+        "search": "<input type='search' id='search' class='content_items_search' placeholder='Buscar' autocomplete='off'>"
+    },
+
+    "comment": {
+        "description": "Descripción",
+        "valuation": "Valoración",
+        "acciones": "Acciones"
     }
 }

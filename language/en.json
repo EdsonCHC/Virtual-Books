@@ -13,6 +13,11 @@
         "reg-acc" : "<p>Don't have an account? <a href='../html/register.php'> !Sign up¡</a></p>"
     },
 
+    "welcome":{
+        "welcome" : "Welcome to Virtual Books",
+        "legend" : "The place where you find your favorite books and where you travel to new worlds!"
+    },
+
     "register" : {
         "title" : "SignUp",
         "name" : "Name",
@@ -111,7 +116,7 @@
         "bien":"Welcome",
         "recien":"Just added",
         "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
-        "estad":"User Statistics",
+        "estad":"New users",
         "coment":"Comments",
         "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
     },
@@ -139,7 +144,17 @@
         "com": "This Book has no comments yet"
     },
 
-    "Suser":{ 
+    "SUser":{ 
         "SNuser":"About Us"
-}
+    },
+
+    "inputs":{
+        "search": "<input type='search' id='search' class='content_items_search' placeholder='Search' autocomplete='off'>"
+    },
+
+    "comment": {
+        "description": "Description",
+        "valuation": "Valuation",
+        "acciones": "Actions"
+    }
 }

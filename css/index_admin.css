@@ -47,7 +47,10 @@ main {
 }
 
 .e2 h4{
+    text-align: center;
+    margin: 1rem 0;
     padding: 1rem;
+    font-size: 8rem;
 }
 
 .flex-element{

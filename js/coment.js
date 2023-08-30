@@ -4,7 +4,7 @@ $(function () {
 
     function showComentarios() {
         $.post("../php/show-com.php", { valor_anterior }, async (response) => {
-            if (response === true) {
+            if (response) {
                 let data = await JSON.parse(response);
                 let plantilla = "";
                 data.forEach((comentario) => {
@@ -23,7 +23,7 @@ $(function () {
                         </tr>`;
                     valor_anterior = comentario.id;
                 });
-                $("#table_content").append(plantilla);
+                $("#t_body").append(plantilla);
             }
         });
     }

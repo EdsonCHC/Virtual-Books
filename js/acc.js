@@ -54,7 +54,7 @@ $(function () {
     formData.append("Pass", $("#oldPass").val());
     formData.append("oldImg", $("#imgData").val());
 
-    let selected_file = $("#imagen")[0].files[0];
+    let selected_file = $("#img_i")[0].files[0];
     let image = null;
 
     if (selected_file) {

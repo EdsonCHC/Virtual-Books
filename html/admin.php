@@ -16,7 +16,7 @@ try {
     $date = date("Y-m-d");
     $last_date = date("Y-m-d", strtotime($date . " -1 day"));
     $count = $obj->showData("SELECT COUNT(*) FROM user WHERE dateReg <= '$last_date' AND rol = 0");
-    $user_count = $count->fetch();
+    $user_count = $count->fetchColumn();
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -44,12 +44,12 @@ try {
         require_once("../html/aside_admin.php");
         ?>
         <div id="content">
-            <h4 data-section="indexA" data-value="bien">Bienvenido</h4>
+            <h4 data-section="IndexA" data-value="bien">Bienvenido</h4>
             <div class="grid-content">
                 <div class="element e1">
                     <div class="flex-element">
-                        <h5 data-section="indexA" data-value="recien">Recién agregados</h5>
-                        <div class="btn-div" data-section="indexA" data-value="cambio">
+                        <h5 data-section="IndexA" data-value="recien">Recién agregados</h5>
+                        <div class="btn-div" data-section="IndexA" data-value="cambio">
                             <a href="../html/catalog_filter.php"><input class="btn" type="button" value="Catalogo"></a>
                         </div>
 
@@ -64,13 +64,13 @@ try {
                             while ($info = $row->fetch()) {
                                 ?>
                                 <div class="resourse">
-                                    \ <div class="book-container">
+                                    <div class="book-container">
                                         <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
                                         <p class="textRes">
                                             <?php echo $info["name"]; ?>
                                         </p>
                                     </div>
-                                    \ </div>
+                                </div>
                                 <?php
                             }
                         }
@@ -78,25 +78,30 @@ try {
                     </div>
                 </div>
                 <div class="e2">
-                    <h5 data-section="indexA" data-value="estad">Nuevos Usuarios</h5>
+                    <h5 data-section="IndexA" data-value="estad">Nuevos Usuarios</h5>
                     <h4>
-                        <?php echo $user_count[0]; ?>
+                        <?php echo $user_count; ?>
                     </h4>
                 </div>
                 <div class="element e3">
                     <div class="flex-element">
-                        <h5 data-section="indexA" data-value="coment">Comentarios</h5>
+                        <h5 data-section="IndexA" data-value="coment">Comentarios</h5>
                     </div>
                     <hr>
                     <div class="contentArticle">
                         <div class="table" id="table">
                             <table id="table_content">
-                                <tr>
-                                    <th>ID</th>
-                                    <th data-section="coment" data-value="description">Description</th>
-                                    <th data-section="coment" data-value="valuation">Valuation</th>
-                                    <th data-section="coment" data-value="acciones">Acciones</th>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th data-section="comment" data-value="description">Descripción</th>
+                                        <th data-section="comment" data-value="valuation">Valoración</th>
+                                        <th data-section="comment" data-value="acciones">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="t_body">
+
+                                </tbody>
                             </table>
                         </div>
                     </div>

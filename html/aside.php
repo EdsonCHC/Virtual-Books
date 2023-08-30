@@ -5,10 +5,6 @@
                 <i class="fa-solid fa-house"></i>
                 <a href="../html/index.php" class="btnLink" data-section="asideU" data-value="IUser">Inicio</a>
             </li>
-            <li class="btnAside">
-                <i class="fa-solid fa-house"></i>
-                <a href="../html/aboutus.php" class="btnLink" data-section="SUser" data-value="SUser">Sobre Nosotros</a>
-            </li>
             <li class="<?php esconder(); ?> btnAside">
                 <i class="fa-solid fa-book-open-reader"></i>
                 <a href="../html/myBooks.php" class="btnLink" data-section="asideU" data-value="ALUser">

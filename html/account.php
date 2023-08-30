@@ -128,12 +128,12 @@ if ($_SESSION['user']) {
                             <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
                         <div class="content_form">
-                            <label for="imagen" class="src" data-section="account" data-value="imagen">Imagen</label>
-                            <input type="file" id="imagen" accept="Image/*" name="img"
-                                onchange="vista_preliminar(event), validar()">
+                            <label for="img_i" class="src" data-section="account" data-value="imagen">Imagen</label>
+                            <input type="file" id="img_i" accept=".jpg,.png" onchange="vista_preliminar(event), validar()">
                             <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image"
                                     id="img-preview">
                             </div>
+                            <div id="warning" style="color: red; font-size: 1.5rem;"></div>
                         </div>
                         <div class="btnPart">
                             <button id="btn-update" data-section="account" data-value="actualizar">Actualizar</button>

@@ -31,8 +31,8 @@ $obj = new métodosUser();
     <div id="content">
       <div class="welcome">
         <div class="text-welcome">
-          <h2>Bienvenido a Virtual Books</h2>
-          <p>Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!</p>
+          <h2 data-section="welcome" data-value="welcome">Bienvenido a Virtual Books</h2>
+          <p data-section="welcome" data-value="legend">Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!</p>
         </div>
         <div class="icon-welcome">
           <img src="../src/logo.png" alt="">
