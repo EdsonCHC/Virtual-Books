@@ -154,26 +154,25 @@ try {
         ?>
         <form id="commentForm" class="<?php esconder(); ?>">
           <div id="general_container">
+            <input type="hidden" id="id_usuario" value="<?php echo $_SESSION['user'][0]; ?>">
+            <input type="hidden" id="id_recurso" value="<?php echo $id_rec; ?>">
             <div id="first_container">
               <div class="linea"></div>
               <div id="post_desc" data-section="book" data-value="hablar">
-                <textarea autocomplete="off" name="texto" id="texto" rows="5" cols="60"
+                <textarea autocomplete="off" id="texto" rows="5" cols="60"
                   placeholder="¿De qué quieres hablar?"></textarea>
               </div>
               <div id="details_primary_part">
                 <h4><label for="valuation" data-section="book" data-value="calificar">Calificar</label></h4>
-                <select name="valuation" id="valuation">
+                <select id="valuation">
                   <option value="Mala" selected data-section="book" data-value="mala">Mala</option>
                   <option value="Buena" data-section="book" data-value="buena">Buena</option>
                   <option value="Excelente" data-section="book" data-value="excelente">Excelente</option>
                 </select>
               </div>
               <div id="post_enter" data-section="book" data-value="comentar">
-                <input type="hidden" id="id_usuario" value="<?php echo $_SESSION['user'][0]; ?>">
-                <input type="hidden" id="id_recurso" value="<?php echo $id_rec ?>">
                 <input type="submit" value="Comentar">
               </div>
-
             </div>
           </div>
         </form>

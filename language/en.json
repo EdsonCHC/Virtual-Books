@@ -142,7 +142,7 @@
         "excelente":"Excelent",
         "comentar":"<input type='submit' value='Comment'>",
         "simil":"Similar Books",
-        "hablar":" <textarea autocomplete='off' name='texto' rows='5' cols='60' placeholder='What do you want to talk about?'></textarea>",
+        "hablar":"<textarea autocomplete='off' id='texto' rows='5' cols='60' placeholder='What do you want to talk about?'></textarea>",
         "com": "This Book has no comments yet"
     },
 
@@ -162,21 +162,7 @@
 
     "read":{
         "regresar": "Back"
-    },
-
-    "faqs":{
-        "PregF": "Frequent Questions",
-        "como":"How can I access the books and resources from Virtual Books?",
-        "unaV": "Once logged in and registered, the user will have the option to view the books on the main page or search for them by name using the search bar at the top. In case they find themselves in a different interface than the homepage, they can look for the (Home) option on the left side of the page.",
-        "Pue":"Can I access it from anywhere and at any time?",
-        "Si":"Yes! You can enjoy Virtual Books and your favorite books anywhere on the go and at any time. You'll be able to pick up your story right where you left off.",
-        "que": "What tools do I need to read digital books on Virtual Books?",
-        "para":"To be able to do so, you will need your preferred web browser. But don't worry, Virtual Books is compatible with most web browsers. In addition to this, you will need an internet connection if you haven't downloaded your book yet.",
-        "comoF": "How do the reading options work?",
-        "tengas":"Once you have chosen the book you want to read, you have the option to read it directly from the platform via an internet connection or download it as a PDF to enjoy the book offline. You can also add it to your favorites to read later if you prefer."
-    },
-    
-    "About":{
-        "Ab": "About Us"
     }
+
+
 }

@@ -84,12 +84,10 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="btnPart">
                             <div class="userUpdate">
-                                <label>
-                                    <button class="btnUpdate" id="btnUpdate">
-                                        <i class="fa-solid fa-pen-to-square white_i"></i>
-                                        <p data-section="account" data-value="count">Cuenta</p>
-                                    </button>
-                                </label>
+                                <button class="btnUpdate" id="btnUpdate">
+                                    <i class="fa-solid fa-pen-to-square white_i"></i>
+                                    <p data-section="account" data-value="count">Cuenta</p>
+                                </button>
                             </div>
                             <div class="userUpdate">
                                 <label>
@@ -129,7 +127,8 @@ if ($_SESSION['user']) {
                         </div>
                         <div class="content_form">
                             <label for="img_i" class="src" data-section="account" data-value="imagen">Imagen</label>
-                            <input type="file" id="img_i" accept=".jpg,.png" onchange="vista_preliminar(event), validar()">
+                            <input type="file" id="img_i" accept=".jpg,.png"
+                                onchange="vista_preliminar(event), validar()">
                             <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image"
                                     id="img-preview">
                             </div>

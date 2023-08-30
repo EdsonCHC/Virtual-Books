@@ -26,7 +26,7 @@ $("#commentForm").on("submit", (e) => {
     setCommentTimestamp();
 
     saveEvaluation(valuation, text, id_usuario, id_recurso);
-
+1
     return true;
 
   function saveEvaluation(valuation, text, id_usuario, id_recurso) {

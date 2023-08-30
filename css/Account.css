@@ -87,15 +87,15 @@ label {
 }
 
 .userUpdate {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 150px;
+  width: 15rem;
   height: auto;
   border-top: 1px solid gray;
 }
 
 .userUpdate button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--main-white);
   border: none;
   background: var(--main-red);

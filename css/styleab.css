@@ -5,51 +5,50 @@ main {
   gap: 3rem;
 }
 
+#ctn{
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+}
 
-
-#title h1 p{
-  position: relative;
-  left: 70%;
-  margin: auto;
-  text-align: center;
-  font-size: 100px;
-  top: 50px;
+#title h1{
+  font-size: 5.6rem !important;
 }
 
 #vb-ctn{
-  position: absolute;
-  display: inline-block;
-  left: 30pc;
-  width: 600px;
+  margin-top: 3rem;
+  left: 3rem;
+  width: 70%;
   height: 100px;
   top: 500px;
   text-align: justify;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
-#vb-ctn h5 p{
+#vb-ctn .text h2{
   color: #be7828;
-  font-size: 60px;
+  font-size: 4rem;
   padding-bottom: 20px;
 }
 
-#vb-ctn p{
+#vb-ctn .text p{
   padding-bottom: 20px;
-  font-size: 40px;
+  font-size: 2.5rem;
+  text-align: justify;
+  width: 90%;
 }
 
 .imagenes img{
-  position: absolute; 
   border-radius: 100%;
   width: 400px;
   height: 400px;
 }
 
-
-
 .imagenes img[src="../src/img/f1.jpeg"]{
   left: 1550px;
-  top:1050px ;
-
 }
 .imagenes img[src="../src/img/f2.jpeg"]{
   left: 1200px;
@@ -61,24 +60,23 @@ main {
   top:800px;
 }
 
-
+.MV{
+  position: relative;
+}
 
 .M, .V{
-  position: absolute;
+
   width: 30%;
   text-align: justify;
 }
 
 .M{
-  top: 1400px;
   left: 30pc;
 }
 
 .V{
-  top: 1950px;
   left: 80pc;
   padding-bottom: 50px;
-
 }
 
 .M h5 p, .V h5 p{
@@ -93,13 +91,10 @@ main {
 }
 
 .imagen img{
-  position: absolute; 
   border-radius: 100%;
   width: 400px;
   height: 400px;
 }
-
-
 
 .imagen img[src="../src/img/f4.jpg"]{
   left: 800px;
