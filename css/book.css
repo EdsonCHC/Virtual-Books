@@ -10,21 +10,19 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 #container {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   margin-top: 3rem;
   gap: 2rem;
 }
 
 #imgContainer {
   width: 30rem;
-  height: 100%;
+  height: 50rem;
 }
 
 #imgContainer img {
@@ -39,13 +37,78 @@ main {
   max-width: 80rem;
 }
 
+#titleBook h3 {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 4.5rem;
+}
+
+#authorBook {
+  margin-top: 0.5rem;
+}
+
+#authorBook h4 {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+}
+
+#authorBook p {
+  font-size: 2rem;
+}
+
+#typeBook {
+  margin-top: 0.5rem;
+}
+
+#typeBook h4 {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+}
+
+#typeBook p {
+  font-size: 2rem;
+}
+
+#cateBook {
+  margin-top: 0.5rem;
+}
+
+#cateBook h4 {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+}
+
+#cateBook p {
+  font-size: 2rem;
+}
+
+#descriptionBook {
+  margin-top: 0.5rem;
+}
+
+#descriptionBook h4 {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+}
+
+#descriptionBook p {
+  font-size: 2rem;
+}
+
 #buttons {
   width: 100%;
   height: 100%;
   display: flex;
   margin-top: 4rem;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 2.5rem;
 }
 
@@ -57,6 +120,7 @@ main {
 
 .btnRead a p {
   color: var(--main-white);
+  font-size: 2rem;
 }
 
 #addFav p {
@@ -67,7 +131,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  width: 20rem;
+  height: 4rem;
   background-color: var(--main-red);
   color: #fff;
   font-size: 1.8rem;
@@ -78,8 +143,21 @@ main {
   cursor: pointer;
 }
 
+.book-link:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.5s ease;
+}
+
+#addFav p {
+  font-size: 2rem;
+  color: var(--main-white);
+}
+
 #delFav p {
   color: var(--main-white);
+  font-size: 2rem;
 }
 
 .btnDown a {
@@ -90,6 +168,7 @@ main {
 
 .btnDown a p {
   color: var(--main-white);
+  font-size: 2rem;
 }
 
 .book-link.down {
@@ -104,20 +183,7 @@ main {
   margin: 4rem 0;
 }
 
-#similar-books {
-  width: 80%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  gap: 1rem;
-}
-
-#similar-books img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
+/*comentario*/
 #fcc-btn {
   background-color: var(--main-red);
   color: white;
@@ -153,7 +219,8 @@ main {
   width: 20%;
   cursor: pointer;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
 }
 
 #details_primary_part select {
@@ -164,9 +231,8 @@ main {
   border-radius: 20px;
   border: 1px solid #ccc;
   padding-left: 15px;
+  font-size: 1.7rem;
 }
-
-/*comentario*/
 
 #content {
   width: 50%;
@@ -238,4 +304,90 @@ main {
   background-color: #333;
   align-items: center;
   margin: 2rem;
+}
+
+
+/*Libros similares*/
+
+/*Estilo cartas*/
+.grid-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.container {
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 2rem;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-image {
+  position: relative;
+  margin-bottom: 7rem;
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.255);
+}
+
+.banner-image img {
+  position: relative;
+  width: 100%;
+  height: 43rem;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.banner-text h3 {
+  position: relative;
+  font-family: Poppins !important;
+  color: var(--main-black);
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.fill {
+  background: var(--main-orange);
+  color: var(--main-white);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.fill:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.3s ease;
+}
+
+#more {
+  text-align: center;
+  margin: 0 0 2rem 0;
 }

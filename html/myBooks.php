@@ -12,10 +12,7 @@ session_start();
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/myBooks.css" />
     <link rel="stylesheet" href="../css/alertify.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
-
+    
     <title>Mis Libros</title>
 </head>
 
@@ -28,9 +25,9 @@ session_start();
         require_once("../html/aside.php");
         ?>
         <div id="content">
-        <h2 class="my-4" data-section="MyBooks" data-value="book">Mis Libros</h2>
-            <div id="books">
-                <div class="flex-books" id="resource"></div>
+            <h2 class="my-4" data-section="MyBooks" data-value="book">Mis Libros</h2>
+            <div class="grid-books">
+
             </div>
         </div>
     </main>

@@ -41,11 +41,15 @@ $obj = new métodosUser();
           <img src="../src/img/vista-superior-disposicion-libros.jpg" alt="">
         </div>
       </div>
-      <h2 data-section="index" data-value="cont">Contenido</h2>
-      <div class="categoria">
+
+
+      <h2 class="title-content" data-section="index" data-value="cont">Contenido</h2>
+      <div class="categoría">
         <a href="" class="tag-link">
-          <h3><a href="../html/category.php?category=Literatura" class="link" data-section="index"
-              data-value="lit">Literatura</a></h3>
+          <h3 class="subTitle-content">
+            <a href="../html/category.php?category=Literatura" class="link" data-section="index"
+              data-value="lit">Literatura</a>
+          </h3>
         </a>
         <div class="grid-books">
           <?php
@@ -78,7 +82,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3><a href="" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Ciencia" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -111,7 +115,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3><a href="" class="link" data-section="index" data-value="eco">Economía</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Economía" class="link" data-section="index" data-value="eco">Economía</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -144,7 +148,7 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3><a href="" class="link" data-section="index" data-value="fis">Física</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Física" class="link" data-section="index" data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -174,9 +178,10 @@ $obj = new métodosUser();
           }
           ?>
         </div>
-        <div class="categoria">
+        <div class="categoría">
           <a href="" class="tag-link">
-            <h3><a href="" class="link" data-section="index" data-value="histo">Historia</a></h3>
+            <h3 class="subTitle-content"><a href="../html/category.php?category=Historia" class="link" data-section="index" data-value="histo">Historia</a>
+            </h3>
           </a>
           <div class="grid-books">
             <?php
@@ -187,20 +192,20 @@ $obj = new métodosUser();
               while ($info = $row->fetch()) {
                 ?>
                 <div class="container">
-                <div class="banner-image">
-                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  <div class="banner-image">
+                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                  </div>
+                  <div class="banner-text">
+                    <h3>
+                      <?php echo $info["name"]; ?>
+                    </h3>
+                  </div>
+                  <div class="button-wrapper">
+                    <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                      <button class="btn fill">Acerca</button>
+                    </a>
+                  </div>
                 </div>
-                <div class="banner-text">
-                  <h3>
-                    <?php echo $info["name"]; ?>
-                  </h3>
-                </div>
-                <div class="button-wrapper">
-                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
-                  </a>
-                </div>
-              </div>
                 <?php
               }
             }

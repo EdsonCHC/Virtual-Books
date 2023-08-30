@@ -22,6 +22,7 @@ a {
   text-decoration: none;
 }
 
+/*Estilo de bienvenida*/
 .welcome {
   width: 121.5%;
   height: auto;
@@ -40,7 +41,6 @@ a {
   padding: 2rem;
   align-items: center;
   justify-content: center;
-  
 }
 
 .text-welcome h2 {
@@ -65,10 +65,36 @@ a {
   object-fit: cover;
 }
 
-.icon-welcome img{
+.icon-welcome img {
   position: absolute;
   left: 130rem;
 }
+
+/**/
+.title-content {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 4.5rem;
+}
+
+.subTitle-content {
+  width: 15%;
+}
+
+.categoría h3 a {
+  color: var(--main-black);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 3.5rem;
+}
+
+.categoría h3 a:hover {
+  color: var(--main-orange);
+  transition: all 0.5s ease;
+  border-bottom: 2px solid  black ;
+}
+
 
 /*Estilo cartas*/
 .grid-books {
@@ -107,7 +133,7 @@ a {
 .banner-image img {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 43rem;
   object-fit: cover;
   border-radius: 12px;
 }

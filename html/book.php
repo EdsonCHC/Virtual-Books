@@ -71,22 +71,22 @@ try {
             </p>
           </div>
           <div id="typeBook">
-            <h5 data-section="book" data-value="tipo">Tipo</h5>
-            <p>
-              <?php echo $info['type'] ?>
-            </p>
+            <h4 data-section="book" data-value="tipo">Tipo</h5>
+              <p>
+                <?php echo $info['type'] ?>
+              </p>
           </div>
           <div id="cateBook">
-            <h5 data-section="book" data-value="categ">Categoría</h5>
-            <p>
-              <?php echo $info['category'] ?>
-            </p>
+            <h4 data-section="book" data-value="categ">Categoría</h5>
+              <p>
+                <?php echo $info['category'] ?>
+              </p>
           </div>
           <div id="descriptionBook">
-            <h3 data-section="book" data-value="desc">Descripción</h3>
-            <p>
-              <?php echo $info['description'] ?>
-            </p>
+            <h4 data-section="book" data-value="desc">Descripción</h3>
+              <p>
+                <?php echo $info['description'] ?>
+              </p>
           </div>
           <div id="buttons">
             <div class="btnRead">
@@ -181,17 +181,30 @@ try {
       </div>
       <div id="more-books">
         <h2 data-section="book" data-value="simil">Libros Similares</h2>
-        <div id="similar-books">
+        <div class="grid-books">
           <?php
-          $cat = $info['category'];
-          $sql = "SELECT id, img FROM resource WHERE category = '$cat' AND id != '$id_rec' LIMIT 4";
-          $row2 = $obj->showData($sql);
-          if ($row2->rowCount() > 0) {
-            while ($info = $row2->fetch(PDO::FETCH_ASSOC)) {
+          $category = $info['category'];
+          $sql = "SELECT id, name, img from resource where category = '$category' AND id != '$id_rec' LIMIT 4";
+          $row = $obj->showData($sql);
+          if ($row->rowCount() > 0) {
+            $row->setFetchMode(PDO::FETCH_ASSOC);
+            while ($info = $row->fetch()) {
               ?>
-              <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                <img src="<?php echo $info["img"] ?>" alt="book-image">
-              </a>
+              <div class="container">
+                <div class="banner-image">
+                  <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </div>
+                <div class="banner-text">
+                  <h3>
+                    <?php echo $info["name"]; ?>
+                  </h3>
+                </div>
+                <div class="button-wrapper">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                    <button class="btn fill">Acerca</button>
+                  </a>
+                </div>
+              </div>
               <?php
             }
           }

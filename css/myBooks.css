@@ -7,8 +7,7 @@ main {
 }
 
 #content {
-  width: 80%;
-  height: auto;
+  width: 70%;
   padding: 2rem 0 0 0;
 }
 
@@ -24,31 +23,91 @@ main {
   display: flex;
 }
 
-.flex-books{
+/*Libros*/
+
+/*Estilo cartas*/
+.grid-books {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
   width: 100%;
   height: auto;
   margin-bottom: 3.5rem;
   overflow: hidden;
 }
 
-.flex-books img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-a{
-  text-decoration: none;
-  list-style: none;
-}
-
-.flex-books p{
-  text-decoration: none;
+.container {
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 2rem;
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
+
+.banner-image {
+  position: relative;
+  margin-bottom: 7rem;
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.255);
+}
+
+.banner-image img {
+  position: relative;
+  width: 100%;
+  height: 43rem;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.banner-text h3 {
+  position: relative;
+  font-family: Poppins !important;
+  color: var(--main-black);
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.fill {
+  background: var(--main-orange);
+  color: var(--main-white);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.fill:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.3s ease;
+}
+
+#more {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
 
 #more{
   text-align: center;
