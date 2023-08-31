@@ -45,7 +45,8 @@ if ($row->rowCount() > 0) {
       </object>
       <div class="btnPart">
         <a href="../html/book.php?id=<?php echo $info['id'] ?>" >
-          <button class="btnLogin" data-section="read" data-value="regresar">Regresar </button>
+          <button class="btnLogin">Regresar </button>
+          <!-- <button class="btnLogin" data-section="read" data-value="regresar">Regresar </button> -->
         </a>
       </div>
     </div>

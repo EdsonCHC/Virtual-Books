@@ -26,7 +26,8 @@ if (isset($_SESSION['user'])) {
 
   <div class="content_description_search">
     <form id="formSearch">
-      <div class="content_items" data-section="inputs" data-value="search">
+      <div class="content_items">
+      <!-- <div class="content_items" data-section="inputs" data-value="search"> -->
         <input type="search" id="search" class="content_items_search" placeholder="Buscar" autocomplete="off">
       </div>
     </form>
@@ -83,6 +84,5 @@ if (isset($_SESSION['user'])) {
       </div>
     </div>
   </div>
-
   <script src="../js/searchRes.js"></script>
 </header>

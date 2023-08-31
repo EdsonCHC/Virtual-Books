@@ -102,7 +102,7 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: 2rem;
   width: 100%;
-  height: auto;
+  height: 67rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
 }
@@ -118,6 +118,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+
 }
 
 .banner-image {

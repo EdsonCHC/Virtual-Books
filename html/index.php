@@ -32,7 +32,8 @@ $obj = new métodosUser();
       <div class="welcome">
         <div class="text-welcome">
           <h2 data-section="welcome" data-value="welcome">Bienvenido a Virtual Books</h2>
-          <p data-section="welcome" data-value="legend">Lugar donde se encuentran tus libros favoritos y donde viajas a nuevos mundos!!</p>
+          <p data-section="welcome" data-value="legend">Lugar donde se encuentran tus libros favoritos y donde viajas a
+            nuevos mundos!!</p>
         </div>
         <div class="icon-welcome">
           <img src="../src/logo.png" alt="">
@@ -69,7 +70,7 @@ $obj = new métodosUser();
                   </h3>
                 </div>
                 <div class="button-wrapper">
-                  <a  href="../html/book.php?id=<?php echo $info["id"] ?>">
+                  <a href="../html/book.php?id=<?php echo $info["id"] ?>">
                     <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                   </a>
                 </div>
@@ -82,7 +83,8 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Ciencia" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Ciencia" class="link" data-section="index"
+              data-value="cien">Ciencia</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -115,7 +117,8 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Economía" class="link" data-section="index" data-value="eco">Economía</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Economía" class="link"
+              data-section="index" data-value="eco">Economía</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -136,7 +139,7 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
+                    <button class="btn fill">Acerca</button>
                   </a>
                 </div>
               </div>
@@ -148,7 +151,8 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Física" class="link" data-section="index" data-value="fis">Física</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Física" class="link" data-section="index"
+              data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
           <?php
@@ -169,7 +173,9 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill"><p data-section="index" data-value="acerca"> Acerca</p></button>
+                    <button class="btn fill">
+                      <p data-section="index" data-value="acerca"> Acerca</p>
+                    </button>
                   </a>
                 </div>
               </div>
@@ -180,7 +186,8 @@ $obj = new métodosUser();
         </div>
         <div class="categoría">
           <a href="" class="tag-link">
-            <h3 class="subTitle-content"><a href="../html/category.php?category=Historia" class="link" data-section="index" data-value="histo">Historia</a>
+            <h3 class="subTitle-content"><a href="../html/category.php?category=Historia" class="link"
+                data-section="index" data-value="histo">Historia</a>
             </h3>
           </a>
           <div class="grid-books">
@@ -202,7 +209,7 @@ $obj = new métodosUser();
                   </div>
                   <div class="button-wrapper">
                     <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                      <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
+                      <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                     </a>
                   </div>
                 </div>
@@ -212,7 +219,6 @@ $obj = new métodosUser();
             ?>
           </div>
         </div>
-        <h5 id="more"><a href="" class="link" data-section="index" data-value="mas">Mirar Más...</a></h5>
       </div>
   </main>
   <?php
