@@ -4,26 +4,30 @@ $(function () {
 
     function showComentarios() {
         $.post("../php/show-com.php", { valor_anterior }, async (response) => {
-            if (response) {
-                let data = await JSON.parse(response);
-                let plantilla = "";
-                data.forEach((comentario) => {
-                    plantilla += `
-                        <tr>
-                            <td>${comentario.id}</td>
-                            <td>${comentario.description}</td>
-                            <td>${comentario.valuation}</td>
-                            <td comentario-id="${comentario.id}">
-                                <div class="flex-element">
-                                    <div class="actions">
-                                        <button class="delete-item"><i class="fa-sharp fa-solid fa-trash"></i></button>
+            try{
+                if (response) {
+                    let data = await JSON.parse(response);
+                    let plantilla = "";
+                    data.forEach((comentario) => {
+                        plantilla += `
+                            <tr>
+                                <td>${comentario.id}</td>
+                                <td>${comentario.description}</td>
+                                <td>${comentario.valuation}</td>
+                                <td comentario-id="${comentario.id}">
+                                    <div class="flex-element">s
+                                        <div class="actions">
+                                            <button class="delete-item"><i class="fa-sharp fa-solid fa-trash"></i></button>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>`;
-                    valor_anterior = comentario.id;
-                });
-                $("#t_body").append(plantilla);
+                                </td>
+                            </tr>`;
+                        valor_anterior = comentario.id;
+                    });
+                    $("#t_body").append(plantilla);
+                }
+            }catch(error){
+
             }
         });
     }

@@ -8,8 +8,7 @@ $(function () {
   let idFileUpdate = null;
   edit = false;
 
-  if(edit) {
-    
+  if (edit) {
   }
 
   showData();
@@ -33,7 +32,9 @@ $(function () {
 
   //buscador
   $(".content_items_search").keyup((e) => {
-    if ($(".content_items_search").val()) {
+    if ($(".content_items_search").val() === "") {
+      $("#search_results  ").hide();
+    } else if ($(".content_items_search").val()) {
       let search = $(".content_items_search").val();
       let plantilla = "";
       $.post("../php/show-rec.php", { search }, (response) => {
@@ -102,7 +103,7 @@ $(function () {
       formData.append("file_name", file);
     }
 
-    if(selected_image){
+    if (selected_image) {
       //imagen
       image = selected_image.name;
       formData.append("img", selected_image);
@@ -136,6 +137,7 @@ $(function () {
           }
           document.querySelector(".dialogIn").close();
           $("#form-dialog-insert").trigger("reset");
+          $("#img-preview").attr("src", "../src/img/icons8-book-100.png");
           edit = false;
           showData();
         } else {

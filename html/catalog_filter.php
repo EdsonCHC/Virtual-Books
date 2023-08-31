@@ -86,7 +86,7 @@ require_once("../php/methods.php");
                                 </tr>
                             </thead>
                             <tbody id="t_body">
-
+                                <!-- Aca van el contenido -->
                             </tbody>
                         </table>
                     </div>
@@ -94,7 +94,7 @@ require_once("../php/methods.php");
             </div>
         </div>
         <dialog class="dialogIn">
-            <form method="POST" enctype="multipart/form-data" id="form-dialog-insert">
+            <form id="form-dialog-insert">
                 <h4 data-section="catalogo" data-value="agregar">Agregar Recursos</h4>
                 <hr>
                 <div class="content_form">
