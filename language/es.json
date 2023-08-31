@@ -172,5 +172,16 @@
         "para":"Para ser capaz de hacerlo, necesitaras el navegador web de tu preferencia; !Pero no te preocupes¡ pues Virtual Books es compatible con la mayoria de navegadores web. Ademas de esto necesitaras conexión  a internet si aun no has descargado tu libro.",
         "comoF": "¿Cómo funcionan las opciones de lectura?",
         "tengas":"Una vez tengas elegído el libro que deseas leer, tienes la opcion de leerlo desde la plataforma mediante conexión a internet o descargarlo de manera PDF y disfrutar del libro sin necesidad de conexión, tambien puedes agregarlo a favoritos para leerlo mas tarde si asi lo deseas"
+    }, 
+
+    
+    "About":{
+        "Ab": "Sobre Nosotros", 
+        "vbS": "Virtual Books is a website through which users are able to obtain books, magazines, theses, etc. quickly and easily, allowing them to enjoy their books at any time and place along the way.",
+        "M": "Mision",
+        "Prh": "Promover el habito de la lectura y permitirle a los usuarios disfrutar de los libros que mas les gusta en cualquier lugar y en cualquier momento, ofreciéndoles siempre una gran variedad de recursos.",
+        "V":  "Visión",
+        "Ss": "Ser siempre uno de los mejores sitios web con referencia al ámbito de libros y lectura, manteniendo la preferencia de nuestros usuarios por mantenernos innovando y ofreciendo de la mejor manera nuevos servicios para que ellos puedan seguir disfrutando de su lectura"
+
     }
 }

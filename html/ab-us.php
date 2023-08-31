@@ -29,7 +29,7 @@
             <h1 data-section="About" data-value="Ab">Sobre Nosotros </h1>
             <div id="vb-ctn">
                 <div id="text">
-                    <h2 data-section="About" data-value="vb">
+                    <h2>
                         Virtual Books
                     </h2>
                     <p data-section="About" data-value="vbS">
