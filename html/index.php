@@ -70,7 +70,7 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a  href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill"> Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                   </a>
                 </div>
               </div>
@@ -103,7 +103,7 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
                   </a>
                 </div>
               </div>
@@ -136,7 +136,7 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
                   </a>
                 </div>
               </div>
@@ -169,7 +169,7 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
+                    <button class="btn fill"><p data-section="index" data-value="acerca"> Acerca</p></button>
                   </a>
                 </div>
               </div>
@@ -202,7 +202,7 @@ $obj = new métodosUser();
                   </div>
                   <div class="button-wrapper">
                     <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                      <button class="btn fill">Acerca</button>
+                      <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
                     </a>
                   </div>
                 </div>

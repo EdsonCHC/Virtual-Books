@@ -49,8 +49,8 @@ try {
                 <div class="element e1">
                     <div class="flex-element">
                         <h5 data-section="IndexA" data-value="recien">Recién agregados</h5>
-                        <div class="btn-div" data-section="IndexA" data-value="cambio">
-                            <a href="../html/catalog_filter.php"><input class="btn" type="button" value="Catalogo"></a>
+                        <div class="btn-div" >
+                            <a href="../html/catalog_filter.php"><input data-section="IndexA" data-value="cambio" class="btn" type="button" value="Catalogo"></a>
                         </div>
 
                     </div>

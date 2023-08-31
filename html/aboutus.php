@@ -48,13 +48,13 @@ session_start();
                     </p>
                 </div>
 
-                <!-- <div id="imagensctn">
+                <div id="imagensctn">
                     <div class="imagenes">
                         <img src="../src/img/f1.jpeg">
                         <img src="../src/img/f2.jpeg">
                         <img src="../src/img/f3.jpeg">
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <div class="MV">

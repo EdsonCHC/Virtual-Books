@@ -34,7 +34,7 @@
         "eco": "Economy",
         "fis": "Physical",
         "histo": "History", 
-        "Acerca":"About",
+        "cerca":"<button class='btn fill'> About</button>",
         "mas": "See More..."
     },
     
@@ -117,10 +117,9 @@
     "IndexA":{
         "bien":"Welcome",
         "recien":"Just added",
-        "cambio": "<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='Catalog'>",
+        "cambio": "<input class='btn' type='button' value='Catalog'>",
         "estad":"New users",
-        "coment":"Comments",
-        "cambios":"<input class='btn' type='button' value='Add'> <input class='btn' type='button' value='See all'>"
+        "coment":"Comments"
     },
 
     "error": {
@@ -161,7 +160,19 @@
     },
 
     "read":{
-        "regresar": "Back"
+        "regresar": "<button class='btnLogin' >Back </button>"
+    },
+
+    "faqs": {
+        "PregF": "Frequently  Questions",
+        "como": "How can I access Virtual Books' books and resources?",
+        "unaV": "Once logged in and registered, the user will have the option to view books on the homepage or search for them by name using the search bar at the top. If you happen to be on a different interface than the homepage, you can find the option (Home) on the left side of the page.",
+        "Pue": "Can I access it from anywhere and at any time?",
+        "Si": "Yes! You can enjoy Virtual Books and your favorite books anywhere and at any time; you can continue your story right where you left off.",
+        "que": "What tools do I need to read digital books on Virtual Books?",
+        "para": "To be able to do this, you will need your preferred web browser; but don't worry, Virtual Books is compatible with most web browsers. In addition to this, you will need an internet connection if you haven't downloaded your book yet.",
+        "comoF": "How do the reading options work?",
+        "tengas": "Once you have chosen the book you want to read, you have the option to read it from the platform using an internet connection or download it in PDF format and enjoy the book without needing a connection. You can also add it to your favorites to read it later if you wish."
     }
 
 
