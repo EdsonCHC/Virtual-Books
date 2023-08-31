@@ -8,6 +8,10 @@ $(function () {
   let idFileUpdate = null;
   edit = false;
 
+  if(edit) {
+    
+  }
+
   showData();
 
   //modales
@@ -91,12 +95,14 @@ $(function () {
     let selected_file = $("#articulo")[0].files[0];
     let file = null;
 
-    if (selected_file && selected_image) {
+    if (selected_file) {
       //file
       file = selected_file.name;
       formData.append("file", selected_file);
       formData.append("file_name", file);
+    }
 
+    if(selected_image){
       //imagen
       image = selected_image.name;
       formData.append("img", selected_image);
@@ -121,10 +127,11 @@ $(function () {
       processData: false,
       contentType: false,
       success: (response) => {
+        console.log(response);
         if (response) {
-          if(edit){
+          if (edit) {
             alertify.success("Actualizado");
-          }else{
+          } else {
             alertify.success("Agregado");
           }
           document.querySelector(".dialogIn").close();
@@ -201,9 +208,9 @@ $(function () {
       "Estas seguro de eliminar este recurso",
       function () {
         $.post("../php/del-res.php", { id }, (response) => {
-          if (response){
+          if (response) {
             alertify.success("Eliminado");
-          }else{
+          } else {
             alertify.error("Error");
           }
           $("#t_body").empty();

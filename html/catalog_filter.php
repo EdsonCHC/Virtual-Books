@@ -54,7 +54,8 @@ require_once("../php/methods.php");
                                             Buscar un recurso
                                         </label>
                                         <label class="searchTitle">
-                                            <input type="text" name="searchTitle" class="content_items_search" autocomplete="off">
+                                            <input type="text" name="searchTitle" class="content_items_search"
+                                                autocomplete="off">
                                         </label>
                                     </div>
                                     <div>
@@ -130,14 +131,12 @@ require_once("../php/methods.php");
                         data-value="desc">Descripción</label>
                     <textarea id="descripción" class="descripción" name="desc"></textarea>
                 </div>
-                <div class="content_form">                    
-                    <!-- <label for="articulo" class="src" data-section="catalogo" data-value="art">Articulo</label> -->
-                    <label for="articulo" class="src">Articulo</label>
+                <div class="content_form">
+                    <label for="articulo" class="src" data-section="catalogo" data-value="art">Articulo</label>
                     <input type="file" id="articulo" accept=".pdf" name="src" autocomplete="off">
                 </div>
                 <div class="content_form">
-                    <!-- <label for="img_i" class="src" data-section="catalogo" data-value="img">Imagen</label> -->
-                    <label for="img_i" class="src">Imagen</label>
+                    <label for="img_i" class="src" data-section="catalogo" data-value="img">Imagen</label>
                     <input type="file" id="img_i" accept=".jpg,.png" onchange="vista_preliminar(event), validar()">
                     <div id="img-container">
                         <img class="grande" src="../src/img/icons8-book-100.png" alt="user_image" id="img-preview">
@@ -145,8 +144,7 @@ require_once("../php/methods.php");
                     <div id="warning"></div>
                 </div>
                 <div class="btnPart">
-                    <!-- <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button> -->
-                    <button type="submit" name="enviar">Agregar</button>
+                    <button type="submit" name="enviar" data-section="catalogo" data-value="añadir">Agregar</button>
                     <button type="button" id="btnCancelIn" data-section="catalogo"
                         data-value="cancelar">Cancelar</button>
                 </div>

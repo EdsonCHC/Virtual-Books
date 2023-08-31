@@ -3,6 +3,7 @@ require_once("../php/methods.php");
 $obj = new MétodosAdmin;
 
 extract($_POST);
+var_dump($_POST);
 
 try {
     if (isset($_FILES['file'])) {
@@ -42,6 +43,7 @@ try {
         }
 
         $sql .= " WHERE id = '$idFileUpdate'";
+        var_dump($sql);
 
         if ($obj->updateData($sql, $arr)) {
             echo true;

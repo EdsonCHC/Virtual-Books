@@ -1,0 +1,74 @@
+@import url(../css/Rules.css);
+
+main {
+  display: flex;
+  gap: 3rem;
+}
+
+#ctn {
+  width: 100%;
+  max-width: 80rem;
+  height: auto;
+  margin: 1rem auto;
+}
+
+#ctn h1 {
+  margin-bottom: 4rem;
+  font-size: 5.6rem !important;
+}
+
+#vb-ctn {
+  width: 100%;
+  height: auto;
+  text-align: justify;
+}
+
+#text h2 {
+  color: #be7828;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#text p {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-align: justify;
+  width: 100%;
+}
+
+.img-ctn {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.ab-img {
+  border-radius: 100%;
+  width: 20rem;
+  height: 20rem;
+}
+
+#MV {
+  width: 100%;
+  margin: 3rem auto 4rem 0;
+}
+
+#M,
+#V {
+  width: 100%;
+  text-align: justify;
+}
+
+#M h5,
+#V h5 {
+  color: #be7828;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#M p,
+#V p {
+  margin-bottom: 5rem;
+  font-size: 3rem;
+}
