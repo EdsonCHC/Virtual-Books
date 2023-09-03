@@ -2,18 +2,7 @@
 require_once('../php/cone.php');
 require_once('../php/interface.php');
 require_once('../php/methods.php');
-require_once "../js/vendor/autoload.php";
 session_start();
-
-$client = new \Google\Client();
-$client->setAuthConfig('../js/credentials.json');
-$client->setRedirectUri('http://localhost/Virtual-Books/html/account.php');
-// $client->addScope('name');
-// $client->addScope('lastName');
-$client->addScope('email');
-$client->addScope('profile');
-$authUrl = $client->createAuthUrl();
-
 
 if (isset($_SESSION['user'])) {
     if ($_SESSION['user'][2] === '0') {
@@ -31,8 +20,8 @@ if (isset($_SESSION['user'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-section="register" data-value="title">Registrarse</title>
-    <link rel="stylesheet" href="../css/Registers.css">
     <link rel="shortcut icon" href="../src/user.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/Registers.css">
     <link rel="stylesheet" href="../css/alertify.css">
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </head>
@@ -76,17 +65,6 @@ if (isset($_SESSION['user'])) {
                         </div>
                     </label>
                     <p class="warnings" id="warnings"></p>
-                    <div id="aparte">
-                        <!-- Registro con google-->
-                        <!--<a href="<?php echo $client->createAuthUrl(); ?>>">
-                            <h6>O Regístrate con...</h6>
-                        </a>
-                        <a href="<?php echo $client->createAuthUrl(); ?>">
-                            <div>
-                                <img src="../src/google.png" alt="">
-                            </div>
-                        </a>-->
-                    </div>
                     <div class="login_part" data-section="register" data-value="log-acc">
                         <p>¿Ya tienes cuenta? <a href="../html/login.php"> !Inicia Sesión¡</a></p>
                     </div>

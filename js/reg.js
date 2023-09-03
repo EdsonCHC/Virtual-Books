@@ -55,9 +55,9 @@ $(function () {
     if (password !== passConfirm) {
       alertify.error("Las contraseñas no coinciden");
       key = false;
-    } 
+    }
 
-      //Eliminar estado de error - no funco en el lab
+    //Eliminar estado de error - no funco en el lab
     $("#name").on("change", () => {
       $("#warnName").html("");
       $("#name").css("border", "2px solid blue");
@@ -75,7 +75,6 @@ $(function () {
       $("#email").css("border", "2px solid blue");
       key = true;
     });
-
 
     if (key) {
       const formData = new FormData();

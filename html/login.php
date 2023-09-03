@@ -26,6 +26,7 @@ if (isset($_SESSION['admin'])) {
     <link rel="stylesheet" href="../css/Rules.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/alertify.css">
+    <script src="../js/j_query.js"></Script>
     <script src="https://kit.fontawesome.com/7bcd40cb83.js" crossorigin="anonymous"></script>
 </head>
 
@@ -55,7 +56,7 @@ if (isset($_SESSION['admin'])) {
                             </div>
                             <input type="text" name="email" id="email" placeholder="username@gmail.com"
                                 autocomplete="off">
-                            <p class="warnings" id="warnings"></p>
+                            <p class="warnings" id="warnEmail"></p>
                         </div>
                         <div class="details_primary_part">
                             <div class="tittle_details_primary_part">
@@ -94,7 +95,6 @@ if (isset($_SESSION['admin'])) {
         <div class="secondary_part">
         </div>
     </div>
-    <script src="../js/valid/valLogin.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/j_query.js"></script>
     <script src="../js/log.js"></script>
