@@ -8,13 +8,18 @@ include_once('../php/methods.php');
 $obj = new DataBase();
 $DBH = $obj->connect();
 
-
 extract($_POST);
-$STH = $DBH->query("SELECT * FROM `user` WHERE `email`='$email' and `password`='$password'");
+
+$sql = "SELECT * FROM `user` WHERE `email` = :email AND `password` = :password";
+$STH = $DBH->prepare($sql);
+$STH->bindParam(':email', $email);
+$STH->bindParam(':password', $password);
+$STH->execute();
+
 if ($STH->rowCount() > 0) {
     $STH->setFetchMode(PDO::FETCH_ASSOC);
     $session = $STH->fetch();
-    if($session['rol'] === "0"){
+    if ($session['rol'] === "0") {
         session_start();
         $_SESSION['user'] = array();
         $_SESSION['user'][0] = $session['id'];
@@ -22,7 +27,7 @@ if ($STH->rowCount() > 0) {
         $_SESSION['user'][2] = $session['rol'];
     }
 
-    if ($session['rol'] === "1"){
+    if ($session['rol'] === "1") {
         session_start();
         $_SESSION['admin'] = array();
         $_SESSION['admin'][0] = $session['id'];
@@ -34,14 +39,10 @@ if ($STH->rowCount() > 0) {
         'name' => $session['name'],
         'rol' => $session['rol']
     );
-    
+
     $json_str = json_encode($json);
     echo $json_str;
-
 } else {
     echo "false";
 }
-
-
-
 ?>

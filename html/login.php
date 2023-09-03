@@ -2,18 +2,7 @@
 require_once('../php/cone.php');
 require_once('../php/interface.php');
 require_once('../php/methods.php');
-require_once "../js/vendor/autoload.php";
 session_start();
-
-$client = new \Google\Client();
-$client->setAuthConfig('../js/credentials.json');
-$client->setRedirectUri('http://localhost/Virtual-Books/html/account.php');
-// $client->addScope('name');
-// $client->addScope('lastName');
-$client->addScope('email');
-// $client->addScope('profile');
-
-$authUrl = $client->createAuthUrl();
 
 if (isset($_SESSION['user'])) {
     header("Location: ../html/index.php");
@@ -83,13 +72,6 @@ if (isset($_SESSION['admin'])) {
                     </div>
                 </div>
                 <div class="google_space_primary_part">
-                    <div class="google_primary_part">
-                        <!-- Login con google-->
-                        <!--<p>O Inicia Sesión con...</p>
-                        <a href="<?php echo $authUrl; ?>">
-                            <img src="../src/google.png" alt="google_logo" id="">
-                        </a>-->
-                    </div>
                     <div class="register_primary_part" data-section="login" data-value="reg-acc">
                         <p>¿No tienes cuenta? <a href="../html/register.php"> !Regístrate¡</a></p>
                     </div>
@@ -112,7 +94,6 @@ if (isset($_SESSION['admin'])) {
         <div class="secondary_part">
         </div>
     </div>
-    <script src="https://accounts.google.com/gsi/client" async></script>
     <script src="../js/valid/valLogin.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/j_query.js"></script>
