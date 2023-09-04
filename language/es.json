@@ -34,7 +34,7 @@
         "eco": "Economia",
         "fis": "Física",
         "histo": "Historia",
-        "cerca":"<button class='btn fill'>Acerca</button>",
+        "cerca":"Acerca",
         "mas": "Ver más..."
     },
 
