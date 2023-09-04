@@ -9,30 +9,7 @@ $(function () {
     const password = $("#pass").val();
     const passConfirm = $("#passConfirm").val();
 
-    if (
-      containsScript(name) ||
-      containsScript(lastName) ||
-      containsScript(email) ||
-      containsScript(password) ||
-      containsScript(passConfirm)
-    ) {
-      alertify.alert("No se permiten scripts en los campos.");
-      return;
-    }
-
-    //campos vacios
-    if (
-      name.trim() === "" ||
-      lastName.trim() === "" ||
-      email.trim() === "" ||
-      password.trim() === "" ||
-      passConfirm.trim() === ""
-    ) {
-      alertify.alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    //valores erroneos
+    //valores erróneos
     if (!/^[a-zA-ZáéíóúñÑ\s]+$/g.test(name)) {
       $("#warnName").html("El nombre solo puede contener letras");
       $("#name").css("border", "2px solid red");
@@ -57,22 +34,22 @@ $(function () {
       key = false;
     }
 
-    //Eliminar estado de error - no funco en el lab
+    //Eliminar estado de error
     $("#name").on("change", () => {
       $("#warnName").html("");
-      $("#name").css("border", "2px solid blue");
+      $("#name").css("border", "none");
       key = true;
     });
 
     $("#lastName").on("change", () => {
       $("#warnLName").html("");
-      $("#lastName").css("border", "2px solid blue");
+      $("#lastName").css("border", "none");
       key = true;
     });
 
     $("#email").on("change", () => {
       $("#warnEmail").html("");
-      $("#email").css("border", "2px solid blue");
+      $("#email").css("border", "none");
       key = true;
     });
 
@@ -127,7 +104,7 @@ function post(formData) {
   });
 }
 
-function containsScript(text) {
-  const scriptTags = /<script.*?>|<\/script>/gi;
-  return scriptTags.test(text);
-}
+// function containsScript(text) {
+//   const scriptTags = /<script.*?>|<\/script>/gi;
+//   return scriptTags.test(text);
+// }

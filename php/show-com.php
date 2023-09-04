@@ -21,9 +21,7 @@ if (isset($valor_anterior)) {
             }
             $json_str = json_encode($json);
             echo ($json_str);
-        } else{
-            echo false;
-        }
+        } 
     } catch (PDOException $e) {
         die("Error " . $e->getMessage());
     }
