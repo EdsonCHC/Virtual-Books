@@ -93,7 +93,7 @@ try {
                             <table id="table_content">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th class="id_table">ID</th>
                                         <th data-section="comment" data-value="description">Descripción</th>
                                         <th data-section="comment" data-value="valuation">Valoración</th>
                                         <th data-section="comment" data-value="acciones">Acciones</th>

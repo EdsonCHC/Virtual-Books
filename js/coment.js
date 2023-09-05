@@ -15,7 +15,7 @@ $(function () {
                                 <td>${comentario.description}</td>
                                 <td>${comentario.valuation}</td>
                                 <td comentario-id="${comentario.id}">
-                                    <div class="flex-element">s
+                                    <div class="flex-element">
                                         <div class="actions">
                                             <button class="delete-item"><i class="fa-sharp fa-solid fa-trash"></i></button>
                                         </div>

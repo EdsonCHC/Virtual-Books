@@ -48,17 +48,18 @@ $obj = new métodosUser();
       <div class="categoría">
         <a href="" class="tag-link">
           <h3 class="subTitle-content">
-            <a href="../html/category.php?category=Literatura" class="link" data-section="index" data-value="lit">Literatura</a>
+            <a href="../html/category.php?category=Literatura" class="link" data-section="index"
+              data-value="lit">Literatura</a>
           </h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img, description from resource where category = 'Literatura' Limit 7";
+          $sql = "SELECT id, name, img, description from resource where category = 'Literatura' Limit 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="container">
                 <div class="banner-image">
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -74,7 +75,7 @@ $obj = new métodosUser();
                   </a>
                 </div>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -82,16 +83,17 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Ciencia" class="link" data-section="index" data-value="cien">Ciencia</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Ciencia" class="link" data-section="index"
+              data-value="cien">Ciencia</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Ciencia' LIMIT 7";
+          $sql = "SELECT id, name, img from resource where category = 'Ciencia' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="container">
                 <div class="banner-image">
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -103,11 +105,11 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                   </a>
                 </div>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -115,16 +117,17 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Economía" class="link" data-section="index" data-value="eco">Economía</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Economía" class="link"
+              data-section="index" data-value="eco">Economía</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Economía' LIMIT 7";
+          $sql = "SELECT id, name, img from resource where category = 'Economía' LIMIT 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="container">
                 <div class="banner-image">
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -136,11 +139,11 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill">Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                   </a>
                 </div>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
@@ -148,16 +151,17 @@ $obj = new métodosUser();
       </div>
       <div class="categoría">
         <a href="" class="tag-link">
-          <h3 class="subTitle-content"><a href="../html/category.php?category=Física" class="link" data-section="index" data-value="fis">Física</a></h3>
+          <h3 class="subTitle-content"><a href="../html/category.php?category=Física" class="link" data-section="index"
+              data-value="fis">Física</a></h3>
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Física' Limit 7";
+          $sql = "SELECT id, name, img from resource where category = 'Física' Limit 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
             while ($info = $row->fetch()) {
-          ?>
+              ?>
               <div class="container">
                 <div class="banner-image">
                   <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -169,28 +173,29 @@ $obj = new métodosUser();
                 </div>
                 <div class="button-wrapper">
                   <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                    <button class="btn fill" data-section="index" data-value="acerca">Acerca</button>
+                    <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
                   </a>
                 </div>
               </div>
-          <?php
+              <?php
             }
           }
           ?>
         </div>
         <div class="categoría">
           <a href="" class="tag-link">
-            <h3 class="subTitle-content"><a href="../html/category.php?category=Historia" class="link" data-section="index" data-value="histo">Historia</a>
+            <h3 class="subTitle-content"><a href="../html/category.php?category=Historia" class="link"
+                data-section="index" data-value="histo">Historia</a>
             </h3>
           </a>
           <div class="grid-books">
             <?php
-            $sql = "SELECT id, name, img from resource where category = 'Historia' limit 7";
+            $sql = "SELECT id, name, img from resource where category = 'Historia' limit 5";
             $row = $obj->showData($sql);
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);
               while ($info = $row->fetch()) {
-            ?>
+                ?>
                 <div class="container">
                   <div class="banner-image">
                     <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
@@ -206,7 +211,7 @@ $obj = new métodosUser();
                     </a>
                   </div>
                 </div>
-            <?php
+                <?php
               }
             }
             ?>
