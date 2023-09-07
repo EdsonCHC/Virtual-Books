@@ -31,36 +31,36 @@ if (isset($category)) {
         <div id="container">
             <h3 class="subTitle-content">
                 <?php echo $category; ?>
-            </h1>
-            <div class="grid-books">
-                <?php
-                $sql = "SELECT id, name, img from resource where category = '$category'";
-                $row = $obj->showData($sql);
-                if ($row->rowCount() > 0) {
-                    $row->setFetchMode(PDO::FETCH_ASSOC);
-                    while ($info = $row->fetch()) {
-                        ?>
-                        <div class="container">
-                            <div class="banner-image">
-                                <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                </h1>
+                <div class="grid-books">
+                    <?php
+                    $sql = "SELECT id, name, img, description from resource where category = 'Literatura'";
+                    $row = $obj->showData($sql);
+                    if ($row->rowCount() > 0) {
+                        $row->setFetchMode(PDO::FETCH_ASSOC);
+                        while ($info = $row->fetch()) {
+                            ?>
+                            <div class="container">
+                                <div class="banner-image">
+                                    <img src="<?php echo $info["img"]; ?>" alt="no funciona xd">
+                                </div>
+                                <div class="banner-text">
+                                    <h3>
+                                        <?php echo $info["name"]; ?>
+                                    </h3>
+                                </div>
+                                <div class="button-wrapper">
+                                    <a href="../html/book.php?id=<?php echo $info["id"] ?>">
+                                        <button class="btn fill" data-section="index" data-value="cerca"> Acerca</button>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="banner-text">
-                                <h3>
-                                    <?php echo $info["name"]; ?>
-                                </h3>
-                            </div>
-                            <div class="button-wrapper">
-                                <a href="../html/book.php?id=<?php echo $info["id"] ?>">
-                                    <button class="btn fill">Acerca</button>
-                                </a>
-                            </div>
-                        </div>
-                        <?php
+                            <?php
+                        }
                     }
-                }
-                ?>
-            </div>
-            <!-- <button id="btn-cargar">Cargar más</button> -->
+                    ?>
+                </div>
+                <!-- <button id="btn-cargar">Cargar más</button> -->
         </div>
 
     </main>

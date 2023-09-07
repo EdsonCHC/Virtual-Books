@@ -54,7 +54,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img, description from resource where category = 'Literatura' Limit 5";
+          $sql = "SELECT id, name, img, description from resource where category = 'Literatura' Limit 4";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -88,7 +88,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Ciencia' LIMIT 5";
+          $sql = "SELECT id, name, img from resource where category = 'Ciencia' LIMIT 4";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -122,7 +122,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Economía' LIMIT 5";
+          $sql = "SELECT id, name, img from resource where category = 'Economía' LIMIT 4";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -156,7 +156,7 @@ $obj = new métodosUser();
         </a>
         <div class="grid-books">
           <?php
-          $sql = "SELECT id, name, img from resource where category = 'Física' Limit 5";
+          $sql = "SELECT id, name, img from resource where category = 'Física' Limit 4";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             $row->setFetchMode(PDO::FETCH_ASSOC);
@@ -190,7 +190,7 @@ $obj = new métodosUser();
           </a>
           <div class="grid-books">
             <?php
-            $sql = "SELECT id, name, img from resource where category = 'Historia' limit 5";
+            $sql = "SELECT id, name, img from resource where category = 'Historia' limit 4";
             $row = $obj->showData($sql);
             if ($row->rowCount() > 0) {
               $row->setFetchMode(PDO::FETCH_ASSOC);

@@ -158,7 +158,7 @@
     },
 
     "read":{
-        "regresar": "<button class='btnLogin' >Regresar </button>"
+        "regresar": "Regresar"
     }, 
 
     

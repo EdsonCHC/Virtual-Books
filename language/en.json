@@ -160,7 +160,7 @@
     },
 
     "read":{
-        "regresar": "<button class='btnLogin' >Back </button>"
+        "regresar": "Back"
     },
 
     "faqs": {
