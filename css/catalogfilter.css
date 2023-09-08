@@ -176,6 +176,11 @@ th {
 td:not(.result_td) {
   padding: 2rem 5rem;
   border-bottom: 1px solid #ddd;
+  font-size: 2rem;
+}
+
+.result_td{
+  font-size: 1.2rem;
 }
 
 .copies {
