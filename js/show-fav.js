@@ -21,6 +21,7 @@ $(function () {
                 <button class="btn fill">Acerca</button>
               </a>
             </div>
+          </div>
               `;
         });
         $(".grid-books").html(plantilla);
