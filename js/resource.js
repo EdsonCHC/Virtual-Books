@@ -80,6 +80,82 @@ $(function () {
     }
   });
 
+
+  //validaciones inputs (jquery)
+$(function () {
+  $("#form").submit((e) => {
+    e.preventDefault();
+
+    const title = $("#title").val();
+    const autor = $("#autor").val();
+    const tipo = $("#tipo").val();
+    const cate = $("#caregoría").val();
+    const description = $("#descripción").val();
+
+    if (
+      name.trim() === "" ||
+      lastName.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === "" ||
+      passConfirm.trim() === ""
+    ) {
+      alertify.alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    //valores erróneos
+    if (!/^[a-zA-ZáéíóúñÑ\s]+$/g.test(lastName)) {
+      $("#warnLName").html("El autor solo puede contener letras");
+      $("#").css("border", "2px solid red");
+      key = false;
+    }
+
+    //Eliminar estado de error
+    $("#name").on("change", () => {
+      $("#warnName").html("");
+      $("#name").css("border", "none");
+      key = true;
+    });
+
+    $("#lastName").on("change", () => {
+      $("#warnLName").html("");
+      $("#lastName").css("border", "none");
+      key = true;
+    });
+
+    $("#email").on("change", () => {
+      $("#warnEmail").html("");
+      $("#email").css("border", "none");
+      key = true;
+    });
+
+    if (key) {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("lastName", lastName);
+      formData.append("email", email);
+      formData.append("password", password);
+
+      let selected_file = $("#img_i")[0].files[0];
+      let image = null;
+
+      if (selected_file) {
+        image = selected_file.name;
+        formData.append("file", selected_file);
+        formData.append("img_name", image);
+      } else {
+        let icon = $("input[name='user-pic']:checked");
+        if (icon.length > 0) {
+          formData.append("img_name", icon.val());
+        }
+      }
+      post(formData);
+    } else {
+      e.preventDefault();
+    }
+  });
+});
+
   //insertar datos
   $("#form-dialog-insert").submit((e) => {
     e.preventDefault();

@@ -100,10 +100,12 @@ require_once("../php/methods.php");
                 <div class="content_form">
                     <label for="title" class="form_text" data-section="catalogo" data-value="titulo">Titulo</label>
                     <input type="text" id="title" class="inputs" name="name" autocomplete="off">
+                    <p class="warnings" id="warnName"></p>
                 </div>
                 <div class="content_form">
                     <label for="autor" class="form_text" data-section="catalogo" data-value="autor">Autor</label>
                     <input type="text" id="autor" class="inputs" name="autor" autocomplete="off">
+                    <p class="warnings" id="warnName"></p>
                 </div>
                 <div class="content_form">
                     <label for="tipo" class="form_text" data-section="catalogo" data-value="tipoR">Tipo de
@@ -130,6 +132,7 @@ require_once("../php/methods.php");
                     <label for="descripción" class="form_text" data-section="catalogo"
                         data-value="desc">Descripción</label>
                     <textarea id="descripción" class="descripción" name="desc"></textarea>
+                    <p class="warnings" id="warnName"></p>
                 </div>
                 <div class="content_form">
                     <label for="articulo" class="src" data-section="catalogo" data-value="art">Articulo</label>

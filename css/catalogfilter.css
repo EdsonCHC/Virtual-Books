@@ -361,3 +361,11 @@ dialog form button {
   width: 20rem;
   margin: 1rem 0 0 30%;
 }
+
+#warning{
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
