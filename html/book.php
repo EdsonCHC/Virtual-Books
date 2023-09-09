@@ -18,7 +18,6 @@ try {
   die("Error " . $e->getMessage());
 }
 
-
 //Mostrar comentarios
 try {
   $sql = "SELECT c.description, c.valuation, u.name, u.img FROM comment c INNER JOIN `user` u on c.id_c = u.id WHERE c.id_rec = $id";
@@ -89,8 +88,11 @@ try {
               </p>
           </div>
           <div id="buttons">
+            <div class="<?php esconderV2(); ?>">
+              <p data-section="book" data-value="need-log" style="color: red;">Debes iniciar iniciar sesión para acceder a este libro</p>
+            </div>
             <div class="btnRead">
-              <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link ">
+              <a href="../html/read.php?id=<?php echo $info['id'] ?>" class="book-link <?php esconder(); ?>">
                 <i class="fa-sharp fa-solid fa-book-open-reader"></i>
                 <p data-section="book" data-value="leer">Leer</p>
               </a>

@@ -24,7 +24,8 @@
         "lastname" : "Last Name",
         "pass-con" : "Confirm Password",
         "avatar" : "Select a default avatar",
-        "log-acc" : " <p >¿Already have an account?? <a href='../html/login.php'> !LogIn¡</a></p>"
+        "log-acc" : " <p >¿Already have an account?? <a href='../html/login.php'> !LogIn¡</a></p>",
+        "image": "Profile picture"
         },
 
     "index":{
@@ -142,7 +143,8 @@
         "comentar":"<input type='submit' value='Comment'>",
         "simil":"Similar Books",
         "hablar":"<textarea autocomplete='off' id='texto' rows='5' cols='60' placeholder='What do you want to talk about?'></textarea>",
-        "com": "This Book has no comments yet"
+        "com": "This Book has no comments yet",
+        "need-log": "You must log in to access this book"
     },
 
     "SUser":{ 

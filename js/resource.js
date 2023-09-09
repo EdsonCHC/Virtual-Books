@@ -43,7 +43,6 @@ $(function () {
           data.forEach((item) => {
             plantilla += `
               <tr>
-                  <td class="result_td">${item.id}</td>
                   <td class="result_td">${item.name} </td>
                   <td class="result_td">${item.author} </td>
                   <td class="result_td" book-id="${item.id}">

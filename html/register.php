@@ -70,7 +70,7 @@ if (isset($_SESSION['user'])) {
                     </div>
                 </div>
                 <div id="img-ctn">
-                    <h5>Foto de Perfil</h5>
+                    <h5 data-section="register" data-value="image">Foto de Perfil</h5>
                     <div id="img-container"><img class="grande" src="../src/user.png" alt="user_image" id="img-preview">
                     </div>
                     <label for="img_i" class="Upload">

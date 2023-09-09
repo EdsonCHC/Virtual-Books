@@ -7,7 +7,7 @@ extract($_POST);
 if (isset($valor_anterior)) {
     $val = $valor_anterior;
     try {
-        $sql = "SELECT id, description, valuation FROM comment WHERE id > '$val' LIMIT 8";
+        $sql = "SELECT id, description, valuation, id_rec FROM comment WHERE id > '$val' LIMIT 8";
         $row = $obj->showData($sql);
 
         if ($row->rowCount() > 0) {
@@ -16,7 +16,8 @@ if (isset($valor_anterior)) {
                 $json[] = array(
                     "id" => $info['id'],
                     "description" => $info['description'],
-                    "valuation" => $info['valuation']
+                    "valuation" => $info['valuation'],
+                    "id_rec" => $info['id_rec']
                 );
             }
             $json_str = json_encode($json);
@@ -41,7 +42,8 @@ if (isset($id)) {
             $json[] = array(
                 "name" => $row['name'],
                 "description" => $row['description'],
-                "valuation" => $row['valuation']
+                "valuation" => $row['valuation'],
+                "id_rec" => $info['id_rec']
             );
         }
 
