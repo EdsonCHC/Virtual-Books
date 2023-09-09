@@ -1,13 +1,89 @@
+//validación de imagen
+const text = document.getElementById("warning");
+let ojo = document.getElementById("ojo");
+let input = document.getElementById("passConfirm");
+var key = true;
+
+//ver doc?
+// let vista_preliminar_doc = (event) => {
+//   let vista = new FileReader();
+//   let id_doc = document.querySelector("#doc-preview");
+
+//   vista.onload = () => {
+//     if (vista.readyState == 2) {
+//       id_doc.src = vista.result;
+//     }
+//   };
+//   vista.readAsDataURL(event.target.files[0]);
+// };
+
+//ver imagen
+let vista_preliminar = (event) => {
+  let vista = new FileReader();
+  let id_img = document.querySelector("#img-preview");
+
+  vista.onload = () => {
+    if (vista.readyState == 2) {
+      id_img.src = vista.result;
+    }
+  };
+  vista.readAsDataURL(event.target.files[0]);
+};
+
+//validar extensión 
+const validar = () => {
+  let warnings = "";
+  text.innerHTML = "";
+
+  let archivo = document.getElementById("img_i").value,
+    extension = archivo.substring(archivo.lastIndexOf("."), archivo.length);
+  if (
+    document
+      .getElementById("img_i")
+      .getAttribute("accept")
+      .split(",")
+      .indexOf(extension) < 0
+  ) {
+    warnings += "Archivo inválido. No se permite la extensión " + extension;
+    text.innerHTML = warnings;
+    key = false;
+  }else{
+    key = true;
+  }
+};
+
+//ver contraseña
+const eye = () => {
+  if (input.type === "password") {
+    input.type = "text";
+    ojo.style.opacity = 0.2;
+  } else {
+    input.type = "password";
+    ojo.style.opacity = 1;
+  }
+};
+
+//validaciones inputs (jquery)
 $(function () {
   $("#form").submit((e) => {
     e.preventDefault();
-    let key = true;
 
     const name = $("#name").val();
     const lastName = $("#lastName").val();
     const email = $("#email").val();
     const password = $("#pass").val();
     const passConfirm = $("#passConfirm").val();
+
+    if (
+      name.trim() === "" ||
+      lastName.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === "" ||
+      passConfirm.trim() === ""
+    ) {
+      alertify.alert("Por favor, completa todos los campos.");
+      return;
+    }
 
     //valores erróneos
     if (!/^[a-zA-ZáéíóúñÑ\s]+$/g.test(name)) {
@@ -80,6 +156,8 @@ $(function () {
   });
 });
 
+
+//envió de datos
 function post(formData) {
   $.ajax({
     url: "../php/register_db_vb.php",
@@ -103,8 +181,3 @@ function post(formData) {
     },
   });
 }
-
-// function containsScript(text) {
-//   const scriptTags = /<script.*?>|<\/script>/gi;
-//   return scriptTags.test(text);
-// }

@@ -242,3 +242,8 @@ dialog form button {
 a {
   text-decoration: none;
 }
+
+.warnings{
+  color: var(--main-red);
+  font-weight: 600;
+}

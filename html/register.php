@@ -55,11 +55,11 @@ if (isset($_SESSION['user'])) {
                     <p class="warnings" id="warnEmail"></p>
                     <label for="">
                         <h6 data-section="login" data-value="pass">Contraseña</h6>
-                        <input type="password" name="password" placeholder="*******" id="pass" autocomplete="off" required>
+                        <input type="password" name="password" placeholder="*******" id="pass" autocomplete="off" >
                     </label>
                     <label for="">
                         <h6 data-section="register" data-value="pass-con">Confirmar Contraseña</h6>
-                        <input type="password" id="passConfirm" placeholder="*******" autocomplete="off" required>
+                        <input type="password" id="passConfirm" placeholder="*******" autocomplete="off" >
                         <div id="eye">
                             <img src="../src/img/icons8-eye-96.png" id="ojo" onclick="eye();">
                         </div>
@@ -127,7 +127,7 @@ if (isset($_SESSION['user'])) {
 </body>
 <script src="../js/alertify.js"></script>
 <script src="../js/j_query.js"></script>
-<script src="../js/preview.js"></script>
+<!-- <script src="../js/preview.js"></script> -->
 <script src="../js/reg.js"></script>
 <script src="../js/toggle.js"></script>
 <script src="../js/trad.js"></script>

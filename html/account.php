@@ -109,22 +109,26 @@ if ($_SESSION['user']) {
                             <label for="title" class="form_text" data-section="account"
                                 data-value="Nombres">Nombres</label>
                             <input type="text" id="name" class="inputs" autocomplete="off">
+                            <p class="warnings" id="warnName"></p>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text" data-section="account"
                                 data-value="Apellidos">Apellidos</label>
                             <input type="text" id="lastName" class="inputs" autocomplete="off">
+                            <p class="warnings" id="warnLName"></p>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text" data-section="account" data-value="Correo">Correo
                                 Electrónico</label>
                             <input type="email" id="email" class="inputs" autocomplete="off">
+                            <p class="warnings" id="warnEmail"></p>
                         </div>
                         <div class="content_form">
                             <label for="autor" class="form_text" data-section="account" data-value="Contra">Contraseña
                                 Actual</label>
                             <input type="password" id="oldPass" class="inputs" autocomplete="off" required>
                         </div>
+                        
                         <div class="content_form">
                             <label for="img_i" class="src" data-section="account" data-value="imagen">Imagen</label>
                             <input type="file" id="img_i" accept=".jpg,.png"
@@ -155,12 +159,10 @@ if ($_SESSION['user']) {
     <?php
     require_once("../html/footer.php");
     ?>
-    <script src="../js/preview.js"></script>
+    <!-- <script src="../js/preview.js"></script> -->
     <script src="../js/j_query.js"></script>
     <script src="../js/alertify.js"></script>
     <script src="../js/acc.js"></script>
-
-
 </body>
 
 </html>

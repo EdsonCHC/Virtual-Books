@@ -258,7 +258,6 @@ input[type="file"] {
 .warnings{
   color: var(--main-red);
   font-weight: 600;
-  position:relative; 
 }
 
 .l-icon{
