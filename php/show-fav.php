@@ -5,7 +5,7 @@ session_start();
 $id_u = $_SESSION['user'][0];
 $obj = new MétodosUser();
 try {
-    $sql = "SELECT r.id, r.name, r.img FROM shelf s LEFT JOIN resource r on s.id_r = r.id AND s.id_u = $id_u";
+    $sql = "SELECT r.id, r.name, r.img FROM shelf s LEFT JOIN resource r on s.id_r = r.id where s.id_u = $id_u";
     $stmt = $obj->showData($sql);
 
     if ($stmt->rowCount() > 0) {

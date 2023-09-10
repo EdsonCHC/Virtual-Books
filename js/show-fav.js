@@ -4,6 +4,7 @@ $(function () {
   //Visualiza el libro
   function get_books() {
     $.get("../php/show-fav.php", (response) => {
+      console.log(response)
       if (response) {
         let resource = JSON.parse(response);
         let plantilla = "";
