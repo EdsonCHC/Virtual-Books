@@ -18,10 +18,6 @@ main {
   margin: 0 0 1.5rem 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 /*Estilo de bienvenida*/
 .welcome {
   width: 121.5%;

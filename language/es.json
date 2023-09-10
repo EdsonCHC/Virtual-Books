@@ -127,8 +127,8 @@
     },
 
     "book":{        
-        "tipo":"Tipo:",
-        "categ":"Categoría:",
+        "tipo":"Tipo",
+        "categ":"Categoría",
         "desc":"Descripción",
         "leer":"Leer",
         "fav":"Favoritos",

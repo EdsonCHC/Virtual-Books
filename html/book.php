@@ -64,7 +64,7 @@ try {
             </h3>
           </div>
           <div id="authorBook">
-            <h4>Autor </h4>
+            <h4>Autor</h4>
             <p>
               <?php echo $info['author'] ?>
             </p>

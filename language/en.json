@@ -129,8 +129,8 @@
     },
 
     "book":{
-        "tipo":"Type:",
-        "categ":"Category:",
+        "tipo":"Type",
+        "categ":"Category",
         "desc":"Description",
         "leer":"Read",
         "fav":"Favorite",

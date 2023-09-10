@@ -74,6 +74,10 @@ p {
   color: var(--main-black);
 }
 
+a {
+  text-decoration: none;
+}
+
 i:not(.white_i) {
   font-size: 2rem;
   margin-right: 5px;
@@ -183,6 +187,7 @@ header {
   color: var(--main-black);
   border-bottom: 1px solid #ddd;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .content_items_slt {
