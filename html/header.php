@@ -62,7 +62,7 @@ if (isset($_SESSION['user'])) {
         <nav id="notis-nav">
           <?php
           $obj = new MétodosUser();
-          $sql = "SELECT * FROM resource";
+          $sql = "SELECT * FROM resource ORDER BY id DESC limit 5";
           $row = $obj->showData($sql);
           if ($row->rowCount() > 0) {
             while ($not = $row->fetch(PDO::FETCH_ASSOC)) {

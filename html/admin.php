@@ -57,7 +57,7 @@ try {
                     <hr>
                     <div class="grid-books">
                         <?php
-                        $sql = "SELECT id, name, img from resource Limit 7";
+                        $sql = "SELECT id, name, img from resource ORDER BY id DESC Limit 7 ";
                         $row = $obj->showData($sql);
                         if ($row->rowCount() > 0) {
                             $row->setFetchMode(PDO::FETCH_ASSOC);

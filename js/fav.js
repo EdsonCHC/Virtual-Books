@@ -6,7 +6,13 @@ $(function () {
   $(document).on("click", "#addFav", function () {
     let container = $(this).closest("#container");
     let id_add = container.data("id");
-    $.post("../php/Fav.php", { id_add }, (response) => {
+    let id_u = $("#id_u_input").val();
+    const post_data = {
+      "id_add": id_add,
+      "id_u": id_u
+    }
+    $.post("../php/Fav.php", post_data, (response) => {
+      console.log(response)
       switch (response) {
         case "1": 
         case true:

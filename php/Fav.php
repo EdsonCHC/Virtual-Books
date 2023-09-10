@@ -16,9 +16,10 @@ if (isset($id_add)) {
         if ($isAdded) {
             echo "added";
         } else {
-            $insertQuery = "INSERT INTO shelf (id_r) VALUES (:id)";
+            $insertQuery = "INSERT INTO shelf (id_r, id_U) VALUES (:id_r, :id_u)";
             $insertStmt = $DBH->prepare($insertQuery);
-            $insertStmt->bindParam(':id', $id_add, PDO::PARAM_INT);
+            $insertStmt->bindParam(':id_r', $id_add, PDO::PARAM_INT);
+            $insertStmt->bindParam(':id_u', $id_u, PDO::PARAM_INT);
             $insertStmt->execute();
             echo true;
         }

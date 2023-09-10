@@ -98,6 +98,7 @@ try {
               </a>
             </div>
             <div id="btnFav" class="<?php esconder(); ?>">
+            <input type="hidden" value="<?php echo $_SESSION['user'][0]?>" id="id_u_input">
               <?php
               $id_r = $info['id'];
               $sql = "SELECT * FROM shelf WHERE id_r = '$id_rec'";
